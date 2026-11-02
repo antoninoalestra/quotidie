@@ -1,0 +1,175 @@
+{
+  "updatedAt": "2026-11-02",
+  "categories": [
+    {
+      "id": "intelligenza-artificiale",
+      "name": "Intelligenza artificiale",
+      "enabled": true
+    },
+    {
+      "id": "informatica",
+      "name": "Informatica",
+      "enabled": true
+    },
+    {
+      "id": "architettura-software",
+      "name": "Architettura software",
+      "enabled": true
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "enabled": true
+    },
+    {
+      "id": "finanza-personale",
+      "name": "Finanza personale",
+      "enabled": true
+    },
+    {
+      "id": "mercati-finanziari",
+      "name": "Mercati finanziari",
+      "enabled": true
+    },
+    {
+      "id": "macroeconomia",
+      "name": "Macroeconomia",
+      "enabled": true
+    },
+    {
+      "id": "economia-comportamentale",
+      "name": "Economia comportamentale",
+      "enabled": true
+    },
+    {
+      "id": "storia",
+      "name": "Storia",
+      "enabled": true
+    },
+    {
+      "id": "storia-dell-arte",
+      "name": "Storia dell'arte",
+      "enabled": true
+    },
+    {
+      "id": "filosofia",
+      "name": "Filosofia",
+      "enabled": true
+    },
+    {
+      "id": "psicologia",
+      "name": "Psicologia",
+      "enabled": true
+    },
+    {
+      "id": "neuroscienze",
+      "name": "Neuroscienze",
+      "enabled": true
+    },
+    {
+      "id": "fisica",
+      "name": "Fisica",
+      "enabled": true
+    },
+    {
+      "id": "astronomia",
+      "name": "Astronomia",
+      "enabled": true
+    },
+    {
+      "id": "biologia",
+      "name": "Biologia",
+      "enabled": true
+    },
+    {
+      "id": "medicina-e-salute",
+      "name": "Medicina e salute",
+      "enabled": true
+    },
+    {
+      "id": "chimica",
+      "name": "Chimica",
+      "enabled": true
+    },
+    {
+      "id": "matematica",
+      "name": "Matematica",
+      "enabled": true
+    },
+    {
+      "id": "geopolitica",
+      "name": "Geopolitica",
+      "enabled": true
+    },
+    {
+      "id": "linguistica-ed-etimologia",
+      "name": "Linguistica ed etimologia",
+      "enabled": true
+    },
+    {
+      "id": "letteratura",
+      "name": "Letteratura",
+      "enabled": true
+    },
+    {
+      "id": "musica",
+      "name": "Musica",
+      "enabled": true
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "enabled": true
+    },
+    {
+      "id": "architettura",
+      "name": "Architettura",
+      "enabled": true
+    },
+    {
+      "id": "cinema",
+      "name": "Cinema",
+      "enabled": true
+    },
+    {
+      "id": "gastronomia-e-vino",
+      "name": "Gastronomia e vino",
+      "enabled": true
+    },
+    {
+      "id": "produttivita-e-metodo",
+      "name": "Produttività e metodo",
+      "enabled": true
+    },
+    {
+      "id": "negoziazione-e-comunicazione",
+      "name": "Negoziazione e comunicazione",
+      "enabled": true
+    },
+    {
+      "id": "retorica-e-pensiero-critico",
+      "name": "Retorica e pensiero critico",
+      "enabled": true
+    },
+    {
+      "id": "grandi-invenzioni",
+      "name": "Grandi invenzioni",
+      "enabled": true
+    },
+    {
+      "id": "ecologia-e-clima",
+      "name": "Ecologia e clima",
+      "enabled": true
+    },
+    {
+      "id": "diritto-per-tutti",
+      "name": "Diritto per tutti",
+      "enabled": true
+    },
+    {
+      "id": "mitologia",
+      "name": "Mitologia",
+      "enabled": true
+    }
+  ]
+}
