@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quotidie</title>
+  <meta name="description" content="Il tuo giornale del mattino e una lezione al giorno.">
+
+  <!-- iOS: installazione come app dalla schermata Home (icona e manifest li genera app.js) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Quotidie">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#F5F1E8" id="theme-color">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Instrument+Sans:wght@400..600&display=swap">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Applica subito tema e dimensione testo salvati, per evitare il flash -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('qd.prefs') || '{}');
+      if (p.theme) document.documentElement.dataset.theme = p.theme;
+      if (p.textScale) document.documentElement.style.setProperty('--text-scale', p.textScale);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <!-- Monogramma: una Q dal tratto contrastato, la coda finisce nel sole -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo-mark" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="15" fill="var(--logo-bg)"/>
+      <path fill="var(--logo-line)" fill-rule="evenodd" d="M31 14.5c-8.6 0-15 7.4-15 16.5s6.4 16.5 15 16.5 15-7.4 15-16.5-6.4-16.5-15-16.5Zm0 1.1c-6 0-10.4 6.9-10.4 15.4S25 46.4 31 46.4 41.4 39.5 41.4 31 37 15.6 31 15.6Z"/>
+      <path d="M34.5 44.2c2.6 2.9 5.6 5.4 9.6 6.6" fill="none" stroke="var(--logo-line)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="47.6" cy="51.6" r="3.1" fill="var(--logo-sun)"/>
+    </symbol>
+  </svg>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#/news" aria-label="Quotidie, vai al giornale">
+      <svg class="brand-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="brand-name">Quotidie</span>
+    </a>
+    <nav class="topnav" aria-label="Sezioni">
+      <a href="#/news" data-tab="news">Giornale</a>
+      <a href="#/learn" data-tab="learn">Impara</a>
+    </nav>
+    <a class="icon-btn" href="#/settings" data-tab="settings" aria-label="Impostazioni">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 8.96 4.6H9a1.7 1.7 0 0 0 1-1.56V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.04a1.7 1.7 0 0 0 1.56 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51.96Z"/></svg>
+    </a>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  </header>
+
+  <main id="view" tabindex="-1" aria-live="polite"></main>
+
+  <nav class="tabbar" aria-label="Sezioni">
+    <a href="#/news" data-tab="news">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5Z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7.5 9h6M7.5 12.5h6M7.5 16h4"/></svg>
+      <span>Giornale</span>
+    </a>
+    <a href="#/learn" data-tab="learn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7c-2-1.6-4.6-2-8-2v13c3.4 0 6 .4 8 2 2-1.6 4.6-2 8-2V5c-3.4 0-6 .4-8 2Z"/><path d="M12 7v13"/></svg>
+      <span>Impara</span>
+    </a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
