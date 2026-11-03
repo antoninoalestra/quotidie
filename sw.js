@@ -25,6 +25,9 @@ self.addEventListener('fetch', (event) => {
   const isFont = /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if (url.origin !== self.location.origin && !isFont) return;
 
+  // Audio MP3: non intercettare con Service Worker per consentire lo streaming HTTP e i Range requests (206) su Safari
+  if (url.pathname.endsWith('.mp3')) return;
+
   if (url.origin === self.location.origin && url.pathname.includes('/data/')) {
     event.respondWith(networkFirst(req));
   } else {

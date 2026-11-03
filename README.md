@@ -13,7 +13,7 @@ Quotidie è il tuo giornale del mattino più una lezione al giorno. È un'app we
   - una lezione al giorno, su un argomento sempre nuovo;
   - ogni 2-3 settimane arriva un **percorso** di 3-5 lezioni collegate;
   - nello **Storico** trovi tutte le lezioni, con ricerca, filtri (da leggere, preferiti, percorsi) e i giorni di fila in cui hai letto.
-- **Ascolta**: il giornale, una singola notizia o la lezione letti dalla voce del telefono. Con lo schermo bloccato iOS interrompe la lettura.
+- **Ascolta**: il giornale e la lezione parlati con la voce neurale naturale di Diego (file MP3 generati ogni mattina). Funziona anche a schermo bloccato su iPhone, con le cuffie e con la levetta del silenzioso attiva. Per le singole notizie è disponibile la lettura istantanea.
 - **Offline**: l'ultima edizione si apre anche senza connessione.
 - **Aggiorna l'edizione**: dalle Impostazioni, o dall'avviso "edizione di ieri", puoi creare l'edizione subito. Una finestra mostra le fasi in tempo reale.
 

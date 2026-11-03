@@ -53,6 +53,14 @@ jobs:
         with:
           node-version: 22
 
+      - name: Prepara Python per sintesi vocale neurale
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Installa edge-tts
+        run: pip install edge-tts
+
       - name: Prepara il generatore
         run: |
           mkdir -p "$RUNNER_TEMP/gen"
@@ -60,6 +68,12 @@ jobs:
           import { readFile, writeFile, mkdir, readdir, unlink, appendFile } from 'node:fs/promises';
           import { existsSync } from 'node:fs';
           import path from 'node:path';
+          import { execFile } from 'node:child_process';
+          import { promisify } from 'node:util';
+
+          const pExec = promisify(execFile);
+          const AUDIO_DIR = path.resolve('data', 'audio');
+          const VOICE = process.env.EDGE_VOICE || 'it-IT-DiegoNeural';
 
           const DATA = path.resolve('data');
           const API_KEY = (process.env.GEMINI_API_KEY || '').trim();
@@ -126,6 +140,63 @@ jobs:
             const worker = async () => { while (next < items.length) { const i = next++; out[i] = await fn(items[i], i); } };
             await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
             return out;
+          }
+
+          /* ---------- Audio Neurale (Edge TTS - Diego) ---------- */
+          function formatNewsSpeech(n) {
+            let t = `Quotidie. ${n.kind === 'weekly' ? 'La settimana' : 'Il giornale'} di ${longDate(n.date)}. Ecco i fatti principali.\n\n`;
+            if (n.brief && n.brief.length) {
+              t += `Le notizie in breve: ${n.brief.join('. ')}.\n\n`;
+            }
+            for (const sec of n.sections || []) {
+              t += `Sezione: ${sec.title}.\n\n`;
+              for (const st of sec.stories || []) {
+                t += `${st.title}.\n`;
+                if (st.lead) t += `${st.lead}\n`;
+                t += `${st.body || st.summary || ''}\n`;
+                if (st.why) t += `Perché conta: ${st.why}.\n\n`;
+              }
+            }
+            t += `Questa era la rassegna di oggi di Quotidie. Buona giornata e a domani.\n`;
+            return t.replace(/\bhttps?:\/\/\S+/gi, '').replace(/[*_#`~\[\]]/g, '').trim();
+          }
+
+          function formatLessonSpeech(l) {
+            let t = `Quotidie. Lezione del giorno: ${l.title}. Categoria: ${l.category}.\n\n`;
+            if (l.hook) t += `${l.hook}\n\n`;
+            for (const sec of l.sections || []) {
+              t += `${sec.heading}.\n${sec.body}\n\n`;
+            }
+            if (l.example) t += `Un esempio concreto: ${l.example}\n\n`;
+            if (l.keyTakeaways && l.keyTakeaways.length) t += `Punti chiave da ricordare: ${l.keyTakeaways.join('. ')}.\n\n`;
+            if (l.funFact) t += `Curiosità: ${l.funFact}\n\n`;
+            t += `Fine della lezione. Buona continuazione con Quotidie.\n`;
+            return t.replace(/\bhttps?:\/\/\S+/gi, '').replace(/[*_#`~\[\]]/g, '').trim();
+          }
+
+          async function generateAudioFile(text, destPath) {
+            await mkdir(path.dirname(destPath), { recursive: true });
+            const tempTxt = path.join(process.env.RUNNER_TEMP || '.', `audio-${Date.now()}-${Math.random().toString(36).slice(2)}.txt`);
+            await writeFile(tempTxt, text, 'utf8');
+            try {
+              await pExec('edge-tts', ['--voice', VOICE, '-f', tempTxt, '--write-media', destPath]);
+              log(`Audio generato: ${path.basename(destPath)}`);
+            } finally {
+              try { await unlink(tempTxt); } catch {}
+            }
+          }
+
+          async function cleanupOldAudio() {
+            if (!existsSync(AUDIO_DIR)) return;
+            const files = await readdir(AUDIO_DIR);
+            const cutoff = addDays(today, -KEEP_NEWS_DAYS);
+            for (const f of files) {
+              const match = f.match(/^(?:news|lesson)-(\d{4}-\d{2}-\d{2})\.mp3$/);
+              if (match && match[1] < cutoff) {
+                await unlink(path.join(AUDIO_DIR, f));
+                log(`Rimosso vecchio audio: ${f}`);
+              }
+            }
           }
 
           /* ---------- Gemini ---------- */
@@ -476,6 +547,16 @@ jobs:
               if (n?.date) editions.push({ date: n.date, kind: n.kind || 'daily', ...(n.range ? { range: n.range } : {}) });
             }
             await writeJSON(path.join(dir, 'index.json'), { editions });
+
+            try {
+              log('Avvio generazione audio neurale per il giornale (Diego)...');
+              const speechTxt = formatNewsSpeech(news);
+              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, `news-${today}.mp3`));
+              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, 'news-latest.mp3'));
+              note('Audio giornale: generato con voce neurale Diego');
+            } catch (err) {
+              log('Errore generazione audio giornale:', err.message);
+            }
           }
 
           /* ---------- Lezione ---------- */
@@ -753,6 +834,16 @@ jobs:
             }
             await writeJSON(seriesPath, series);
             note(`Lezione: "${lesson.title}" (${lesson.kind === 'series' ? `percorso "${lesson.series.title}", parte ${lesson.series.part} di ${lesson.series.total}` : lesson.category}, ${lesson.minutes} minuti)`);
+
+            try {
+              log('Avvio generazione audio neurale per la lezione (Diego)...');
+              const speechTxt = formatLessonSpeech(lesson);
+              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, `lesson-${today}.mp3`));
+              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, 'lesson-latest.mp3'));
+              note('Audio lezione: generato con voce neurale Diego');
+            } catch (err) {
+              log('Errore generazione audio lezione:', err.message);
+            }
           }
 
           /* ---------- Main ---------- */
@@ -782,6 +873,12 @@ jobs:
                 failed = true;
                 note(`Errore nella lezione: ${err.message}`);
               }
+            }
+
+            try {
+              await cleanupOldAudio();
+            } catch (err) {
+              log('Errore pulizia vecchi audio:', err.message);
             }
 
             if (process.env.GITHUB_STEP_SUMMARY) {

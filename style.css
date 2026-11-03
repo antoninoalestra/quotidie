@@ -847,8 +847,8 @@ label.lbl { display: block; font-family: var(--sans); font-size: .82rem; color: 
   font-family: var(--sans);
 }
 @keyframes rise { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
-.player-bar { height: 2px; background: color-mix(in srgb, var(--paper) 20%, transparent); }
-.player-bar span { display: block; height: 100%; background: var(--sun); transform-origin: 0 50%; transform: scaleX(0); transition: transform .4s ease; }
+.player-bar { height: 5px; background: color-mix(in srgb, var(--paper) 20%, transparent); cursor: pointer; position: relative; touch-action: none; }
+.player-bar span { display: block; height: 100%; background: var(--sun); transform-origin: 0 50%; transform: scaleX(0); transition: transform .15s linear; }
 .player-row { display: flex; align-items: center; gap: .1rem; padding: .4rem .4rem .4rem 1rem; }
 .player-info { flex: 1; min-width: 0; line-height: 1.25; }
 .player-info b { display: block; font-size: .88rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

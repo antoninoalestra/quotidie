@@ -389,7 +389,12 @@
         ...(news.brief || []),
         ...sections.flatMap((s) => [`${s.title}.`, ...s.stories.flatMap((st) => [st.title + '.', st.lead, st.body || st.summary, st.why])]),
       ];
-      speech.play(parts, { title: weekly ? 'La settimana' : 'Il giornale', sub: `${mins} minuti` });
+      speech.play(parts, {
+        title: weekly ? 'La settimana' : 'Il giornale',
+        sub: `${mins} minuti • Voce Diego`,
+        audioUrl: `data/audio/news-${news.date}.mp3`,
+        fallbackAudioUrl: 'data/audio/news-latest.mp3',
+      });
     });
     $view.querySelectorAll('[data-action="listen-story"]').forEach((b) => b.addEventListener('click', () => {
       const st = sections.flatMap((s) => s.stories).find((x) => storyKey(news.date, x) === b.dataset.key);
@@ -562,7 +567,13 @@
         lesson.example ? 'Un esempio concreto. ' + lesson.example : '',
         lesson.keyTakeaways?.length ? 'Da ricordare. ' + lesson.keyTakeaways.join(' ') : '',
         lesson.funFact ? 'Lo sapevi? ' + lesson.funFact : '',
-      ], { title: plain(lesson.title), sub: `Lezione, ${mins} minuti`, onEnd: () => { if (!state.read[target]) { markRead(target); syncReadButton(target); } } });
+      ], {
+        title: plain(lesson.title),
+        sub: `Lezione, ${mins} minuti • Voce Diego`,
+        audioUrl: `data/audio/lesson-${target}.mp3`,
+        fallbackAudioUrl: 'data/audio/lesson-latest.mp3',
+        onEnd: () => { if (!state.read[target]) { markRead(target); syncReadButton(target); } },
+      });
     });
 
     // Segna come letta in automatico quando arrivi in fondo (dopo almeno 20 secondi)
@@ -1376,16 +1387,87 @@
     });
   }
 
-  /* ---------- Ascolto (sintesi vocale del dispositivo) ---------- */
+  /* ---------- Ascolto (Audio neurale Diego MP3 + fallback sintesi vocale) ---------- */
   const speech = (() => {
     const synth = window.speechSynthesis;
     const $player = $('player');
+    const audio = new Audio();
+    audio.preload = 'metadata';
+
+    let mode = 'idle'; // 'audio' | 'synth' | 'idle'
     let queue = [];
     let pos = 0;
     let playing = false;
     let opts = {};
     let voice = null;
     let token = 0;
+
+    const fmtTime = (s) => {
+      if (!s || isNaN(s) || s < 0) return '0:00';
+      const m = Math.floor(s / 60);
+      const sec = Math.floor(s % 60);
+      return `${m}:${sec.toString().padStart(2, '0')}`;
+    };
+
+    const setupMediaSession = () => {
+      if (!('mediaSession' in navigator)) return;
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: opts.title || 'Quotidie',
+        artist: 'Quotidie — Voce di Diego',
+        album: opts.sub || 'Rassegna vocale',
+        artwork: [
+          { src: 'assets/icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'assets/icon-512.png', sizes: '512x512', type: 'image/png' },
+        ],
+      });
+      navigator.mediaSession.setActionHandler('play', () => { if (mode === 'audio') audio.play(); else toggle(); });
+      navigator.mediaSession.setActionHandler('pause', () => { if (mode === 'audio') audio.pause(); else toggle(); });
+      navigator.mediaSession.setActionHandler('seekbackward', () => {
+        if (mode === 'audio') audio.currentTime = Math.max(0, audio.currentTime - 15);
+        else speakAt(pos - 1);
+      });
+      navigator.mediaSession.setActionHandler('seekforward', () => {
+        if (mode === 'audio') audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 15);
+        else speakAt(pos + 1);
+      });
+      navigator.mediaSession.setActionHandler('seekto', (details) => {
+        if (mode === 'audio' && details.seekTime != null) audio.currentTime = details.seekTime;
+      });
+    };
+
+    // Eventi audio HTML5
+    audio.addEventListener('play', () => {
+      playing = true;
+      $player.classList.add('is-playing');
+      $player.querySelector('[data-player="toggle"]').setAttribute('aria-label', 'Pausa');
+      if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
+    });
+    audio.addEventListener('pause', () => {
+      playing = false;
+      $player.classList.remove('is-playing');
+      $player.querySelector('[data-player="toggle"]').setAttribute('aria-label', 'Riprendi');
+      if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
+    });
+    audio.addEventListener('timeupdate', () => {
+      if (mode !== 'audio') return;
+      const cur = audio.currentTime;
+      const dur = audio.duration;
+      if (dur > 0) {
+        $('player-progress').style.transform = `scaleX(${Math.min(1, cur / dur)})`;
+        const left = dur - cur;
+        $('player-sub').textContent = `${fmtTime(left)} rimanenti • Voce Diego`;
+      }
+    });
+    audio.addEventListener('ended', () => {
+      stop();
+      if (opts.onEnd) opts.onEnd();
+    });
+    audio.addEventListener('error', () => {
+      if (mode === 'audio' && queue.length) {
+        console.warn('Audio MP3 non disponibile o errore, passo a sintesi vocale');
+        playSynth(queue, opts);
+      }
+    });
 
     const pickVoice = () => {
       const voices = synth ? synth.getVoices() : [];
@@ -1397,7 +1479,6 @@
       synth.addEventListener?.('voiceschanged', pickVoice);
     }
 
-    // Frasi brevi: su iOS le stringhe lunghe vengono interrotte
     const split = (parts) => parts
       .filter(Boolean)
       .map((p) => plain(p).replace(/\s+/g, ' ').trim())
@@ -1416,20 +1497,25 @@
       });
 
     const ui = () => {
-      $player.hidden = !queue.length;
-      document.body.classList.toggle('has-player', !!queue.length);
-      if (!queue.length) return;
+      const active = mode !== 'idle';
+      $player.hidden = !active;
+      document.body.classList.toggle('has-player', active);
+      if (!active) return;
       $('player-title').textContent = opts.title || 'Ascolto';
-      const left = queue.slice(pos).join(' ');
-      $('player-sub').textContent = playing ? `Circa ${minutes(words(left))} min rimanenti` : 'In pausa';
-      $('player-progress').style.transform = `scaleX(${queue.length ? pos / queue.length : 0})`;
+      if (mode === 'audio') {
+        $('player-sub').textContent = 'Caricamento audio...';
+      } else {
+        const left = queue.slice(pos).join(' ');
+        $('player-sub').textContent = playing ? `Circa ${minutes(words(left))} min rimanenti` : 'In pausa';
+        $('player-progress').style.transform = `scaleX(${queue.length ? pos / queue.length : 0})`;
+      }
       $player.classList.toggle('is-playing', playing);
       $player.querySelector('[data-player="toggle"]').setAttribute('aria-label', playing ? 'Pausa' : 'Riprendi');
     };
 
     const speakAt = (i) => {
       const my = ++token;
-      synth.cancel();
+      if (synth) synth.cancel();
       pos = Math.max(0, Math.min(i, queue.length));
       if (pos >= queue.length) {
         const done = opts.onEnd;
@@ -1448,36 +1534,95 @@
       synth.speak(u);
     };
 
-    function play(parts, o = {}) {
-      if (!synth) { toast('Il tuo browser non supporta la lettura ad alta voce'); return; }
+    function playSynth(parts, o) {
+      mode = 'synth';
       queue = split(parts);
       opts = o;
       if (!queue.length) return;
       if (!voice) pickVoice();
       speakAt(0);
     }
-    function toggle() {
-      if (!queue.length) return;
-      if (playing) { playing = false; token++; synth.cancel(); ui(); } else speakAt(pos);
+
+    async function play(parts, o = {}) {
+      stop();
+      opts = o;
+      queue = split(parts);
+
+      if (o.audioUrl) {
+        try {
+          mode = 'audio';
+          playing = true;
+          ui();
+          audio.src = o.audioUrl;
+          await audio.play();
+          setupMediaSession();
+          return;
+        } catch (err) {
+          console.warn('Impossibile riprodurre audioUrl primario, provo fallback:', err.message);
+          if (o.fallbackAudioUrl) {
+            try {
+              audio.src = o.fallbackAudioUrl;
+              await audio.play();
+              setupMediaSession();
+              return;
+            } catch (e2) {}
+          }
+          playSynth(parts, o);
+          return;
+        }
+      }
+
+      playSynth(parts, o);
     }
+
+    function toggle() {
+      if (mode === 'audio') {
+        if (audio.paused) audio.play(); else audio.pause();
+        return;
+      }
+      if (!queue.length) return;
+      if (playing) { playing = false; token++; if (synth) synth.cancel(); ui(); } else speakAt(pos);
+    }
+
     function stop() {
       token++;
       playing = false;
+      mode = 'idle';
       queue = [];
       pos = 0;
+      audio.pause();
+      audio.currentTime = 0;
+      audio.src = '';
       if (synth) synth.cancel();
+      if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'none';
       ui();
     }
 
     $player.addEventListener('click', (e) => {
       const b = e.target.closest('[data-player]');
-      if (!b) return;
-      const a = b.dataset.player;
-      if (a === 'toggle') toggle();
-      if (a === 'close') stop();
-      if (a === 'prev') speakAt(pos - 1);
-      if (a === 'next') speakAt(pos + 1);
+      if (b) {
+        const a = b.dataset.player;
+        if (a === 'toggle') toggle();
+        if (a === 'close') stop();
+        if (a === 'prev') {
+          if (mode === 'audio') audio.currentTime = Math.max(0, audio.currentTime - 15);
+          else speakAt(pos - 1);
+        }
+        if (a === 'next') {
+          if (mode === 'audio') audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 15);
+          else speakAt(pos + 1);
+        }
+        return;
+      }
+
+      const bar = e.target.closest('.player-bar');
+      if (bar && mode === 'audio' && audio.duration > 0) {
+        const rect = bar.getBoundingClientRect();
+        const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        audio.currentTime = ratio * audio.duration;
+      }
     });
+
     window.addEventListener('pagehide', stop);
     return { play, stop };
   })();
