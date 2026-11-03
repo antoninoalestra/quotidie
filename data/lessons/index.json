@@ -1,6 +1,14 @@
 {
   "lessons": [
     {
+      "date": "2026-11-03",
+      "title": "L'Infinito Non È Uno Solo: La Gerarchia di Cantor",
+      "category": "Matematica",
+      "categoryId": "matematica",
+      "minutes": 4,
+      "hook": "E se l'infinito che conosciamo non fosse l'unico? Immaginate un universo matematico dove non tutti gli infiniti sono uguali, dove alcuni sono inequivocabilmente più grandi di altri. Questa è la vertiginosa intuizione che ha rivoluzionato il nostro modo di concepire il 'tutto'."
+    },
+    {
       "date": "2026-11-02",
       "title": "Il Triangolo del Litio: Chiavi del Futuro Energetico",
       "category": "Geopolitica",
