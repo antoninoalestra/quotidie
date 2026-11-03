@@ -48,15 +48,45 @@
       <a href="#/news" data-tab="news">Giornale</a>
       <a href="#/learn" data-tab="learn">Impara</a>
     </nav>
+    <button class="icon-btn run-chip" id="run-chip" type="button" hidden aria-label="Stato dell'aggiornamento">
+      <span class="run-chip-dot"></span><span class="run-chip-text">Aggiornamento</span>
+    </button>
     <a class="icon-btn" href="#/settings" data-tab="settings" aria-label="Impostazioni">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 8.96 4.6H9a1.7 1.7 0 0 0 1-1.56V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.04a1.7 1.7 0 0 0 1.56 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51.96Z"/></svg>
     </a>
     <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
   </header>
 
-  <main id="view" tabindex="-1" aria-live="polite"></main>
+  <div class="ptr" id="ptr" aria-hidden="true"><span></span></div>
+
+  <main id="view" tabindex="-1"></main>
+
+  <!-- Barra di ascolto -->
+  <div class="player" id="player" hidden role="region" aria-label="Ascolto">
+    <div class="player-bar"><span id="player-progress"></span></div>
+    <div class="player-row">
+      <div class="player-info">
+        <b id="player-title">Ascolto</b>
+        <span id="player-sub"></span>
+      </div>
+      <button class="player-btn" data-player="prev" type="button" aria-label="Frase precedente">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6v12M18 6l-8 6 8 6V6Z"/></svg>
+      </button>
+      <button class="player-btn main" data-player="toggle" type="button" aria-label="Pausa">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7V5Z"/></svg>
+      </button>
+      <button class="player-btn" data-player="next" type="button" aria-label="Frase successiva">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6v12M6 6l8 6-8 6V6Z"/></svg>
+      </button>
+      <button class="player-btn" data-player="close" type="button" aria-label="Chiudi ascolto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
 
   <nav class="tabbar" aria-label="Sezioni">
+    <span class="tab-indicator" aria-hidden="true"></span>
     <a href="#/news" data-tab="news">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5Z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7.5 9h6M7.5 12.5h6M7.5 16h4"/></svg>
       <span>Giornale</span>
@@ -66,6 +96,13 @@
       <span>Impara</span>
     </a>
   </nav>
+
+  <!-- Finestra dal basso (aggiornamento dell'edizione) -->
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <section class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div id="sheet-body"></div>
+  </section>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

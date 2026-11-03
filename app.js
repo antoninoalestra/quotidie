@@ -1,22 +1,24 @@
 /* =========================================================
    Quotidie — logica dell'app
    Dati: file JSON generati ogni mattina da GitHub Actions (data/).
-   Stato personale (letto, preferiti, streak, preferenze): localStorage.
+   Stato personale (letture, preferiti, streak, preferenze): localStorage.
    ========================================================= */
 (() => {
   'use strict';
 
   const TZ = 'Europe/Rome';
   const WPM = 200; // parole al minuto, lettura in italiano
+  const WORKFLOW = 'daily.yml';
   const KEYS = {
     state: 'qd.state',
     prefs: 'qd.prefs',
     cache: 'qd.cache',
     topicsDraft: 'qd.topicsDraft',
     github: 'qd.github',
+    run: 'qd.run',
   };
 
-  // Categorie iniziali delle lezioni: la GitHub Action usa le stesse se data/topics.json non esiste ancora
+  // Categorie iniziali delle lezioni: il workflow usa le stesse se data/topics.json non esiste ancora
   const DEFAULT_TOPICS = [
     'Intelligenza artificiale', 'Informatica', 'Architettura software', 'Cybersecurity', 'Finanza personale',
     'Mercati finanziari', 'Macroeconomia', 'Economia comportamentale', 'Storia', "Storia dell'arte", 'Filosofia',
@@ -25,13 +27,14 @@
     'Gastronomia e vino', 'Produttività e metodo', 'Negoziazione e comunicazione', 'Retorica e pensiero critico',
     'Grandi invenzioni', 'Ecologia e clima', 'Diritto per tutti', 'Mitologia',
   ];
-  const slug = (name) => name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  const slug = (name) => String(name).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-  const $view = document.getElementById('view');
-  const $topbar = document.getElementById('topbar');
-  const $progress = document.getElementById('progress-bar');
-  const $toast = document.getElementById('toast');
+  const $ = (id) => document.getElementById(id);
+  const $view = $('view');
+  const $topbar = $('topbar');
+  const $progress = $('progress-bar');
+  const $toast = $('toast');
 
   /* ---------- Utilità ---------- */
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => (
@@ -42,6 +45,7 @@
   const inline = (s) => esc(s)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g, '$1<em>$2</em>');
+  const plain = (s) => String(s ?? '').replace(/\*\*?(.+?)\*\*?/g, '$1');
 
   const paragraphs = (s) => String(s ?? '')
     .split(/\n\s*\n|\n/)
@@ -67,6 +71,7 @@
   // Data "di calendario" a Roma, formato YYYY-MM-DD
   const isoDay = (d = new Date()) =>
     new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
+  const romeHour = () => Number(new Intl.DateTimeFormat('en-GB', { timeZone: TZ, hour: '2-digit', hourCycle: 'h23' }).format(new Date()));
 
   const fromIso = (iso) => {
     const [y, m, d] = iso.split('-').map(Number);
@@ -77,22 +82,29 @@
     d.setUTCDate(d.getUTCDate() + n);
     return d.toISOString().slice(0, 10);
   };
+  const isIso = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s || '');
 
   const fmt = (iso, opts) => new Intl.DateTimeFormat('it-IT', { timeZone: 'UTC', ...opts }).format(fromIso(iso));
-  const longDate = (iso) => {
-    const s = fmt(iso, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-    return s.charAt(0).toUpperCase() + s.slice(1);
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const longDate = (iso) => cap(fmt(iso, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));
+  // "dal 2 all'8 novembre" oppure "dal 28 ottobre al 3 novembre"
+  const rangeText = (from, to) => {
+    const sameMonth = from.slice(0, 7) === to.slice(0, 7);
+    const a = fmt(from, sameMonth ? { day: 'numeric' } : { day: 'numeric', month: 'long' });
+    const b = fmt(to, { day: 'numeric', month: 'long' });
+    return `dal ${a} ${/^(8|11)\b/.test(b) ? "all'" : 'al '}${b}`;
   };
 
   const words = (s) => (String(s ?? '').match(/\S+/g) || []).length;
   const minutes = (n) => Math.max(1, Math.round(n / WPM));
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
   let toastTimer;
   const toast = (msg) => {
     $toast.textContent = msg;
     $toast.classList.add('is-on');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => $toast.classList.remove('is-on'), 2600);
+    toastTimer = setTimeout(() => $toast.classList.remove('is-on'), 2800);
   };
 
   const icon = {
@@ -100,11 +112,14 @@
     star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.8 2.5 5.1 5.6.8-4 4 .9 5.6-5-2.7-5 2.7.9-5.6-4-4 5.6-.8L12 3.8Z"/></svg>',
     starSolid: '<svg class="star" viewBox="0 0 24 24" aria-label="Preferito"><path d="m12 3.8 2.5 5.1 5.6.8-4 4 .9 5.6-5-2.7-5 2.7.9-5.6-4-4 5.6-.8L12 3.8Z"/></svg>',
     back: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+    listen: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg>',
+    chevron: '<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+    refresh: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>',
     logo: '<svg aria-hidden="true"><use href="#logo-mark"/></svg>',
   };
 
   /* ---------- Stato personale ---------- */
-  const state = Object.assign({ read: {}, favs: {}, readDays: [] }, load(KEYS.state, {}));
+  const state = Object.assign({ read: {}, favs: {}, readDays: [], newsRead: {} }, load(KEYS.state, {}));
   const prefs = Object.assign({ theme: 'auto', textScale: 1 }, load(KEYS.prefs, {}));
   const persist = () => save(KEYS.state, state);
 
@@ -124,6 +139,16 @@
     return !!state.favs[date];
   };
 
+  // Notizie lette: si tengono solo le edizioni ancora in archivio
+  const storyKey = (date, story) => `${date}:${slug(story.title).slice(0, 60)}`;
+  const markStoryRead = (key) => {
+    if (state.newsRead[key]) return;
+    state.newsRead[key] = 1;
+    const cutoff = addDays(isoDay(), -10);
+    for (const k of Object.keys(state.newsRead)) if (k.slice(0, 10) < cutoff) delete state.newsRead[k];
+    persist();
+  };
+
   // Giorni consecutivi con almeno una lezione letta (oggi o ieri compresi)
   const streak = () => {
     const days = new Set(state.readDays);
@@ -141,15 +166,16 @@
   async function getJSON(path) {
     if (memo[path]) return memo[path];
     try {
-      const res = await fetch(path, { cache: 'no-cache' });
+      // Il parametro evita la cache di GitHub Pages/Safari; il service worker lo ignora
+      const res = await fetch(`${path}?v=${Date.now()}`, { cache: 'no-store' });
       if (!res.ok) throw Object.assign(new Error(`HTTP ${res.status}`), { status: res.status });
       const data = await res.json();
       memo[path] = data;
       cache[path] = data;
-      // In cache solo l'indice, le notizie e le ultime lezioni, per restare leggeri
-      const keep = Object.keys(cache).filter((k) => !k.includes('/lessons/2')).concat(
-        Object.keys(cache).filter((k) => k.includes('/lessons/2')).sort().slice(-5)
-      );
+      // In cache solo indici, ultime notizie e ultime lezioni, per restare leggeri
+      const keys = Object.keys(cache);
+      const dated = (k) => /\/\d{4}-\d{2}-\d{2}\.json$/.test(k);
+      const keep = keys.filter((k) => !dated(k)).concat(keys.filter(dated).sort((a, b) => a.slice(-15).localeCompare(b.slice(-15))).slice(-8));
       save(KEYS.cache, Object.fromEntries(keep.map((k) => [k, cache[k]])));
       return data;
     } catch (err) {
@@ -157,53 +183,51 @@
       throw err;
     }
   }
+  const clearMemo = () => Object.keys(memo).forEach((k) => delete memo[k]);
 
-  const getNews = () => getJSON('data/news/latest.json');
+  const getNews = (date) => getJSON(date ? `data/news/${date}.json` : 'data/news/latest.json');
+  const getEditions = () => getJSON('data/news/index.json').then((d) => d.editions || []).catch(() => []);
   const getIndex = () => getJSON('data/lessons/index.json').then((d) => d.lessons || []);
   const getLesson = (date) => getJSON(`data/lessons/${date}.json`);
   const getTopics = () => getJSON('data/topics.json');
 
   /* ---------- Router ---------- */
-  const routes = {
-    news: renderNews,
-    learn: renderLearn,
-    settings: renderSettings,
-  };
+  const routes = { news: renderNews, learn: renderLearn, settings: renderSettings };
 
   let cleanup = [];
+  let currentView = '';
   async function route() {
     cleanup.forEach((fn) => fn());
     cleanup = [];
+    speech.stop();
 
     // Vecchio indirizzo dello storico, ora dentro Impara
     if (/^#\/?archive/.test(location.hash)) return location.replace('#/learn/storico');
 
     const [name = 'news', param] = location.hash.replace(/^#\/?/, '').split('/');
     const view = routes[name] ? name : 'news';
-    const tab = view;
+    const sameView = view === currentView;
+    currentView = view;
 
     document.querySelectorAll('[data-tab]').forEach((a) => {
-      a.classList.toggle('is-active', a.dataset.tab === tab);
-      if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+      const on = a.dataset.tab === view;
+      a.classList.toggle('is-active', on);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
+    document.body.dataset.view = view;
+    moveTabIndicator();
 
-    $view.innerHTML = skeleton();
+    if (!sameView) $view.innerHTML = skeleton(view);
     window.scrollTo(0, 0);
     try {
       await routes[view](param);
     } catch (err) {
       console.error(err);
-      $view.innerHTML = err.status === 404
-        ? emptyState(
-          'Nessuna edizione ancora',
-          'La prima edizione arriva domattina. Per averla subito, su GitHub apri Actions, scegli "Edizione del mattino" e premi Run workflow.',
-          '<button class="text-link" data-action="reload">Controlla di nuovo</button>'
-        )
-        : emptyState(
-          'Contenuti non disponibili',
-          'Non riesco a caricare l\'edizione: controlla la connessione.',
-          '<button class="text-link" data-action="reload">Riprova</button>'
-        );
+      $view.innerHTML = err.status === 404 ? noEditionState() : emptyState(
+        'Contenuti non disponibili',
+        'Non riesco a caricare l\'edizione: controlla la connessione.',
+        '<button class="text-link" data-action="reload">Riprova</button>'
+      );
     }
     $view.classList.remove('view-enter');
     void $view.offsetWidth;
@@ -211,11 +235,20 @@
     updateProgress();
   }
 
-  const skeleton = () => `
+  const skeleton = (view) => view === 'news' ? `
     <div class="loading" aria-label="Caricamento">
-      <div class="skeleton" style="height:14px;width:40%"></div>
-      <div class="skeleton" style="height:48px;width:85%"></div>
-      <div class="skeleton" style="height:48px;width:60%;margin-bottom:2rem"></div>
+      <div class="skeleton" style="height:13px;width:45%"></div>
+      <div class="skeleton" style="height:44px;width:80%;margin-top:.8rem"></div>
+      <div class="skeleton" style="height:3px;margin:1.4rem 0"></div>
+      ${Array.from({ length: 4 }, () => `
+        <div class="skeleton" style="height:20px;width:88%;margin-top:1.6rem"></div>
+        <div class="skeleton" style="height:14px"></div>
+        <div class="skeleton" style="height:14px;width:62%"></div>`).join('')}
+    </div>` : `
+    <div class="loading" aria-label="Caricamento">
+      <div class="skeleton" style="height:13px;width:40%"></div>
+      <div class="skeleton" style="height:44px;width:85%;margin-top:.8rem"></div>
+      <div class="skeleton" style="height:44px;width:60%;margin-bottom:2rem"></div>
       <div class="skeleton" style="height:14px"></div>
       <div class="skeleton" style="height:14px"></div>
       <div class="skeleton" style="height:14px;width:70%"></div>
@@ -229,78 +262,207 @@
       ${action}
     </div>`;
 
+  const noEditionState = () => emptyState(
+    'Nessuna edizione ancora',
+    'La prima edizione arriva domattina. Puoi anche crearla adesso: ci vogliono un paio di minuti.',
+    `<button class="btn primary" data-action="run">${icon.refresh}Crea l'edizione adesso</button>
+     <button class="text-link" data-action="reload">Controlla di nuovo</button>`
+  );
+
   /* ---------- Giornale ---------- */
-  async function renderNews() {
-    const news = await getNews();
+  const deskShort = { tech: 'Tech e AI', finance: 'Finanza', italy: 'Italia', world: 'Mondo' };
+  const storyText = (st) => [st.title, st.lead, st.body || st.summary, st.why].filter(Boolean).join(' ');
+
+  async function renderNews(param) {
+    const date = isIso(param) ? param : null;
+    const [news, editions] = await Promise.all([getNews(date), getEditions()]);
     const today = isoDay();
-    const sections = news.sections || [];
+    const sections = (news.sections || []).filter((s) => s.stories?.length);
+    const weekly = news.kind === 'weekly';
 
-    const allText = [
-      ...(news.brief || []),
-      ...sections.flatMap((s) => s.stories.flatMap((st) => [st.title, st.summary, st.why])),
-    ].join(' ');
-    const mins = minutes(words(allText));
+    const allText = [...(news.brief || []), ...sections.flatMap((s) => s.stories.map(storyText))].join(' ');
+    const mins = news.minutes || minutes(words(allText));
     const storyCount = sections.reduce((n, s) => n + s.stories.length, 0);
+    const keys = sections.flatMap((s) => s.stories.map((st) => storyKey(news.date, st)));
 
-    let staleNote = '';
-    if (news.date !== today) {
-      staleNote = news.date === addDays(today, -1)
-        ? '<span class="stale">Edizione di ieri</span>'
-        : `<span class="stale">Edizione del ${esc(fmt(news.date, { day: 'numeric', month: 'long' }))}</span>`;
+    const isLatest = !date;
+    let note = '';
+    if (isLatest && news.date !== today) {
+      const late = romeHour() >= 9;
+      note = `
+        <div class="stale-note">
+          <span>${news.date === addDays(today, -1) ? 'Questa è l\'edizione di ieri' : `Questa è l'edizione del ${esc(fmt(news.date, { day: 'numeric', month: 'long' }))}`}${late ? ': quella di oggi non è ancora arrivata.' : '. Quella di oggi arriva in mattinata.'}</span>
+          ${late ? `<button class="text-link" data-action="run">Aggiorna adesso</button>` : ''}
+        </div>`;
     }
+
+    const heading = weekly
+      ? `La settimana <em>${esc(rangeText(news.range?.from || addDays(news.date, -6), news.range?.to || news.date))}</em>`
+      : isLatest && news.date === today ? greeting() : `Il mondo, <em>${esc(fmt(news.date, { weekday: 'long', day: 'numeric', month: 'long' }))}</em>`;
 
     $view.innerHTML = `
       <header class="masthead">
+        ${editionChips(editions, news.date)}
         <div class="dateline">
           <span>${esc(longDate(news.date))}</span>
-          <span>${storyCount} notizie in ${mins} minuti</span>
-          ${staleNote}
+          <span>${storyCount} notizie, ${mins} minuti</span>
         </div>
-        <h1>${greeting()}</h1>
+        <h1>${heading}</h1>
+        ${note}
         <div class="dawn" aria-hidden="true"></div>
         ${news.brief?.length ? `
           <ul class="brief" aria-label="In breve">
             ${news.brief.map((b) => `<li>${inline(b)}</li>`).join('')}
           </ul>` : ''}
+        <div class="news-actions">
+          <button class="btn small" data-action="listen-news">${icon.listen}Ascolta</button>
+          <span class="read-count" id="read-count"></span>
+        </div>
       </header>
+      <nav class="desk-nav" id="desk-nav" aria-label="Sezioni del giornale">
+        ${sections.map((s) => `<a href="#desk-${esc(s.id)}" data-desk="${esc(s.id)}">${esc(deskShort[s.id] || s.title)}</a>`).join('')}
+      </nav>
       <div class="desks">
-        ${sections.map(renderDesk).join('')}
+        ${sections.map((s) => renderDesk(s, news.date)).join('')}
       </div>`;
+
+    const updateCount = () => {
+      const n = keys.filter((k) => state.newsRead[k]).length;
+      $('read-count').textContent = n ? `${n} di ${keys.length} lette` : 'Tocca una notizia per aprirla';
+    };
+    updateCount();
+
+    // Espandi / chiudi notizia
+    $view.querySelectorAll('.story-toggle').forEach((btn) => btn.addEventListener('click', () => {
+      const story = btn.closest('.story');
+      const open = !story.classList.contains('is-open');
+      story.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open);
+      if (open) {
+        markStoryRead(story.dataset.key);
+        story.classList.add('is-read');
+        updateCount();
+        // Se la notizia aperta finisce sotto la tab bar, la porta in vista
+        requestAnimationFrame(() => {
+          const r = story.getBoundingClientRect();
+          if (r.top < 120) window.scrollBy({ top: r.top - 130, behavior: 'smooth' });
+        });
+      }
+    }));
+
+    // Barra delle sezioni: tocco = scorri alla sezione; scorrendo si evidenzia quella visibile
+    const nav = $('desk-nav');
+    const setDesk = (id) => nav.querySelectorAll('[data-desk]').forEach((a) => {
+      const on = a.dataset.desk === id;
+      if (on === a.classList.contains('is-on')) return;
+      a.classList.toggle('is-on', on);
+      // Porta in vista la voce attiva scorrendo solo la barra, non la pagina
+      if (on) nav.scrollTo({ left: a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' });
+    });
+    let lockUntil = 0;
+    nav.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-desk]');
+      if (!a) return;
+      e.preventDefault();
+      const target = $(`desk-${a.dataset.desk}`);
+      const top = target.getBoundingClientRect().top + window.scrollY - (nav.offsetHeight + $topbar.offsetHeight + 8);
+      setDesk(a.dataset.desk);
+      lockUntil = Date.now() + 900;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+    const onScroll = () => {
+      if (Date.now() < lockUntil) return;
+      const line = $topbar.offsetHeight + nav.offsetHeight + 40;
+      let current = sections[0]?.id;
+      for (const s of sections) if ($(`desk-${s.id}`).getBoundingClientRect().top <= line) current = s.id;
+      setDesk(current);
+    };
+    let raf = 0;
+    const scrollHandler = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(onScroll); };
+    window.addEventListener('scroll', scrollHandler, { passive: true });
+    cleanup.push(() => window.removeEventListener('scroll', scrollHandler));
+
+    // Ascolto
+    $view.querySelector('[data-action="listen-news"]').addEventListener('click', () => {
+      const parts = [
+        `${weekly ? 'La settimana' : 'Il giornale'} di ${longDate(news.date)}.`,
+        ...(news.brief || []),
+        ...sections.flatMap((s) => [`${s.title}.`, ...s.stories.flatMap((st) => [st.title + '.', st.lead, st.body || st.summary, st.why])]),
+      ];
+      speech.play(parts, { title: weekly ? 'La settimana' : 'Il giornale', sub: `${mins} minuti` });
+    });
+    $view.querySelectorAll('[data-action="listen-story"]').forEach((b) => b.addEventListener('click', () => {
+      const st = sections.flatMap((s) => s.stories).find((x) => storyKey(news.date, x) === b.dataset.key);
+      if (st) speech.play([st.title + '.', st.lead, st.body || st.summary, st.why], { title: plain(st.title), sub: 'Notizia' });
+    }));
+  }
+
+  function editionChips(editions, current) {
+    if (editions.length < 2) return '';
+    const latest = editions[0]?.date;
+    return `
+      <nav class="editions" aria-label="Edizioni precedenti">
+        ${editions.map((e) => {
+          const label = e.date === isoDay() ? 'Oggi'
+            : e.date === addDays(isoDay(), -1) ? 'Ieri'
+            : e.kind === 'weekly' ? `Settimana ${fmt(e.date, { day: 'numeric' })}`
+            : cap(fmt(e.date, { weekday: 'short', day: 'numeric' }));
+          const href = e.date === latest ? '#/news' : `#/news/${e.date}`;
+          return `<a href="${href}" class="${e.date === current ? 'is-on' : ''}${e.kind === 'weekly' ? ' weekly' : ''}">${esc(label)}</a>`;
+        }).join('')}
+      </nav>`;
   }
 
   function greeting() {
-    const h = Number(new Intl.DateTimeFormat('it-IT', { timeZone: TZ, hour: 'numeric', hour12: false }).format(new Date()));
+    const h = romeHour();
     if (h < 5) return 'Buona notte, <em>ecco il mondo</em>';
     if (h < 13) return 'Buongiorno, <em>ecco il mondo</em>';
     if (h < 18) return 'Buon pomeriggio, <em>ecco il mondo</em>';
     return 'Buonasera, <em>ecco il mondo</em>';
   }
 
-  function renderDesk(section) {
+  function renderDesk(section, date) {
     return `
-      <section class="desk" aria-labelledby="desk-${esc(section.id)}">
+      <section class="desk" id="desk-${esc(section.id)}" aria-labelledby="desk-h-${esc(section.id)}">
         <div class="desk-head">
-          <h2 id="desk-${esc(section.id)}">${esc(section.title)}</h2>
+          <h2 id="desk-h-${esc(section.id)}">${esc(section.title)}</h2>
           <span class="meta">${section.stories.length} notizie</span>
         </div>
-        ${section.stories.map(renderStory).join('')}
+        ${section.stories.map((st) => renderStory(st, date)).join('')}
       </section>`;
   }
 
-  function renderStory(story) {
+  function renderStory(story, date) {
+    const key = storyKey(date, story);
     const sources = (story.sources || [])
       .map((s) => ({ ...s, url: safeUrl(s.url) }))
       .filter((s) => s.url)
       .slice(0, 3);
+    const body = story.body || story.summary || '';
+    // Edizioni vecchie senza "lead": anteprima dalla prima frase del testo
+    const lead = story.lead || (body.match(/^.*?[.!?](\s|$)/) || [body.slice(0, 160)])[0];
+    const rest = story.lead ? body : body.slice(lead.length);
+    const secs = story.readSeconds || Math.round(words(storyText(story)) / WPM * 60);
+    const time = secs >= 90 ? `${Math.round(secs / 60)} min` : `${Math.max(1, Math.round(secs / 60))} min`;
+    const read = !!state.newsRead[key];
+    const id = `st-${slug(key).slice(-40)}`;
     return `
-      <article class="story">
-        <h3>${inline(story.title)}</h3>
-        ${paragraphs(story.summary)}
-        ${story.why ? `<p class="why">${inline(story.why)}</p>` : ''}
-        ${sources.length ? `
-          <div class="sources">
-            ${sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title || new URL(s.url).hostname)} ↗</a>`).join('')}
-          </div>` : ''}
+      <article class="story${read ? ' is-read' : ''}" data-key="${esc(key)}">
+        <button class="story-toggle" type="button" aria-expanded="false" aria-controls="${id}">
+          <h3>${inline(story.title)}</h3>
+          <p class="lead">${inline(lead)}</p>
+          <span class="story-meta">${read ? '<span class="tick" aria-label="Letta"></span>' : ''}${time}${icon.chevron}</span>
+        </button>
+        <div class="story-more" id="${id}">
+          <div class="story-inner">
+            ${paragraphs(rest)}
+            ${story.why ? `<p class="why"><b>Perché conta.</b> ${inline(story.why)}</p>` : ''}
+            <div class="story-foot">
+              ${sources.length ? `<div class="sources">${sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title || new URL(s.url).hostname)} ↗</a>`).join('')}</div>` : ''}
+              <button class="text-link" data-action="listen-story" data-key="${esc(key)}">${icon.listen}Ascolta</button>
+            </div>
+          </div>
+        </div>
       </article>`;
   }
 
@@ -308,7 +470,8 @@
   async function renderLearn(param) {
     const index = await getIndex();
     if (!index.length) {
-      $view.innerHTML = emptyState('Nessuna lezione ancora', 'La prima lezione arriva con la prossima edizione del mattino.');
+      $view.innerHTML = emptyState('Nessuna lezione ancora', 'La prima lezione arriva con la prossima edizione del mattino.',
+        `<button class="btn primary" data-action="run">${icon.refresh}Crea l'edizione adesso</button>`);
       return;
     }
     const onArchive = param === 'storico';
@@ -318,7 +481,7 @@
       <nav class="subnav" aria-label="Impara">
         <div class="segmented">
           <a href="#/learn" class="${!onArchive && !isPast ? 'is-on' : ''}">Oggi</a>
-          <a href="#/learn/storico" class="${onArchive || isPast ? 'is-on' : ''}">Storico${unread ? `<span class="badge" aria-label="${unread} da leggere">${unread}</span>` : ''}</a>
+          <a href="#/learn/storico" class="${onArchive || isPast ? 'is-on' : ''}">Storico<span class="badge" ${unread ? '' : 'hidden'} aria-label="${unread} da leggere">${unread}</span></a>
         </div>
       </nav>`;
     if (onArchive) return renderArchive(index, subnav);
@@ -328,15 +491,15 @@
   async function renderLesson(index, target, subnav) {
     const lesson = await getLesson(target);
     const isToday = target === index[0].date;
+    const sections = lesson.sections || [];
 
     const fullText = [
       lesson.hook,
-      ...lesson.sections.flatMap((s) => [s.heading, s.body]),
+      ...sections.flatMap((s) => [s.heading, s.body]),
       ...(lesson.keyTakeaways || []),
       lesson.example, lesson.funFact,
     ].join(' ');
     const mins = lesson.minutes || minutes(words(fullText));
-
     const further = Array.isArray(lesson.furtherReading) ? lesson.furtherReading : [];
 
     $view.innerHTML = `${subnav}
@@ -348,10 +511,13 @@
           <span>${mins} minuti</span>
         </div>
         <h1>${inline(lesson.title)}</h1>
+        ${lesson.fromNews?.headline ? `<p class="from-news">Spunto dalla notizia: <em>${inline(lesson.fromNews.headline)}</em></p>` : ''}
         <p class="hook">${inline(lesson.hook)}</p>
+        ${lesson.series ? seriesBox(lesson.series, index, target) : ''}
+        <button class="btn small listen-lesson" data-action="listen-lesson">${icon.listen}Ascolta la lezione</button>
 
         <div class="body">
-          ${lesson.sections.map((s) => `
+          ${sections.map((s) => `
             <section>
               <h2>${inline(s.heading)}</h2>
               ${paragraphs(s.body)}
@@ -389,9 +555,18 @@
         </div>
       </article>`;
 
+    $view.querySelector('[data-action="listen-lesson"]').addEventListener('click', () => {
+      speech.play([
+        lesson.title + '.', lesson.hook,
+        ...sections.flatMap((s) => [s.heading + '.', s.body]),
+        lesson.example ? 'Un esempio concreto. ' + lesson.example : '',
+        lesson.keyTakeaways?.length ? 'Da ricordare. ' + lesson.keyTakeaways.join(' ') : '',
+        lesson.funFact ? 'Lo sapevi? ' + lesson.funFact : '',
+      ], { title: plain(lesson.title), sub: `Lezione, ${mins} minuti`, onEnd: () => { if (!state.read[target]) { markRead(target); syncReadButton(target); } } });
+    });
+
     // Segna come letta in automatico quando arrivi in fondo (dopo almeno 20 secondi)
     const opened = Date.now();
-    const end = document.getElementById('lesson-end');
     const io = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && Date.now() - opened > 20000 && !state.read[target]) {
         markRead(target);
@@ -400,16 +575,40 @@
         io.disconnect();
       }
     }, { threshold: 0.6 });
-    io.observe(end);
+    io.observe($('lesson-end'));
     cleanup.push(() => io.disconnect());
+  }
+
+  function seriesBox(series, index, current) {
+    // Le puntate uscite si trovano nell'indice con lo stesso id di percorso
+    const published = Object.fromEntries(index.filter((l) => l.series?.id === series.id).map((l) => [l.series.part, l.date]));
+    const parts = series.parts || [];
+    return `
+      <aside class="series">
+        <div class="series-head">
+          <span class="series-label">Percorso, parte ${series.part} di ${series.total}</span>
+          <b>${inline(series.title)}</b>
+          ${series.intro ? `<p>${inline(series.intro)}</p>` : ''}
+        </div>
+        <ol class="series-parts">
+          ${parts.map((t, i) => {
+            const n = i + 1;
+            const date = published[n];
+            const state_ = n === series.part ? 'is-current' : date ? 'is-done' : 'is-next';
+            const label = inline(t);
+            return `<li class="${state_}">${date && date !== current ? `<a href="#/learn/${esc(date)}">${label}</a>` : `<span>${label}</span>`}${!date ? '<small>in arrivo</small>' : ''}</li>`;
+          }).join('')}
+        </ol>
+      </aside>`;
   }
 
   function syncReadButton(date) {
     const btn = $view.querySelector('[data-action="read"]');
-    if (!btn) return;
-    const on = !!state.read[date];
-    btn.classList.toggle('is-on', on);
-    btn.querySelector('span').textContent = on ? 'Letta' : 'Segna come letta';
+    if (btn) {
+      const on = !!state.read[date];
+      btn.classList.toggle('is-on', on);
+      btn.querySelector('span').textContent = on ? 'Letta' : 'Segna come letta';
+    }
     const badge = $view.querySelector('.subnav .badge');
     if (badge) getIndex().then((index) => {
       const n = index.filter((l) => !state.read[l.date]).length;
@@ -424,6 +623,7 @@
   function renderArchive(index, subnav) {
     const cats = [...new Set(index.map((l) => l.category))].sort((a, b) => a.localeCompare(b, 'it'));
     const readCount = index.filter((l) => state.read[l.date]).length;
+    const hasSeries = index.some((l) => l.series);
     const s = streak();
 
     // Ultimi 7 giorni per il mini-calendario della streak
@@ -431,27 +631,29 @@
     const days = new Set(state.readDays);
     const week = Array.from({ length: 7 }, (_, i) => addDays(today, i - 6));
 
+    const statusFilters = [['all', 'Tutte'], ['unread', 'Da leggere'], ['favs', 'Preferiti']];
+    if (hasSeries) statusFilters.push(['series', 'Percorsi']);
+    if (!statusFilters.some(([k]) => k === archiveFilter.only)) archiveFilter.only = 'all';
+
     $view.innerHTML = `${subnav}
       <section class="archive">
-        <header class="archive-head">
-          <div class="stats">
-            <div class="stat streak">
-              <b>${s}</b>
-              <span>${s === 1 ? 'giorno di fila' : 'giorni di fila'}</span>
-              <div class="week" aria-label="Letture degli ultimi 7 giorni">
-                ${week.map((d) => `<i class="${days.has(d) ? 'on' : ''}" title="${esc(fmt(d, { weekday: 'long', day: 'numeric' }))}"></i>`).join('')}
-              </div>
+        <div class="stats">
+          <div class="stat streak">
+            <b>${s}</b>
+            <span>${s === 1 ? 'giorno di fila' : 'giorni di fila'}</span>
+            <div class="week" aria-label="Letture degli ultimi 7 giorni">
+              ${week.map((d) => `<i class="${days.has(d) ? 'on' : ''}" title="${esc(fmt(d, { weekday: 'long', day: 'numeric' }))}"></i>`).join('')}
             </div>
-            <div class="stat"><b>${readCount}</b><span>lette</span></div>
-            <div class="stat"><b>${index.length - readCount}</b><span>da leggere</span></div>
           </div>
-        </header>
+          <div class="stat"><b>${readCount}</b><span>lette</span></div>
+          <div class="stat"><b>${index.length - readCount}</b><span>da leggere</span></div>
+        </div>
 
         <div class="filters">
           <label class="sr-only" for="q">Cerca nello storico</label>
-          <input class="search" id="q" type="search" placeholder="Cerca un argomento" value="${esc(archiveFilter.q)}" autocomplete="off">
+          <input class="search" id="q" type="search" placeholder="Cerca un argomento" value="${esc(archiveFilter.q)}" autocomplete="off" enterkeyhint="search">
           <div class="chips" role="group" aria-label="Filtra per stato">
-            ${[['all', 'Tutte'], ['unread', 'Da leggere'], ['favs', 'Preferiti']].map(([k, label]) => `
+            ${statusFilters.map(([k, label]) => `
               <button class="chip ${archiveFilter.only === k ? 'is-on' : ''}" data-only="${k}">${label}</button>`).join('')}
           </div>
           <div class="chips" role="group" aria-label="Filtra per categoria">
@@ -463,17 +665,18 @@
         <div id="entries"></div>
       </section>`;
 
-    const $entries = document.getElementById('entries');
+    const $entries = $('entries');
     const draw = () => {
       const q = archiveFilter.q.trim().toLowerCase();
       const list = index.filter((l) =>
         (archiveFilter.cat === 'all' || l.category === archiveFilter.cat) &&
         (archiveFilter.only !== 'unread' || !state.read[l.date]) &&
         (archiveFilter.only !== 'favs' || state.favs[l.date]) &&
-        (!q || `${l.title} ${l.category} ${l.hook || ''}`.toLowerCase().includes(q))
+        (archiveFilter.only !== 'series' || l.series) &&
+        (!q || `${l.title} ${l.category} ${l.hook || ''} ${l.series?.title || ''}`.toLowerCase().includes(q))
       );
       if (!list.length) {
-        $entries.innerHTML = `<div class="empty"><p>${
+        $entries.innerHTML = `<div class="empty small"><p>${
           archiveFilter.only === 'favs' ? 'Nessun preferito con questi filtri. Tocca la stella in fondo a una lezione per salvarla qui.'
           : archiveFilter.only === 'unread' ? 'Hai letto tutto. Ottimo lavoro.'
           : 'Nessuna lezione corrisponde alla ricerca.'
@@ -486,12 +689,13 @@
         const head = m !== month ? `<h2 class="month">${esc(m)}</h2>` : '';
         month = m;
         const read = !!state.read[l.date];
+        const sub = l.series ? `${esc(l.series.title)}, parte ${l.series.part} di ${l.series.total}` : esc(l.category);
         return `${head}
           <a class="entry ${read ? 'is-read' : ''}" href="#/learn/${esc(l.date)}">
             <span class="day"><b>${fromIso(l.date).getUTCDate()}</b><small>${esc(fmt(l.date, { weekday: 'short' }))}</small></span>
             <span>
               <h3>${inline(l.title)}</h3>
-              <span class="sub">${esc(l.category)}, ${l.minutes || 5} minuti</span>
+              <span class="sub">${sub}, ${l.minutes || 5} min</span>
             </span>
             <span class="marks">
               ${state.favs[l.date] ? icon.starSolid : ''}
@@ -502,7 +706,7 @@
     };
     draw();
 
-    const $q = document.getElementById('q');
+    const $q = $('q');
     $q.addEventListener('input', () => { archiveFilter.q = $q.value; draw(); });
     $view.querySelectorAll('[data-only]').forEach((b) => b.addEventListener('click', () => {
       archiveFilter.only = b.dataset.only;
@@ -516,7 +720,7 @@
     }));
   }
 
-  /* ---------- Impostazioni ---------- */
+  /* ---------- GitHub: configurazione e API ---------- */
   function guessRepo() {
     const host = location.hostname;
     if (!host.endsWith('.github.io')) return { owner: '', repo: '' };
@@ -524,18 +728,420 @@
     const first = location.pathname.split('/').filter(Boolean)[0];
     return { owner, repo: first || host };
   }
+  const ghConfig = () => Object.assign(guessRepo(), load(KEYS.github, {}));
+  const ghConnected = () => !!load(KEYS.github, {}).token;
+  const TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=Quotidie&description=Categorie+e+aggiornamento+dell%27edizione&expires_in=none&contents=write&actions=write';
 
+  // L'indirizzo delle API si può cambiare solo per i test in locale
+  const GH_API = (() => {
+    const override = new URLSearchParams(location.search).get('ghapi');
+    return override && /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? override : 'https://api.github.com';
+  })();
+
+  async function gh(cfg, path, opts = {}) {
+    const res = await fetch(`${GH_API}/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}${path}`, {
+      ...opts,
+      cache: 'no-store',
+      headers: {
+        Authorization: `Bearer ${cfg.token}`,
+        Accept: 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        ...(opts.body ? { 'Content-Type': 'application/json' } : {}),
+      },
+    });
+    if (res.status === 401) throw ghError('Il token non è valido o è scaduto: creane uno nuovo.', 'token');
+    return res;
+  }
+  const ghError = (message, kind) => Object.assign(new Error(message), { kind });
+
+  async function pushTopics(cfg, content) {
+    const current = await gh(cfg, '/contents/data/topics.json');
+    let sha;
+    if (current.status === 404) {
+      // Il file non esiste ancora: verifica almeno che il repository sia raggiungibile
+      const repoRes = await gh(cfg, '');
+      if (!repoRes.ok) throw ghError('Repository non trovato o token senza accesso a questo repository.', 'token');
+    } else if (!current.ok) {
+      throw ghError(`GitHub ha risposto ${current.status}`);
+    } else {
+      ({ sha } = await current.json());
+    }
+    const json = JSON.stringify(content, null, 2) + '\n';
+    const bytes = new TextEncoder().encode(json);
+    let bin = '';
+    bytes.forEach((b) => { bin += String.fromCharCode(b); });
+    const res = await gh(cfg, '/contents/data/topics.json', {
+      method: 'PUT',
+      body: JSON.stringify({ message: 'Aggiorna categorie delle lezioni', content: btoa(bin), sha }),
+    });
+    if (res.status === 403 || res.status === 404) throw ghError('Il token non ha il permesso "Contents: Read and write" su questo repository.', 'token');
+    if (!res.ok) throw ghError(`Salvataggio non riuscito (${res.status})`);
+  }
+
+  /* ---------- Aggiornamento dell'edizione (avvio del workflow) ---------- */
+  const STEP_LABELS = [
+    [/scarica|checkout/i, 'Preparazione dell\'ambiente'],
+    [/node/i, 'Preparazione dell\'ambiente'],
+    [/prepara il generatore/i, 'Preparazione dell\'ambiente'],
+    [/genera/i, 'Gemini cerca le notizie e scrive i testi, circa 1-3 minuti'],
+    [/salva/i, 'Salvataggio nel repository'],
+    [/segnala/i, 'Controllo finale'],
+  ];
+  const PHASES = [
+    ['start', 'Avvio'],
+    ['queued', 'In coda su GitHub'],
+    ['running', 'Scrittura del giornale e della lezione'],
+    ['publish', 'Pubblicazione'],
+    ['done', 'Pronto'],
+  ];
+
+  const runner = {
+    job: load(KEYS.run, null), // { startedAt, runId, phase, step, error, htmlUrl, prevGen, opts }
+    timer: null,
+    sheetOpen: false,
+
+    save() { save(KEYS.run, this.job); renderRunChip(); if (this.sheetOpen) renderSheet(); },
+    active() { return this.job && !['done', 'error'].includes(this.job.phase); },
+
+    async start(opts = {}) {
+      const cfg = ghConfig();
+      if (!cfg.token || !cfg.owner || !cfg.repo) { openSheet('setup'); return; }
+      if (this.active()) { openSheet(); return; }
+      const prev = await fetch(`data/news/latest.json?v=${Date.now()}`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+      this.job = { startedAt: Date.now(), phase: 'start', step: '', prevGen: prev?.generatedAt || null, prevLesson: null, opts };
+      const idx = await fetch(`data/lessons/index.json?v=${Date.now()}`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+      this.job.prevLesson = idx?.lessons?.[0]?.date || null;
+      this.save();
+      openSheet();
+      try {
+        const inputs = { only: opts.only || 'tutto', force: String(!!opts.force), new_series: String(!!opts.newSeries) };
+        const res = await gh(cfg, `/actions/workflows/${WORKFLOW}/dispatches`, {
+          method: 'POST',
+          body: JSON.stringify({ ref: await defaultBranch(cfg), inputs }),
+        });
+        if (res.status === 404) throw ghError('GitHub non trova il workflow: nel repository deve esistere il file .github/workflows/daily.yml (senza .txt).', 'workflow');
+        if (res.status === 403) throw ghError('Il token non ha il permesso "Actions: Read and write". Creane uno nuovo con il link qui sotto.', 'token');
+        if (res.status === 422) {
+          const msg = (await res.json().catch(() => ({}))).message || '';
+          throw ghError(/disabled/i.test(msg) ? 'Il workflow è disattivato: riattivalo da GitHub, tab Actions.' : `GitHub ha rifiutato la richiesta: ${msg}`, 'workflow');
+        }
+        if (!res.ok) throw ghError(`GitHub ha risposto ${res.status}`);
+        this.job.phase = 'queued';
+        this.save();
+        this.poll();
+      } catch (err) {
+        this.fail(err);
+      }
+    },
+
+    fail(err) {
+      console.error(err);
+      this.job = { ...(this.job || {}), failedAt: this.job?.phase || 'start', phase: 'error', error: err.message || 'Errore sconosciuto', errorKind: err.kind || '' };
+      this.save();
+      openSheet();
+    },
+
+    async poll() {
+      clearTimeout(this.timer);
+      if (!this.active()) return;
+      const cfg = ghConfig();
+      try {
+        if (['queued', 'running', 'start'].includes(this.job.phase)) await this.checkRun(cfg);
+        if (this.job.phase === 'publish') await this.checkPublished();
+      } catch (err) {
+        // Errori definitivi: si mostrano subito. Gli altri (rete) si riprovano al giro dopo
+        if (err.kind === 'token' || err.kind === 'run' || err.kind === 'workflow') return this.fail(err);
+        console.warn('Controllo stato non riuscito, riprovo', err);
+      }
+      if (Date.now() - this.job.startedAt > 25 * 60000 && this.active()) {
+        return this.fail(ghError('L\'aggiornamento sta impiegando troppo. Controlla su GitHub, tab Actions.'));
+      }
+      if (this.active()) this.timer = setTimeout(() => this.poll(), document.hidden ? 15000 : 4000);
+    },
+
+    async checkRun(cfg) {
+      if (!this.job.runId) {
+        const since = new Date(this.job.startedAt - 60000).toISOString();
+        const res = await gh(cfg, `/actions/workflows/${WORKFLOW}/runs?event=workflow_dispatch&per_page=5&created=${encodeURIComponent('>=' + since)}`);
+        if (res.status === 403) throw ghError('Il token non può leggere le Actions: serve il permesso "Actions: Read and write".', 'token');
+        if (!res.ok) return;
+        const { workflow_runs: runs = [] } = await res.json();
+        const run = runs.find((r) => new Date(r.created_at).getTime() >= this.job.startedAt - 60000);
+        if (!run) return;
+        this.job.runId = run.id;
+        this.job.htmlUrl = run.html_url;
+      }
+      const res = await gh(cfg, `/actions/runs/${this.job.runId}/jobs`);
+      if (!res.ok) return;
+      const { jobs = [] } = await res.json();
+      const job = jobs[0];
+      const runRes = await gh(cfg, `/actions/runs/${this.job.runId}`);
+      const run = runRes.ok ? await runRes.json() : null;
+      const status = run?.status || job?.status;
+      if (status === 'queued' || status === 'waiting' || status === 'pending' || status === 'requested') {
+        this.job.phase = 'queued';
+      } else if (status === 'in_progress') {
+        this.job.phase = 'running';
+        const step = (job?.steps || []).find((s) => s.status === 'in_progress');
+        const label = step && (STEP_LABELS.find(([re]) => re.test(step.name)) || [])[1];
+        this.job.step = label || '';
+      } else if (status === 'completed') {
+        const failedStep = (job?.steps || []).find((s) => s.conclusion === 'failure');
+        if (run?.conclusion === 'success') {
+          this.job.phase = 'publish';
+          this.job.publishSince = Date.now();
+        } else if (failedStep && /segnala/i.test(failedStep.name) && (job.steps || []).some((s) => /salva/i.test(s.name) && s.conclusion === 'success')) {
+          // Generazione parziale: qualcosa è stato salvato, si aspetta comunque la pubblicazione
+          this.job.phase = 'publish';
+          this.job.partial = true;
+          this.job.publishSince = Date.now();
+        } else {
+          throw ghError(failedStep && /genera/i.test(failedStep.name)
+            ? 'La generazione non è riuscita. Di solito dipende dalla API key di Gemini o da un limite temporaneo: apri il dettaglio su GitHub.'
+            : `L'aggiornamento si è interrotto${failedStep ? ` allo step "${failedStep.name}"` : ''}. Apri il dettaglio su GitHub.`, 'run');
+        }
+      }
+      this.save();
+    },
+
+    async checkPublished() {
+      // GitHub Pages pubblica i nuovi file in 1-2 minuti dopo la fine del workflow
+      const [news, idx] = await Promise.all([
+        fetch(`data/news/latest.json?v=${Date.now()}`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+        fetch(`data/lessons/index.json?v=${Date.now()}`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      ]);
+      const only = this.job.opts?.only || 'tutto';
+      const newsReady = only === 'lesson' || (news?.generatedAt && news.generatedAt !== this.job.prevGen);
+      // Lezione: pronta se c'è quella di oggi (se esisteva già e non si è chiesto di sostituirla, va bene così)
+      const lessonToday = idx?.lessons?.[0]?.date === isoDay();
+      const lessonReady = only === 'news' || (lessonToday && (this.job.prevLesson !== isoDay() || !this.job.opts?.force || Date.now() - this.job.publishSince > 90000));
+      if ((newsReady && lessonReady) || Date.now() - this.job.publishSince > 6 * 60000) {
+        this.job.phase = 'done';
+        this.job.finishedAt = Date.now();
+        this.save();
+        clearMemo();
+        if (!this.sheetOpen) toast('La nuova edizione è pronta');
+        if (currentView !== 'settings') route();
+      }
+    },
+
+    resume() { if (this.active()) this.poll(); },
+    dismiss() { this.job = null; save(KEYS.run, null); renderRunChip(); },
+  };
+
+  async function defaultBranch(cfg) {
+    try {
+      const res = await gh(cfg, '');
+      if (res.ok) return (await res.json()).default_branch || 'main';
+    } catch (err) { if (err.kind === 'token') throw err; }
+    return 'main';
+  }
+
+  function renderRunChip() {
+    const chip = $('run-chip');
+    const job = runner.job;
+    const show = job && (runner.active() || (job.phase === 'done' && Date.now() - (job.finishedAt || 0) < 60000) || job.phase === 'error');
+    chip.hidden = !show || runner.sheetOpen;
+    if (!show) return;
+    chip.dataset.phase = job.phase;
+    chip.querySelector('.run-chip-text').textContent = job.phase === 'error' ? 'Errore' : job.phase === 'done' ? 'Pronta' : 'Aggiornamento';
+  }
+  $('run-chip').addEventListener('click', () => openSheet());
+
+  /* ---------- Finestra dal basso ---------- */
+  let sheetMode = 'run';
+  let elapsedTimer;
+  function openSheet(mode = 'run') {
+    sheetMode = mode;
+    runner.sheetOpen = true;
+    $('sheet-backdrop').hidden = false;
+    $('sheet').hidden = false;
+    requestAnimationFrame(() => document.body.classList.add('sheet-open'));
+    renderSheet();
+    renderRunChip();
+    clearInterval(elapsedTimer);
+    elapsedTimer = setInterval(() => { if (runner.active()) updateElapsed(); }, 1000);
+  }
+  function closeSheet() {
+    runner.sheetOpen = false;
+    document.body.classList.remove('sheet-open');
+    clearInterval(elapsedTimer);
+    setTimeout(() => { if (!runner.sheetOpen) { $('sheet').hidden = true; $('sheet-backdrop').hidden = true; } }, 280);
+    if (runner.job && ['done', 'error'].includes(runner.job.phase) && Date.now() - (runner.job.finishedAt || runner.job.startedAt) > 3000) {
+      if (runner.job.phase === 'done') runner.dismiss();
+    }
+    renderRunChip();
+  }
+  $('sheet-backdrop').addEventListener('click', closeSheet);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && runner.sheetOpen) closeSheet(); });
+
+  // Trascina verso il basso per chiudere
+  (() => {
+    const sheet = $('sheet');
+    let y0 = null;
+    let dy = 0;
+    sheet.addEventListener('touchstart', (e) => {
+      if (sheet.scrollTop > 0 || e.target.closest('input, textarea')) return;
+      y0 = e.touches[0].clientY; dy = 0;
+    }, { passive: true });
+    sheet.addEventListener('touchmove', (e) => {
+      if (y0 === null) return;
+      dy = Math.max(0, e.touches[0].clientY - y0);
+      sheet.style.transform = `translateY(${dy}px)`;
+    }, { passive: true });
+    sheet.addEventListener('touchend', () => {
+      if (y0 === null) return;
+      sheet.style.transform = '';
+      if (dy > 90) closeSheet();
+      y0 = null;
+    });
+  })();
+
+  const elapsedText = () => {
+    const s = Math.max(0, Math.round((Date.now() - (runner.job?.startedAt || Date.now())) / 1000));
+    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  };
+  function updateElapsed() {
+    const el = $('sheet-elapsed');
+    if (el) el.textContent = elapsedText();
+  }
+
+  function renderSheet() {
+    const body = $('sheet-body');
+    const job = runner.job;
+    const cfg = ghConfig();
+
+    if (sheetMode === 'setup' || (!job && !cfg.token)) {
+      body.innerHTML = `
+        <h2 id="sheet-title">Collega l'app a GitHub</h2>
+        <p>Per aggiornare l'edizione dal telefono, l'app deve poter avviare il lavoro su GitHub. Serve una sola volta.</p>
+        <ol class="steps-howto">
+          <li>Apri la <a href="${TOKEN_URL}" target="_blank" rel="noopener noreferrer">pagina di creazione del token</a>: nome e permessi sono già compilati.</li>
+          <li>In <em>Repository access</em> scegli <em>Only select repositories</em> e seleziona <b>${esc(cfg.repo || 'il repository dell\'app')}</b>. Poi premi <em>Generate token</em> e copialo.</li>
+          <li>Incollalo qui sotto e premi <em>Collega</em>.</li>
+        </ol>
+        <label class="lbl" for="sheet-token">Token</label>
+        <input class="field" id="sheet-token" type="password" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+        ${cfg.owner ? '' : `
+          <label class="lbl" for="sheet-owner">Utente GitHub</label>
+          <input class="field" id="sheet-owner" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <label class="lbl" for="sheet-repo">Repository</label>
+          <input class="field" id="sheet-repo" autocomplete="off" autocapitalize="off" spellcheck="false">`}
+        <div class="sheet-actions">
+          <button class="btn primary" id="sheet-connect">Collega e aggiorna</button>
+          <button class="text-link" id="sheet-close">Annulla</button>
+        </div>`;
+      $('sheet-close').onclick = closeSheet;
+      $('sheet-connect').onclick = async (e) => {
+        const btn = e.currentTarget;
+        const next = {
+          owner: cfg.owner || $('sheet-owner')?.value.trim(),
+          repo: cfg.repo || $('sheet-repo')?.value.trim(),
+          token: $('sheet-token').value.trim(),
+        };
+        if (!next.token || !next.owner || !next.repo) return toast('Compila tutti i campi');
+        btn.disabled = true;
+        try {
+          const res = await gh(next, '');
+          if (!res.ok) throw ghError('Il token non vede questo repository: controlla di averlo selezionato.', 'token');
+          save(KEYS.github, next);
+          sheetMode = 'run';
+          runner.start();
+        } catch (err) {
+          toast(err.message);
+        } finally {
+          btn.disabled = false;
+        }
+      };
+      return;
+    }
+
+    if (!job) {
+      body.innerHTML = `
+        <h2 id="sheet-title">Aggiorna l'edizione</h2>
+        <p>Crea adesso il giornale e la lezione di oggi, senza aspettare l'aggiornamento automatico. Ci vogliono circa 2-4 minuti.</p>
+        <div class="run-options">
+          <label class="check"><input type="radio" name="run-only" value="tutto" checked><span>Giornale e lezione</span></label>
+          <label class="check"><input type="radio" name="run-only" value="news"><span>Solo il giornale</span></label>
+          <label class="check"><input type="radio" name="run-only" value="lesson"><span>Solo la lezione</span></label>
+          <label class="check"><input type="checkbox" id="run-force"><span>Sostituisci la lezione di oggi con una nuova</span></label>
+          <label class="check"><input type="checkbox" id="run-series"><span>Inizia un nuovo percorso di più lezioni</span></label>
+        </div>
+        <div class="sheet-actions">
+          <button class="btn primary" id="sheet-run">${icon.refresh}Avvia</button>
+          <button class="text-link" id="sheet-close">Annulla</button>
+        </div>`;
+      $('sheet-close').onclick = closeSheet;
+      $('sheet-run').onclick = () => runner.start({
+        only: body.querySelector('[name="run-only"]:checked').value,
+        force: $('run-force').checked,
+        newSeries: $('run-series').checked,
+      });
+      return;
+    }
+
+    const order = PHASES.map(([k]) => k);
+    const at = order.indexOf(job.phase === 'error' ? job.failedAt || 'start' : job.phase);
+    const title = job.phase === 'done' ? 'La nuova edizione è pronta'
+      : job.phase === 'error' ? 'Aggiornamento non riuscito'
+      : 'Aggiornamento in corso';
+    body.innerHTML = `
+      <h2 id="sheet-title">${title}</h2>
+      ${job.phase === 'error' ? `<p class="sheet-error">${esc(job.error)}</p>` : runner.active()
+        ? `<p>Puoi chiudere questa finestra e continuare a leggere: ti avviso quando è pronta. <span class="elapsed" id="sheet-elapsed">${elapsedText()}</span></p>`
+        : `<p>${job.partial ? 'Una parte non è riuscita, ma quello che è stato generato è già pubblicato.' : 'Notizie e lezione sono pubblicate.'}</p>`}
+      <ol class="phases">
+        ${PHASES.map(([k, label], i) => {
+          const cls = i < at ? 'is-done'
+            : i === at ? (job.phase === 'error' ? 'is-failed' : k === 'done' ? 'is-done' : 'is-active')
+            : '';
+          const detail = k === 'running' && job.phase === 'running' && job.step ? job.step
+            : k === 'publish' && job.phase === 'publish' ? 'GitHub Pages aggiorna il sito, di solito in 1-2 minuti'
+            : k === 'queued' && job.phase === 'queued' ? 'GitHub assegna una macchina, pochi secondi'
+            : '';
+          return `<li class="${cls}"><span class="ph-dot"></span><span class="ph-text">${label}${detail ? `<small>${esc(detail)}</small>` : ''}</span></li>`;
+        }).join('')}
+      </ol>
+      <div class="sheet-actions">
+        ${job.phase === 'done' ? '<button class="btn primary" id="sheet-open">Apri l\'edizione</button>' : ''}
+        ${job.phase === 'error' && job.errorKind === 'token' ? `<a class="btn primary" href="${TOKEN_URL}" target="_blank" rel="noopener noreferrer">Crea un nuovo token</a>` : ''}
+        ${job.phase === 'error' && job.errorKind !== 'token' ? '<button class="btn primary" id="sheet-retry">Riprova</button>' : ''}
+        ${job.htmlUrl ? `<a class="text-link" href="${esc(job.htmlUrl)}" target="_blank" rel="noopener noreferrer">Dettagli su GitHub</a>` : ''}
+        ${job.phase === 'error' && job.errorKind === 'token' ? '<button class="text-link" id="sheet-newtoken">Incolla il nuovo token</button>' : ''}
+        <button class="text-link" id="sheet-close">${runner.active() ? 'Continua a leggere' : 'Chiudi'}</button>
+      </div>`;
+    $('sheet-close').onclick = closeSheet;
+    const open = $('sheet-open');
+    if (open) open.onclick = () => { runner.dismiss(); closeSheet(); clearMemo(); location.hash = '#/news'; route(); };
+    const retry = $('sheet-retry');
+    if (retry) retry.onclick = () => { const opts = job.opts; runner.job = null; runner.start(opts); };
+    const newToken = $('sheet-newtoken');
+    if (newToken) newToken.onclick = () => { runner.job = null; save(KEYS.run, null); const c = load(KEYS.github, {}); delete c.token; save(KEYS.github, c); openSheet('setup'); };
+  }
+
+  /* ---------- Impostazioni ---------- */
   async function renderSettings() {
     const remote = await getTopics().catch(() => ({
       categories: DEFAULT_TOPICS.map((name) => ({ id: slug(name), name, enabled: true })),
     }));
     let topics = load(KEYS.topicsDraft, null) || structuredClone(remote.categories);
-    const gh = Object.assign(guessRepo(), load(KEYS.github, {}));
+    const gh0 = ghConfig();
     const dirty = () => JSON.stringify(topics) !== JSON.stringify(remote.categories);
 
     $view.innerHTML = `
       <section class="settings">
         <h1>Impostazioni</h1>
+
+        <div class="group">
+          <div class="group-head">
+            <h2>Edizione</h2>
+            <span class="pill" id="gh-pill"></span>
+          </div>
+          <p>L'edizione arriva da sola ogni mattina. Se non è arrivata, o vuoi una nuova lezione, puoi crearla adesso.</p>
+          <div class="row">
+            <button class="btn primary" data-action="run">${icon.refresh}Aggiorna l'edizione</button>
+          </div>
+        </div>
 
         <div class="group">
           <h2>Aspetto</h2>
@@ -553,51 +1159,47 @@
 
         <div class="group">
           <h2>Argomenti delle lezioni</h2>
-          <p>Ogni mattina la lezione arriva da una di queste categorie, a rotazione e senza mai ripetere un argomento. Tocca una categoria per attivarla o disattivarla.</p>
+          <p>Ogni mattina la lezione arriva da una di queste categorie, a rotazione e senza mai ripetere un argomento. Ogni due o tre settimane arriva un percorso di più lezioni collegate. Tocca una categoria per attivarla o disattivarla.</p>
           <div class="topic-list" id="topics"></div>
           <div class="row">
             <label class="sr-only" for="new-topic">Nuova categoria</label>
-            <input class="field" id="new-topic" placeholder="Aggiungi una categoria, per esempio Fotografia" maxlength="60">
+            <input class="field" id="new-topic" placeholder="Aggiungi una categoria, per esempio Fotografia" maxlength="60" enterkeyhint="done">
             <button class="btn" data-action="add-topic">Aggiungi</button>
           </div>
           <div class="notice" id="topics-status" role="status"></div>
         </div>
 
         <div class="group" id="github">
-          <div class="group-head">
-            <h2>Collegamento a GitHub</h2>
-            <span class="pill" id="gh-pill"></span>
-          </div>
-          <p>Facoltativo. Serve a una sola cosa: far valere le modifiche alle categorie qui sopra.</p>
-          <p>La lezione viene scritta ogni mattina su GitHub, che sceglie la categoria leggendo l'elenco salvato nel tuo repository. Collegando l'app, le tue scelte vengono salvate lì. Senza collegamento l'app funziona lo stesso, con le categorie che ci sono adesso.</p>
+          <h2>Collegamento a GitHub</h2>
+          <p>Facoltativo. Serve per due cose: <b>aggiornare l'edizione</b> dal telefono e <b>salvare le categorie</b> qui sopra, che altrimenti restano solo su questo dispositivo.</p>
           <p class="hint">Non ha niente a che fare con la chiave di Gemini, che resta nei Secrets di GitHub e l'app non vede mai.</p>
 
-          <details class="howto">
+          <details class="howto" ${gh0.token ? '' : 'open'}>
             <summary>Come ottenere il token (2 minuti)</summary>
             <ol>
-              <li>Apri la <a href="https://github.com/settings/personal-access-tokens/new?name=Quotidie&amp;description=Salva+le+categorie+delle+lezioni&amp;contents=write" target="_blank" rel="noopener noreferrer">pagina di creazione del token</a> su GitHub.</li>
+              <li>Apri la <a href="${TOKEN_URL}" target="_blank" rel="noopener noreferrer">pagina di creazione del token</a>: nome e permessi (<em>Contents</em> e <em>Actions</em> in lettura e scrittura) sono già compilati.</li>
               <li>In <em>Repository access</em> scegli <em>Only select repositories</em> e seleziona solo il repository dell'app.</li>
-              <li>In <em>Permissions</em>, alla voce <em>Contents</em>, scegli <em>Read and write</em>. Non serve nient'altro.</li>
               <li>Premi <em>Generate token</em>, copialo e incollalo qui sotto.</li>
             </ol>
-            <p class="hint">Il token può modificare solo i file di quel repository e resta salvato solo su questo dispositivo. Puoi revocarlo quando vuoi dalle impostazioni di GitHub.</p>
+            <p class="hint">Il token può agire solo su quel repository e resta salvato solo su questo dispositivo. Puoi revocarlo quando vuoi dalle impostazioni di GitHub.</p>
           </details>
 
           <label class="lbl" for="gh-owner">Utente GitHub</label>
-          <input class="field" id="gh-owner" value="${esc(gh.owner)}" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <input class="field" id="gh-owner" value="${esc(gh0.owner)}" autocomplete="off" autocapitalize="off" spellcheck="false">
           <label class="lbl" for="gh-repo">Repository</label>
-          <input class="field" id="gh-repo" value="${esc(gh.repo)}" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <input class="field" id="gh-repo" value="${esc(gh0.repo)}" autocomplete="off" autocapitalize="off" spellcheck="false">
           <label class="lbl" for="gh-token">Token</label>
-          <input class="field" id="gh-token" type="password" value="${esc(gh.token || '')}" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+          <input class="field" id="gh-token" type="password" value="${esc(gh0.token || '')}" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
           <div class="row" style="margin-top:1rem">
-            <button class="btn primary" data-action="push-topics">Collega e salva le categorie</button>
-            <button class="text-link" data-action="disconnect" ${gh.token ? '' : 'hidden'}>Scollega</button>
+            <button class="btn primary" data-action="connect">Collega</button>
+            <button class="btn" data-action="push-topics">Salva le categorie</button>
+            <button class="text-link" data-action="disconnect">Scollega</button>
           </div>
         </div>
 
         <div class="group">
           <h2>I tuoi dati</h2>
-          <p>Letture, preferiti e streak sono salvati su questo dispositivo. Esportali per spostarli su un altro.</p>
+          <p>Letture, preferiti e streak sono salvati su questo dispositivo. Puoi esportarli come copia di sicurezza.</p>
           <div class="row">
             <button class="btn" data-action="export">Esporta</button>
             <label class="btn" for="import-file">Importa</label>
@@ -606,8 +1208,8 @@
         </div>
       </section>`;
 
-    const $topics = document.getElementById('topics');
-    const $status = document.getElementById('topics-status');
+    const $topics = $('topics');
+    const $status = $('topics-status');
     const drawTopics = () => {
       $topics.innerHTML = topics.map((t, i) => `
         <span class="topic ${t.enabled ? 'is-on' : ''}" role="button" tabindex="0" data-i="${i}" aria-pressed="${t.enabled}">
@@ -616,11 +1218,10 @@
         </span>`).join('');
       const on = topics.filter((t) => t.enabled).length;
       const count = `${on} categorie attive su ${topics.length}.`;
-      const connected = !!load(KEYS.github, {}).token;
       $status.classList.toggle('is-warn', dirty());
       if (!dirty()) {
         $status.textContent = count;
-      } else if (connected) {
+      } else if (ghConnected()) {
         $status.innerHTML = `${count} Hai modifiche non salvate: premi <a href="#github" data-jump>Salva le categorie</a> per farle valere dalla prossima lezione.`;
       } else {
         $status.innerHTML = `${count} Le modifiche sono solo su questo dispositivo e non cambiano ancora le lezioni. Per farle valere <a href="#github" data-jump>collega GitHub</a>.`;
@@ -628,32 +1229,56 @@
       if (dirty()) save(KEYS.topicsDraft, topics); else localStorage.removeItem(KEYS.topicsDraft);
     };
 
-    const $pill = document.getElementById('gh-pill');
     const drawConnection = () => {
-      const connected = !!load(KEYS.github, {}).token;
-      $pill.textContent = connected ? 'Collegato' : 'Non collegato';
-      $pill.classList.toggle('is-on', connected);
-      $view.querySelector('[data-action="push-topics"]').textContent = connected ? 'Salva le categorie' : 'Collega e salva le categorie';
+      const connected = ghConnected();
+      const pill = $('gh-pill');
+      pill.textContent = connected ? 'Collegato a GitHub' : 'Non collegato';
+      pill.classList.toggle('is-on', connected);
       $view.querySelector('[data-action="disconnect"]').hidden = !connected;
+      $view.querySelector('[data-action="connect"]').textContent = connected ? 'Aggiorna collegamento' : 'Collega';
     };
     drawTopics();
     drawConnection();
+
+    const readCfg = () => ({
+      owner: $('gh-owner').value.trim(),
+      repo: $('gh-repo').value.trim(),
+      token: $('gh-token').value.trim(),
+    });
 
     // I link "#github" scorrono alla sezione senza cambiare pagina
     $status.addEventListener('click', (e) => {
       if (!e.target.closest('[data-jump]')) return;
       e.preventDefault();
-      const target = document.getElementById('github');
+      const target = $('github');
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      const details = target.querySelector('.howto');
-      if (!load(KEYS.github, {}).token) details.open = true;
+      if (!ghConnected()) target.querySelector('.howto').open = true;
+    });
+
+    $view.querySelector('[data-action="connect"]').addEventListener('click', async (e) => {
+      const btn = e.currentTarget;
+      const cfg = readCfg();
+      if (!cfg.owner || !cfg.repo || !cfg.token) return toast(!cfg.token ? 'Incolla il token: vedi "Come ottenere il token"' : 'Inserisci utente e repository');
+      btn.disabled = true;
+      try {
+        const res = await gh(cfg, '');
+        if (!res.ok) throw ghError('Il token non vede questo repository: controlla di averlo selezionato.');
+        save(KEYS.github, cfg);
+        drawConnection();
+        drawTopics();
+        toast('Collegato a GitHub');
+      } catch (err) {
+        toast(err.message);
+      } finally {
+        btn.disabled = false;
+      }
     });
 
     $view.querySelector('[data-action="disconnect"]').addEventListener('click', () => {
       const cfg = load(KEYS.github, {});
       delete cfg.token;
       save(KEYS.github, cfg);
-      document.getElementById('gh-token').value = '';
+      $('gh-token').value = '';
       drawConnection();
       drawTopics();
       toast('App scollegata da GitHub');
@@ -677,12 +1302,12 @@
       if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('[data-i]')) { e.preventDefault(); e.target.click(); }
     });
 
-    const $new = document.getElementById('new-topic');
+    const $new = $('new-topic');
     const addTopic = () => {
       const name = $new.value.trim();
       if (!name) return;
       const id = slug(name);
-      if (topics.some((t) => t.id === id)) return toast('Categoria già presente');
+      if (!id || topics.some((t) => t.id === id)) return toast('Categoria già presente');
       topics.push({ id, name, enabled: true });
       $new.value = '';
       drawTopics();
@@ -705,13 +1330,9 @@
 
     $view.querySelector('[data-action="push-topics"]').addEventListener('click', async (e) => {
       const btn = e.currentTarget;
-      const cfg = {
-        owner: document.getElementById('gh-owner').value.trim(),
-        repo: document.getElementById('gh-repo').value.trim(),
-        token: document.getElementById('gh-token').value.trim(),
-      };
+      const cfg = readCfg();
       if (!cfg.owner || !cfg.repo || !cfg.token) {
-        document.querySelector('#github .howto').open = !cfg.token;
+        $('github').querySelector('.howto').open = !cfg.token;
         return toast(!cfg.token ? 'Incolla il token: vedi "Come ottenere il token"' : 'Inserisci utente e repository');
       }
       btn.disabled = true;
@@ -738,7 +1359,7 @@
       a.click();
       setTimeout(() => URL.revokeObjectURL(a.href), 1000);
     });
-    document.getElementById('import-file').addEventListener('change', async (e) => {
+    $('import-file').addEventListener('change', async (e) => {
       const file = e.target.files[0];
       if (!file) return;
       try {
@@ -755,36 +1376,111 @@
     });
   }
 
-  async function pushTopics({ owner, repo, token }, content) {
-    const url = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/data/topics.json`;
-    const headers = {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
+  /* ---------- Ascolto (sintesi vocale del dispositivo) ---------- */
+  const speech = (() => {
+    const synth = window.speechSynthesis;
+    const $player = $('player');
+    let queue = [];
+    let pos = 0;
+    let playing = false;
+    let opts = {};
+    let voice = null;
+    let token = 0;
+
+    const pickVoice = () => {
+      const voices = synth ? synth.getVoices() : [];
+      const it = voices.filter((v) => /^it(-|_|$)/i.test(v.lang));
+      voice = it.find((v) => /premium|enhanced|alice|federica|luca/i.test(v.name)) || it.find((v) => v.localService) || it[0] || null;
     };
-    const current = await fetch(url, { headers, cache: 'no-store' });
-    if (current.status === 401) throw new Error('Token non valido o scaduto');
-    let sha;
-    if (current.status === 404) {
-      // Il file non esiste ancora: verifica almeno che il repository sia raggiungibile
-      const repoRes = await fetch(`https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`, { headers });
-      if (!repoRes.ok) throw new Error('Repository non trovato o token senza accesso');
-    } else if (!current.ok) {
-      throw new Error(`GitHub ha risposto ${current.status}`);
-    } else {
-      ({ sha } = await current.json());
+    if (synth) {
+      pickVoice();
+      synth.addEventListener?.('voiceschanged', pickVoice);
     }
 
-    const json = JSON.stringify(content, null, 2) + '\n';
-    const b64 = btoa(String.fromCharCode(...new TextEncoder().encode(json)));
-    const res = await fetch(url, {
-      method: 'PUT',
-      headers,
-      body: JSON.stringify({ message: 'Aggiorna categorie delle lezioni', content: b64, sha }),
+    // Frasi brevi: su iOS le stringhe lunghe vengono interrotte
+    const split = (parts) => parts
+      .filter(Boolean)
+      .map((p) => plain(p).replace(/\s+/g, ' ').trim())
+      .flatMap((p) => p.match(/[^.!?;:]+[.!?;:]+["»”]?|[^.!?;:]+$/g) || [])
+      .map((s) => s.trim())
+      .filter((s) => s.length > 1)
+      .flatMap((s) => {
+        if (s.length <= 220) return [s];
+        const out = [];
+        let cur = '';
+        for (const w of s.split(/(?<=,)\s+|\s+/)) {
+          if ((cur + ' ' + w).length > 200 && cur) { out.push(cur); cur = w; } else cur = cur ? `${cur} ${w}` : w;
+        }
+        if (cur) out.push(cur);
+        return out;
+      });
+
+    const ui = () => {
+      $player.hidden = !queue.length;
+      document.body.classList.toggle('has-player', !!queue.length);
+      if (!queue.length) return;
+      $('player-title').textContent = opts.title || 'Ascolto';
+      const left = queue.slice(pos).join(' ');
+      $('player-sub').textContent = playing ? `Circa ${minutes(words(left))} min rimanenti` : 'In pausa';
+      $('player-progress').style.transform = `scaleX(${queue.length ? pos / queue.length : 0})`;
+      $player.classList.toggle('is-playing', playing);
+      $player.querySelector('[data-player="toggle"]').setAttribute('aria-label', playing ? 'Pausa' : 'Riprendi');
+    };
+
+    const speakAt = (i) => {
+      const my = ++token;
+      synth.cancel();
+      pos = Math.max(0, Math.min(i, queue.length));
+      if (pos >= queue.length) {
+        const done = opts.onEnd;
+        stop();
+        if (done) done();
+        return;
+      }
+      const u = new SpeechSynthesisUtterance(queue[pos]);
+      u.lang = 'it-IT';
+      if (voice) u.voice = voice;
+      u.rate = 1;
+      u.onend = () => { if (my === token && playing) speakAt(pos + 1); };
+      u.onerror = (e) => { if (my === token && playing && e.error !== 'interrupted' && e.error !== 'canceled') speakAt(pos + 1); };
+      playing = true;
+      ui();
+      synth.speak(u);
+    };
+
+    function play(parts, o = {}) {
+      if (!synth) { toast('Il tuo browser non supporta la lettura ad alta voce'); return; }
+      queue = split(parts);
+      opts = o;
+      if (!queue.length) return;
+      if (!voice) pickVoice();
+      speakAt(0);
+    }
+    function toggle() {
+      if (!queue.length) return;
+      if (playing) { playing = false; token++; synth.cancel(); ui(); } else speakAt(pos);
+    }
+    function stop() {
+      token++;
+      playing = false;
+      queue = [];
+      pos = 0;
+      if (synth) synth.cancel();
+      ui();
+    }
+
+    $player.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-player]');
+      if (!b) return;
+      const a = b.dataset.player;
+      if (a === 'toggle') toggle();
+      if (a === 'close') stop();
+      if (a === 'prev') speakAt(pos - 1);
+      if (a === 'next') speakAt(pos + 1);
     });
-    if (res.status === 403) throw new Error('Il token non ha il permesso di scrittura');
-    if (!res.ok) throw new Error(`Salvataggio non riuscito (${res.status})`);
-  }
+    window.addEventListener('pagehide', stop);
+    return { play, stop };
+  })();
 
   /* ---------- Azioni globali ---------- */
   $view.addEventListener('click', (e) => {
@@ -792,8 +1488,10 @@
     if (!el) return;
     const { action, date } = el.dataset;
     if (action === 'reload') {
-      Object.keys(memo).forEach((k) => delete memo[k]);
+      clearMemo();
       route();
+    } else if (action === 'run') {
+      runner.active() || ghConnected() ? openSheet() : openSheet('setup');
     } else if (action === 'read') {
       markRead(date, !state.read[date]);
       syncReadButton(date);
@@ -806,15 +1504,24 @@
     }
   });
 
-  /* ---------- Tema e scroll ---------- */
+  /* ---------- Tema, scroll, tab bar ---------- */
   function applyPrefs() {
     const root = document.documentElement;
     root.dataset.theme = prefs.theme;
     root.style.setProperty('--text-scale', prefs.textScale);
     const dark = prefs.theme === 'dark' || (prefs.theme === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
-    document.getElementById('theme-color').setAttribute('content', dark ? '#13151F' : '#F5F1E8');
+    $('theme-color').setAttribute('content', dark ? '#13151F' : '#F5F1E8');
   }
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyPrefs);
+
+  function moveTabIndicator() {
+    const active = document.querySelector('.tabbar a.is-active');
+    const ind = document.querySelector('.tab-indicator');
+    if (!ind) return;
+    ind.style.opacity = active ? '1' : '0';
+    if (active) ind.style.transform = `translateX(${active.offsetLeft + active.offsetWidth / 2 - 14}px)`;
+  }
+  window.addEventListener('resize', moveTabIndicator);
 
   let ticking = false;
   function updateProgress() {
@@ -829,19 +1536,54 @@
     if (!ticking) { ticking = true; requestAnimationFrame(updateProgress); }
   }, { passive: true });
 
-  // Quando l'app torna in primo piano in un nuovo giorno, ricarica le notizie
+  // Tira giù per aggiornare (Giornale e Impara)
+  (() => {
+    const $ptr = $('ptr');
+    let y0 = null;
+    let dy = 0;
+    const limit = 70;
+    window.addEventListener('touchstart', (e) => {
+      if (window.scrollY > 0 || runner.sheetOpen || !['news', 'learn'].includes(currentView)) return;
+      y0 = e.touches[0].clientY; dy = 0;
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+      if (y0 === null) return;
+      dy = e.touches[0].clientY - y0;
+      if (dy <= 0 || window.scrollY > 0) { $ptr.style.transform = ''; $ptr.classList.remove('is-ready'); return; }
+      const d = Math.min(limit * 1.4, dy * 0.5);
+      $ptr.style.transform = `translate(-50%, ${d}px) rotate(${d * 4}deg)`;
+      $ptr.style.opacity = Math.min(1, d / limit);
+      $ptr.classList.toggle('is-ready', d >= limit * 0.9);
+    }, { passive: true });
+    window.addEventListener('touchend', async () => {
+      if (y0 === null) return;
+      const ready = $ptr.classList.contains('is-ready');
+      y0 = null;
+      if (!ready) { $ptr.style.transform = ''; $ptr.style.opacity = 0; return; }
+      $ptr.classList.add('is-loading');
+      clearMemo();
+      await route();
+      $ptr.classList.remove('is-loading', 'is-ready');
+      $ptr.style.transform = '';
+      $ptr.style.opacity = 0;
+    });
+  })();
+
+  // Quando l'app torna in primo piano in un nuovo giorno, ricarica
   let lastDay = isoDay();
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible' && isoDay() !== lastDay) {
+    if (document.visibilityState !== 'visible') return;
+    runner.resume();
+    if (isoDay() !== lastDay) {
       lastDay = isoDay();
-      Object.keys(memo).forEach((k) => delete memo[k]);
+      clearMemo();
       route();
     }
   });
 
-  /* ---------- Icone e manifest (tutto dentro i 3 file) ---------- */
+  /* ---------- Icone e manifest (dentro i file dell'app) ---------- */
   function installIcons() {
-    const symbol = document.getElementById('logo-mark');
+    const symbol = $('logo-mark');
     const svg = (rounded) => {
       const inner = symbol.innerHTML
         .replace(/var\(--logo-bg\)/g, '#1D2033')
@@ -867,7 +1609,7 @@
       addLink('apple-touch-icon', icon180);
       const manifest = {
         name: 'Quotidie', short_name: 'Quotidie', display: 'standalone',
-        start_url: location.href.split('#')[0], background_color: '#F5F1E8', theme_color: '#1D2033',
+        start_url: location.href.split('#')[0].split('?')[0], background_color: '#F5F1E8', theme_color: '#1D2033',
         icons: [{ src: icon180, sizes: '180x180', type: 'image/png' }, { src: png(512), sizes: '512x512', type: 'image/png' }],
       };
       addLink('manifest', 'data:application/manifest+json,' + encodeURIComponent(JSON.stringify(manifest)));
@@ -875,8 +1617,24 @@
     img.src = 'data:image/svg+xml,' + encodeURIComponent(svg(false));
   }
 
+  /* ---------- Offline ---------- */
+  function registerServiceWorker() {
+    if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
+    navigator.serviceWorker.register('sw.js').then((reg) => {
+      reg.addEventListener('updatefound', () => {
+        const w = reg.installing;
+        w?.addEventListener('statechange', () => {
+          if (w.state === 'activated' && navigator.serviceWorker.controller) toast('App aggiornata alla nuova versione');
+        });
+      });
+    }).catch((err) => console.warn('Service worker non registrato', err));
+  }
+
   installIcons();
   applyPrefs();
+  registerServiceWorker();
+  renderRunChip();
+  runner.resume();
   window.addEventListener('hashchange', route);
   route();
 })();

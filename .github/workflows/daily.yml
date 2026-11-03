@@ -1,13 +1,22 @@
 name: Edizione del mattino
 
-# Ogni mattina chiede a Gemini notizie e lezione del giorno e le salva in data/.
+# Ogni mattina chiede a Gemini il giornale e la lezione del giorno e li salva in data/.
 # La API key è letta dal secret GEMINI_API_KEY e non lascia mai GitHub.
+#
+# IMPORTANTE: questo file funziona solo se nel repository si trova esattamente in
+#   .github/workflows/daily.yml
+# Con un altro nome o in un'altra cartella GitHub lo ignora: niente avvio automatico
+# e niente pulsante "Run workflow".
+
+run-name: ${{ github.event_name == 'schedule' && 'Edizione automatica' || format('Edizione manuale ({0})', inputs.only || 'tutto') }}
 
 on:
   schedule:
-    # 05:30 UTC = 06:30 (ora solare) / 07:30 (ora legale) in Italia.
-    # I job programmati di GitHub possono partire in ritardo: così è tutto pronto prima delle 9.
-    - cron: "30 5 * * *"
+    # Orari in UTC. 04:45 UTC = 05:45 in inverno, 06:45 in estate (ora italiana).
+    # Il secondo orario è una riserva: se il primo è andato bene non rifà nulla.
+    # GitHub può ritardare gli avvii programmati anche di 30-60 minuti.
+    - cron: "45 4 * * *"
+    - cron: "15 6 * * *"
   workflow_dispatch:
     inputs:
       only:
@@ -16,7 +25,11 @@ on:
         options: [tutto, news, lesson]
         default: tutto
       force:
-        description: "Rigenera la lezione anche se esiste già"
+        description: "Sostituisci la lezione di oggi se esiste già"
+        type: boolean
+        default: false
+      new_series:
+        description: "Inizia un nuovo percorso di più lezioni"
         type: boolean
         default: false
 
@@ -30,11 +43,13 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - name: Scarica il repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Prepara Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
@@ -42,21 +57,26 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/gen"
           cat > "$RUNNER_TEMP/gen/generate.mjs" <<'GENERATOR'
-          import { readFile, writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
+          import { readFile, writeFile, mkdir, readdir, unlink, appendFile } from 'node:fs/promises';
           import { existsSync } from 'node:fs';
           import path from 'node:path';
 
           const DATA = path.resolve('data');
-          const API_KEY = process.env.GEMINI_API_KEY;
-          const MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+          const API_KEY = (process.env.GEMINI_API_KEY || '').trim();
+          const API_BASE = process.env.GEMINI_API_BASE || 'https://generativelanguage.googleapis.com/v1beta';
           const TZ = 'Europe/Rome';
           const ONLY = ['news', 'lesson'].includes(process.env.ONLY) ? process.env.ONLY : null;
           const FORCE = process.env.FORCE === 'true';
+          const NEW_SERIES = process.env.NEW_SERIES === 'true';
+          const SCHEDULED = process.env.EVENT === 'schedule';
 
-          // Lettura da 5-6 minuti a ~200 parole/minuto
-          const LIMITS = { news: { min: 850, max: 1250 }, lesson: { min: 850, max: 1250 } };
-          const KEEP_NEWS_DAYS = 7;
+          // Giornale da ~10 minuti, lezione da ~5 minuti (circa 200 parole al minuto)
+          const WPM = 200;
+          const LIMITS = { news: { target: '1800-2100', min: 1500, max: 2300 }, lesson: { min: 650, max: 1250 } };
+          const MIN_STORIES = 10;          // su 13 previste: sotto questa soglia si riprova
+          const KEEP_NEWS_DAYS = 8;        // archivio sfogliabile nell'app
           const AVOID_RECENT_CATEGORIES = 8;
+          const SERIES = { minGap: 14, maxGap: 21, chance: 0.35, minLessons: 7 }; // un percorso ogni 2-3 settimane
 
           // Stesse categorie predefinite di app.js
           const DEFAULT_TOPICS = [
@@ -67,7 +87,7 @@ jobs:
             'Gastronomia e vino', 'Produttività e metodo', 'Negoziazione e comunicazione', 'Retorica e pensiero critico',
             'Grandi invenzioni', 'Ecologia e clima', 'Diritto per tutti', 'Mitologia',
           ];
-          const slug = (name) => name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          const slug = (name) => String(name).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
           if (!API_KEY) {
@@ -75,12 +95,20 @@ jobs:
             process.exit(1);
           }
 
-          /* ---------- Utilità ---------- */
-          const today = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-          const todayLong = new Intl.DateTimeFormat('it-IT', { timeZone: TZ, weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date());
+          /* ---------- Date (sempre ora di Roma) ---------- */
+          const today = process.env.QD_TODAY || new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+          const fromIso = (iso) => new Date(`${iso}T12:00:00Z`);
+          const addDays = (iso, n) => { const d = fromIso(iso); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+          const daysBetween = (a, b) => Math.round((fromIso(b) - fromIso(a)) / 86400000);
+          const longDate = (iso) => new Intl.DateTimeFormat('it-IT', { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(fromIso(iso));
+          const shortDate = (iso) => new Intl.DateTimeFormat('it-IT', { timeZone: 'UTC', day: 'numeric', month: 'long' }).format(fromIso(iso));
+          const IS_SUNDAY = fromIso(today).getUTCDay() === 0;
 
+          /* ---------- Utilità ---------- */
           const words = (s) => (String(s ?? '').match(/\S+/g) || []).length;
           const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+          const str = (v) => (typeof v === 'string' ? v.trim() : '');
+          const arr = (v) => (Array.isArray(v) ? v : []);
           const readJSON = async (p, fallback) => {
             try { return JSON.parse(await readFile(p, 'utf8')); } catch { return fallback; }
           };
@@ -89,47 +117,166 @@ jobs:
             await writeFile(p, JSON.stringify(data, null, 2) + '\n', 'utf8');
           };
           const log = (...m) => console.log(`[${new Date().toISOString().slice(11, 19)}]`, ...m);
+          const report = [];
+          const note = (line) => { report.push(line); log(line); };
+
+          async function mapLimit(items, limit, fn) {
+            const out = new Array(items.length);
+            let next = 0;
+            const worker = async () => { while (next < items.length) { const i = next++; out[i] = await fn(items[i], i); } };
+            await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+            return out;
+          }
 
           /* ---------- Gemini ---------- */
-          async function gemini({ prompt, system, schema, search = false, temperature = 0.7 }) {
-            const body = {
-              contents: [{ role: 'user', parts: [{ text: prompt }] }],
-              generationConfig: { temperature },
-            };
-            if (system) body.systemInstruction = { parts: [{ text: system }] };
-            if (search) body.tools = [{ google_search: {} }];
-            if (schema) {
-              body.generationConfig.responseMimeType = 'application/json';
-              body.generationConfig.responseJsonSchema = schema;
-            }
+          // Modello: variabile GEMINI_MODEL, altrimenti il default. Se Google lo ritira (404),
+          // si passa da solo al modello Flash più recente disponibile per la tua chiave.
+          let MODEL = (process.env.GEMINI_MODEL || '').trim() || 'gemini-3.8-flash';
+          const triedModels = new Set();
 
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
-            for (let attempt = 1; attempt <= 5; attempt++) {
-              const res = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'x-goog-api-key': API_KEY },
-                body: JSON.stringify(body),
-              });
+          async function pickFallbackModel() {
+            const res = await fetch(`${API_BASE}/models?pageSize=1000`, { headers: { 'x-goog-api-key': API_KEY } });
+            if (!res.ok) return null;
+            const { models = [] } = await res.json();
+            const version = (name) => (name.match(/gemini-(\d+(?:\.\d+)?)/) || [])[1];
+            const candidates = models
+              .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
+              .map((m) => m.name.replace(/^models\//, ''))
+              .filter((n) => /^gemini-[\d.]+-flash$/.test(n) || n === 'gemini-flash-latest')
+              .filter((n) => !triedModels.has(n))
+              .sort((a, b) => (parseFloat(version(b)) || 0) - (parseFloat(version(a)) || 0));
+            return candidates[0] || null;
+          }
+
+          // Formato della risposta JSON: se l'API non accetta un campo, si prova il successivo
+          const SCHEMA_MODES = ['jsonSchema', 'openApi', 'prompt'];
+          let schemaMode = 0;
+
+          function toOpenApi(schema) {
+            if (Array.isArray(schema)) return schema.map(toOpenApi);
+            if (!schema || typeof schema !== 'object') return schema;
+            const out = {};
+            for (const [k, v] of Object.entries(schema)) {
+              if (k === 'type') out.type = String(v).toUpperCase();
+              else if (k === 'properties') out.properties = Object.fromEntries(Object.entries(v).map(([pk, pv]) => [pk, toOpenApi(pv)]));
+              else if (['items', 'required', 'enum', 'description'].includes(k)) out[k] = toOpenApi(v);
+            }
+            return out;
+          }
+
+          async function gemini({ prompt, system, schema, search = false, temperature = 0.7 }) {
+            for (let attempt = 1; attempt <= 6; attempt++) {
+              const mode = SCHEMA_MODES[schemaMode];
+              const body = {
+                contents: [{ role: 'user', parts: [{ text: schema && mode === 'prompt'
+                  ? `${prompt}\n\nRispondi SOLO con un oggetto JSON valido, senza testo prima o dopo, che rispetti questo JSON Schema:\n${JSON.stringify(schema)}`
+                  : prompt }] }],
+                generationConfig: { temperature },
+              };
+              if (system) body.systemInstruction = { parts: [{ text: system }] };
+              if (search) body.tools = [{ google_search: {} }];
+              if (schema) {
+                body.generationConfig.responseMimeType = 'application/json';
+                if (mode === 'jsonSchema') body.generationConfig.responseJsonSchema = schema;
+                if (mode === 'openApi') body.generationConfig.responseSchema = toOpenApi(schema);
+              }
+
+              let res;
+              try {
+                res = await fetch(`${API_BASE}/models/${MODEL}:generateContent`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json', 'x-goog-api-key': API_KEY },
+                  body: JSON.stringify(body),
+                  signal: AbortSignal.timeout(180000),
+                });
+              } catch (err) {
+                if (attempt < 6) { log(`Rete non raggiungibile (${err.message}), nuovo tentativo`); await sleep(5000 * attempt); continue; }
+                throw err;
+              }
+
               if (res.ok) {
                 const data = await res.json();
                 const cand = data.candidates?.[0];
-                const text = cand?.content?.parts?.map((p) => p.text || '').join('') ?? '';
-                if (!text) throw new Error(`Risposta vuota (finishReason: ${cand?.finishReason})`);
+                const text = (cand?.content?.parts || []).filter((p) => !p.thought).map((p) => p.text || '').join('').trim();
+                if (!text) {
+                  if (attempt < 6) { log(`Risposta vuota (${cand?.finishReason || data.promptFeedback?.blockReason || 'motivo sconosciuto'}), nuovo tentativo`); continue; }
+                  throw new Error(`Risposta vuota da Gemini (${cand?.finishReason || 'motivo sconosciuto'})`);
+                }
                 return { text, grounding: cand.groundingMetadata };
               }
+
               const errText = await res.text();
-              if (res.status === 404) throw new Error(`Modello "${MODEL}" non trovato: imposta la variabile GEMINI_MODEL con un modello disponibile. ${errText.slice(0, 300)}`);
-              if ([429, 500, 502, 503, 504].includes(res.status) && attempt < 5) {
-                const wait = 2 ** attempt * 3000;
+              if (res.status === 404 || (res.status === 400 && /model/i.test(errText) && /not found|not supported/i.test(errText))) {
+                triedModels.add(MODEL);
+                const next = await pickFallbackModel();
+                if (!next) throw new Error(`Il modello "${MODEL}" non è disponibile e non ho trovato alternative. Imposta la variabile GEMINI_MODEL. ${errText.slice(0, 200)}`);
+                note(`Il modello ${MODEL} non è disponibile: uso ${next}. Per sceglierlo tu imposta la variabile GEMINI_MODEL.`);
+                MODEL = next;
+                continue;
+              }
+              if (res.status === 400 && schema && schemaMode < SCHEMA_MODES.length - 1 && /response_?json_?schema|response_?schema|unknown name|invalid json payload/i.test(errText)) {
+                schemaMode++;
+                log(`L'API non accetta il formato "${mode}": passo a "${SCHEMA_MODES[schemaMode]}"`);
+                continue;
+              }
+              if (res.status === 400 && /api key not valid|api_key_invalid/i.test(errText)) {
+                throw new Error('La API key di Gemini non è valida: aggiorna il secret GEMINI_API_KEY.');
+              }
+              if ([429, 500, 502, 503, 504].includes(res.status) && attempt < 6) {
+                const wait = Math.min(60000, 2 ** attempt * 3000);
                 log(`Gemini ${res.status}, nuovo tentativo tra ${wait / 1000}s`);
                 await sleep(wait);
                 continue;
               }
-              throw new Error(`Gemini ${res.status}: ${errText.slice(0, 500)}`);
+              throw new Error(`Gemini ${res.status}: ${errText.slice(0, 400)}`);
             }
+            throw new Error('Gemini non ha risposto dopo vari tentativi');
           }
 
-          const parseJSON = (text) => JSON.parse(text.trim().replace(/^```(?:json)?\s*|\s*```$/g, ''));
+          function parseJSON(text) {
+            const clean = text.trim().replace(/^```(?:json)?\s*|\s*```$/g, '');
+            try { return JSON.parse(clean); } catch {}
+            const start = clean.indexOf('{');
+            const end = clean.lastIndexOf('}');
+            if (start >= 0 && end > start) return JSON.parse(clean.slice(start, end + 1));
+            throw new Error('La risposta di Gemini non è un JSON valido');
+          }
+
+          /* ---------- Fonti ---------- */
+          // Inserisce nel testo della ricerca i riferimenti [n] alle fonti che supportano ogni frase
+          function annotate(text, supports = []) {
+            const marks = [];
+            for (const s of supports) {
+              const seg = s.segment?.text;
+              const ids = s.groundingChunkIndices || [];
+              if (!seg || !ids.length) continue;
+              const at = text.indexOf(seg);
+              if (at >= 0) marks.push({ pos: at + seg.length, label: ` [${ids.join(',')}]` });
+            }
+            marks.sort((a, b) => b.pos - a.pos);
+            let out = text;
+            for (const m of marks) out = out.slice(0, m.pos) + m.label + out.slice(m.pos);
+            return out;
+          }
+
+          // I link di Google Search sono reindirizzamenti temporanei: si risolvono nell'indirizzo vero
+          // dell'articolo. Un link che risponde 404/410 viene scartato; se il controllo non riesce
+          // per motivi di rete si tiene il link originale, che funziona comunque nel browser.
+          const UA = 'Mozilla/5.0 (compatible; QuotidieBot/1.0; +https://github.com)';
+          async function verifySource(uri) {
+            try {
+              const res = await fetch(uri, { redirect: 'manual', headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(8000) });
+              res.body?.cancel().catch(() => {});
+              const loc = res.headers.get('location');
+              if (res.status >= 300 && res.status < 400 && loc) return { url: new URL(loc, uri).href, resolved: true };
+              if (res.status === 404 || res.status === 410) return null;
+              return { url: uri, resolved: res.status < 300 };
+            } catch {
+              return { url: uri, resolved: false };
+            }
+          }
+          const hostOf = (url) => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return 'Fonte'; } };
+          const isRedirector = (url) => /vertexaisearch\.cloud\.google\.com|google\.com\/url/i.test(url);
 
           /* ---------- Notizie ---------- */
           const NEWS_DESKS = [
@@ -138,6 +285,7 @@ jobs:
             { id: 'italy', title: 'Italia', count: 3, focus: 'politica, economia e società italiana' },
             { id: 'world', title: 'Mondo', count: 3, focus: 'esteri, geopolitica, grandi eventi internazionali' },
           ];
+          const STORY_COUNT = NEWS_DESKS.reduce((n, d) => n + d.count, 0);
 
           const NEWS_SCHEMA = {
             type: 'object',
@@ -155,11 +303,12 @@ jobs:
                         type: 'object',
                         properties: {
                           title: { type: 'string' },
-                          summary: { type: 'string' },
+                          lead: { type: 'string' },
+                          body: { type: 'string' },
                           why: { type: 'string' },
-                          sourceUrls: { type: 'array', items: { type: 'string' } },
+                          sourceIds: { type: 'array', items: { type: 'integer' } },
                         },
-                        required: ['title', 'summary', 'why', 'sourceUrls'],
+                        required: ['title', 'lead', 'body', 'why', 'sourceIds'],
                       },
                     },
                   },
@@ -170,79 +319,163 @@ jobs:
             required: ['brief', 'sections'],
           };
 
-          // Le fonti del grounding hanno URL di redirect: il "title" contiene il dominio vero
-          function prettySource(title, url) {
-            if (title && /\.[a-z]{2,}$/i.test(title.trim())) return title.trim().replace(/^www\./, '');
-            try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return 'Fonte'; }
+          async function readEditions(fromDay, toDay) {
+            const out = [];
+            for (let d = fromDay; d <= toDay; d = addDays(d, 1)) {
+              const n = await readJSON(path.join(DATA, 'news', `${d}.json`), null);
+              if (n?.sections) out.push(n);
+            }
+            return out;
           }
 
-          async function generateNews() {
-            log('Notizie: ricerca con Google Search');
-            const deskList = NEWS_DESKS.map((d) => `- ${d.title} (${d.count} notizie): ${d.focus}`).join('\n');
+          const storyWords = (st) => words([st.title, st.lead, st.body, st.why].join(' '));
 
+          async function generateNews() {
+            const weekly = IS_SUNDAY;
+            const deskList = NEWS_DESKS.map((d) => `- ${d.title} (${d.count} notizie): ${d.focus}`).join('\n');
+            const range = weekly ? { from: addDays(today, -6), to: today } : null;
+
+            let researchPrompt;
+            if (weekly) {
+              const past = (await readEditions(range.from, addDays(today, -1))).filter((n) => n.kind !== 'weekly');
+              const hints = past.flatMap((n) => arr(n.sections).flatMap((s) => arr(s.stories).map((st) => `${shortDate(n.date)}, ${s.title}: ${st.title}`)));
+              researchPrompt = `Oggi è ${longDate(today)}. Prepara il riepilogo della settimana dal ${shortDate(range.from)} al ${shortDate(today)}: cerca i fatti più importanti della settimana e i loro sviluppi più recenti per queste sezioni:
+          ${deskList}
+
+          Per ogni fatto riporta cosa è successo, gli sviluppi nel corso della settimana, i numeri chiave, il contesto e perché conta. Privilegia ciò che avrà conseguenze anche nelle prossime settimane.${hints.length ? `
+
+          Titoli usciti nelle edizioni di questa settimana, da usare come traccia (verificali e aggiornali):
+          ${hints.join('\n')}` : ''}`;
+            } else {
+              researchPrompt = `Oggi è ${longDate(today)}. Cerca le notizie più importanti delle ultime 24-36 ore per queste sezioni:
+          ${deskList}
+
+          Per ogni notizia riporta: i fatti essenziali (chi, cosa, quando, dove), i numeri chiave, il contesto, le reazioni e perché è rilevante. Preferisci fonti autorevoli (agenzie, quotidiani nazionali e internazionali, testate di settore). Scarta gossip e notizie minori. Evita doppioni tra le sezioni.`;
+            }
+
+            log(`Notizie (${weekly ? 'riepilogo settimanale' : 'giornaliere'}): ricerca con Google Search`);
             const research = await gemini({
               search: true,
               temperature: 0.3,
               system: 'Sei il caporedattore di un quotidiano italiano di qualità. Lavori solo su fatti verificati e recenti, citando le fonti. Non inventi nulla.',
-              prompt: `Oggi è ${todayLong}. Cerca le notizie più importanti delle ultime 24-36 ore per queste sezioni:
-          ${deskList}
-
-          Per ogni notizia riporta: i fatti essenziali (chi, cosa, quando, numeri chiave), il contesto e perché è rilevante. Preferisci fonti autorevoli (agenzie, quotidiani nazionali e internazionali, testate di settore). Scarta gossip e notizie minori. Evita doppioni tra le sezioni.`,
+              prompt: researchPrompt,
             });
 
-            const chunks = (research.grounding?.groundingChunks || []).map((c) => c.web).filter((w) => w?.uri);
-            log(`Notizie: ${chunks.length} fonti trovate`);
-            const sourceList = chunks.map((c, i) => `[${i}] ${c.title || ''} ${c.uri}`).join('\n');
+            const chunks = arr(research.grounding?.groundingChunks).map((c) => c.web || {});
+            const annotated = annotate(research.text, research.grounding?.groundingSupports);
+            log(`Notizie: ${chunks.filter((c) => c.uri).length} fonti trovate dalla ricerca`);
+            const sourceList = chunks.map((c, i) => (c.uri ? `[${i}] ${c.title || hostOf(c.uri)}` : null)).filter(Boolean).join('\n');
 
+            const verified = new Map(); // id → { url, title } oppure null
+            const verify = async (ids) => {
+              const todo = [...new Set(ids)].filter((id) => Number.isInteger(id) && !verified.has(id) && chunks[id]?.uri);
+              await mapLimit(todo, 8, async (id) => {
+                const v = await verifySource(chunks[id].uri);
+                if (!v) return verified.set(id, null);
+                const domain = chunks[id].title && /\.[a-z]{2,}$/i.test(chunks[id].title.trim()) ? chunks[id].title.trim().replace(/^www\./, '') : null;
+                verified.set(id, { url: v.url, title: !isRedirector(v.url) ? hostOf(v.url) : (domain || 'Fonte') });
+              });
+            };
+
+            let best = null;
             for (let attempt = 1; attempt <= 3; attempt++) {
-              const { text } = await gemini({
-                schema: NEWS_SCHEMA,
-                temperature: 0.4,
-                system: 'Sei un redattore italiano: scrivi in un italiano chiaro, preciso e sobrio, da quotidiano di qualità. Niente sensazionalismo, niente emoji.',
-                prompt: `Trasforma questa rassegna in un giornale del mattino in italiano.
+              let draft;
+              try {
+                const { text } = await gemini({
+                  schema: NEWS_SCHEMA,
+                  temperature: 0.4,
+                  system: 'Sei un redattore italiano: scrivi in un italiano chiaro, preciso e sobrio, da quotidiano di qualità. Niente sensazionalismo, niente emoji.',
+                  prompt: `Trasforma questa rassegna in ${weekly ? 'un riepilogo della settimana' : 'un giornale del mattino'} in italiano, da leggere in circa 10 minuti.
 
-          RASSEGNA:
-          ${research.text}
+          RASSEGNA (i numeri tra parentesi quadre indicano le fonti di ogni frase):
+          ${annotated}
 
-          FONTI DISPONIBILI:
+          FONTI:
           ${sourceList || '(nessuna)'}
 
           REGOLE:
           - Sezioni e numero di notizie: ${NEWS_DESKS.map((d) => `${d.id}=${d.count}`).join(', ')}.
-          - "brief": esattamente 3 frasi, una per ciascuno dei fatti più importanti di oggi (max 30 parole l'una).
+          - "brief": esattamente 3 frasi, una per ciascuno dei fatti più importanti ${weekly ? 'della settimana' : 'di oggi'} (max 30 parole l'una).
           - "title": titolo informativo, max 12 parole, senza punto finale.
-          - "summary": 55-75 parole, solo fatti e contesto.
+          - "lead": la notizia in una o due frasi (20-30 parole): il fatto principale, chiaro anche da solo.
+          - "body": 90-120 parole in 2 paragrafi separati da una riga vuota. Non ripetere il lead: aggiungi dettagli, numeri, contesto, reazioni${weekly ? ' e gli sviluppi della settimana' : ''}.
           - "why": una frase (max 25 parole) che spiega perché la notizia conta.
-          - "sourceUrls": 1-2 URL presi SOLO dall'elenco FONTI DISPONIBILI, quelli che supportano la notizia. Lista vuota se nessuno è pertinente.
-          - Lunghezza totale tra ${LIMITS.news.min} e ${LIMITS.news.max - 100} parole: deve leggersi in 5 minuti.
+          - "sourceIds": i numeri [n] delle fonti che supportano la notizia (1-3). Includi SOLO notizie supportate da almeno una fonte dell'elenco.
+          - Lunghezza totale tra ${LIMITS.news.target} parole.
           - Usa solo informazioni presenti nella rassegna.`,
-              });
+                });
+                draft = parseJSON(text);
+              } catch (err) {
+                log(`Notizie: tentativo ${attempt} non valido (${err.message})`);
+                continue;
+              }
 
-              const draft = parseJSON(text);
-              const titles = new Map(chunks.map((c) => [c.uri, c.title]));
+              const drafts = arr(draft.sections);
+              await verify(drafts.flatMap((s) => arr(s.stories).flatMap((st) => arr(st.sourceIds))));
+
+              let dropped = 0;
+              const seen = new Set();
               const sections = NEWS_DESKS.map((desk) => {
-                const s = draft.sections.find((x) => x.id === desk.id) || { stories: [] };
-                return {
-                  id: desk.id,
-                  title: desk.title,
-                  stories: s.stories.slice(0, desk.count).map((st) => ({
-                    title: st.title.trim(),
-                    summary: st.summary.trim(),
-                    why: st.why.trim(),
-                    sources: [...new Set(st.sourceUrls || [])]
-                      .filter((u) => /^https?:\/\//.test(u))
-                      .slice(0, 2)
-                      .map((u) => ({ url: u, title: prettySource(titles.get(u), u) })),
-                  })),
-                };
+                const s = drafts.find((x) => x?.id === desk.id) || { stories: [] };
+                const stories = [];
+                for (const st of arr(s.stories)) {
+                  const title = str(st.title);
+                  const lead = str(st.lead);
+                  const body = str(st.body);
+                  if (!title || !lead || !body) { dropped++; continue; }
+                  const key = slug(title);
+                  const sources = [...new Set(arr(st.sourceIds))].map((id) => verified.get(id)).filter(Boolean)
+                    .filter((src, i, all) => all.findIndex((x) => x.url === src.url) === i).slice(0, 3);
+                  // Controllo fonti: una notizia senza almeno una fonte reale non viene pubblicata
+                  if (!sources.length || seen.has(key)) { dropped++; continue; }
+                  seen.add(key);
+                  const story = { title, lead, body, why: str(st.why), sources };
+                  story.readSeconds = Math.max(20, Math.round(storyWords(story) / WPM * 60));
+                  stories.push(story);
+                  if (stories.length === desk.count) break;
+                }
+                return { id: desk.id, title: desk.title, stories };
               }).filter((s) => s.stories.length);
 
-              const news = { date: today, generatedAt: new Date().toISOString(), model: MODEL, brief: draft.brief.slice(0, 3), sections };
-              const total = words([news.brief.join(' '), ...sections.flatMap((s) => s.stories.flatMap((x) => [x.title, x.summary, x.why]))].join(' '));
-              log(`Notizie: ${total} parole (tentativo ${attempt})`);
-              if (total <= LIMITS.news.max && sections.length >= 3) return news;
+              const brief = arr(draft.brief).map(str).filter(Boolean).slice(0, 3);
+              const storyCount = sections.reduce((n, s) => n + s.stories.length, 0);
+              const total = words(brief.join(' ')) + sections.reduce((n, s) => n + s.stories.reduce((m, st) => m + storyWords(st), 0), 0);
+              log(`Notizie: ${storyCount} con fonte verificata, ${dropped} scartate, ${total} parole (tentativo ${attempt})`);
+
+              const news = {
+                date: today,
+                kind: weekly ? 'weekly' : 'daily',
+                ...(range ? { range } : {}),
+                generatedAt: new Date().toISOString(),
+                model: MODEL,
+                minutes: Math.max(1, Math.round(total / WPM)),
+                words: total,
+                brief,
+                sections,
+                dropped,
+              };
+              const fits = total >= LIMITS.news.min && total <= LIMITS.news.max;
+              const score = storyCount * 10 + (fits ? 5 : 0);
+              if (!best || score > best.score) best = { news, storyCount, dropped, score, fits };
+              if (fits && storyCount >= MIN_STORIES) break;
             }
-            throw new Error('Notizie troppo lunghe o incomplete dopo 3 tentativi');
+            if (!best || best.storyCount < 6) throw new Error('Troppe poche notizie con fonti verificate dopo 3 tentativi');
+            note(`Giornale${best.news.kind === 'weekly' ? ' (riepilogo della settimana)' : ''}: ${best.storyCount} notizie, circa ${best.news.minutes} minuti${best.dropped ? `, ${best.dropped} scartate perché senza fonte verificata` : ''}`);
+            return best.news;
+          }
+
+          async function saveNews(news) {
+            const dir = path.join(DATA, 'news');
+            await writeJSON(path.join(dir, 'latest.json'), news);
+            await writeJSON(path.join(dir, `${today}.json`), news);
+            const files = (await readdir(dir)).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
+            for (const f of files.slice(0, Math.max(0, files.length - KEEP_NEWS_DAYS))) await unlink(path.join(dir, f));
+            const editions = [];
+            for (const f of files.slice(-KEEP_NEWS_DAYS).reverse()) {
+              const n = await readJSON(path.join(dir, f), null);
+              if (n?.date) editions.push({ date: n.date, kind: n.kind || 'daily', ...(n.range ? { range: n.range } : {}) });
+            }
+            await writeJSON(path.join(dir, 'index.json'), { editions });
           }
 
           /* ---------- Lezione ---------- */
@@ -275,7 +508,7 @@ jobs:
           };
 
           function pickCategory(topics, index) {
-            const enabled = topics.categories.filter((c) => c.enabled);
+            const enabled = arr(topics.categories).filter((c) => c.enabled);
             if (!enabled.length) throw new Error('Nessuna categoria attiva in data/topics.json');
             const recent = index.slice(0, AVOID_RECENT_CATEGORIES).map((l) => l.categoryId);
             const counts = Object.fromEntries(enabled.map((c) => [c.id, index.filter((l) => l.categoryId === c.id).length]));
@@ -287,42 +520,130 @@ jobs:
             return least[Math.floor(Math.random() * least.length)];
           }
 
-          async function generateLesson(topics, index) {
-            const category = pickCategory(topics, index);
-            const past = index.map((l) => l.title);
-            const pastSame = index.filter((l) => l.categoryId === category.id).map((l) => l.title);
-            log(`Lezione: categoria "${category.name}"`);
+          const pastTitles = (index) => index.slice(0, 150).map((l) => l.title).join(' | ') || '(nessuno)';
 
-            // 1) Scelta di un argomento specifico e nuovo
-            const { text: topicText } = await gemini({
+          // Lezione normale: argomento nuovo da una categoria a rotazione
+          async function planRegular(topics, index) {
+            const category = pickCategory(topics, index);
+            const pastSame = index.filter((l) => l.categoryId === category.id).map((l) => l.title);
+            const { text } = await gemini({
               temperature: 1,
-              schema: {
-                type: 'object',
-                properties: { topic: { type: 'string' }, angle: { type: 'string' } },
-                required: ['topic', 'angle'],
-              },
+              schema: { type: 'object', properties: { topic: { type: 'string' }, angle: { type: 'string' } }, required: ['topic', 'angle'] },
               prompt: `Proponi UN argomento per una lezione di microlearning di 5 minuti nella categoria "${category.name}".
           Deve essere specifico (non "la storia di Roma" ma "perché i Romani usavano il calcestruzzo pozzolanico e come si autoripara"), sorprendente, utile o affascinante per un adulto curioso e colto.
           Spazia tra livelli: concetti fondamentali, idee controintuitive, storie poco note, strumenti pratici.
           Argomenti GIÀ trattati in questa categoria, da NON ripetere né sovrapporre:
           ${pastSame.length ? pastSame.map((t) => `- ${t}`).join('\n') : '(nessuno)'}
-          Altri titoli già usati: ${past.slice(0, 120).join(' | ') || '(nessuno)'}
+          Altri titoli già usati: ${pastTitles(index)}
           Restituisci "topic" (l'argomento) e "angle" (l'angolazione narrativa, una frase).`,
             });
-            const { topic, angle } = parseJSON(topicText);
-            log(`Lezione: "${topic}"`);
+            const plan = parseJSON(text);
+            return { kind: 'regular', category: category.name, categoryId: category.id, topic: str(plan.topic) || category.name, angle: str(plan.angle) };
+          }
 
-            // 2) Scrittura della lezione
-            for (let attempt = 1; attempt <= 3; attempt++) {
+          // Domenica: la lezione spiega il concetto dietro una notizia della settimana
+          async function planFromNews(index) {
+            const editions = await readEditions(addDays(today, -6), today);
+            const items = editions.flatMap((n) => arr(n.sections).flatMap((s) => arr(s.stories).map((st) => `- ${st.title}: ${st.lead || st.summary || ''}`)));
+            if (!items.length) return null;
+            const { text } = await gemini({
+              temperature: 0.8,
+              schema: {
+                type: 'object',
+                properties: { headline: { type: 'string' }, topic: { type: 'string' }, angle: { type: 'string' } },
+                required: ['headline', 'topic', 'angle'],
+              },
+              prompt: `Queste sono le notizie della settimana:
+          ${[...new Set(items)].slice(0, 60).join('\n')}
+
+          Scegline UNA che nasconde un concetto interessante da capire a fondo (economico, scientifico, tecnologico, storico, giuridico, geopolitico). La lezione non deve riassumere la notizia: deve spiegare il concetto che serve per capirla davvero e che resterà utile anche tra un anno.
+          Esempio: dalla notizia "La BCE taglia i tassi" il concetto "Come un taglio dei tassi arriva al tuo mutuo e ai prezzi".
+          Titoli già usati, da non ripetere: ${pastTitles(index)}
+          Restituisci "headline" (il titolo della notizia scelta, identico), "topic" (il concetto) e "angle" (l'angolazione, una frase).`,
+            });
+            const plan = parseJSON(text);
+            if (!str(plan.topic)) return null;
+            return { kind: 'news', category: "Dall'attualità", categoryId: 'attualita', topic: str(plan.topic), angle: str(plan.angle), fromNews: { headline: str(plan.headline) } };
+          }
+
+          // Percorsi: ogni 2-3 settimane una serie di 3-5 lezioni collegate
+          async function planSeries(topics, index, series) {
+            let cur = series.current;
+            if (cur && NEW_SERIES && cur.done < cur.parts.length) note(`Il percorso "${cur.title}" è ancora in corso: continua con la prossima puntata`);
+            if (!cur || cur.done >= cur.parts.length) {
+              const lastEnd = series.history.at(-1)?.endedAt || index.at(-1)?.date || today;
+              const gap = daysBetween(lastEnd, today);
+              const due = index.length >= SERIES.minLessons && (gap >= SERIES.maxGap || (gap >= SERIES.minGap && Math.random() < SERIES.chance));
+              if (!NEW_SERIES && !due) return null;
+
+              const category = pickCategory(topics, index);
               const { text } = await gemini({
-                schema: LESSON_SCHEMA,
-                temperature: 0.8,
-                system: 'Sei un divulgatore italiano eccellente, nello stile dei migliori saggisti: chiaro, preciso, narrativo, mai banale. Scrivi in italiano. Niente emoji, niente elenchi puntati nel corpo del testo.',
-                prompt: `Scrivi una lezione di microlearning.
-          Categoria: ${category.name}
-          Argomento: ${topic}
-          Angolazione: ${angle}
+                temperature: 0.9,
+                schema: {
+                  type: 'object',
+                  properties: {
+                    title: { type: 'string' },
+                    intro: { type: 'string' },
+                    parts: {
+                      type: 'array',
+                      items: { type: 'object', properties: { title: { type: 'string' }, focus: { type: 'string' } }, required: ['title', 'focus'] },
+                    },
+                  },
+                  required: ['title', 'intro', 'parts'],
+                },
+                prompt: `Progetta un percorso di microlearning di 3-5 lezioni nella categoria "${category.name}": una lezione al giorno, 5 minuti ciascuna.
+          Il percorso affronta un tema ampio e affascinante passo dopo passo: ogni lezione sta in piedi da sola ma costruisce sulla precedente, dalle basi alle implicazioni.
+          Esempio di tema: "Come funzionano gli LLM", "La nascita della finanza moderna", "Il cervello che decide".
+          Percorsi già fatti, da non ripetere: ${series.history.map((h) => h.title).join(' | ') || '(nessuno)'}
+          Titoli di lezioni già usati: ${pastTitles(index)}
+          Restituisci "title" (titolo del percorso, max 7 parole), "intro" (una frase che spiega cosa si impara) e "parts" (3-5 lezioni con "title" e "focus" di una frase).`,
+              });
+              const plan = parseJSON(text);
+              const parts = arr(plan.parts).map((p) => ({ title: str(p.title), focus: str(p.focus) })).filter((p) => p.title).slice(0, 5);
+              if (parts.length < 3 || !str(plan.title)) throw new Error('Gemini ha proposto un percorso non valido');
+              cur = {
+                id: `${today}-${slug(plan.title)}`.slice(0, 80),
+                title: str(plan.title),
+                intro: str(plan.intro),
+                category: category.name,
+                categoryId: category.id,
+                parts,
+                done: 0,
+                startedAt: today,
+              };
+              series.current = cur;
+              note(`Nuovo percorso: "${cur.title}" in ${cur.parts.length} lezioni`);
+            }
+            const n = cur.done;
+            const part = cur.parts[n];
+            return {
+              kind: 'series',
+              category: cur.category,
+              categoryId: cur.categoryId,
+              topic: part.title,
+              angle: part.focus,
+              series: { id: cur.id, title: cur.title, intro: cur.intro, part: n + 1, total: cur.parts.length, parts: cur.parts.map((p) => p.title) },
+              context: `Questa è la lezione ${n + 1} di ${cur.parts.length} del percorso "${cur.title}" (${cur.intro}).
+          Lezioni del percorso: ${cur.parts.map((p, i) => `${i + 1}. ${p.title}${i === n ? ' (QUESTA)' : ''}`).join('; ')}.
+          ${n > 0 ? 'Apri con una frase che si collega alla lezione precedente, senza ripeterla.' : 'Apri presentando brevemente il percorso.'}
+          ${n < cur.parts.length - 1 ? `Chiudi con una frase che anticipa la prossima lezione: "${cur.parts[n + 1].title}".` : 'Chiudi tirando le fila di tutto il percorso.'}`,
+            };
+          }
 
+          async function writeLesson(plan) {
+            let best = null;
+            for (let attempt = 1; attempt <= 3; attempt++) {
+              let draft;
+              try {
+                const { text } = await gemini({
+                  schema: LESSON_SCHEMA,
+                  temperature: 0.8,
+                  system: 'Sei un divulgatore italiano eccellente, nello stile dei migliori saggisti: chiaro, preciso, narrativo, mai banale. Scrivi in italiano. Niente emoji, niente elenchi puntati nel corpo del testo.',
+                  prompt: `Scrivi una lezione di microlearning.
+          Categoria: ${plan.category}
+          Argomento: ${plan.topic}
+          Angolazione: ${plan.angle}
+          ${plan.fromNews ? `Lo spunto è questa notizia della settimana: "${plan.fromNews.headline}". Richiamala in apertura in una frase, poi spiega il concetto in modo che resti valido anche quando la notizia sarà dimenticata.\n` : ''}${plan.context ? `${plan.context}\n` : ''}
           STRUTTURA:
           - "title": titolo evocativo e chiaro, max 10 parole.
           - "hook": 1-2 frasi che incuriosiscono e pongono la domanda centrale.
@@ -333,84 +654,139 @@ jobs:
           - "furtherReading": 1-2 libri o risorse reali e esistenti, con "note" di una riga.
 
           VINCOLI:
-          - Lunghezza totale tra ${LIMITS.lesson.min} e ${LIMITS.lesson.max - 150} parole: deve leggersi in 5 minuti.
+          - Lunghezza totale tra 850 e 1100 parole: deve leggersi in 5 minuti.
           - Accuratezza assoluta: se un dato è incerto, non citarlo.`,
-              });
-              const draft = parseJSON(text);
-              const total = words([draft.hook, ...draft.sections.flatMap((s) => [s.heading, s.body]), draft.example, ...draft.keyTakeaways, draft.funFact].join(' '));
+                });
+                draft = parseJSON(text);
+              } catch (err) {
+                log(`Lezione: tentativo ${attempt} non valido (${err.message})`);
+                continue;
+              }
+              const sections = arr(draft.sections).map((s) => ({ heading: str(s.heading), body: str(s.body) })).filter((s) => s.heading && s.body);
+              if (!str(draft.title) || sections.length < 2) { log(`Lezione: tentativo ${attempt} incompleto`); continue; }
+              const lesson = {
+                date: today,
+                generatedAt: new Date().toISOString(),
+                model: MODEL,
+                kind: plan.kind,
+                category: plan.category,
+                categoryId: plan.categoryId,
+                ...(plan.series ? { series: plan.series } : {}),
+                ...(plan.fromNews ? { fromNews: plan.fromNews } : {}),
+                title: str(draft.title),
+                hook: str(draft.hook),
+                sections,
+                example: str(draft.example),
+                keyTakeaways: arr(draft.keyTakeaways).map(str).filter(Boolean).slice(0, 3),
+                funFact: str(draft.funFact),
+                furtherReading: arr(draft.furtherReading).map((f) => (typeof f === 'string' ? { title: f } : { title: str(f.title), note: str(f.note) })).filter((f) => f.title).slice(0, 2),
+              };
+              const total = words([lesson.hook, ...sections.flatMap((s) => [s.heading, s.body]), lesson.example, ...lesson.keyTakeaways, lesson.funFact].join(' '));
+              lesson.minutes = Math.max(1, Math.round(total / WPM));
+              lesson.words = total;
               log(`Lezione: ${total} parole (tentativo ${attempt})`);
-              if (total <= LIMITS.lesson.max && total >= LIMITS.lesson.min * 0.75) {
-                return {
-                  date: today,
-                  generatedAt: new Date().toISOString(),
-                  model: MODEL,
-                  category: category.name,
-                  categoryId: category.id,
-                  minutes: Math.max(1, Math.round(total / 200)),
-                  words: total,
-                  title: draft.title.trim(),
-                  hook: draft.hook.trim(),
-                  sections: draft.sections,
-                  example: draft.example,
-                  keyTakeaways: draft.keyTakeaways.slice(0, 3),
-                  funFact: draft.funFact,
-                  furtherReading: draft.furtherReading.slice(0, 2),
-                };
+              const fits = total >= LIMITS.lesson.min && total <= LIMITS.lesson.max;
+              if (fits) return lesson;
+              if (!best || Math.abs(total - 950) < Math.abs(best.words - 950)) best = lesson;
+            }
+            if (best) { log('Lezione: uso la versione più vicina alla lunghezza richiesta'); return best; }
+            throw new Error('Gemini non ha prodotto una lezione valida dopo 3 tentativi');
+          }
+
+          async function generateLesson() {
+            const topicsPath = path.join(DATA, 'topics.json');
+            let topics = await readJSON(topicsPath, null);
+            if (!arr(topics?.categories).length) {
+              topics = { updatedAt: today, categories: DEFAULT_TOPICS.map((name) => ({ id: slug(name), name, enabled: true })) };
+              await writeJSON(topicsPath, topics);
+              note('Creato data/topics.json con le categorie predefinite');
+            }
+
+            const indexPath = path.join(DATA, 'lessons', 'index.json');
+            const lessonPath = path.join(DATA, 'lessons', `${today}.json`);
+            const seriesPath = path.join(DATA, 'series.json');
+            const idx = await readJSON(indexPath, { lessons: [] });
+            idx.lessons = arr(idx.lessons);
+            const series = await readJSON(seriesPath, { current: null, history: [] });
+            series.history = arr(series.history);
+
+            if (existsSync(lessonPath)) {
+              if (!FORCE) { note('Lezione di oggi già presente: nessuna modifica'); return; }
+              // Rigenerazione: se oggi era una puntata di un percorso, la stessa puntata viene riscritta
+              const old = await readJSON(lessonPath, {});
+              if (old.series) {
+                if (series.current?.id === old.series.id) series.current.done = old.series.part - 1;
+                else if (series.history.at(-1)?.id === old.series.id && series.history.at(-1).endedAt === today) {
+                  const h = series.history.pop();
+                  series.current = { ...h.plan, done: old.series.part - 1 };
+                }
               }
             }
-            throw new Error('Lezione fuori dai limiti di lunghezza dopo 3 tentativi');
+
+            const others = idx.lessons.filter((l) => l.date !== today);
+            let plan = null;
+            if (IS_SUNDAY && !NEW_SERIES) plan = await planFromNews(others).catch((err) => { log(`Lezione dall'attualità non riuscita (${err.message})`); return null; });
+            if (!plan) plan = await planSeries(topics, others, series);
+            if (!plan) plan = await planRegular(topics, others);
+            log(`Lezione: "${plan.topic}" (${plan.category})`);
+
+            const lesson = await writeLesson(plan);
+            await writeJSON(lessonPath, lesson);
+            idx.lessons = [
+              {
+                date: today, title: lesson.title, category: lesson.category, categoryId: lesson.categoryId,
+                minutes: lesson.minutes, hook: lesson.hook, kind: lesson.kind,
+                ...(lesson.series ? { series: { id: lesson.series.id, title: lesson.series.title, part: lesson.series.part, total: lesson.series.total } } : {}),
+              },
+              ...others,
+            ].sort((a, b) => b.date.localeCompare(a.date));
+            await writeJSON(indexPath, idx);
+
+            if (plan.kind === 'series') {
+              const cur = series.current;
+              cur.done += 1;
+              if (cur.done >= cur.parts.length) {
+                const { done, ...planCopy } = cur;
+                series.history.push({ id: cur.id, title: cur.title, startedAt: cur.startedAt, endedAt: today, plan: planCopy });
+                series.current = null;
+              }
+            }
+            await writeJSON(seriesPath, series);
+            note(`Lezione: "${lesson.title}" (${lesson.kind === 'series' ? `percorso "${lesson.series.title}", parte ${lesson.series.part} di ${lesson.series.total}` : lesson.category}, ${lesson.minutes} minuti)`);
           }
 
           /* ---------- Main ---------- */
           async function main() {
-            log(`Edizione del ${today} con ${MODEL}`);
+            log(`Edizione del ${today} (${SCHEDULED ? 'automatica' : 'manuale'})`);
             let failed = false;
 
             if (!ONLY || ONLY === 'news') {
               try {
-                const news = await generateNews();
-                await writeJSON(path.join(DATA, 'news', 'latest.json'), news);
-                await writeJSON(path.join(DATA, 'news', `${today}.json`), news);
-                const files = (await readdir(path.join(DATA, 'news'))).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
-                for (const f of files.slice(0, Math.max(0, files.length - KEEP_NEWS_DAYS))) await unlink(path.join(DATA, 'news', f));
-                log('Notizie salvate');
+                const latest = await readJSON(path.join(DATA, 'news', 'latest.json'), null);
+                // Il secondo orario programmato non rifà il lavoro se il primo è andato a buon fine
+                if (SCHEDULED && latest?.date === today) {
+                  note('Giornale di oggi già presente: nessuna modifica');
+                } else {
+                  await saveNews(await generateNews());
+                }
               } catch (err) {
                 failed = true;
-                console.error('Errore notizie:', err.message);
+                note(`Errore nel giornale: ${err.message}`);
               }
             }
 
             if (!ONLY || ONLY === 'lesson') {
               try {
-                const topicsPath = path.join(DATA, 'topics.json');
-                let topics = await readJSON(topicsPath, null);
-                if (!topics?.categories?.length) {
-                  topics = { updatedAt: today, categories: DEFAULT_TOPICS.map((name) => ({ id: slug(name), name, enabled: true })) };
-                  await writeJSON(topicsPath, topics);
-                  log('Creato data/topics.json con le categorie predefinite');
-                }
-                const indexPath = path.join(DATA, 'lessons', 'index.json');
-                const lessonPath = path.join(DATA, 'lessons', `${today}.json`);
-                const idx = await readJSON(indexPath, { lessons: [] });
-                if (existsSync(lessonPath) && !FORCE) {
-                  log('Lezione di oggi già presente (scegli "Rigenera la lezione" per crearne una nuova)');
-                } else {
-                  const others = idx.lessons.filter((l) => l.date !== today);
-                  const lesson = await generateLesson(topics, others);
-                  await writeJSON(lessonPath, lesson);
-                  idx.lessons = [
-                    { date: today, title: lesson.title, category: lesson.category, categoryId: lesson.categoryId, minutes: lesson.minutes, hook: lesson.hook },
-                    ...others,
-                  ].sort((a, b) => b.date.localeCompare(a.date));
-                  await writeJSON(indexPath, idx);
-                  log('Lezione salvata');
-                }
+                await generateLesson();
               } catch (err) {
                 failed = true;
-                console.error('Errore lezione:', err.message);
+                note(`Errore nella lezione: ${err.message}`);
               }
             }
 
+            if (process.env.GITHUB_STEP_SUMMARY) {
+              await appendFile(process.env.GITHUB_STEP_SUMMARY, `### Edizione di ${longDate(today)}\n\nModello: ${MODEL}\n\n${report.map((l) => `- ${l}`).join('\n')}\n`);
+            }
             if (failed) process.exit(1);
           }
 
@@ -423,8 +799,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          EVENT: ${{ github.event_name }}
           ONLY: ${{ inputs.only }}
           FORCE: ${{ inputs.force }}
+          NEW_SERIES: ${{ inputs.new_series }}
         run: node "$RUNNER_TEMP/gen/generate.mjs"
 
       - name: Salva i contenuti nel repository
@@ -435,14 +813,18 @@ jobs:
           git add data
           if git diff --staged --quiet; then
             echo "Nessun contenuto nuovo"
-          else
-            git commit -m "Edizione del $(TZ=Europe/Rome date +%F)"
-            git pull --rebase
-            git push
+            exit 0
           fi
+          git commit -m "Edizione del $(TZ=Europe/Rome date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            echo "Push non riuscito, nuovo tentativo tra 10 secondi"
+            sleep 10
+          done
+          exit 1
 
       - name: Segnala errori di generazione
         if: steps.gen.outcome == 'failure'
         run: |
-          echo "::error::La generazione non è riuscita del tutto: apri il log dello step 'Genera notizie e lezione' per il dettaglio."
+          echo "::error::La generazione non è riuscita del tutto: apri lo step 'Genera notizie e lezione' per il dettaglio."
           exit 1
