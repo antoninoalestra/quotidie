@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-04",
+      "title": "Il Wood Wide Web: La Rete Segreta delle Foreste",
+      "category": "Biologia",
+      "categoryId": "biologia",
+      "minutes": 3,
+      "hook": "Immaginate una foresta non come una collezione di alberi solitari, ma come un organismo pulsante, interconnesso e intelligente. E se gli alberi comunicassero, scambiandosi risorse e persino avvisi di pericolo, attraverso una rete invisibile sotto i nostri piedi?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-03",
       "title": "SSD: Il Trucco che Inganna l'Usura",
       "category": "Informatica",
