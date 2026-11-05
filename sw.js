@@ -1,7 +1,7 @@
 /* Quotidie — service worker: l'app si apre anche senza rete.
    - App e font: risposta immediata dalla cache, aggiornata in background.
    - Contenuti (data/*.json): prima la rete, la cache solo se manca il segnale. */
-const VERSION = 'quotidie-v3';
+const VERSION = 'quotidie-v4';
 const SHELL = ['./', './index.html', './style.css', './app.js'];
 
 self.addEventListener('install', (event) => {

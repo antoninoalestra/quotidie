@@ -391,7 +391,7 @@
       ];
       speech.play(parts, {
         title: weekly ? 'La settimana' : 'Il giornale',
-        sub: `${mins} minuti • Voce Diego`,
+        sub: `${mins} minuti`,
         audioUrl: `data/audio/news-${news.date}.mp3`,
         fallbackAudioUrl: 'data/audio/news-latest.mp3',
       });
@@ -569,7 +569,7 @@
         lesson.funFact ? 'Lo sapevi? ' + lesson.funFact : '',
       ], {
         title: plain(lesson.title),
-        sub: `Lezione, ${mins} minuti • Voce Diego`,
+        sub: `Lezione, ${mins} minuti`,
         audioUrl: `data/audio/lesson-${target}.mp3`,
         fallbackAudioUrl: 'data/audio/lesson-latest.mp3',
         onEnd: () => { if (!state.read[target]) { markRead(target); syncReadButton(target); } },
@@ -1387,7 +1387,22 @@
     });
   }
 
-  /* ---------- Ascolto (Audio neurale Diego MP3 + fallback sintesi vocale) ---------- */
+  /* ---------- Ascolto (Audio neurale MP3 + fallback sintesi vocale) ---------- */
+  // Nome della voce dell'audio, letto da data/audio/index.json (scritto dal workflow)
+  let audioVoices = {};
+  fetch(`data/audio/index.json?v=${Date.now()}`, { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((d) => { audioVoices = d?.files || {}; })
+    .catch(() => {});
+  const VOICE_NAMES = { ryan: 'Ryan', eric: 'Eric', aiden: 'Aiden', dylan: 'Dylan', serena: 'Serena', vivian: 'Vivian' };
+  const voiceLabel = (url) => {
+    const meta = audioVoices[String(url || '').split('/').pop()];
+    if (!meta) return 'Voce';
+    if (meta.engine === 'qwen3-tts') return `Voce ${VOICE_NAMES[meta.voice] || meta.voice}`;
+    const m = /-([A-Z][a-z]+)(?:Multilingual)?Neural$/.exec(meta.voice || '');
+    return `Voce ${m ? m[1] : 'rapida'}`;
+  };
+
   const speech = (() => {
     const synth = window.speechSynthesis;
     const $player = $('player');
@@ -1413,7 +1428,7 @@
       if (!('mediaSession' in navigator)) return;
       navigator.mediaSession.metadata = new MediaMetadata({
         title: opts.title || 'Quotidie',
-        artist: 'Quotidie — Voce di Diego',
+        artist: `Quotidie — ${voiceLabel(audio.currentSrc || audio.src)}`,
         album: opts.sub || 'Rassegna vocale',
         artwork: [
           { src: 'assets/icon-192.png', sizes: '192x192', type: 'image/png' },
@@ -1455,7 +1470,7 @@
       if (dur > 0) {
         $('player-progress').style.transform = `scaleX(${Math.min(1, cur / dur)})`;
         const left = dur - cur;
-        $('player-sub').textContent = `${fmtTime(left)} rimanenti • Voce Diego`;
+        $('player-sub').textContent = `${fmtTime(left)} rimanenti • ${voiceLabel(audio.currentSrc || audio.src)}`;
       }
     });
     audio.addEventListener('ended', () => {

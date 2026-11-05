@@ -12,10 +12,10 @@ run-name: ${{ github.event_name == 'schedule' && 'Edizione automatica' || format
 
 on:
   schedule:
-    # Orari in UTC. 04:45 UTC = 05:45 in inverno, 06:45 in estate (ora italiana).
+    # Orari in UTC. 03:15 UTC = 04:15 in inverno, 05:15 in estate (ora italiana).
     # Il secondo orario è una riserva: se il primo è andato bene non rifà nulla.
     # GitHub può ritardare gli avvii programmati anche di 30-60 minuti.
-    - cron: "45 4 * * *"
+    - cron: "15 3 * * *"
     - cron: "15 6 * * *"
   workflow_dispatch:
     inputs:
@@ -32,6 +32,10 @@ on:
         description: "Inizia un nuovo percorso di più lezioni"
         type: boolean
         default: false
+      test_open_source:
+        description: "Prova la voce open source (lenta, 20-40 minuti)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -43,7 +47,7 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 90
     steps:
       - name: Scarica il repository
         uses: actions/checkout@v4
@@ -59,7 +63,54 @@ jobs:
           python-version: '3.10'
 
       - name: Installa edge-tts
-        run: pip install edge-tts
+        run: pip install --upgrade edge-tts
+
+      # ===== QUOTIDIE AUDIO v2: voce open source (solo avvio programmato o test) =====
+      - name: Strumenti audio
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg > /dev/null
+          ffmpeg -version | head -n 1
+
+      - name: Cache motore voce open source
+        if: github.event_name == 'schedule' || inputs.test_open_source == true
+        id: qwen-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/qwen3-tts
+          key: qwen3-tts-v1-${{ runner.os }}
+
+      - name: Installa motore voce open source (Qwen3-TTS)
+        if: (github.event_name == 'schedule' || inputs.test_open_source == true) && steps.qwen-cache.outputs.cache-hit != 'true'
+        continue-on-error: true
+        timeout-minutes: 20
+        run: |
+          sudo apt-get install -y -qq build-essential libopenblas-dev > /dev/null
+          (
+            set -e
+            rm -rf ~/qwen3-tts
+            git clone --depth 1 https://github.com/gabriele-mastrapasqua/qwen3-tts.git ~/qwen3-tts
+            cd ~/qwen3-tts
+            make blas SIMD=portable
+            ./download_model.sh --model small
+            ls -lh qwen3-tts-0.6b
+          ) || { echo "Installazione non riuscita: si userà edge-tts"; rm -rf ~/qwen3-tts; exit 1; }
+
+      - name: Verifica motore voce open source
+        if: github.event_name == 'schedule' || inputs.test_open_source == true
+        id: qwen-check
+        continue-on-error: true
+        run: |
+          sudo apt-get install -y -qq libopenblas0 > /dev/null || true
+          cd ~/qwen3-tts
+          ./qwen_tts --self-test
+          ./qwen_tts -d qwen3-tts-0.6b -s "${QWEN_SPEAKER:-ryan}" -l Italian --int4 --silent --text "Buongiorno, questa è una prova." -o "$RUNNER_TEMP/prova.wav"
+          test -s "$RUNNER_TEMP/prova.wav"
+          echo "bin=$HOME/qwen3-tts/qwen_tts" >> "$GITHUB_OUTPUT"
+          echo "model=$HOME/qwen3-tts/qwen3-tts-0.6b" >> "$GITHUB_OUTPUT"
+        env:
+          QWEN_SPEAKER: ${{ vars.QWEN_SPEAKER }}
+      # ===== FINE QUOTIDIE AUDIO v2 =====
 
       - name: Prepara il generatore
         run: |
@@ -70,10 +121,13 @@ jobs:
           import path from 'node:path';
           import { execFile } from 'node:child_process';
           import { promisify } from 'node:util';
+          import { mkdtemp as qdMkdtemp, copyFile as qdCopyFile, rm as qdRm } from 'node:fs/promises';
+          import { spawn as qdSpawn } from 'node:child_process';
+          import qdOs from 'node:os';
 
           const pExec = promisify(execFile);
           const AUDIO_DIR = path.resolve('data', 'audio');
-          const VOICE = process.env.EDGE_VOICE || 'it-IT-DiegoNeural';
+          const VOICE = process.env.EDGE_VOICE || 'it-IT-GiuseppeMultilingualNeural';
 
           const DATA = path.resolve('data');
           const API_KEY = (process.env.GEMINI_API_KEY || '').trim();
@@ -142,7 +196,321 @@ jobs:
             return out;
           }
 
-          /* ---------- Audio Neurale (Edge TTS - Diego) ---------- */
+          /* ===================== QUOTIDIE AUDIO v2 — INIZIO =====================
+             Audio del giornale e della lezione.
+             - Avvio programmato (EVENT=schedule) o test (TEST_OPEN_SOURCE=true):
+                 voce open source Qwen3-TTS; se fallisce o è troppo lenta → edge-tts.
+             - Avvio manuale: solo edge-tts (veloce).
+             In tutti i casi il testo viene prima riscritto per l'ascolto (copione).
+             Richiede nel generatore: gemini(), parseJSON(), log(), note(), readJSON(),
+             writeJSON(), today, DATA, formatNewsSpeech(), formatLessonSpeech(),
+             e gli import qdSpawn, qdMkdtemp, qdCopyFile, qdRm, qdOs (vedi istruzioni).
+             ===================================================================== */
+          const AUDIO = {
+            dir: path.resolve('data', 'audio'),
+            qwenBin: process.env.QWEN_BIN || '',
+            qwenModel: process.env.QWEN_MODEL_DIR || '',
+            qwenSpeakerNews: (process.env.QWEN_SPEAKER || '').trim() || 'ryan',
+            qwenSpeakerLesson: (process.env.QWEN_SPEAKER_LESSON || '').trim() || (process.env.QWEN_SPEAKER || '').trim() || 'ryan',
+            edgeVoice: (process.env.EDGE_VOICE || '').trim() || 'it-IT-GiuseppeMultilingualNeural',
+            useOpenSource: process.env.EVENT === 'schedule' || process.env.TEST_OPEN_SOURCE === 'true',
+            qwenFileTimeoutMs: Number(process.env.QWEN_FILE_TIMEOUT_MIN || 25) * 60000,
+            qwenBlockTimeoutMs: 6 * 60000,
+            bitrate: process.env.AUDIO_BITRATE || '48k',
+            rate: 24000,
+          };
+
+          const audioRun = (cmd, args, { timeout = 10 * 60000, input } = {}) => new Promise((resolve, reject) => {
+            const child = qdSpawn(cmd, args, { stdio: ['pipe', 'pipe', 'pipe'] });
+            let out = '';
+            let err = '';
+            const timer = setTimeout(() => { child.kill('SIGKILL'); reject(new Error(`${path.basename(cmd)}: tempo scaduto`)); }, timeout);
+            child.stdout.on('data', (d) => { out += d; });
+            child.stderr.on('data', (d) => { err += d; });
+            child.on('error', (e) => { clearTimeout(timer); reject(e); });
+            child.on('close', (code) => {
+              clearTimeout(timer);
+              if (code === 0) resolve(out);
+              else reject(new Error(`${path.basename(cmd)} uscito con codice ${code}: ${(err || out).slice(-300)}`));
+            });
+            if (input !== undefined) child.stdin.end(input); else child.stdin.end();
+          });
+
+          /* ---------- 1. Copione per l'ascolto ---------- */
+          const SCRIPT_SCHEMA = {
+            type: 'object',
+            properties: { blocks: { type: 'array', items: { type: 'string' } } },
+            required: ['blocks'],
+          };
+
+          function cleanSpeech(s) {
+            return String(s ?? '')
+              .replace(/\bhttps?:\/\/\S+/gi, '')
+              .replace(/[*_#`~[\]<>|]/g, '')
+              .replace(/\s+/g, ' ')
+              .trim();
+          }
+
+          // Divide un testo lungo in blocchi da ~maxWords parole, tagliando a fine frase
+          function chunkText(text, maxWords = 170) {
+            const sentences = String(text).match(/[^.!?…]+[.!?…]+["»”]?\s*|[^.!?…]+$/g) || [String(text)];
+            const blocks = [];
+            let cur = '';
+            for (const s of sentences) {
+              const next = cur ? `${cur} ${s.trim()}` : s.trim();
+              if (cur && next.split(/\s+/).length > maxWords) { blocks.push(cur); cur = s.trim(); } else cur = next;
+            }
+            if (cur) blocks.push(cur);
+            return blocks.filter((b) => b.length > 1);
+          }
+
+          async function speechScript(kind, data, fallbackText) {
+            const isNews = kind === 'news';
+            const source = isNews
+              ? [
+                `Edizione: ${data.kind === 'weekly' ? 'riepilogo della settimana' : 'giornale del mattino'} di ${data.date}.`,
+                `In breve: ${(data.brief || []).join(' ')}`,
+                ...(data.sections || []).flatMap((s) => [`SEZIONE ${s.title}:`, ...(s.stories || []).map((st) => `- ${st.title}. ${st.lead || ''} ${st.body || st.summary || ''} Perché conta: ${st.why || ''}`)]),
+              ].join('\n')
+              : [
+                `Lezione: ${data.title} (categoria ${data.category}).`,
+                data.series ? `Fa parte del percorso "${data.series.title}", parte ${data.series.part} di ${data.series.total}.` : '',
+                `Domanda iniziale: ${data.hook}`,
+                ...(data.sections || []).map((s) => `${s.heading}: ${s.body}`),
+                data.example ? `Esempio: ${data.example}` : '',
+                (data.keyTakeaways || []).length ? `Da ricordare: ${data.keyTakeaways.join(' ')}` : '',
+                data.funFact ? `Curiosità: ${data.funFact}` : '',
+              ].filter(Boolean).join('\n');
+
+            const style = isNews
+              ? `Sei il conduttore di un notiziario radiofonico italiano del mattino. Trasforma il materiale in un copione da leggere ad alta voce:
+          - apri con un saluto breve e la data detta per esteso;
+          - usa raccordi naturali tra sezioni e notizie ("Passiamo all'economia", "Restiamo in Italia");
+          - frasi brevi e scorrevoli, tono caldo e sicuro, niente elenchi;
+          - chiudi con un saluto breve e un augurio di buona giornata.`
+              : `Sei il narratore di un documentario divulgativo italiano. Trasforma la lezione in un racconto da ascoltare:
+          - apri con la domanda centrale per incuriosire;
+          - ritmo disteso, frasi chiare, qualche domanda retorica per far riflettere;
+          - riprendi alla fine i tre concetti da ricordare in modo discorsivo;
+          - chiudi con una frase che lascia il segno.`;
+
+            try {
+              const { text } = await gemini({
+                schema: SCRIPT_SCHEMA,
+                temperature: 0.6,
+                system: 'Scrivi testi in italiano pensati per essere ascoltati, non letti. Non inventare fatti: usa solo il materiale fornito.',
+                prompt: `${style}
+
+          REGOLE DI SCRITTURA PER LA VOCE:
+          - Numeri, date, percentuali e valute in lettere quando aiuta la pronuncia ("due virgola cinque per cento", "tre novembre").
+          - Sigle: scrivile come si pronunciano se non sono parole comuni ("bi-ci-e" per BCE è sbagliato: scrivi "la Banca centrale europea" la prima volta).
+          - Niente URL, niente simboli, niente parentesi, niente emoji, niente markdown.
+          - Lunghezza simile al materiale originale${isNews ? ' (circa 9-11 minuti di ascolto)' : ' (circa 5 minuti di ascolto)'}.
+          - Restituisci "blocks": il copione diviso in blocchi da 120-180 parole, ognuno che finisce a fine frase.
+
+          MATERIALE:
+          ${source}`,
+              });
+              const blocks = (parseJSON(text).blocks || []).map(cleanSpeech).filter((b) => b.split(/\s+/).length >= 3);
+              const total = blocks.join(' ').split(/\s+/).length;
+              if (blocks.length && total >= (isNews ? 600 : 300)) {
+                // Blocchi troppo lunghi vengono ridivisi
+                return { blocks: blocks.flatMap((b) => (b.split(/\s+/).length > 220 ? chunkText(b) : [b])), rewritten: true };
+              }
+              log(`Audio ${kind}: copione troppo corto (${total} parole), uso il testo originale`);
+            } catch (err) {
+              log(`Audio ${kind}: riscrittura non riuscita (${err.message}), uso il testo originale`);
+            }
+            return { blocks: chunkText(cleanSpeech(fallbackText)), rewritten: false };
+          }
+
+          /* ---------- 2. WAV ---------- */
+          function parseWav(buf) {
+            if (buf.length < 44 || buf.toString('ascii', 0, 4) !== 'RIFF' || buf.toString('ascii', 8, 12) !== 'WAVE') throw new Error('WAV non valido');
+            let off = 12;
+            let fmt = null;
+            while (off + 8 <= buf.length) {
+              const id = buf.toString('ascii', off, off + 4);
+              let size = buf.readUInt32LE(off + 4);
+              const body = off + 8;
+              if (id === 'fmt ') {
+                fmt = { channels: buf.readUInt16LE(body + 2), rate: buf.readUInt32LE(body + 4), bits: buf.readUInt16LE(body + 14) };
+              } else if (id === 'data') {
+                if (!fmt) throw new Error('WAV senza formato');
+                if (size === 0 || body + size > buf.length) size = buf.length - body; // intestazioni in streaming
+                return { ...fmt, pcm: buf.subarray(body, body + size) };
+              }
+              off = body + size + (size % 2);
+            }
+            throw new Error('WAV senza dati audio');
+          }
+
+          function wavFile(pcm, rate = AUDIO.rate) {
+            const h = Buffer.alloc(44);
+            h.write('RIFF', 0); h.writeUInt32LE(36 + pcm.length, 4); h.write('WAVE', 8);
+            h.write('fmt ', 12); h.writeUInt32LE(16, 16); h.writeUInt16LE(1, 20); h.writeUInt16LE(1, 22);
+            h.writeUInt32LE(rate, 24); h.writeUInt32LE(rate * 2, 28); h.writeUInt16LE(2, 32); h.writeUInt16LE(16, 34);
+            h.write('data', 36); h.writeUInt32LE(pcm.length, 40);
+            return Buffer.concat([h, pcm]);
+          }
+
+          const silence = (seconds, rate = AUDIO.rate) => Buffer.alloc(Math.round(seconds * rate) * 2);
+
+          /* ---------- 3. Motori ---------- */
+          async function ttsQwen(blocks, speaker, tmp) {
+            if (!AUDIO.qwenBin || !existsSync(AUDIO.qwenBin)) throw new Error('motore Qwen3-TTS non installato');
+            if (!AUDIO.qwenModel || !existsSync(AUDIO.qwenModel)) throw new Error('modello Qwen3-TTS non trovato');
+            const deadline = Date.now() + AUDIO.qwenFileTimeoutMs;
+            const parts = [];
+            for (let i = 0; i < blocks.length; i++) {
+              const left = deadline - Date.now();
+              if (left <= 0) throw new Error('Qwen3-TTS troppo lento: tempo massimo superato');
+              const out = path.join(tmp, `qwen-${i}.wav`);
+              await audioRun(AUDIO.qwenBin, [
+                '-d', AUDIO.qwenModel, '-s', speaker, '-l', 'Italian', '--int4', '--silent',
+                '--text', blocks[i], '-o', out,
+              ], { timeout: Math.min(left, AUDIO.qwenBlockTimeoutMs) });
+              const wav = parseWav(await readFile(out));
+              if (wav.channels !== 1 || wav.bits !== 16) throw new Error(`formato audio inatteso da Qwen3-TTS (${wav.channels} canali, ${wav.bits} bit)`);
+              const seconds = wav.pcm.length / 2 / wav.rate;
+              const words = blocks[i].split(/\s+/).length;
+              // Controllo di qualità: troppo corto o troppo lungo rispetto al testo = generazione difettosa
+              if (seconds < words * 0.18 || seconds > words * 1.2 + 5) throw new Error(`blocco ${i + 1} di durata anomala (${seconds.toFixed(1)} s per ${words} parole)`);
+              parts.push(wav.rate === AUDIO.rate ? wav.pcm : await resample(wav, tmp, i));
+              log(`  Qwen3-TTS blocco ${i + 1}/${blocks.length}: ${seconds.toFixed(1)} s`);
+            }
+            return parts;
+          }
+
+          async function resample(wav, tmp, i) {
+            const src = path.join(tmp, `rs-in-${i}.wav`);
+            const dst = path.join(tmp, `rs-out-${i}.wav`);
+            await writeFile(src, wavFile(wav.pcm, wav.rate));
+            await audioRun('ffmpeg', ['-y', '-loglevel', 'error', '-i', src, '-ar', String(AUDIO.rate), '-ac', '1', '-c:a', 'pcm_s16le', dst]);
+            return parseWav(await readFile(dst)).pcm;
+          }
+
+          async function ttsEdge(blocks, voice, rate, tmp) {
+            const parts = [];
+            for (let i = 0; i < blocks.length; i++) {
+              const txt = path.join(tmp, `edge-${i}.txt`);
+              const mp3 = path.join(tmp, `edge-${i}.mp3`);
+              const wavOut = path.join(tmp, `edge-${i}.wav`);
+              await writeFile(txt, blocks[i], 'utf8');
+              let lastErr;
+              for (let attempt = 1; attempt <= 3; attempt++) {
+                try {
+                  await audioRun('edge-tts', ['--voice', voice, `--rate=${rate}`, '-f', txt, '--write-media', mp3], { timeout: 3 * 60000 });
+                  lastErr = null;
+                  break;
+                } catch (err) {
+                  lastErr = err;
+                  await new Promise((r) => setTimeout(r, 3000 * attempt));
+                }
+              }
+              if (lastErr) throw lastErr;
+              await audioRun('ffmpeg', ['-y', '-loglevel', 'error', '-i', mp3, '-ar', String(AUDIO.rate), '-ac', '1', '-c:a', 'pcm_s16le', wavOut]);
+              parts.push(parseWav(await readFile(wavOut)).pcm);
+            }
+            return parts;
+          }
+
+          async function writeMp3(parts, dest, tmp, pauseSeconds) {
+            const gap = silence(pauseSeconds);
+            const pcm = Buffer.concat(parts.flatMap((p, i) => (i ? [gap, p] : [p])));
+            const wavPath = path.join(tmp, 'full.wav');
+            await writeFile(wavPath, wavFile(pcm));
+            await mkdir(path.dirname(dest), { recursive: true });
+            await audioRun('ffmpeg', ['-y', '-loglevel', 'error', '-i', wavPath, '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', AUDIO.bitrate, dest]);
+            return pcm.length / 2 / AUDIO.rate;
+          }
+
+          /* ---------- 4. Orchestrazione ---------- */
+          async function makeAudio(kind, data, fallbackText) {
+            const t0 = Date.now();
+            const tmp = await qdMkdtemp(path.join(process.env.RUNNER_TEMP || qdOs.tmpdir(), `qd-audio-${kind}-`));
+            try {
+              const { blocks, rewritten } = await speechScript(kind, data, fallbackText);
+              if (!blocks.length) throw new Error('nessun testo da leggere');
+              const dest = path.join(AUDIO.dir, `${kind}-${today}.mp3`);
+              const pause = kind === 'news' ? 0.6 : 0.8;
+              let engine = 'edge-tts';
+              let voice = AUDIO.edgeVoice;
+              let parts = null;
+              let fallbackReason = '';
+
+              if (AUDIO.useOpenSource) {
+                const speaker = kind === 'news' ? AUDIO.qwenSpeakerNews : AUDIO.qwenSpeakerLesson;
+                try {
+                  parts = await ttsQwen(blocks, speaker, tmp);
+                  engine = 'qwen3-tts';
+                  voice = speaker;
+                } catch (err) {
+                  fallbackReason = err.message;
+                  note(`Audio ${kind}: voce open source non riuscita (${err.message}), uso edge-tts`);
+                }
+              }
+              if (!parts) parts = await ttsEdge(blocks, AUDIO.edgeVoice, kind === 'lesson' ? '-5%' : '+0%', tmp);
+
+              const seconds = await writeMp3(parts, dest, tmp, pause);
+              await qdCopyFile(dest, path.join(AUDIO.dir, `${kind}-latest.mp3`));
+
+              const indexPath = path.join(AUDIO.dir, 'index.json');
+              const idx = await readJSON(indexPath, { files: {} });
+              idx.files = idx.files || {};
+              idx.files[`${kind}-${today}.mp3`] = {
+                date: today, kind, engine, voice, seconds: Math.round(seconds), rewritten,
+                ...(fallbackReason ? { fallbackReason: fallbackReason.slice(0, 200) } : {}),
+                generatedAt: new Date().toISOString(),
+              };
+              idx.files[`${kind}-latest.mp3`] = { ...idx.files[`${kind}-${today}.mp3`] };
+              idx.updatedAt = new Date().toISOString();
+              await writeJSON(indexPath, idx);
+              note(`Audio ${kind}: ${Math.round(seconds / 60)} min con ${engine} (voce ${voice}) in ${Math.round((Date.now() - t0) / 1000)} s`);
+            } finally {
+              await qdRm(tmp, { recursive: true, force: true }).catch(() => {});
+            }
+          }
+
+          async function cleanupAudioIndex() {
+            const indexPath = path.join(AUDIO.dir, 'index.json');
+            const idx = await readJSON(indexPath, null);
+            if (!idx?.files) return;
+            const existing = new Set(existsSync(AUDIO.dir) ? await readdir(AUDIO.dir) : []);
+            for (const name of Object.keys(idx.files)) if (!existing.has(name)) delete idx.files[name];
+            await writeJSON(indexPath, idx);
+          }
+
+          // Genera l'audio dei contenuti di oggi. Se l'MP3 di oggi esiste già lo salta,
+          // a meno che i contenuti siano più recenti dell'audio (rigenerazione manuale).
+          async function generateAudioForToday() {
+            const jobs = [];
+            const news = await readJSON(path.join(DATA, 'news', 'latest.json'), null);
+            if (news?.date === today) jobs.push(['news', news, formatNewsSpeech(news)]);
+            const lessonPath = path.join(DATA, 'lessons', `${today}.json`);
+            const lesson = await readJSON(lessonPath, null);
+            if (lesson) jobs.push(['lesson', lesson, formatLessonSpeech(lesson)]);
+
+            const idx = await readJSON(path.join(AUDIO.dir, 'index.json'), { files: {} });
+            let audioFailed = false;
+            for (const [kind, data, fallbackText] of jobs) {
+              const meta = idx.files?.[`${kind}-${today}.mp3`];
+              const exists = existsSync(path.join(AUDIO.dir, `${kind}-${today}.mp3`));
+              const stale = !meta || (data.generatedAt && meta.generatedAt < data.generatedAt);
+              const upgrade = AUDIO.useOpenSource && meta?.engine === 'edge-tts' && process.env.TEST_OPEN_SOURCE === 'true';
+              if (exists && !stale && !upgrade) { note(`Audio ${kind}: già presente`); continue; }
+              try {
+                await makeAudio(kind, data, fallbackText);
+              } catch (err) {
+                audioFailed = true;
+                note(`Errore audio ${kind}: ${err.message}`);
+              }
+            }
+            await cleanupAudioIndex();
+            return !audioFailed;
+          }
+          /* ===================== QUOTIDIE AUDIO v2 — FINE ===================== */
+
           function formatNewsSpeech(n) {
             let t = `Quotidie. ${n.kind === 'weekly' ? 'La settimana' : 'Il giornale'} di ${longDate(n.date)}. Ecco i fatti principali.\n\n`;
             if (n.brief && n.brief.length) {
@@ -548,15 +916,6 @@ jobs:
             }
             await writeJSON(path.join(dir, 'index.json'), { editions });
 
-            try {
-              log('Avvio generazione audio neurale per il giornale (Diego)...');
-              const speechTxt = formatNewsSpeech(news);
-              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, `news-${today}.mp3`));
-              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, 'news-latest.mp3'));
-              note('Audio giornale: generato con voce neurale Diego');
-            } catch (err) {
-              log('Errore generazione audio giornale:', err.message);
-            }
           }
 
           /* ---------- Lezione ---------- */
@@ -835,21 +1194,20 @@ jobs:
             await writeJSON(seriesPath, series);
             note(`Lezione: "${lesson.title}" (${lesson.kind === 'series' ? `percorso "${lesson.series.title}", parte ${lesson.series.part} di ${lesson.series.total}` : lesson.category}, ${lesson.minutes} minuti)`);
 
-            try {
-              log('Avvio generazione audio neurale per la lezione (Diego)...');
-              const speechTxt = formatLessonSpeech(lesson);
-              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, `lesson-${today}.mp3`));
-              await generateAudioFile(speechTxt, path.join(AUDIO_DIR, 'lesson-latest.mp3'));
-              note('Audio lezione: generato con voce neurale Diego');
-            } catch (err) {
-              log('Errore generazione audio lezione:', err.message);
-            }
           }
 
           /* ---------- Main ---------- */
           async function main() {
             log(`Edizione del ${today} (${SCHEDULED ? 'automatica' : 'manuale'})`);
             let failed = false;
+
+            if (process.env.AUDIO_ONLY === 'only') {
+              try { if (!(await generateAudioForToday())) failed = true; } catch (err) { failed = true; note(`Errore audio: ${err.message}`); }
+              try { await cleanupOldAudio(); } catch {}
+              if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### Audio\n\n${report.map((l) => `- ${l}`).join('\n')}\n`);
+              if (failed) process.exit(1);
+              return;
+            }
 
             if (!ONLY || ONLY === 'news') {
               try {
@@ -872,6 +1230,15 @@ jobs:
               } catch (err) {
                 failed = true;
                 note(`Errore nella lezione: ${err.message}`);
+              }
+            }
+
+            if (process.env.AUDIO_ONLY !== 'skip' && (!ONLY || process.env.AUDIO_ONLY === 'only')) {
+              try {
+                if (!(await generateAudioForToday())) failed = true;
+              } catch (err) {
+                failed = true;
+                note(`Errore audio: ${err.message}`);
               }
             }
 
@@ -900,6 +1267,7 @@ jobs:
           ONLY: ${{ inputs.only }}
           FORCE: ${{ inputs.force }}
           NEW_SERIES: ${{ inputs.new_series }}
+          AUDIO_ONLY: skip
         run: node "$RUNNER_TEMP/gen/generate.mjs"
 
       - name: Salva i contenuti nel repository
@@ -920,8 +1288,47 @@ jobs:
           done
           exit 1
 
+      - name: Genera l'audio
+        id: audio
+        continue-on-error: true
+        timeout-minutes: 70
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          EVENT: ${{ github.event_name }}
+          ONLY: ${{ inputs.only }}
+          AUDIO_ONLY: only
+          TEST_OPEN_SOURCE: ${{ inputs.test_open_source }}
+          QWEN_BIN: ${{ steps.qwen-check.outputs.bin }}
+          QWEN_MODEL_DIR: ${{ steps.qwen-check.outputs.model }}
+          QWEN_SPEAKER: ${{ vars.QWEN_SPEAKER }}
+          QWEN_SPEAKER_LESSON: ${{ vars.QWEN_SPEAKER_LESSON }}
+          EDGE_VOICE: ${{ vars.EDGE_VOICE }}
+          AUDIO_BITRATE: ${{ vars.AUDIO_BITRATE }}
+        run: |
+          git pull --rebase || true
+          node "$RUNNER_TEMP/gen/generate.mjs"
+
+      - name: Salva l'audio nel repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ ! -d data/audio ]; then echo "Nessun audio generato"; exit 0; fi
+          git add data/audio
+          if git diff --staged --quiet; then
+            echo "Nessun audio nuovo"
+            exit 0
+          fi
+          git commit -m "Audio del $(TZ=Europe/Rome date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            echo "Push non riuscito, nuovo tentativo tra 10 secondi"
+            sleep 10
+          done
+          exit 1
+
       - name: Segnala errori di generazione
-        if: steps.gen.outcome == 'failure'
+        if: steps.gen.outcome == 'failure' || steps.audio.outcome == 'failure'
         run: |
           echo "::error::La generazione non è riuscita del tutto: apri lo step 'Genera notizie e lezione' per il dettaglio."
           exit 1
