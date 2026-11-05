@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "kind": "daily",
-  "generatedAt": "2026-11-04T06:49:13.376Z",
+  "generatedAt": "2026-11-05T09:07:10.565Z",
   "model": "gemini-2.5-flash",
-  "minutes": 11,
-  "words": 2204,
+  "minutes": 10,
+  "words": 2001,
   "brief": [
-    "Marvell Technology ha annunciato l'acquisizione di Lumentum per 115 miliardi di dollari, un'operazione che mira a rafforzare la sua posizione nel settore dei data center e dell'intelligenza artificiale.",
-    "Intesa Sanpaolo ha registrato risultati record nei primi nove mesi del 2026, con un utile netto di 8,2 miliardi di euro, e ha alzato la guidance annuale a oltre 10 miliardi.",
-    "Gli Stati Uniti hanno tenuto le elezioni di metà mandato per il rinnovo del Congresso, un evento cruciale che influenzerà la politica interna ed estera e i mercati globali."
+    "La vittoria Democratica alle Midterm USA ha generato timori di maggiore regolamentazione per Big Tech e AI, ma ha spinto i mercati più ampi.",
+    "Anthropic ha annunciato impegni per quasi 900 miliardi di dollari in infrastrutture AI, evidenziando la fiducia nel potenziale di crescita del settore.",
+    "Apple ha superato le attese nel Q4 2026, ma ha previsto margini più deboli a causa dei costi dei chip e degli investimenti in intelligenza artificiale."
   ],
   "sections": [
     {
@@ -16,76 +16,72 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "Marvell acquisisce Lumentum per 115 miliardi, rafforzando la sua posizione nell'AI",
-          "lead": "Marvell Technology ha annunciato l'acquisizione di Lumentum, produttore di componenti ottici, tramite uno scambio azionario da 115 miliardi di dollari, mirando a rafforzare la sua presenza nei data center per l'AI.",
-          "body": "L'accordo, annunciato il 2 novembre 2026, prevede che gli azionisti di Lumentum ricevano 4,5 azioni Marvell per ogni loro titolo, con gli azionisti Marvell che controlleranno il 67% del nuovo gruppo. L'operazione, sebbene stimata a 115 miliardi, è indicata a circa 100 miliardi in un documento SEC.\nIl mercato ha reagito con scetticismo iniziale: Marvell ha chiuso in calo del 12,7% e Lumentum del 18,6% a Wall Street. Morningstar ha stimato una probabilità di completamento \"inferiore al 50%\", nonostante le aziende prevedano risparmi superiori a un miliardo di dollari l'anno.",
-          "why": "L'operazione è una delle maggiori nel settore, evidenziando la corsa all'espansione delle capacità per la crescente domanda di AI.",
+          "title": "Vittoria Democratica USA: timori regolatori per Big Tech e AI",
+          "lead": "La conquista di Camera e Senato da parte dei Democratici alle elezioni di metà mandato USA ha innescato una reazione negativa sui titoli delle grandi aziende tecnologiche e dell'intelligenza artificiale.",
+          "body": "Le azioni di Amazon, Microsoft, Apple e Alphabet hanno registrato un rally iniziale mercoledì, ma i titoli tech legati all'AI hanno subito un calo giovedì. L'indice Nasdaq ha mostrato un declino significativo in ottobre, il più grande da marzo 2025, entrando in territorio di correzione.\nGli investitori temono che un Congresso a maggioranza democratica possa portare a un maggiore scrutinio normativo sul settore dell'AI e sulle Big Tech, con possibili restrizioni sui data center e incertezze sulla spesa in capitale. Gli analisti prevedono una fase in cui le relazioni istituzionali saranno cruciali.",
+          "why": "Questo sviluppo segna un potenziale cambiamento nel panorama normativo per l'industria tecnologica e dell'AI, con implicazioni per innovazione e investimenti futuri.",
           "sources": [
             {
-              "url": "https://www.elettronicanews.it/semiconduttori-notizie-3-novembre-2026/",
-              "title": "elettronicanews.it"
-            }
-          ],
-          "readSeconds": 45
-        },
-        {
-          "title": "Rimbalzo dei semiconduttori a Wall Street, NVIDIA in testa, tra dubbi sull'AI",
-          "lead": "Il settore dei semiconduttori ha registrato un rimbalzo a Wall Street, con NVIDIA in crescita del 3,23%, in un contesto di dibattito sulla sostenibilità degli investimenti nell'intelligenza artificiale.",
-          "body": "Martedì 3 novembre 2026, NVIDIA ha guadagnato il 3,23% a 208,6 dollari, e anche AMD e Micron hanno mostrato progressi. Questo ha contribuito a un rialzo del Nasdaq Composite dello 0,83% e dell'S&P 500 dello 0,36%, dopo recenti cali del settore tecnologico.\nLa ripresa segue una fase di vendite dovuta a valutazioni elevate e dubbi sulla spesa per l'AI. Gli investitori stanno attentamente monitorando la domanda di acceleratori per data center e la capacità delle aziende di tradurre l'entusiasmo per l'AI in ricavi sostenibili, considerando il settore un barometro della spesa in intelligenza artificiale.",
-          "why": "Il rimbalzo indica interesse per l'AI, ma sottolinea la volatilità e selettività degli investitori in un settore ad alta crescita.",
-          "sources": [
-            {
-              "url": "https://www.giocareinborsa.com/news/nvidia-rimbalzo-chip-wall-street-3-novembre-2026-11-03",
-              "title": "giocareinborsa.com"
+              "url": "https://shattered.io/voters-gift-to-big-tech-4-stocks-41-data-center-measures-2026/",
+              "title": "shattered.io"
             },
             {
-              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/03/stock-market-today-nov-3-markets-edge-higher-as-semiconductor-stocks-rebound/",
-              "title": "fool.com"
+              "url": "https://www.afp.com/en/tech-hit-new-ai-worries-positive-day-most-markets",
+              "title": "afp.com"
             },
             {
-              "url": "https://it.benzinga.com/news/global/asia/borse-asia-3-novembre-2026-semiconduttori-seul-australia/",
-              "title": "it.benzinga.com"
+              "url": "https://www.rivista.ai/",
+              "title": "rivista.ai"
             }
           ],
           "readSeconds": 46
         },
         {
-          "title": "Regno Unito: allarme NCSC per cyberattacchi AI a infrastrutture critiche entro il 2028",
-          "lead": "Il NCSC del Regno Unito ha avvertito che entro il 2028 le infrastrutture critiche potrebbero subire cyberattacchi potenziati dall'AI, dopo recenti incidenti a supermercati europei.",
-          "body": "Il National Cyber Security Centre (NCSC) del Regno Unito ha lanciato l'allarme il 3 novembre 2026, evidenziando come l'intelligenza artificiale stia rendendo gli attacchi più sofisticati e difficili da rilevare, aumentando la vulnerabilità di settori vitali. L'avvertimento arriva dopo recenti attacchi informatici a supermercati in Europa, inclusi quelli nel Regno Unito, che hanno causato danni a grandi quantità di cibo.\nEsperti di sicurezza del NCSC hanno lavorato intensamente per contattare le organizzazioni che utilizzano tecnologie vulnerabili. Questa crescente preoccupazione globale per la sicurezza informatica nell'era dell'AI sottolinea la necessità di rafforzare le difese contro minacce sempre più avanzate.",
-          "why": "L'allarme evidenzia una crescente preoccupazione globale per la sicurezza informatica nell'era dell'AI e la necessità di rafforzare le difese.",
+          "title": "Anthropic investe quasi 900 miliardi in infrastrutture AI",
+          "lead": "Anthropic ha riportato un aumento significativo dei ricavi nel terzo trimestre 2026, raggiungendo quasi 17 miliardi di dollari, e ha annunciato impegni futuri per quasi 900 miliardi in infrastrutture AI.",
+          "body": "Questi impegni massicci sono destinati al calcolo e all'infrastruttura AI, includendo accordi con giganti come Amazon e Google per fornire capacità di calcolo per il laboratorio AI Frontier. L'annuncio ha avuto un impatto positivo sui mercati, con i prezzi delle azioni delle aziende tecnologiche coinvolte che sono aumentati lunedì.\nQuesto evidenzia l'enorme e crescente investimento necessario per lo sviluppo dell'intelligenza artificiale e la fiducia del mercato nel potenziale di crescita del settore, nonostante le preoccupazioni sui margini e la regolamentazione.",
+          "why": "Questo investimento sottolinea la fiducia del mercato nel potenziale dell'AI e la crescente necessità di risorse computazionali per il suo sviluppo futuro.",
           "sources": [
             {
-              "url": "https://it.euronews.com/2026/11/03/regno-unito-allarme-ncsc-entro-il-2028-cyberattacchi-ai-a-infrastrutture-critiche",
-              "title": "it.euronews.com"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=9ds4ZN9vgi8",
+              "url": "https://www.youtube.com/watch?v=n9KYgQ-IIKs",
               "title": "youtube.com"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 42
         },
         {
-          "title": "Risultati contrastanti per Apple e Palantir, dibattito sull'AI domina le conferenze",
-          "lead": "Apple ha registrato ricavi superiori alle attese ma un margine lordo inferiore, mentre Palantir ha deluso con il suo outlook, mentre la governance dell'AI è al centro delle conferenze di settore.",
-          "body": "Apple ha presentato risultati trimestrali misti, con ricavi di 114,5 miliardi di dollari (+12% su base annua) e un utile netto di 30,71 miliardi, superando le aspettative. Tuttavia, la previsione di margine lordo tra il 45% e il 46% è inferiore al 47% atteso. Palantir ha deluso con un outlook trimestrale che segnala un possibile rallentamento della crescita sequenziale delle vendite, portando a un calo del titolo.\nContemporaneamente, eventi come la \"2026 Tech Economics Conference\" a San Diego e l'\"IGF Italia 2026\" hanno focalizzato l'attenzione sull'impatto dell'AI e sulle sfide di policy legate all'economia digitale, con un forte accento sulla governance e l'etica dell'AI, sottolineando la necessità di un approccio strategico.",
-          "why": "Le performance delle big tech influenzano il mercato, mentre il dibattito sulla governance dell'AI è cruciale per il futuro della regolamentazione.",
+          "title": "L'AI guida il 26% delle attività di Ricerca e Sviluppo in Anthropic",
+          "lead": "Un'analisi interna di Anthropic rivela che i sistemi di intelligenza artificiale guidano il 26% delle attività di ricerca e sviluppo dell'azienda, un aumento significativo rispetto a marzo 2026.",
+          "body": "Questo dato, basato su dati fino ad agosto 2026, sottolinea una rapida progressione nell'autonomia dei sistemi AI nello sviluppo di nuovi modelli. A marzo 2026, tale percentuale era solo dell'1%, indicando una crescita esponenziale.\nLa notizia alimenta il dibattito sulla capacità delle AI di svilupparsi autonomamente e sulle implicazioni per la sicurezza e il controllo. Il CEO di Anthropic, Dario Amodei, aveva già sollevato questo tema in una lettera aperta sulla sicurezza dell'AI a settembre 2026.",
+          "why": "Questo è un indicatore significativo della velocità con cui l'AI sta evolvendo e della sua crescente capacità di auto-miglioramento, sollevando questioni fondamentali.",
           "sources": [
             {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-03-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611030732546447",
-              "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://www.xtb.com/it/analisi-di-mercato/notizie-del-mattino-gli-indici-azionari-tornano-a-scendere-03-11-2026",
-              "title": "xtb.com"
-            },
-            {
-              "url": "http://finanza.repubblica.it/mobile/News/2026/11/03/settore_ai_sostiene_il_rialzo_di_wall_street-253/",
-              "title": "finanza.repubblica.it"
+              "url": "https://www.ilpost.it/2026/11/03/grafico-ai-sviluppo-ricorsivo/",
+              "title": "ilpost.it"
             }
           ],
-          "readSeconds": 52
+          "readSeconds": 41
+        },
+        {
+          "title": "Rimbalzo dei semiconduttori, ma persistono incertezze di mercato",
+          "lead": "Dopo un periodo di forti vendite, i titoli dei semiconduttori hanno registrato un rimbalzo a Wall Street, ma il settore ha subito una nuova correzione in Asia, evidenziando incertezze.",
+          "body": "Nvidia (+3,23%), AMD (+4,6%) e Micron hanno mostrato un recupero martedì 3 novembre. Tuttavia, giovedì 5 novembre, SK Hynix ha perso oltre il 7% e Samsung il 5,5% in Asia.\nIl rimbalzo iniziale è stato interpretato come un tentativo del mercato di ridare credito all'AI, ma le preoccupazioni sulla sostenibilità degli investimenti e la pressione sui margini continuano a influenzare la volatilità. Gli investitori restano cauti, in attesa di indicazioni sulla domanda.",
+          "why": "Il settore dei semiconduttori è un barometro cruciale della spesa in intelligenza artificiale; la sua volatilità riflette le incertezze sulla crescita futura.",
+          "sources": [
+            {
+              "url": "https://www.afp.com/en/tech-hit-new-ai-worries-positive-day-most-markets",
+              "title": "afp.com"
+            },
+            {
+              "url": "https://www.theguardian.com/business/2026/nov/03/us-tech-stocks-recovery-ai-spending",
+              "title": "theguardian.com"
+            },
+            {
+              "url": "https://invezz.com/it/notizie/2026/11/03/il-nasdaq-sale-mentre-i-titoli-dei-semiconduttori-rimbalzano-apple-e-palantir-in-calo/",
+              "title": "invezz.com"
+            }
+          ],
+          "readSeconds": 39
         }
       ]
     },
@@ -94,67 +90,59 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Intesa Sanpaolo: risultati record e guidance utile netto oltre 10 miliardi",
-          "lead": "Intesa Sanpaolo ha annunciato risultati netti record nei primi nove mesi del 2026, pari a 8,2 miliardi di euro, alzando la previsione di utile netto annuale a oltre 10 miliardi.",
-          "body": "Il 3 novembre 2026, la banca ha comunicato che il terzo trimestre è stato il migliore di sempre, con oltre 2,6 miliardi di utile netto, e il Return on Equity (ROE) annualizzato ha raggiunto il 21%. Questi risultati confermano la solidità del modello di business e la piena esecuzione del Piano d'Impresa 2026-2029.\nNonostante l'impatto fiscale di quasi un miliardo di euro dovuto alla Legge di Bilancio italiana per il 2026, il CEO Carlo Messina ha sottolineato la solidità del gruppo e il valore industriale dell'offerta su Monte dei Paschi di Siena. Il titolo Intesa Sanpaolo ha reagito positivamente, tornando in territorio positivo.",
-          "why": "Questi dati evidenziano la forte performance del principale gruppo bancario italiano, con implicazioni positive per il settore finanziario e la fiducia.",
+          "title": "Mercati globali: reazione mista alla vittoria Democratica USA",
+          "lead": "La vittoria dei Democratici in entrambe le camere del Congresso USA ha generato reazioni contrastanti sui mercati finanziari globali, con cali per il tech e rally per altri settori.",
+          "body": "Mentre i titoli tecnologici hanno subito un calo per timori regolatori, l'S&P 500 è salito dell'1,2% e il Nasdaq dell'1,1% mercoledì. Il Dow Jones è balzato di oltre 1.100 punti (+2,3%), e il prezzo del petrolio Brent è sceso a 103 dollari al barile.\nLa sconfitta dei Repubblicani di Trump, attribuita a prezzi elevati e alla guerra in Iran, ha alimentato le speranze di una riduzione del conflitto in Medio Oriente e un ammorbidimento della posizione commerciale, mitigando l'inflazione. Gli investitori si aspettano anche un blocco politico che potrebbe limitare l'indebitamento.",
+          "why": "L'esito delle elezioni di metà mandato USA influenza le aspettative degli investitori su inflazione, tassi di interesse e regolamentazione settoriale a livello globale.",
           "sources": [
             {
-              "url": "https://www.milanofinanza.it/news/cos-e-successo-oggi-sui-mercati-dai-nove-mesi-record-di-intesa-al-4-5-di-ferrari-che-alza-gli-obiettivi-202611031806168599",
-              "title": "milanofinanza.it"
+              "url": "https://www.afp.com/en/tech-hit-new-ai-worries-positive-day-most-markets",
+              "title": "afp.com"
             },
             {
-              "url": "https://group.intesasanpaolo.com/it/newsroom/tutte-le-news/news/2026/highlights-risultati-terzo-trimestre-2026",
-              "title": "group.intesasanpaolo.com"
+              "url": "https://it.beincrypto.com/perche-mercato-azionario-usa-sale-dopo-elezioni-midterm-2026/",
+              "title": "it.beincrypto.com"
             },
             {
-              "url": "https://group.intesasanpaolo.com/it/newsroom/tutte-le-news/news/2026/dichiarazione-ceo-risultati-3-trimestre-2026",
-              "title": "group.intesasanpaolo.com"
+              "url": "https://www.theguardian.com/business/2026/nov/03/us-tech-stocks-recovery-ai-spending",
+              "title": "theguardian.com"
+            }
+          ],
+          "readSeconds": 45
+        },
+        {
+          "title": "Apple supera le attese, ma prevede margini più deboli nel Q4",
+          "lead": "Apple ha annunciato risultati finanziari superiori alle attese per il quarto trimestre 2026, con ricavi di 114,5 miliardi di dollari, ma ha fornito una previsione del margine lordo più debole del previsto.",
+          "body": "I ricavi totali sono aumentati del 12% su base annua, raggiungendo 114,5 miliardi di dollari, con un utile netto di 30,71 miliardi di dollari e un EPS di 2,10 dollari, superando le previsioni. Le vendite di iPhone sono cresciute del 17% e quelle di Mac del 24%.\nLa previsione sui margini è stata influenzata dall'aumento dei costi dei chip di memoria e dalle spese per l'intelligenza artificiale. Nonostante i risultati positivi, le azioni Apple hanno registrato un calo del 2-3% dopo la pubblicazione, a causa delle preoccupazioni sui margini e sulla crescita dei servizi.",
+          "why": "I risultati di Apple sono un indicatore chiave della salute del settore tecnologico; la pressione sui margini evidenzia le sfide legate ai costi e agli investimenti in AI.",
+          "sources": [
+            {
+              "url": "https://www.theguardian.com/business/2026/nov/03/us-tech-stocks-recovery-ai-spending",
+              "title": "theguardian.com"
+            },
+            {
+              "url": "https://invezz.com/it/notizie/2026/11/03/il-nasdaq-sale-mentre-i-titoli-dei-semiconduttori-rimbalzano-apple-e-palantir-in-calo/",
+              "title": "invezz.com"
+            },
+            {
+              "url": "https://www.xtb.com/it/analisi-di-mercato/notizie-del-mattino-gli-indici-azionari-tornano-a-scendere-03-11-2026",
+              "title": "xtb.com"
             }
           ],
           "readSeconds": 50
         },
         {
-          "title": "Mercati cauti per midterm USA, petrolio in rialzo dopo attacco a Qeshm",
-          "lead": "Le borse europee e Wall Street hanno mostrato cautela in attesa delle elezioni di metà mandato USA, mentre il petrolio Brent è salito dopo un attacco statunitense all'isola iraniana di Qeshm.",
-          "body": "Martedì 3 novembre 2026, le borse europee hanno chiuso in territorio negativo o sulla parità, con il FTSEMib che ha ceduto lo 0,01% a 49.942 punti. Wall Street ha mostrato un andamento misto, con il Dow Jones in calo dello 0,4%, l'S&P 500 in progresso dello 0,4% e il Nasdaq dello 0,8%. Lo spread Btp-Bund si è attestato sopra i 110 punti.\nL'incertezza legata all'esito delle elezioni di metà mandato negli USA ha influenzato la cautela degli investitori, con possibili ripercussioni sulle politiche economiche. Contemporaneamente, il petrolio Brent ha registrato un aumento di quasi l'1,5%, superando i 105,70 dollari al barile, in seguito alle notizie di un attacco statunitense all'isola iraniana di Qeshm.",
-          "why": "Le elezioni USA sono un evento chiave per i mercati globali, mentre le dinamiche geopolitiche e i prezzi delle materie prime restano fattori determinanti.",
+          "title": "USA: proposta di regolamentazione criptovalute e crisi dei wallet",
+          "lead": "La SEC ha avanzato una proposta per la \"Regulation Crypto Assets\" in un periodo di significativa contrazione, con i ricavi dei wallet di criptovalute crollati del 60% nel primo semestre 2026.",
+          "body": "I ricavi complessivi dell'industria blockchain sono scesi del 28% anno su anno, attestandosi a circa 100 miliardi di dollari per l'intero anno. I ricavi totali delle criptovalute sono stati di soli 47 miliardi di dollari nel primo semestre 2026, in calo del 23% rispetto all'anno precedente.\nIl calo dei ricavi è legato alla debolezza del mercato secondario e a un calo del 30% dei prezzi delle criptovalute. La proposta della SEC, che segue un'interpretazione di marzo 2026, crea pressione immediata sugli operatori per adeguare la conformità e i modelli di business.",
+          "why": "Questa iniziativa della SEC segna una nuova era di supervisione regolamentare per il settore delle criptovalute, stabilendo standard più chiari in un mercato in contrazione.",
           "sources": [
             {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-03-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611030732546447",
-              "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://www.xtb.com/it/analisi-di-mercato/notizie-del-mattino-gli-indici-azionari-tornano-a-scendere-03-11-2026",
-              "title": "xtb.com"
-            },
-            {
-              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-3-novembre-2026",
-              "title": "soldionline.it"
+              "url": "https://alphaedgemedia.com/article/crypto-regulation-shifts-amid-wallet-revenue-crisis-november",
+              "title": "alphaedgemedia.com"
             }
           ],
-          "readSeconds": 54
-        },
-        {
-          "title": "Ferrari alza la guidance 2026 dopo un terzo trimestre con ricavi e utili in crescita",
-          "lead": "Ferrari ha alzato per la seconda volta la guidance per l'anno finanziario 2026, a seguito di un terzo trimestre con ricavi netti di 1,89 miliardi di euro e utili in forte crescita.",
-          "body": "L'annuncio, avvenuto il 3 novembre 2026, ha evidenziato una crescita dei ricavi netti del terzo trimestre del 7% su base annua, con un aumento dell'utile del 13%. Questa performance positiva è stata sostenuta da un forte mix di prodotti e dalle personalizzazioni, che continuano a trainare la domanda per le vetture del Cavallino Rampante.\nIl titolo Ferrari ha registrato un balzo in borsa, chiudendo in territorio positivo, a conferma della fiducia degli investitori nella strategia e nella solidità del marchio di lusso. La continua crescita e la revisione al rialzo delle previsioni indicano una solida domanda nel segmento di fascia alta e una gestione efficace.",
-          "why": "La continua crescita e le previsioni al rialzo di Ferrari indicano una solida domanda nel lusso e una gestione efficace, segnale positivo per l'economia.",
-          "sources": [
-            {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-03-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611030732546447",
-              "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://www.milanofinanza.it/news/cos-e-successo-oggi-sui-mercati-dai-nove-mesi-record-di-intesa-al-4-5-di-ferrari-che-alza-gli-obiettivi-202611031806168599",
-              "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-3-novembre-2026",
-              "title": "soldionline.it"
-            }
-          ],
-          "readSeconds": 53
+          "readSeconds": 47
         }
       ]
     },
@@ -163,55 +151,51 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Funerali di Stato a Roma per i quattro militari italiani morti in Bosnia",
-          "lead": "Si sono tenuti a Roma i funerali di Stato per i quattro militari italiani deceduti in un incidente di elicottero in Bosnia, con la partecipazione delle massime autorità.",
-          "body": "Martedì 3 novembre 2026, le salme dei quattro militari, deceduti la settimana precedente durante una missione, sono arrivate a Ciampino. La cerimonia si è svolta con la partecipazione del Presidente della Repubblica Sergio Mattarella e del Presidente del Consiglio Giorgia Meloni, oltre ad altre massime autorità dello Stato.\nIl Ministro della Difesa Guido Crosetto ha descritto i militari come \"il meglio dell'Italia\". La nazione ha espresso cordoglio, con lutto cittadino proclamato in diverse località, in un momento di dolore e unità nazionale che ha focalizzato l'attenzione sul sacrificio delle forze armate italiane nelle missioni internazionali.",
-          "why": "L'evento ha rappresentato un momento di lutto e unità nazionale, focalizzando l'attenzione sul sacrificio delle forze armate italiane nelle missioni.",
+          "title": "Reggio Calabria: diplomazia scientifica per la prosperità italiana",
+          "lead": "Si è conclusa a Reggio Calabria la Conferenza degli Addetti scientifici e spaziali e degli Esperti agricoli, focalizzata sulle \"Tecnologie di frontiera per la prosperità dell'Italia\".",
+          "body": "L'evento, organizzato dal MAECI dal 3 al 5 novembre 2026, ha visto la partecipazione del Ministro degli Affari Esteri Antonio Tajani nella sessione istituzionale del 5 novembre, culminata con la firma del Protocollo MAECI-CNR.\nQuesta conferenza annuale è cruciale per rafforzare la strategia di diplomazia della crescita della Farnesina, valorizzando il ruolo della scienza nella promozione dell'innovazione e nella costruzione di partenariati internazionali. L'apertura alla stampa ha sottolineato l'importanza della comunicazione.",
+          "why": "L'evento evidenzia l'impegno italiano nel promuovere l'innovazione tecnologica e scientifica a livello internazionale, integrando la diplomazia scientifica nella strategia di crescita.",
           "sources": [
             {
-              "url": "https://www.youtube.com/watch?v=9ds4ZN9vgi8",
-              "title": "youtube.com"
+              "url": "https://www.esteri.it/it/sala_stampa/archivionotizie/notestampa/2026/10/nota-di-accreditamento-stampa-conferenza-degli-addetti-scientifici-e-spaziali-e-degli-esperti-agricoli-dal-laboratorio-al-mercato-tecnologie-di-frontiera-per-la-prosperita-dellitalia/",
+              "title": "esteri.it"
             },
             {
-              "url": "https://www.giornalelavoce.it/tag/notizie-3-novembre-2026/1",
-              "title": "giornalelavoce.it"
+              "url": "https://www.esteri.it/it/sala_stampa/archivionotizie/notestampa/2026/11/reminder-nota-di-accreditamento-stampa-conferenza-degli-addetti-scientifici-e-spaziali-e-degli-esperti-agricoli-dal-laboratorio-al-mercato-tecnologie-di-frontiera-per-la-prosperita-dell/",
+              "title": "esteri.it"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 38
         },
         {
-          "title": "Italia: PIL crescita zero nel Q3, inflazione accelera al 5,4% a ottobre",
-          "lead": "Il PIL italiano è rimasto invariato nel terzo trimestre, mentre l'inflazione ha raggiunto il 5,4% a ottobre, spinta dai prezzi di energia e alimentari, secondo i dati Istat.",
-          "body": "Secondo i dati Istat pubblicati il 3 novembre 2026, la crescita zero del Prodotto Interno Lordo (PIL) indica una fase di stagnazione economica. L'inflazione elevata, al 5,4% a ottobre, continua a comprimere il potere d'acquisto delle famiglie, dato che le retribuzioni contrattuali crescono meno dei prezzi.\nQuesto scenario evidenzia le fragilità strutturali dell'economia italiana, nonostante alcuni segnali di vitalità nel terziario torinese, con ricavi in crescita e occupazione in recupero. Le aspettative sulla produzione industriale sono peggiorate, in un contesto europeo di rallentamento.",
-          "why": "Questi dati macroeconomici sono cruciali per valutare lo stato di salute dell'economia italiana e per le future decisioni di politica economica.",
+          "title": "Manovra: il Movimento 5 Stelle critica i tagli alla scuola",
+          "lead": "Il Movimento 5 Stelle ha denunciato il \"fallimento del governo Meloni su natalità e scuola\", criticando i tagli previsti nella Manovra che comportano una riduzione di circa 7.000 posti.",
+          "body": "La riduzione riguarda docenti e personale ATA. Il capogruppo di Fratelli d'Italia, Bignami, ha tentato di giustificare i tagli con l'argomento della denatalità, ma il Movimento 5 Stelle ha respinto questa motivazione, definendola una \"calunnia\" e sostenendo che la situazione diventerà \"insostenibile\".\nLa segretaria della CGIL-Scuola, Fracassi, ha affermato che la manovra \"colpisce anche gli insegnanti precari\" e unisce i sindacati contro i tagli. Questo dibattito sottolinea le tensioni politiche e sociali riguardo alle priorità di spesa del governo.",
+          "why": "Questo dibattito evidenzia le tensioni sulle priorità di spesa del governo e l'impatto delle politiche economiche sul settore dell'istruzione, cruciale per il futuro del Paese.",
           "sources": [
             {
-              "url": "https://www.ascomtorino.it/notizia?kid=8847",
-              "title": "ascomtorino.it"
+              "url": "https://www.movimento5stelle.eu/2026/11/03/",
+              "title": "movimento5stelle.eu"
+            },
+            {
+              "url": "https://www.ilfattoquotidiano.it/in-edicola/edizione/martedi-3-novembre-2026/",
+              "title": "ilfattoquotidiano.it"
             }
           ],
           "readSeconds": 43
         },
         {
-          "title": "Ecomondo: Italia in ritardo nella transizione energetica, nonostante leadership circolare",
-          "lead": "A Ecomondo 2026 è emerso il ritardo dell'Italia nella transizione energetica, con una riduzione del consumo di fonti non rinnovabili del 4% contro il 13% della media UE.",
-          "body": "Dal 3 al 6 novembre 2026 si tiene a Rimini Ecomondo, la 29ª edizione dell'evento internazionale sulla green, blue e circular economy. Durante l'evento, è stato presentato il Rapporto Circonomia 2026, che evidenzia come l'Italia sia quarta in Europa per circolarità, ma in ritardo nella transizione energetica.\nTra il 2019 e il 2024, l'Italia ha ridotto il consumo di energia da fonti non rinnovabili solo del 4%, contro una media UE del 13%. Questo ritardo nella decarbonizzazione rende il Paese più esposto alle oscillazioni dei prezzi dei combustibili fossili, un danno all'interesse generale del Paese, come dichiarato dal direttore scientifico di Circonomia, Roberto Della Seta.",
-          "why": "Ecomondo è un appuntamento chiave per la green economy, e i dati sottolineano l'urgenza di accelerare gli investimenti in rinnovabili per la sicurezza energetica.",
+          "title": "OrientaTalenti 2026 a Milano: AI e robotica per l'orientamento",
+          "lead": "L'evento OrientaTalenti 2026 si è tenuto al MIND di Milano, offrendo a studenti e famiglie l'opportunità di esplorare percorsi professionali, con focus su intelligenza artificiale e robotica.",
+          "body": "La manifestazione, dal 3 al 5 novembre, ha incluso sessioni sull'intelligenza artificiale applicata alla scuola, robotica educativa e professioni del design. L'iniziativa mira a rompere l'equivoco che dietro etichette generiche come \"tecnologia\" si nascondano compiti molto diversi, permettendo ai giovani di osservare da vicino le attività professionali.\nL'ingresso gratuito ha favorito un'ampia partecipazione di studenti e famiglie. L'iniziativa è importante per affrontare le sfide dell'orientamento professionale in un mercato del lavoro in rapida evoluzione, dove le competenze legate all'AI e alla robotica sono sempre più richieste.",
+          "why": "L'iniziativa è cruciale per connettere l'istruzione con le esigenze del mercato del lavoro in evoluzione, dove le competenze in AI e robotica sono sempre più richieste.",
           "sources": [
             {
-              "url": "https://teleborsa.ansa.it/notiziario/finanza/eventi-e-scadenze-del-3-novembre-2026/",
-              "title": "teleborsa.ansa.it"
-            },
-            {
-              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-del-3-novembre-2026-9_2026-11-03_TLB.html?lang=it",
-              "title": "borsaitaliana.it"
-            },
-            {
-              "url": "https://www.ecomondo.com/it",
-              "title": "ecomondo.com"
+              "url": "https://www.sbircialanotizia.it/articoli/2026/11/03/orientatalenti-mind-0h68l/",
+              "title": "sbircialanotizia.it"
             }
           ],
-          "readSeconds": 50
+          "readSeconds": 44
         }
       ]
     },
@@ -220,60 +204,52 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Stati Uniti al voto per le elezioni di metà mandato, attese implicazioni globali",
-          "lead": "Gli Stati Uniti hanno tenuto le elezioni di metà mandato per il rinnovo del Congresso, un evento cruciale che determinerà il controllo legislativo e influenzerà l'agenda politica interna ed estera.",
-          "body": "Martedì 3 novembre 2026, gli Stati Uniti hanno votato per il rinnovo della Camera dei Rappresentanti e di un terzo del Senato. I primi dati sono attesi nel corso della notte. Queste elezioni sono cruciali per determinare il controllo del Congresso e potrebbero influenzare la capacità dell'amministrazione in carica di attuare la propria agenda politica.\nGli scenari possibili includono una vittoria netta dei Repubblicani, un'affermazione dei Democratici o un Congresso diviso, ognuno con diverse implicazioni per settori come tecnologia, finanza, energia e sanità. I mercati finanziari hanno mostrato cautela in attesa dei risultati, prevedendo impatti sui Treasury USA e sui titoli tecnologici.",
-          "why": "L'esito ridefinirà gli equilibri politici USA e avrà ripercussioni sulla politica estera americana, sulla stabilità globale e sui mercati finanziari.",
+          "title": "USA: vittoria schiacciante dei Democratici alle Midterm, sconfitta per Trump",
+          "lead": "I Democratici hanno conquistato il controllo di Camera e Senato nelle elezioni di metà mandato USA del 3 novembre 2026, infliggendo una significativa sconfitta politica a Donald Trump.",
+          "body": "È la prima volta dal 2006 che, in un'elezione di metà mandato, entrambe le camere passano all'opposizione. I Democratici hanno raggiunto circa 240 seggi alla Camera e 54 al Senato, secondo le stime di ABC News. Trump aveva chiesto agli americani di votare come se il suo nome fosse sulla scheda, ma il risultato ha dimostrato un forte spostamento dell'elettorato.\nNonostante la sconfitta, Trump mantiene il potere di veto e il comando delle forze armate per i prossimi due anni. La vittoria democratica ha generato un rally sui mercati azionari USA, sebbene i titoli tech abbiano subito un calo. Trump ha accettato i risultati, riducendo i timori di una disputa elettorale.",
+          "why": "Questo cambiamento negli equilibri di potere a Washington avrà profonde implicazioni per la politica interna ed estera degli Stati Uniti nei prossimi due anni.",
           "sources": [
             {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-03-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611030732546447",
-              "title": "milanofinanza.it"
+              "url": "https://it.beincrypto.com/perche-mercato-azionario-usa-sale-dopo-elezioni-midterm-2026/",
+              "title": "it.beincrypto.com"
             },
             {
-              "url": "https://www.xtb.com/it/analisi-di-mercato/notizie-del-mattino-gli-indici-azionari-tornano-a-scendere-03-11-2026",
-              "title": "xtb.com"
+              "url": "https://www.openpr.com/news/4681782/crypto-update-bitcoin-dips-to-75-700-after-the-midterms-but",
+              "title": "openpr.com"
             },
             {
-              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/wall-street-ostaggio-delle-midterm-gli-scenari-attesi-41_2026-11-03_TLB.html",
-              "title": "borsaitaliana.it"
-            }
-          ],
-          "readSeconds": 50
-        },
-        {
-          "title": "Ucraina: nuovi attacchi russi compromettono la pace, Germania promette sostegno",
-          "lead": "Nuovi attacchi russi, inclusi quelli a un centro di aiuti a Zaporijia con 26 morti, hanno compromesso le speranze di pace in Ucraina, mentre la Germania ha promesso ulteriore sostegno.",
-          "body": "Il 3 novembre 2026, il presidente ucraino Volodymyr Zelenskiy ha dichiarato che le speranze di progressi verso la pace, dopo il cessate il fuoco localizzato della scorsa settimana, sono state compromesse da mortali attacchi russi contro un centro di distribuzione di aiuti nel sud-est dell'Ucraina, nella regione di Zaporijia, causando almeno 26 morti. La Russia ha ripreso gli attacchi anche nella regione di Kherson.\nQuesti sviluppi indicano una recrudescenza delle ostilità nonostante i recenti tentativi di mediazione. Contemporaneamente, il cancelliere tedesco Friedrich Merz ha promesso ulteriori aiuti e sostegno per l'approvvigionamento energetico dell'Ucraina in vista dell'inverno, avvertendo la Russia che gli attacchi nel Mar Nero rischiano un'ulteriore escalation e una crisi alimentare globale.",
-          "why": "La ripresa degli attacchi evidenzia la difficoltà nel raggiungere una pace duratura, mentre il continuo sostegno internazionale all'Ucraina resta centrale.",
-          "sources": [
-            {
-              "url": "https://www.atalayar.com/en/articulo/gustavo-aristegui/gustavo-aristegui-geopolitical-analysis-of-3-november/20261103180000230247.html",
-              "title": "atalayar.com"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=b91uJNbvJw4",
-              "title": "youtube.com"
-            },
-            {
-              "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/03/merz-promises-more-support-for-ukraine-warns-russia-over-black-sea-attacks",
-              "title": "internazionale.it"
+              "url": "https://www.radiobullets.com/notiziari/5-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
             }
           ],
           "readSeconds": 52
         },
         {
-          "title": "Attacco USA all'isola iraniana di Qeshm aumenta le tensioni in Medio Oriente",
-          "lead": "Aerei statunitensi hanno distrutto un lanciatore di missili sull'isola iraniana di Qeshm nello Stretto di Hormuz, in risposta a un precedente attacco della Guardia Rivoluzionaria a un aereo americano.",
-          "body": "Nella notte tra il 2 e il 3 novembre 2026, l'attacco statunitense ha colpito un lanciatore di missili terra-aria sull'isola di Qeshm, situata nello Stretto di Hormuz. L'azione è giunta in risposta a un precedente sparo della Guardia Rivoluzionaria iraniana contro un aereo americano.\nQuesto incidente rappresenta un'escalation delle tensioni in una regione già volatile, cruciale per il transito del petrolio mondiale. L'attacco ha contribuito a un aumento del prezzo del petrolio Brent, e sebbene i mediatori qatarioti siano volati a Teheran con una bozza di accordo, le posizioni tra le parti rimangono distanti.",
-          "why": "L'incidente ha significative implicazioni geopolitiche ed economiche, aumentando il rischio di conflitto nella regione e influenzando la stabilità dei mercati energetici.",
+          "title": "Russia conferma colloqui di pace trilaterali con Ucraina e USA",
+          "lead": "La Russia ha confermato che terrà colloqui di pace trilaterali con l'Ucraina e gli Stati Uniti ad Abu Dhabi dal 10 all'11 novembre 2026, con Vladimir Medinsky come capo negoziatore.",
+          "body": "Questa notizia è emersa il 3 novembre, a seguito di colloqui riservati tra il senatore statunitense Rubio e il ministro degli esteri russo Lavrov a margine del vertice del G20 ad Atlanta. La Turchia ha ribadito la necessità di porre fine al conflitto in Ucraina, offrendosi come mediatore.\nLa notizia ha acceso la speranza per una possibile risoluzione del conflitto in Ucraina, anche se Bruxelles ha mantenuto il silenzio. Questi colloqui rappresentano un significativo sviluppo diplomatico nel conflitto, offrendo una potenziale via per la de-escalation.",
+          "why": "Questi colloqui rappresentano un significativo sviluppo diplomatico nel conflitto in Ucraina, offrendo una potenziale via per la de-escalation e la ricerca di una soluzione pacifica.",
           "sources": [
             {
-              "url": "https://www.xtb.com/it/analisi-di-mercato/notizie-del-mattino-gli-indici-azionari-tornano-a-scendere-03-11-2026",
-              "title": "xtb.com"
+              "url": "https://www.triesteallnews.it/2026/11/lanalisi-si-accende-la-speranza-nel-conflitto-in-ucraina/",
+              "title": "triesteallnews.it"
+            }
+          ],
+          "readSeconds": 45
+        },
+        {
+          "title": "Teheran avverte Washington: rischio nuovo fronte di guerra",
+          "lead": "Le tensioni tra Stati Uniti e Iran rimangono estremamente alte, con Teheran che ha avvertito Washington del rischio di un nuovo fronte di guerra e minacciato una risposta \"senza limiti geografici\".",
+          "body": "Il presidente del Parlamento iraniano Ghalibaf ha dichiarato che \"tocca agli USA prevenire la guerra\". L'Iran è in massima allerta e ha minacciato una \"risposta immediata senza limiti geografici\" a qualsiasi minaccia. Gli USA avevano avvertito gli alleati nel Golfo di possibili attacchi a partire dal 4 novembre.\nQueste dichiarazioni seguono un periodo di crescenti tensioni, inclusi attacchi statunitensi a obiettivi iraniani a Qeshm, nello Stretto di Hormuz. Il leader supremo iraniano Mojtaba Khamenei ha dato ordini per una risposta incisiva a qualsiasi minaccia, generando preoccupazioni globali per una possibile escalation.",
+          "why": "La crescente retorica e le azioni militari tra USA e Iran rappresentano una delle crisi geopolitiche più pericolose, con il potenziale di destabilizzare la regione.",
+          "sources": [
+            {
+              "url": "https://it.euronews.com/video/2026/11/03/teheran-avverte-washington-rischio-di-un-nuovo-fronte-di-guerra-nel-mirino-le-basi-usa-in-",
+              "title": "it.euronews.com"
             },
             {
-              "url": "https://www.atalayar.com/en/articulo/gustavo-aristegui/gustavo-aristegui-geopolitical-analysis-of-3-november/20261103180000230247.html",
-              "title": "atalayar.com"
+              "url": "https://www.ilgiornale.it/news/guerra/trump-prepara-nuovi-attacchi-alliran-vance-tenta-la-via-diplomatica-per-evitare-la-guerra/",
+              "title": "ilgiornale.it"
             }
           ],
           "readSeconds": 47
