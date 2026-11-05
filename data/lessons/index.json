@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-05",
+      "title": "L'Effetto Kuleshov: Il Montaggio che Svela le Emozioni Nascoste",
+      "category": "Cinema",
+      "categoryId": "cinema",
+      "minutes": 4,
+      "hook": "Avete mai riflettuto su come un film possa manipolare le vostre emozioni senza che un attore cambi espressione? Il segreto risiede in un principio cinematografico fondamentale, capace di riscrivere il significato di ogni immagine: l'Effetto Kuleshov.",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-04",
       "title": "Il Wood Wide Web: La Rete Segreta delle Foreste",
       "category": "Biologia",
