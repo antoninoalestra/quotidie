@@ -793,16 +793,32 @@ jobs:
             }
 
             log(`Notizie (${weekly ? 'riepilogo settimanale' : 'giornaliere'}): ricerca con Google Search`);
-            const research = await gemini({
-              search: true,
-              temperature: 0.3,
-              system: 'Sei il caporedattore di un quotidiano italiano di qualità. Lavori solo su fatti verificati e recenti, citando le fonti. Non inventi nulla.',
-              prompt: researchPrompt,
-            });
-
-            const chunks = arr(research.grounding?.groundingChunks).map((c) => c.web || {});
-            const annotated = annotate(research.text, research.grounding?.groundingSupports);
-            log(`Notizie: ${chunks.filter((c) => c.uri).length} fonti trovate dalla ricerca`);
+            let research = null;
+            let chunks = [];
+            let annotated = '';
+            for (let rAttempt = 1; rAttempt <= 3; rAttempt++) {
+              try {
+                research = await gemini({
+                  search: true,
+                  temperature: 0.3,
+                  system: 'Sei il caporedattore di un quotidiano italiano di qualità. Lavori solo su fatti verificati e recenti, citando le fonti. Non inventi nulla.',
+                  prompt: researchPrompt,
+                });
+                chunks = arr(research.grounding?.groundingChunks).map((c) => c.web || {});
+                annotated = annotate(research.text, research.grounding?.groundingSupports);
+                const foundCount = chunks.filter((c) => c.uri).length;
+                log(`Notizie: ${foundCount} fonti trovate dalla ricerca${rAttempt > 1 ? ` (tentativo ${rAttempt})` : ''}`);
+                if (foundCount > 0) break;
+                if (rAttempt < 3) {
+                  log('Nessuna fonte trovata nella risposta, nuovo tentativo tra 6s...');
+                  await sleep(6000);
+                }
+              } catch (err) {
+                log(`Ricerca notizie: tentativo ${rAttempt} fallito (${err.message})`);
+                if (rAttempt < 3) await sleep(6000);
+                else throw err;
+              }
+            }
             const sourceList = chunks.map((c, i) => (c.uri ? `[${i}] ${c.title || hostOf(c.uri)}` : null)).filter(Boolean).join('\n');
 
             const verified = new Map(); // id → { url, title } oppure null
