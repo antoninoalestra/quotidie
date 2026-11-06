@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-06",
+      "title": "Biochar: L'eredità amazzonica per suoli e clima",
+      "category": "Ecologia e clima",
+      "categoryId": "ecologia-e-clima",
+      "minutes": 3,
+      "hook": "Immaginate un suolo così fertile da sfidare ogni logica, capace di mantenere la sua produttività per migliaia di anni. E se questa antica saggezza amazzonica potesse offrirci una soluzione rivoluzionaria per la fertilità della terra e la lotta al cambiamento climatico?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-05",
       "title": "Usucapione: Così un Bene Altrui Diventa Tuo Col Tempo",
       "category": "Diritto per tutti",
