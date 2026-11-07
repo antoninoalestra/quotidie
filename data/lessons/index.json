@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-07",
+      "title": "Il più Grande Hack non è un Codice: La Mente Umana è la Vera Porta d'Accesso",
+      "category": "Cybersecurity",
+      "categoryId": "cybersecurity",
+      "minutes": 5,
+      "hook": "Immaginate un sistema informatico impenetrabile, protetto da crittografie all'avanguardia e firewall invalicabili. Ma cosa succede se la chiave d'accesso non è digitale, bensì profondamente umana?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-06",
       "title": "Biochar: L'eredità amazzonica per suoli e clima",
       "category": "Ecologia e clima",

@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "kind": "daily",
-  "generatedAt": "2026-11-06T08:40:54.970Z",
+  "generatedAt": "2026-11-07T10:14:51.744Z",
   "model": "gemini-2.5-flash",
   "minutes": 11,
-  "words": 2106,
+  "words": 2220,
   "brief": [
-    "I mercati tecnologici globali hanno subito un crollo significativo dopo le elezioni di midterm negli USA, con il Nasdaq in calo del 5,5% per timori di nuove regolamentazioni.",
-    "La Bank of England ha incrementato i tassi di interesse al 4% per contenere l'inflazione, una mossa attesa dai mercati finanziari.",
-    "In Italia, il dibattito sulla Manovra di Bilancio si concentra su IRPEF e pensioni, con Forza Italia che spinge per modifiche significative."
+    "Microsoft ha terminato l'accordo di noleggio di capacità AI con Oracle, consolidando le proprie operazioni all'interno del suo ecosistema Azure.",
+    "I mercati azionari globali hanno registrato forte volatilità con un crollo dei titoli AI, innescato da timori regolatori post-elezioni USA, seguito da un parziale recupero.",
+    "La Russia ha lanciato un massiccio attacco combinato contro l'Ucraina, colpendo Kyiv, mentre si preparano nuovi colloqui di pace ad Abu Dhabi."
   ],
   "sections": [
     {
@@ -16,68 +16,80 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "Crollo titoli tech e AI a Wall Street dopo elezioni midterm USA",
-          "lead": "Wall Street ha registrato un significativo sell-off giovedì 5 novembre 2026, con l'indice tecnologico Nasdaq Composite in calo del 5,5% e l'S&P 500 del 4,4%.",
-          "body": "Questo ha spinto il Nasdaq in territorio di correzione, quasi il 12% sotto il suo massimo di ottobre, segnando la peggiore performance del mercato azionario dall'aprile 2025. Il crollo è avvenuto due giorni dopo che i Democratici hanno ottenuto guadagni storici nelle elezioni di metà mandato, inclusa la conquista dei governatorati di Texas e Ohio, aree cruciali per lo sviluppo dei data center.\nGli investitori temono che la vittoria democratica possa portare a una regolamentazione più stringente sui data center statunitensi, rallentando i permessi e imponendo regole più severe su energia e acqua. Questo scenario minaccia la domanda di semiconduttori e mette in discussione la sostenibilità del boom degli investimenti nell'intelligenza artificiale.",
-          "why": "Il crollo evidenzia la vulnerabilità del settore tech alle dinamiche politiche e normative, con impatti diretti sulla crescita dell'AI.",
+          "title": "Microsoft conclude accordo AI con Oracle, punta all'autosufficienza Azure",
+          "lead": "Microsoft ha deciso di terminare l'accordo del 2023 per il noleggio di capacità di calcolo AI da Oracle, una mossa strategica per consolidare le proprie operazioni all'interno dell'ecosistema Azure.",
+          "body": "La partnership era stata avviata durante la \"crisi\" delle infrastrutture AI del 2024-2025, quando la domanda per l'addestramento di modelli di linguaggio superava l'offerta. L'accordo prevedeva l'utilizzo di server Oracle con chip Nvidia di vecchia generazione, ma Microsoft ha ora impegnato oltre 80 miliardi di dollari in spese capitali per il 2026, gran parte delle quali destinate alle proprie infrastrutture.Le azioni di Oracle sono scese di circa il 3% dopo la notizia. Un portavoce di Oracle ha comunque ribadito la forte domanda per la sua infrastruttura AI, anche per le GPU di generazione precedente, suggerendo che il mercato rimane dinamico nonostante la decisione di Microsoft.",
+          "why": "Questa decisione evidenzia la strategia di Microsoft di diventare autosufficiente nelle sue capacità AI, con impatti significativi sul mercato delle infrastrutture cloud.",
           "sources": [
             {
-              "url": "https://theashlandchronicle.com/ai-free-fall-today-11-5-2026-fueling-fears-of-a-slowdown-in-the-ai-boom/",
-              "title": "theashlandchronicle.com"
+              "url": "https://emergent.sh/news/microsoft-ends-oracle-ai-cloud-capacity-deal",
+              "title": "emergent.sh"
             },
             {
-              "url": "https://teleborsa.ansa.it/notiziario/finanza/wall-street-in-rosso-con-forte-calo-dei-tech/",
-              "title": "teleborsa.ansa.it"
+              "url": "https://dealroom.co/news/170467-microsoft-winds-down-its-ai-cloud-rental-deal-with-oracle-as-older-nvidi/",
+              "title": "dealroom.co"
             },
             {
-              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-6-novembre-2026",
-              "title": "soldionline.it"
+              "url": "https://www.marketscale.com/industries/software-and-technology/microsoft-winding-down-oracle-ai-cloud-capacity-deal",
+              "title": "marketscale.com"
             }
           ],
           "readSeconds": 50
         },
         {
-          "title": "Big Tech offre concessioni per data center dopo voto restrittivo",
-          "lead": "Le grandi aziende tecnologiche stanno cercando di rinegoziare la costruzione di infrastrutture per l'intelligenza artificiale, in particolare i data center, dopo che gli elettori hanno votato per limitarne la costruzione.",
-          "body": "La reazione degli elettori evidenzia una crescente resistenza politica all'espansione incontrollata dell'industria dell'AI, che richiede ingenti risorse come energia e acqua. In diverse misure elettorali negli Stati Uniti, i cittadini hanno espresso il loro dissenso verso l'espansione indiscriminata di queste infrastrutture.\nIn risposta, le aziende stanno offrendo \"nuovi accordi\" che includono denaro contante e concessioni, come dividendi e benefici per scuole o città, oltre a impegni ambientali e protezioni per i lavoratori. Questo è un tentativo di placare un elettorato ostile e prevenire una minaccia esistenziale alla corsa globale all'AI.",
-          "why": "Le concessioni delle Big Tech mostrano la pressione crescente per bilanciare innovazione e sostenibilità, cruciale per il futuro dell'AI.",
+          "title": "TSMC considera produzione 3D DRAM su sollecitazione di Nvidia",
+          "lead": "TSMC, il principale produttore di chip mondiale, sta valutando di espandere la sua attività includendo la produzione di memorie avanzate 3D DRAM, su richiesta di Nvidia, per soddisfare la crescente domanda AI.",
+          "body": "L'iniziativa, riportata il 6 novembre 2026, rappresenterebbe un'espansione significativa per TSMC, tradizionalmente focalizzata sui chip logici. Attualmente, le sue collaborazioni HBM si concentrano sul packaging avanzato, non sulla produzione delle celle di memoria stesse. La carenza di chip di memoria è un problema crescente nel settore AI.Nonostante l'importanza della notizia, TSMC ha dichiarato di non commentare le voci di mercato, ribadendo il suo ruolo di fonderia di chip logici. Nvidia non ha risposto a richieste di commento, mantenendo il riserbo su questa potenziale mossa che potrebbe ridefinire la catena di approvvigionamento.",
+          "why": "Se confermata, questa mossa potrebbe alterare profondamente la catena di approvvigionamento dei semiconduttori per l'AI, rafforzando la posizione di TSMC.",
           "sources": [
             {
-              "url": "https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions",
-              "title": "axios.com"
+              "url": "https://xenospectrum.com/en/tsmc-3d-dram-hbm-boundary/",
+              "title": "xenospectrum.com"
             },
             {
-              "url": "https://theashlandchronicle.com/ai-free-fall-today-11-5-2026-fueling-fears-of-a-slowdown-in-the-ai-boom/",
-              "title": "theashlandchronicle.com"
+              "url": "https://www.igorslab.de/en/tsmc-3d-dram-nvidia-memory-chips/",
+              "title": "igorslab.de"
+            },
+            {
+              "url": "https://theedgemalaysia.com/node/824943",
+              "title": "theedgemalaysia.com"
             }
           ],
-          "readSeconds": 45
+          "readSeconds": 46
         },
         {
-          "title": "Shield AI acquisisce Echodyne per 5,3 miliardi di dollari",
-          "lead": "Shield AI ha concordato l'acquisizione di Echodyne, un produttore di radar compatti per il rilevamento di droni, in un accordo valutato fino a 5,3 miliardi di dollari.",
-          "body": "L'accordo prevede che Shield AI raccolga 2,5 miliardi di dollari per finanziare l'acquisizione, inclusi 1 miliardo di dollari in nuovi finanziamenti che portano la sua valutazione a 28,8 miliardi di dollari, più del doppio rispetto a marzo. Echodyne è un'azienda specializzata in radar, sostenuta anche da Bill Gates, il che ne sottolinea l'importanza strategica nel settore.\nQuesta acquisizione rappresenta un significativo consolidamento nel settore dell'intelligenza artificiale applicata alla difesa e alla sicurezza, raddoppiando l'impegno di Shield AI nell'area di Seattle. L'operazione evidenzia la crescente importanza della tecnologia radar per i sistemi autonomi e la sicurezza nazionale.",
-          "why": "L'acquisizione rafforza il settore dell'AI per la difesa, indicando un'accelerazione nell'integrazione di tecnologie autonome e radar.",
+          "title": "Titoli AI in calo a Wall Street, poi parziale recupero",
+          "lead": "I titoli legati all'intelligenza artificiale hanno subito un brusco calo il 5 novembre, con il Nasdaq Composite in forte perdita, seguito da un parziale recupero il giorno successivo.",
+          "body": "Il 5 novembre, il Nasdaq Composite ha perso il 5,52% e l'indice dei semiconduttori di Filadelfia è crollato del 12,3%, bruciando 3.200 miliardi di dollari a Wall Street. Tra i titoli più colpiti figurano AMD (-17%), Micron (-15%) e Nvidia (-9%). Il sell-off è stato innescato dai timori che la vittoria dei Democratici alle elezioni di midterm potesse portare a una maggiore regolamentazione del settore AI e a limiti alla costruzione di nuovi data center.Il 6 novembre, il mercato ha mostrato un parziale recupero, con il Nasdaq in rialzo dell'1,09% e l'S&P 500 dello 0,3%. Nvidia è salita del 2,8% e AMD dell'11,04%. La volatilità è aumentata, con l'indice VIX balzato di quasi il 70%, dividendo gli analisti tra l'inizio di un ribasso prolungato o una correzione a breve termine.",
+          "why": "L'evento sottolinea la crescente sensibilità del mercato ai fattori politici e regolatori che influenzano l'industria dell'AI, mettendo in discussione la sua espansione.",
           "sources": [
             {
-              "url": "https://www.geekwire.com/",
-              "title": "geekwire.com"
+              "url": "https://www.ai4business.it/intelligenza-artificiale/lai-perde-2-500-miliardi-in-borsa-sta-per-scoppiare-la-bolla/",
+              "title": "ai4business.it"
+            },
+            {
+              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026",
+              "title": "thestreet.com"
+            },
+            {
+              "url": "https://www.washingtonpost.com/business/2026/11/06/wall-street-stocks-dow-nasdaq/fbde12a0-da27-11f1-930a-e08f8086f5ac_story.html",
+              "title": "washingtonpost.com"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 57
         },
         {
-          "title": "Preoccupazioni sulla sostenibilità del boom degli investimenti in AI",
-          "lead": "Gli investitori stanno sempre più mettendo in discussione la sostenibilità del boom degli investimenti nell'intelligenza artificiale, data la spesa massiccia in infrastrutture informatiche.",
-          "body": "Alphabet, Amazon, Meta e Microsoft hanno delineato piani di spesa in conto capitale combinati che superano i 740 miliardi di dollari per il 2026. Gran parte di questi investimenti è associata a infrastrutture AI, inclusi data center, chip avanzati e sistemi di cloud computing, essenziali per alimentare l'espansione dell'intelligenza artificiale.\nL'entità senza precedenti di questa spesa ha iniziato a preoccupare gli investitori, che si interrogano sulla redditività, il debito e i futuri rendimenti. Le azioni delle principali aziende tecnologiche e dei semiconduttori hanno subito perdite mentre gli investitori rivalutano le implicazioni finanziarie dello sviluppo delle infrastrutture AI, come dimostrato dal flusso di cassa negativo di Alphabet nel terzo trimestre.",
-          "why": "La massiccia spesa in AI solleva dubbi sulla redditività a lungo termine e sulla sostenibilità finanziaria del settore tecnologico.",
+          "title": "Accordo Italia-Giappone per neuroscienze e intelligenza artificiale",
+          "lead": "L'Università \"Gabriele d'Annunzio\" di Chieti-Pescara ha siglato un accordo con la Juntendo University in Giappone per collaborare nel campo delle neuroscienze e dell'intelligenza artificiale.",
+          "body": "L'accordo, annunciato il 6 novembre 2026, mira a unire le competenze nel neuroimaging e nelle neuroscienze cliniche dell'ateneo italiano con il patrimonio digitale e clinico dell'università giapponese. L'obiettivo è lavorare congiuntamente verso una medicina predittiva e tempestiva, sfruttando le sinergie tra le due istituzioni.Il professor Stefano Sensi ha evidenziato che questa collaborazione offrirà a studenti e ricercatori un'esperienza internazionale d'avanguardia, promuovendo lo scambio di conoscenze e l'innovazione. L'iniziativa sottolinea l'importanza della cooperazione globale nella ricerca avanzata.",
+          "why": "Questo accordo evidenzia l'importanza della collaborazione internazionale nella ricerca avanzata sull'AI e le neuroscienze, con potenziale innovativo in medicina.",
           "sources": [
             {
-              "url": "https://www.thedailystar.net/news/technology/news/big-techs-740bn-spending-plans-raise-fresh-fears-over-ai-investment-boom-4313641",
-              "title": "thedailystar.net"
+              "url": "https://www.insalutenews.it/in-salute/neuroscienze-e-intelligenza-artificiale-la-dannunzio-vola-in-giappone-siglato-accordo-con-la-juntendo-university/",
+              "title": "insalutenews.it"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 38
         }
       ]
     },
@@ -86,59 +98,59 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Bank of England aumenta i tassi di interesse al 4%",
-          "lead": "La Bank of England ha deciso di aumentare i tassi di interesse di 25 punti base, portando il saggio di riferimento dal 3,75% al 4%.",
-          "body": "La decisione è stata presa giovedì 5 novembre 2026 con il voto favorevole di otto dei nove membri del consiglio dell'istituto, con il restante componente che avrebbe preferito un aumento di 0,5%. Il Comitato di politica monetaria ha ribadito che adeguerà i tassi se necessario per riportare l'inflazione all'obiettivo del 2% nel medio termine.\nQuesto rialzo era atteso dal mercato a causa dell'aumento dei costi energetici che ha spinto l'inflazione britannica. La mossa della BoE si inserisce in un contesto globale di banche centrali che affrontano pressioni inflazionistiche, con la BCE che potrebbe anch'essa considerare ulteriori aumenti dei tassi a dicembre.",
-          "why": "L'aumento dei tassi è una risposta all'inflazione, con implicazioni per l'economia britannica e un segnale per le altre banche centrali.",
+          "title": "Mercati globali volatili dopo il crollo dei titoli AI",
+          "lead": "I mercati azionari globali hanno registrato forte volatilità il 5 novembre con un crollo dei titoli AI, seguito da un parziale recupero il 6 novembre.",
+          "body": "Il 5 novembre, il Nasdaq Composite ha perso il 5,52% e l'S&P 500 il 4,4%, bruciando 3.200 miliardi di dollari a Wall Street. Il sell-off è stato innescato dai timori di una maggiore regolamentazione del settore AI dopo le elezioni di midterm USA e da un solido rapporto sull'occupazione che ha spinto al rialzo i rendimenti dei Treasury.Il 6 novembre, il Nasdaq ha rimbalzato dell'1,09% e l'S&P 500 dello 0,3%. Tuttavia, i mercati europei hanno chiuso in rosso, con il FTSE MIB di Milano in calo dello 0,9%. L'elevata volatilità, con l'indice VIX balzato di quasi il 70%, lascia gli investitori incerti tra una correzione a breve o un ribasso prolungato.",
+          "why": "Questo evento evidenzia la profonda interconnessione tra politica, tecnologia e mercati finanziari globali, con l'AI catalizzatore di significative fluttuazioni.",
           "sources": [
             {
-              "url": "https://www.soldionline.it/notizie/macroeconomia/bank-england-tassi-interesse-novembre-2026",
-              "title": "soldionline.it"
+              "url": "https://www.ai4business.it/intelligenza-artificiale/lai-perde-2-500-miliardi-in-borsa-sta-per-scoppiare-la-bolla/",
+              "title": "ai4business.it"
             },
             {
-              "url": "https://www.xtb.com/it/analisi-di-mercato/cosa-muove-il-mercato-le-principali-notizie-del-mattino-5-novembre-2026",
-              "title": "xtb.com"
+              "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026",
+              "title": "thestreet.com"
+            },
+            {
+              "url": "https://www.washingtonpost.com/business/2026/11/06/wall-street-stocks-dow-nasdaq/fbde12a0-da27-11f1-930a-e08f8086f5ac_story.html",
+              "title": "washingtonpost.com"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 49
         },
         {
-          "title": "Crollo mercati azionari globali, in particolare il settore tecnologico",
-          "lead": "I mercati azionari globali hanno subito un forte calo giovedì 5 novembre 2026, con Wall Street in netto ribasso e le borse europee attese in rosso.",
-          "body": "Il Nasdaq ha chiuso a -5,52% a 24.315 punti, l'S&P 500 a -4,36% a 7.354 punti e il Dow Jones a -3,44% a 51.523 punti. Piazza Affari ha chiuso la seduta del 5 novembre in calo dell'1,37% a 50.332 punti. Il sell-off è stato principalmente guidato dai timori di nuove restrizioni agli investimenti nell'intelligenza artificiale dopo le elezioni di midterm negli Stati Uniti, che hanno visto i Democratici ottenere il controllo del Congresso.\nQuesto ha generato incertezza e una \"pioggia di vendite\" sui titoli legati al settore tecnologico e dei semiconduttori. Gli investitori sono preoccupati per una potenziale frenata del boom dell'AI e per le implicazioni sulla redditività delle grandi aziende tech, riflettendo un cambiamento di sentiment globale.",
-          "why": "Il calo globale dei mercati, specialmente nel tech, riflette l'incertezza politica e le preoccupazioni sulla sostenibilità del boom dell'AI.",
+          "title": "Bitcoin e criptovalute in forte calo, massicce liquidazioni",
+          "lead": "Il mercato delle criptovalute ha subito un forte ribasso il 5 novembre, con Bitcoin in calo di circa il 6% e massicce liquidazioni di posizioni con leva.",
+          "body": "Bitcoin è sceso a 75.700 dollari, annullando il recupero sopra gli 80.000 dollari post-elezioni di midterm. Ethereum ha perso oltre il 7%, scendendo a circa 2.247 dollari. Il calo ha innescato liquidazioni per circa 1,1 miliardi di dollari, coinvolgendo circa 211.000 trader nelle ultime 24 ore.Il ribasso è stato interpretato nel contesto di un più ampio arretramento degli asset rischiosi, inclusi i titoli tecnologici. Il sentiment crypto è sceso drasticamente, passando da 50 a 28 in un solo giorno. L'aumento dell'indice della paura di Wall Street ha mostrato che le azioni si trovano in uno stato di paura più profonda rispetto alle criptovalute, invertendo l'ordine abituale.",
+          "why": "L'evento sottolinea la persistente volatilità del mercato delle criptovalute e la sua sensibilità agli eventi macroeconomici e al sentiment generale.",
           "sources": [
             {
-              "url": "https://theashlandchronicle.com/ai-free-fall-today-11-5-2026-fueling-fears-of-a-slowdown-in-the-ai-boom/",
-              "title": "theashlandchronicle.com"
+              "url": "https://financefeeds.com/it/mercato-cripto-cancella-rally-elezioni-liquidazioni-bitcoin/",
+              "title": "financefeeds.com"
             },
             {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-06-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611060745242997",
-              "title": "milanofinanza.it"
+              "url": "https://www.blotix.io/index.php/component/content/article/bitcoin-perde-il-6-liquidazioni-e-tensione-sui-titoli-tecnologici-108?catid=8&Itemid=101",
+              "title": "blotix.io"
             },
             {
-              "url": "https://teleborsa.ansa.it/notiziario/finanza/wall-street-in-rosso-con-forte-calo-dei-tech/",
-              "title": "teleborsa.ansa.it"
+              "url": "https://it.beincrypto.com/indice-paura-azioni-crypto-nasdaq-crash/",
+              "title": "it.beincrypto.com"
             }
           ],
-          "readSeconds": 52
+          "readSeconds": 48
         },
         {
-          "title": "Rialzo prezzi petrolio a causa tensioni in Medio Oriente",
-          "lead": "I prezzi del petrolio hanno prolungato i loro rialzi giovedì 5 e venerdì 6 novembre 2026, a seguito di nuovi attacchi contro petroliere in Medio Oriente.",
-          "body": "Il petrolio greggio (contratto con scadenza a dicembre 2026) è risalito oltre i 91,5 dollari al barile, mentre il Brent si attesta a 98,21 dollari al barile. Questi incidenti accentuano i timori di interruzioni dell'approvvigionamento, in un contesto di riconsiderazione delle prospettive della guerra tra Stati Uniti, Israele e Iran.\nNonostante i rialzi recenti, le quotazioni del petrolio rimangono orientate verso una perdita su base settimanale. La crisi energetica europea continua a essere un fattore di preoccupazione. La situazione geopolitica in Medio Oriente rimane un fattore cruciale per la stabilità dei mercati delle materie prime e l'inflazione globale, influenzando direttamente i costi energetici.",
-          "why": "Le tensioni in Medio Oriente continuano a influenzare i prezzi del petrolio, con ripercussioni sulla stabilità energetica e l'inflazione globale.",
+          "title": "AMD supera le stime di ricavi e utili, titolo in rialzo",
+          "lead": "Advanced Micro Devices (AMD) ha registrato un notevole rialzo dell'11,04% il 6 novembre, dopo aver superato le stime di ricavi e utili nel suo rapporto del terzo trimestre 2026.",
+          "body": "AMD ha riportato ricavi per 13,4 miliardi di dollari, con un aumento del 45% anno su anno, e i ricavi del data center sono cresciuti del 97% nello stesso periodo. Questo rally ha rappresentato un recupero dopo un calo il giorno precedente, quando gli investitori avevano venduto azioni di chip a causa dei timori di una regolamentazione più stringente dell'industria post-elezioni USA.Gli investitori hanno accolto con favore i risultati solidi e le prospettive di crescita più rapida di AMD fino al 2027, dimostrando fiducia nella capacità dell'azienda di performare anche in un contesto di mercato volatile. La performance di AMD evidenzia la resilienza di alcune aziende chiave nel settore dei semiconduttori e dell'AI.",
+          "why": "La performance di AMD dimostra la resilienza e la forte domanda per i prodotti di alcune aziende chiave nel settore dei semiconduttori e dell'AI.",
           "sources": [
             {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-06-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611060745242997",
-              "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://www.xtb.com/it/analisi-di-mercato/cosa-muove-il-mercato-le-principali-notizie-del-mattino-5-novembre-2026",
-              "title": "xtb.com"
+              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/06/stock-market-today-nov-6-amd-surges-11-on-record-quarterly-revenue-and-stronger-growth-outlook/",
+              "title": "fool.com"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 53
         }
       ]
     },
@@ -147,51 +159,47 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Dibattito sulla Manovra di Bilancio: focus su IRPEF e pensioni",
-          "lead": "Il dibattito sulla Manovra di Bilancio italiana è in corso, con i partiti che studiano proposte di emendamento da presentare entro il 17 novembre.",
-          "body": "La dote per le modifiche parlamentari è di 120 milioni di euro. Forza Italia spinge per l'estensione dell'aliquota IRPEF del 33% fino a 60mila euro di redditi (attualmente a 55mila), una misura che richiederebbe circa 1,2 miliardi di euro aggiuntivi per essere finanziata.\nIl partito si è anche impegnato a ridurre il taglio all'indicizzazione degli assegni previdenziali, che secondo le stime più recenti prevede penalizzazioni fino a 1.300 euro all'anno per le pensioni più ricche. La Manovra è un punto centrale dell'agenda politica ed economica italiana, e le modifiche proposte sono cruciali per l'impatto sui cittadini e sulle finanze pubbliche.",
-          "why": "La Manovra di Bilancio è cruciale per l'economia italiana, con impatti diretti su redditi e pensioni dei cittadini.",
+          "title": "Dell'Utri in Argentina rafforza legami con la collettività italiana",
+          "lead": "Il Sottosegretario agli Affari Esteri, Massimo Dell'Utri, ha concluso una missione in Argentina per rafforzare la cooperazione e i legami con la collettività italiana.",
+          "body": "Durante la missione, conclusasi il 7 novembre, Dell'Utri ha avuto incontri istituzionali, si è confrontato con la comunità italiana e le scuole italo-argentine, e ha partecipato a iniziative economiche. L'obiettivo è promuovere la cooperazione in settori chiave, dalla promozione universitaria ai progetti energetici e minerari.Il Sottosegretario ha evidenziato la netta crescita delle registrazioni degli elettori per il rinnovo dei Com.It.Es. in tutte e nove le circoscrizioni consolari argentine, definendola \"un attestato dell'intenso lavoro svolto dalla nostra rete\". Questo successo rafforza la rappresentatività dei nuovi Comitati.",
+          "why": "La missione evidenzia l'impegno dell'Italia nel mantenere e rafforzare i legami con le comunità all'estero e promuovere gli interessi nazionali.",
           "sources": [
             {
-              "url": "https://tg24.sky.it/economia/2026/11/05/manovra-2027-modifiche",
-              "title": "tg24.sky.it"
+              "url": "https://www.esteri.it/it/sala_stampa/archivionotizie/comunicati/2026/11/missione-dellutri-in-argentina/",
+              "title": "esteri.it"
             }
           ],
-          "readSeconds": 46
+          "readSeconds": 41
         },
         {
-          "title": "Piazza Affari in calo, ma risultati societari positivi per alcuni gruppi",
-          "lead": "Venerdì 6 novembre 2026, Piazza Affari è attesa in rosso, influenzata dal clima di correzione globale, ma con risultati positivi per Banco BPM, Mediobanca e Leonardo.",
-          "body": "Piazza Affari ha chiuso la seduta del 5 novembre in calo dell'1,37%, risentendo delle vendite sui titoli bancari e tecnologici. Tuttavia, diverse importanti società italiane hanno comunicato risultati finanziari incoraggianti. Banco BPM ha chiuso i primi nove mesi del 2026 con un utile netto adjusted record di 1,532 miliardi di euro, in crescita del 2,6% rispetto al 2025.\nMediobanca ha approvato risultati dei nove mesi al 30 settembre 2026 con una crescita a doppia cifra del risultato operativo (+16%) a 1,8 miliardi di euro e dell'utile netto (+13%) a 1,1 miliardi di euro. Anche Leonardo ha registrato una significativa crescita nei primi nove mesi del 2026, con risultati economico-finanziari in deciso miglioramento, fornendo segnali positivi sulla salute di specifici settori.",
-          "why": "Nonostante il calo generale del mercato, la solidità di importanti gruppi italiani segnala resilienza in settori chiave dell'economia.",
+          "title": "Friuli Venezia Giulia, successo per il bando AI a imprese",
+          "lead": "Il Friuli Venezia Giulia ha presentato i risultati del \"Bando Intelligenza Artificiale per piccole imprese e professionisti\", registrando un successo straordinario con oltre mille domande.",
+          "body": "Il bando, annunciato il 6 novembre a Trieste, ha incentivato l'uso dell'IA tra microimprese e liberi professionisti. Tra il 10 giugno e il 31 luglio 2026 sono state presentate 1.062 domande, con 137 progetti finanziati per un totale di 1,2 milioni di euro. Il contributo a fondo perduto può coprire fino al 75% delle spese, con un tetto di 10.000 euro.La provincia di Trieste ha registrato la quota più alta di domande accolte (21,6%). Il Capogruppo regionale di Fratelli d'Italia, Claudio Giacomelli, ha definito il risultato \"straordinario\", sottolineando che le domande sono state otto volte superiori alle previsioni iniziali. L'Italia è stata la prima nazione a recepire il regolamento europeo sull'IA con una legge ad hoc.",
+          "why": "Il successo del bando dimostra un forte interesse e una rapida adozione dell'AI da parte delle piccole realtà imprenditoriali italiane, evidenziando l'efficacia delle politiche regionali.",
           "sources": [
             {
-              "url": "https://it.benzinga.com/news/italy/indices/piazza-affari-analisi-seduta-previsioni-6-novembre-2026/",
-              "title": "it.benzinga.com"
-            },
-            {
-              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-6-novembre-2026",
-              "title": "soldionline.it"
-            },
-            {
-              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-06-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611060745242997",
-              "title": "milanofinanza.it"
+              "url": "https://www.triesteallnews.it/2026/11/intelligenza-artificiale-fdi-grande-adesione-al-bando-regionale/",
+              "title": "triesteallnews.it"
             }
           ],
           "readSeconds": 53
         },
         {
-          "title": "Conferenza Globale sugli Impollinatori a Roma",
-          "lead": "La FAO ospita a Roma la Conferenza globale sugli impollinatori 2026, riunendo esperti e governi per rafforzare l'azione globale a tutela di questi organismi.",
-          "body": "L'evento, che si svolge il 5 e 6 novembre, riunisce governi, organizzazioni internazionali, scienziati, popoli indigeni, comunità locali, agricoltori e apicoltori. Gli impollinatori sono fondamentali per i sistemi agroalimentari, la sicurezza alimentare, la nutrizione e la biodiversità, ma affrontano pressioni crescenti dovute a perdita di habitat, cambiamento climatico e pratiche agricole insostenibili.\nUn punto centrale della Conferenza riguarda i possibili passi successivi verso l'istituzione di una Piattaforma globale sugli impollinatori per rafforzare il coordinamento dell'azione globale per la loro conservazione e gestione sostenibile. L'evento sottolinea l'importanza cruciale della biodiversità per la sicurezza alimentare globale e la necessità di interventi urgenti.",
-          "why": "La conferenza evidenzia l'importanza critica degli impollinatori per la sicurezza alimentare e la biodiversità globale, richiedendo azioni urgenti.",
+          "title": "Aziende italiane: risultati finanziari tra utili e cali in mercato volatile",
+          "lead": "Diverse importanti aziende italiane hanno comunicato i loro risultati finanziari, mostrando performance differenziate in un contesto di mercato europeo in rosso.",
+          "body": "BancoBPM ha registrato un calo del 3,17% dopo la diffusione dei risultati e l'indicazione dell'acconto sul dividendo. Monte dei Paschi di Siena (MPS) ha riportato un forte aumento dell'utile netto nei primi nove mesi, mentre Mediobanca ha confermato la sua guidance per l'intero esercizio. Pirelli ha comunicato risultati positivi, confermando le previsioni per il 2026 e aspettandosi ricavi nella parte alta della forchetta precedente.Questi dati sono stati pubblicati in un contesto di mercato europeo volatile, con il FTSE MIB che ha chiuso in calo dello 0,9% il 6 novembre. Il settore bancario italiano ha mostrato un calo generale, ma le reazioni degli investitori sono state differenziate in base ai singoli risultati, con alcuni titoli in rialzo come Pirelli.",
+          "why": "Questi dati offrono uno spaccato della salute economica di settori chiave dell'economia italiana e della capacità delle aziende di navigare in un mercato incerto.",
           "sources": [
             {
-              "url": "https://askanews.it/2026/11/03/a-roma-il-5-6-novembre-la-conferenza-globale-sugli-impollinatori/",
-              "title": "askanews.it"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-06-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611060745242997",
+              "title": "milanofinanza.it"
+            },
+            {
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-6-novembre-2026",
+              "title": "soldionline.it"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 52
         }
       ]
     },
@@ -200,47 +208,67 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Sconfitta di Donald Trump alle elezioni di metà mandato negli USA",
-          "lead": "Le elezioni di metà mandato negli Stati Uniti del 3 novembre 2026 hanno visto una netta sconfitta per Donald Trump e il Partito Repubblicano.",
-          "body": "I Democratici hanno conquistato il controllo sia della Camera che del Senato, segnando la sconfitta politica più pesante del secondo mandato di Trump, rientrato alla Casa Bianca nel 2025 con maggioranze risicate al Congresso. Il voto è stato ampiamente interpretato come un referendum sulla sua presidenza, con un chiaro messaggio da parte dell'elettorato.\nLa vittoria democratica cambia gli equilibri a Washington, aprendo una fase più difficile per la Casa Bianca e consentendo al Congresso di bloccare o modificare una parte importante dell'agenda legislativa. Gli effetti sono stati immediati anche sui mercati, con timori di una regolamentazione più stringente nel settore tecnologico, e potrebbero influenzare le politiche estere statunitensi.",
-          "why": "La sconfitta di Trump ridisegna il panorama politico statunitense, con significative implicazioni per la politica interna ed estera.",
+          "title": "Attacco russo all'Ucraina, si preparano nuovi colloqui di pace",
+          "lead": "La Russia ha lanciato un massiccio attacco combinato contro l'Ucraina, colpendo Kyiv, mentre si preparano nuovi colloqui di pace tra Russia, Ucraina e Stati Uniti.",
+          "body": "Nella notte tra il 6 e il 7 novembre, le forze russe hanno utilizzato missili balistici e 172 droni, di cui 137 a propulsione a getto. L'aeronautica ucraina ha intercettato quattro missili e 149 droni. Kyiv è stata l'obiettivo principale, subendo danni a infrastrutture energetiche, edifici residenziali e un asilo, con cinque feriti. L'Ucraina ha risposto colpendo diverse regioni russe.Contemporaneamente, sono previsti nuovi colloqui ad Abu Dhabi martedì prossimo, mediati dall'amministrazione Trump, con l'obiettivo di porre fine alla guerra. Il sindaco di Kyiv, Vitali Klitschko, ha riportato interruzioni di elettricità, riscaldamento e acqua, descrivendo la situazione energetica come estremamente critica. Il presidente Trump ha affermato che le parti \"vogliono raggiungere un accordo\".",
+          "why": "L'evento evidenzia la continua escalation del conflitto, con gravi conseguenze, e la complessità degli sforzi diplomatici per una soluzione duratura.",
           "sources": [
             {
-              "url": "https://www.sarnonotizie.it/notizie-oggi-5-novembre-2026-trump-sconfitto-midterm/",
-              "title": "sarnonotizie.it"
+              "url": "https://english.nv.ua/russian-war/russia-attacks-ukraine-with-missiles-and-172-drones-air-defenses-neutralize-149-50657139.html",
+              "title": "english.nv.ua"
             },
             {
-              "url": "https://www.ildenaro.it/diplomacy-magazine-puntata-del-5-novembre-2026/",
-              "title": "ildenaro.it"
+              "url": "https://www.italpress.com/guerra-ucraina-russia-aggiornamenti-notizie-oggi-sabato-7-novembre-2026-feriti/",
+              "title": "italpress.com"
+            },
+            {
+              "url": "https://www.washingtonpost.com/world/2026/11/07/russia-ukraine-war-kyiv-talks-abu-dhabi/00567b3e-da7c-11f1-930a-e08f8086f5ac_story.html",
+              "title": "washingtonpost.com"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 50
         },
         {
-          "title": "Attacco russo a centrale elettrica vicino a Sumy, Ucraina",
-          "lead": "Le forze armate russe hanno attaccato con bombe aeree Fab-3000 una centrale elettrica nei pressi della città di Sumy, nell'Ucraina orientale.",
-          "body": "L'attacco è avvenuto nelle ultime 24-36 ore, inserendosi nel contesto della guerra in corso tra Ucraina e Russia. Mosca continua a prendere di mira infrastrutture critiche ucraine, cercando di indebolire la capacità del paese di resistere e di sostenere la sua popolazione durante il conflitto.\nL'attacco a una centrale elettrica evidenzia la strategia russa di colpire le infrastrutture energetiche ucraine, con potenziali gravi conseguenze per la popolazione civile. Questo tipo di azioni mira a creare disagi diffusi e a minare la stabilità del paese, aumentando la pressione sulle risorse e sui servizi essenziali.",
-          "why": "L'attacco alle infrastrutture energetiche ucraine evidenzia la brutalità del conflitto e le sue gravi conseguenze umanitarie.",
+          "title": "USA attaccano Qeshm in Iran, Trump parla di progressi diplomatici",
+          "lead": "Due missili hanno colpito l'isola iraniana di Qeshm, con il presidente Trump che ha confermato nuovi attacchi militari USA, sostenendo progressi nei negoziati con Teheran.",
+          "body": "Nella notte tra il 6 e il 7 novembre, l'isola di Qeshm è stata colpita. Trump ha descritto l'attacco come \"piccolo\" e durato \"pochi minuti\", affermando di aver distrutto difese antiaeree. L'amministrazione Trump è divisa sulla politica verso l'Iran, con il vicepresidente JD Vance che spinge per un accordo e altri per un ritorno ai combattimenti.Le tensioni si sono intensificate dopo le elezioni di metà mandato negli USA. Il vicepresidente Vance è impegnato in trattative indirette per un cessate il fuoco e la ripresa dei colloqui sul nucleare. L'esercito iraniano ha avvertito USA e Israele di essere \"più forte di prima\" e pronto a una risposta \"immediata e senza limiti geografici\" in caso di ripresa del conflitto.",
+          "why": "La situazione indica una fase critica nelle relazioni USA-Iran, caratterizzata da un mix di azioni militari e tentativi diplomatici, con rischio di escalation.",
           "sources": [
             {
-              "url": "https://tg24.sky.it/mondo",
+              "url": "https://tg24.sky.it/mondo/2026/11/07/guerra-iran-usa-trump-news-diretta",
               "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://www.tgcom24.mediaset.it/mondo/guerra-iran-usa-ultime-notizie-7-novembre_118687285-202602k.shtml",
+              "title": "tgcom24.mediaset.it"
+            },
+            {
+              "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-trump-scenari-guerra-missili-7-novembre_21F7izpCOKRJzAdF8sprpo",
+              "title": "adnkronos.com"
             }
           ],
-          "readSeconds": 42
+          "readSeconds": 53
         },
         {
-          "title": "Dimissioni del Presidente del Paraguay a seguito di crisi bancaria",
-          "lead": "Il Presidente del Paraguay, Santiago Peña, si è dimesso a causa di una crisi finanziaria legata al crollo della Ueno Bank.",
-          "body": "La crisi finanziaria e il crollo di una banca rilevante hanno portato a instabilità politica nel paese sudamericano, scuotendo la fiducia nel sistema economico nazionale. La Ueno Bank, un'istituzione di rilievo, ha visto un tracollo che ha innescato una reazione a catena, culminata nelle dimissioni del capo di stato.\nLe dimissioni di un capo di stato a causa di una crisi economica e bancaria sottolineano la fragilità di alcuni sistemi finanziari e le loro dirette ripercussioni sulla stabilità politica a livello internazionale. Questo evento evidenzia come le turbolenze economiche possano avere conseguenze profonde sulla governance e sulla fiducia pubblica.",
-          "why": "Le dimissioni del Presidente paraguaiano mostrano come le crisi finanziarie possano destabilizzare governi e sistemi politici a livello globale.",
+          "title": "Colloqui commerciali USA-Cina in preparazione del vertice APEC",
+          "lead": "Alti funzionari di Stati Uniti e Cina hanno tenuto colloqui \"franchi\" sulle relazioni commerciali, in preparazione di un vertice APEC dove si incontreranno i presidenti Trump e Xi Jinping.",
+          "body": "Il 6 novembre, il Segretario al Tesoro Scott Bessent e il Rappresentante per il Commercio degli Stati Uniti Jamieson Greer hanno parlato con il Vice Premier cinese He Lifeng. I colloqui mirano a finalizzare i preparativi per l'incontro tra Trump e Xi al vertice APEC a Shenzhen (18-19 novembre). Le discussioni si sono concentrate sull'attuazione dell'accordo commerciale di Busan, firmato nell'ottobre 2025, che prevedeva tagli tariffari reciproci per 30 miliardi di dollari.Il Segretario Bessent ha sottolineato l'importanza che la Cina attui pienamente gli impegni di Busan e ha espresso preoccupazioni per recenti azioni cinesi. La Cina si è detta aperta all'acquisto di più prodotti agricoli statunitensi, a condizione che vengano attuati i tagli tariffari reciproci. Questi colloqui sono cruciali per stabilizzare le relazioni commerciali tra le due maggiori economie mondiali.",
+          "why": "Questi colloqui sono cruciali per la stabilizzazione delle relazioni commerciali tra le due maggiori economie mondiali e per la risoluzione delle tensioni.",
           "sources": [
             {
-              "url": "https://it.euronews.com/notizie/internazionale",
-              "title": "it.euronews.com"
+              "url": "https://www.thehindu.com/news/international/top-us-china-officials-raise-trade-concerns-as-apec-approaches/article71677476.ece",
+              "title": "thehindu.com"
+            },
+            {
+              "url": "https://www.scmp.com/news/us/economy-trade-business/article/3373616/us-china-trade-chiefs-hold-call-ahead-trump-xi-summit-shenzhen",
+              "title": "scmp.com"
+            },
+            {
+              "url": "https://www.aljazeera.com/economy/2026/11/6/us-urges-china-to-honour-busan-trade-deal-commitments",
+              "title": "aljazeera.com"
             }
           ],
-          "readSeconds": 45
+          "readSeconds": 57
         }
       ]
     }
