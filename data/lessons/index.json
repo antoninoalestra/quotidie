@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-08",
+      "title": "Robots.txt: Da Guardiano Web a Guida per l'Intelligenza Artificiale",
+      "category": "Dall'attualità",
+      "categoryId": "attualita",
+      "minutes": 5,
+      "hook": "La recente adozione di un protocollo robots.txt unificato da parte di colossi come OpenAI, Google e Microsoft segna un momento cruciale nella gestione dei dati digitali. Ma come può un meccanismo nato per i motori di ricerca diventare lo scudo per la privacy nell'era dell'AI generativa?",
+      "kind": "news"
+    },
+    {
       "date": "2026-11-07",
       "title": "Il più Grande Hack non è un Codice: La Mente Umana è la Vera Porta d'Accesso",
       "category": "Cybersecurity",
