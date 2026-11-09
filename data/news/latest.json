@@ -1,18 +1,14 @@
 {
-  "date": "2026-11-08",
-  "kind": "weekly",
-  "range": {
-    "from": "2026-11-02",
-    "to": "2026-11-08"
-  },
-  "generatedAt": "2026-11-08T10:28:20.025Z",
+  "date": "2026-11-09",
+  "kind": "daily",
+  "generatedAt": "2026-11-09T11:36:20.110Z",
   "model": "gemini-2.5-flash",
-  "minutes": 6,
-  "words": 1146,
+  "minutes": 9,
+  "words": 1756,
   "brief": [
-    "La vittoria democratica alle Midterm USA solleva timori di maggiori regolamentazioni per Big Tech e l'AI, in particolare sui data center.",
-    "TSMC valuta la produzione di 3D DRAM su richiesta di Nvidia, segnalando un potenziale ingresso nel mercato delle memorie avanzate per AI.",
-    "I mercati azionari globali hanno registrato un calo, con il settore tecnologico colpito dalle incertezze normative e dalla sostenibilità degli investimenti AI."
+    "Un'indagine interna è stata avviata su Jensen Huang, CEO di Nvidia, per presunti legami con una spia cinese, sollevando interrogativi sulla sicurezza nel settore tech.",
+    "UniCredit ha superato le attese nel terzo trimestre 2026, annunciando un acconto sul dividendo e contribuendo al rialzo del FTSEMib.",
+    "La guerra in Ucraina vede Kiev registrare perdite russe record, mentre l'UE partecipa a colloqui di pace ad Abu Dhabi."
   ],
   "sections": [
     {
@@ -20,88 +16,68 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "Vittoria Democratica Midterm USA, timori regolamentazione Big Tech e AI",
-          "lead": "La schiacciante vittoria dei Democratici alle elezioni di metà mandato negli Stati Uniti ha generato significative preoccupazioni nel settore tecnologico e dell'intelligenza artificiale, specialmente per le grandi aziende e i data center.",
-          "body": "Il controllo democratico di entrambe le Camere del Congresso, con candidati che hanno promesso di limitare i data center ad alta intensità energetica, preannuncia un ambiente normativo più stringente dal 2027. Diverse contee hanno già approvato divieti o moratorie, con un sondaggio NBC che indica l'AI e i data center come \"fattore cruciale\" per il 56% degli elettori.Dopo quasi due anni di un approccio meno restrittivo, la nuova leadership democratica potrebbe portare a un maggiore controllo sull'AI e sulla privacy, con possibili leggi federali e statali. Questo potrebbe rallentare la rapida espansione dell'industria AI, motore di crescita per l'economia statunitense.",
-          "why": "La nuova maggioranza democratica al Congresso potrebbe imporre significative restrizioni all'industria tecnologica e dell'AI, influenzando la crescita e l'innovazione.",
+          "title": "Indagine interna su CEO Nvidia per presunti legami con spia cinese",
+          "lead": "Jensen Huang, CEO di Nvidia, è sotto indagine interna per sospetti legami con una spia cinese, una notizia che scuote il gigante dei semiconduttori e dell'AI.",
+          "body": "L'accusa suggerisce che Huang potrebbe essere stato un bersaglio di servizi segreti stranieri a seguito di una relazione, data la posizione dominante di Nvidia nel settore dei semiconduttori e dell'intelligenza artificiale. Il consiglio di amministrazione ha prontamente avviato un'indagine interna per fare piena chiarezza.\nNonostante la \"pesante distrazione\", come definita da Bernstein, la banca d'investimento ha confermato il target sul titolo Nvidia, evidenziando la solidità fondamentale dell'azienda e la sua leadership tecnologica.",
+          "why": "Questo evento potrebbe avere significative ripercussioni sulla leadership di una delle aziende tecnologiche più influenti al mondo.",
           "sources": [
             {
-              "url": "https://iapp.org/news/a/democratic-midterm-wins-set-stage-for-tougher-tech-and-ai-scrutiny",
-              "title": "iapp.org"
+              "url": "https://it.euronews.com/",
+              "title": "it.euronews.com"
             },
             {
-              "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/06/ai-data-centres-took-a-beating-in-the-midterm-elections-a-reckoning-may-be-ahead-for-tech-giants/",
-              "title": "bnnbloomberg.ca"
+              "url": "https://www.tgcom24.mediaset.it/mondo/",
+              "title": "tgcom24.mediaset.it"
             },
             {
-              "url": "https://fortune.com/2026/11/05/midterm-elections-data-center-construction-big-tech-hinojosa-acton-lance-bottoms/",
-              "title": "fortune.com"
+              "url": "https://tg24.sky.it/",
+              "title": "tg24.sky.it"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 38
         },
         {
-          "title": "TSMC valuta produzione 3D DRAM su richiesta Nvidia",
-          "lead": "TSMC, il principale produttore di chip a contratto, sta elaborando piani per la produzione di chip di memoria 3D DRAM, su sollecitazione del suo cliente chiave, Nvidia.",
-          "body": "La notizia, emersa il 6 novembre 2026, indica che TSMC sta esplorando diverse opzioni, inclusa la costruzione di nuove fabbriche o la conversione di impianti esistenti, sebbene dettagli su tempistiche e budget non siano stati divulgati. Il mercato globale della DRAM ha generato quasi 200 miliardi di dollari nel terzo trimestre 2026, con un aumento del 369% annuo.Questa mossa segna un potenziale ingresso di TSMC nel mercato delle memorie, tradizionalmente dominato da Samsung, SK Hynix e Micron. L'iniziativa è spinta dalla crescente domanda di memoria avanzata per l'hardware AI, che sta causando carenze di fornitura.",
-          "why": "L'ingresso di TSMC nel mercato delle memorie potrebbe alleviare i colli di bottiglia nella catena di approvvigionamento AI e rafforzare la posizione di Nvidia.",
+          "title": "Elezioni Midterm USA: timori per regolamentazione Big Tech e AI",
+          "lead": "La vittoria democratica alle elezioni di metà mandato negli Stati Uniti sta generando preoccupazioni tra gli investitori, che ora prezzano un rischio maggiore di regole severe per data center e sviluppo AI.",
+          "body": "Inizialmente, i mercati avevano accolto con entusiasmo il successo dei Democratici, con un rialzo del Dow Jones. Tuttavia, le preoccupazioni per una stretta normativa hanno causato una flessione del Nasdaq, influenzando in particolare i titoli a maggiore crescita nel 2026.\nSergio Ermotti, CEO di UBS, ha espresso il timore che la maggioranza democratica possa rallentare la costruzione delle infrastrutture essenziali per l'AI, indicando un potenziale freno agli investimenti e allo sviluppo tecnologico.",
+          "why": "Questo scenario indica un potenziale cambiamento normativo per le Big Tech e l'AI, con possibili freni agli investimenti.",
           "sources": [
             {
-              "url": "https://gadgetsnow.indiatimes.com/tech-news/nvidia-asks-tsmc-to-make-3d-dram-putting-the-chipmaker-against-samsung-and-sk-hynix/articleshow/135632581.cms",
-              "title": "gadgetsnow.indiatimes.com"
+              "url": "https://www.focusrisparmio.com/news/scelti-da-noi-le-notizie-del-09-novembre-2026",
+              "title": "focusrisparmio.com"
             },
             {
-              "url": "https://www.igorslab.de/en/tsmc-3d-dram-nvidia-memory-chips/",
-              "title": "igorslab.de"
-            },
-            {
-              "url": "https://mlq.ai/news/tsmc-is-weighing-a-move-into-3d-dram-at-nvidias-request-the-information-reports/",
-              "title": "mlq.ai"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-09-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611090733182752",
+              "title": "milanofinanza.it"
             }
           ],
-          "readSeconds": 46
+          "readSeconds": 40
         },
         {
-          "title": "Acquisizioni strategiche AI: Marvell-Lumentum e Shield AI-Echodyne",
-          "lead": "La settimana ha visto due importanti acquisizioni: Marvell Technology ha acquisito Lumentum per 115 miliardi di dollari, mentre Shield AI ha comprato Echodyne Corp. per 5,3 miliardi di dollari.",
-          "body": "L'accordo Marvell-Lumentum, annunciato il 2 novembre, mira a combinare le competenze nei semiconduttori per infrastrutture dati con l'esperienza nei prodotti ottici e fotonici, rafforzando la connettività AI. La chiusura è prevista per la prima metà del 2028. Shield AI, il 5 novembre, ha acquisito Echodyne, un'azienda di radar, per espandere i sistemi anti-drone.Shield AI sta raccogliendo 2,5 miliardi di dollari per finanziare l'operazione, inclusi 1 miliardo in finanziamenti di Serie H a una valutazione post-money di 28,8 miliardi di dollari. Queste acquisizioni riflettono la corsa all'integrazione verticale e all'espansione delle capacità nell'era dell'AI.",
-          "why": "Queste operazioni consolidano il settore AI e semiconduttori, mirando a creare leader nella connettività e nella difesa avanzata, con impatti sulla competitività.",
+          "title": "L'Europa punta a un ruolo chiave nel design dei chip AI per sfidare Nvidia",
+          "lead": "L'Europa sta cercando di affermarsi come protagonista nel design dei chip AI del futuro, con l'obiettivo ambizioso di creare un'alternativa europea al dominio di Nvidia.",
+          "body": "Attualmente, la filiera dei semiconduttori avanzati è dominata da Stati Uniti e Asia, con l'Europa che cerca di recuperare terreno. L'iniziativa mira a superare i limiti energetici dei grandi data center e a elaborare l'AI in modo più efficiente, riducendo la dipendenza da attori esterni.\nQuesta ambizione riflette la crescente consapevolezza dell'importanza strategica dei semiconduttori e dell'AI a livello geopolitico ed economico. L'obiettivo è rafforzare la sovranità tecnologica europea nel futuro digitale globale.",
+          "why": "Questa iniziativa mira a ridurre la dipendenza tecnologica europea e a rafforzare la sua posizione strategica nell'AI.",
           "sources": [
             {
-              "url": "https://www.photonics.com/Articles/Marvell-Acquiring-Lumentum-for-115B/a72732",
-              "title": "photonics.com"
-            },
-            {
-              "url": "https://www.semiconductor-today.com/news_items/2026/nov/lumentum-marvell-021126.shtml",
-              "title": "semiconductor-today.com"
-            },
-            {
-              "url": "https://corp-intl.com/news/marvell-lumentum-deal",
-              "title": "corp-intl.com"
+              "url": "https://argomenti.ilsole24ore.com/tag/semiconductors",
+              "title": "argomenti.ilsole24ore.com"
             }
           ],
-          "readSeconds": 45
+          "readSeconds": 39
         },
         {
-          "title": "Big Tech adotta robots.txt unificato per addestramento AI",
-          "lead": "Google, Microsoft, OpenAI e Anthropic hanno annunciato il supporto per un segnale unificato nel file robots.txt, permettendo ai proprietari di siti di controllare l'uso dei contenuti per l'addestramento AI.",
-          "body": "La proposta, basata su una bozza dell'IETF, mira a semplificare il processo per gli editori, che finora dovevano gestire direttive separate per i diversi fornitori di AI. L'implementazione è prevista per l'inizio del 2027 per Google, febbraio 2027 per Microsoft e nei prossimi mesi per OpenAI.Questa iniziativa è cruciale per affrontare le crescenti preoccupazioni sulla proprietà intellettuale e sull'uso dei contenuti web da parte dei modelli AI. Offre ai creatori di contenuti un controllo più granulare sui loro dati, influenzando potenzialmente la qualità e la diversità dei dati di addestramento.",
-          "why": "Questa mossa offre ai creatori di contenuti maggiore controllo sui loro dati, affrontando le preoccupazioni sulla proprietà intellettuale nell'addestramento AI.",
+          "title": "Netflix investe massicciamente in contenuti locali europei tra timori normativi",
+          "lead": "Netflix sta realizzando ingenti investimenti in contenuti locali in Europa, una mossa che si inserisce in un contesto di crescenti preoccupazioni per la regolamentazione del settore.",
+          "body": "Questi investimenti evidenziano la strategia delle grandi piattaforme di streaming di adattarsi alle preferenze dei mercati locali, riconoscendo l'importanza del pubblico europeo e la necessità di contenuti culturalmente rilevanti. La spinta risponde anche alle crescenti pressioni normative per promuovere l'industria audiovisiva locale.\nLa mossa di Netflix sottolinea le sfide poste dalle normative europee, che potrebbero influenzare le operazioni delle Big Tech e la loro capacità di operare liberamente nel continente, bilanciando innovazione e conformità.",
+          "why": "La mossa evidenzia l'importanza del mercato europeo e le sfide normative che le Big Tech devono affrontare.",
           "sources": [
             {
-              "url": "https://dev.to/alifar/google-bing-and-openai-move-toward-shared-ai-training-controls-in-robotstxt-4bdb",
-              "title": "dev.to"
-            },
-            {
-              "url": "https://www.searchenginejournal.com/google-microsoft-openai-shared-ai-training-opt-out/595387/",
-              "title": "searchenginejournal.com"
-            },
-            {
-              "url": "https://remoteworkeurope.eu/news/2026/google-microsoft-openai-shared-ai-training-opt-out/",
-              "title": "remoteworkeurope.eu"
+              "url": "https://it.euronews.com/",
+              "title": "it.euronews.com"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 38
         }
       ]
     },
@@ -110,46 +86,112 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Mercati azionari globali in calo, settore tech colpito",
-          "lead": "I mercati azionari globali hanno registrato un calo significativo, con il settore tecnologico e dell'AI che ha subito le perdite maggiori, a causa di timori normativi e sulla sostenibilità degli investimenti.",
-          "body": "Dopo un selloff di 2 trilioni di dollari nel Nasdaq-100 a ottobre, la volatilità è proseguita. I titoli AI hanno mostrato un calo a Wall Street, seguito da un parziale recupero. Le azioni di Oracle e Microsoft sono rimaste piatte dopo la notizia dell'accordo AI, mentre Micron e SK Hynix sono scese dopo il rapporto sull'ingresso di TSMC nel 3D DRAM.L'incertezza normativa e le crescenti domande sulla redditività degli enormi investimenti nell'AI stanno portando gli investitori a riconsiderare le valutazioni del settore. Questa tendenza potrebbe portare a maggiore cautela e a una potenziale correzione dei mercati.",
-          "why": "L'incertezza normativa e le domande sulla redditività AI stanno causando una revisione delle valutazioni, influenzando la fiducia degli investitori.",
+          "title": "UniCredit supera le attese nel terzo trimestre e alza le stime",
+          "lead": "UniCredit ha presentato risultati finanziari del terzo trimestre 2026 superiori al consensus degli analisti, rivedendo al rialzo le stime per l'intero esercizio e annunciando un acconto sul dividendo.",
+          "body": "La banca ha registrato una solida performance, con il titolo che è stato protagonista di giornata, chiudendo in rialzo del +5,92% a 81,35 euro. Questo risultato ha contribuito significativamente al forte rialzo del FTSEMib nella prima seduta della settimana, trainando l'intero settore bancario.\nI dati positivi rafforzano la fiducia degli investitori nella gestione e nella strategia di UniCredit, proiettando un outlook positivo per la banca e per il comparto finanziario italiano nel prossimo futuro.",
+          "why": "Questi risultati indicano una solida performance della banca e un outlook positivo, rafforzando la fiducia degli investitori.",
           "sources": [
             {
-              "url": "https://www.thedailystar.net/news/technology/news/big-techs-740bn-spending-plans-raise-fresh-fears-over-ai-investment-boom-4313641",
-              "title": "thedailystar.net"
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-9-novembre-2026",
+              "title": "soldionline.it"
             },
             {
-              "url": "https://www.investing.com/news/stock-market-news/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity-bloomberg-news-reports-5008946",
-              "title": "investing.com"
+              "url": "https://www.soldionline.it/",
+              "title": "soldionline.it"
             },
             {
-              "url": "https://www.mufgresearch.com/rates/2026-midterm-election-recap-6-november-2026/",
-              "title": "mufgresearch.com"
+              "url": "https://www.soldionline.it/notizie/economia-politica/agenda-economica-del-9-novembre-2026",
+              "title": "soldionline.it"
             }
           ],
-          "readSeconds": 46
+          "readSeconds": 39
         },
         {
-          "title": "Apple e Palantir superano stime, ma azioni in calo",
-          "lead": "Apple e Palantir hanno riportato risultati trimestrali superiori alle aspettative degli analisti, ma le loro azioni sono scese dopo gli annunci, evidenziando la cautela del mercato.",
-          "body": "Apple ha registrato un fatturato di 114,5 miliardi di dollari (+12%) e utili per azione di 2,10 dollari, superando le previsioni. Tuttavia, la previsione di margini lordi più deboli per il trimestre di dicembre (45-46% contro il 47,9% precedente) a causa dell'aumento dei costi della memoria ha causato un calo del 2,8% delle azioni.Palantir ha visto i ricavi crescere del 96% a 2,31 miliardi di dollari, superando le stime, e ha alzato le previsioni per l'intero anno a circa 8,53 miliardi di dollari. Nonostante ciò, il titolo è sceso di circa il 3% a causa delle elevate aspettative già incorporate nel prezzo e di una crescita più lenta del valore totale dei contratti.",
-          "why": "I risultati mostrano che anche un \"beat\" non basta se le prospettive future o le valutazioni sono percepite come troppo aggressive dal mercato.",
+          "title": "Crédit Agricole propone fusione amichevole con Banco BPM",
+          "lead": "Crédit Agricole ha avanzato una proposta amichevole a Banco BPM per avviare negoziati su una fusione con Crédit Agricole Italia, creando un nuovo polo bancario.",
+          "body": "La proposta prevede che Banco BPM mantenga la quotazione a Milano e diventi il fulcro della nuova entità, con un rapporto di cambio che include un premio del 20% per gli azionisti. È previsto anche il pagamento di un dividendo straordinario di un miliardo di euro.\nIl titolo Banco BPM ha reagito con un balzo dell'11,2% a 14,95 euro. Questa operazione rappresenta un'importante mossa di consolidamento nel settore bancario italiano ed europeo, con potenziali ripercussioni sull'intero panorama finanziario.",
+          "why": "L'operazione, se concretizzata, creerebbe un nuovo polo bancario di rilievo e potrebbe innescare ulteriori movimenti.",
           "sources": [
             {
-              "url": "https://www.kucoin.com/news/flash/apple-and-palantir-earnings-to-test-ai-stock-recovery-after-october-selloff",
-              "title": "kucoin.com"
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-9-novembre-2026",
+              "title": "soldionline.it"
             },
             {
-              "url": "https://heytheo.io/blog/apple-palantir-earnings-q3-2026",
-              "title": "heytheo.io"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-09-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611090733182752",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://borsite.net/en/palantir-apple-q3-2026-earnings-investment-strategy/",
-              "title": "borsite.net"
+              "url": "https://www.soldionline.it/",
+              "title": "soldionline.it"
             }
           ],
-          "readSeconds": 51
+          "readSeconds": 38
+        },
+        {
+          "title": "Bitcoin crolla sotto i 74.000 dollari, liquidazioni crypto in aumento",
+          "lead": "Bitcoin è precipitato sotto i 74.000 dollari, toccando il livello più basso da agosto, mentre le liquidazioni crypto hanno raggiunto 855 milioni di dollari in 24 ore.",
+          "body": "Il calo ha visto Ethereum scendere a 2.100 dollari, con oltre 140.000 trader liquidati e le posizioni long che rappresentano il 90,2% delle perdite. Diversi segnali di allarme indicano che i problemi di Bitcoin vanno oltre l'eccessiva leva finanziaria.\nTra questi, il supporto critico infranto, i deflussi dagli ETF spot su Bitcoin negli Stati Uniti (circa 1,28 miliardi di dollari la scorsa settimana) e una domanda di acquisto debole, aggravata da crescenti pressioni macroeconomiche.",
+          "why": "Questo calo significativo indica una fase di incertezza e debolezza nel mercato delle criptovalute.",
+          "sources": [
+            {
+              "url": "https://it.beincrypto.com/crollo-prezzo-bitcoin-liquidazioni-crypto-rischi-mercato/",
+              "title": "it.beincrypto.com"
+            }
+          ],
+          "readSeconds": 38
+        }
+      ]
+    },
+    {
+      "id": "italy",
+      "title": "Italia",
+      "stories": [
+        {
+          "title": "Manovra 2027: card sanitaria per over 75 e nuovi bonus in arrivo",
+          "lead": "La Legge di Bilancio 2027 del governo Meloni introduce una card sanitaria da 300 euro per gli over 75 e proroga o modifica diversi bonus esistenti.",
+          "body": "Questa manovra, l'ultima della legislatura, mira a fornire sostegno alle fasce più anziane della popolazione e ad altre categorie attraverso varie misure di supporto economico e sociale. L'obiettivo è affrontare le esigenze primarie dei cittadini e stimolare l'economia.\nLe disposizioni avranno un impatto diretto sull'economia e sulla società italiana, influenzando in particolare la spesa sanitaria e le politiche di sostegno al reddito, con l'intento di migliorare il benessere generale e la coesione sociale.",
+          "why": "Le misure della Manovra 2027 avranno un impatto diretto sull'economia e sulla società italiana.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/economia",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 38
+        },
+        {
+          "title": "Ex Ilva: Arvedi e Jindal in corsa, Flacks Group si sfila temporaneamente",
+          "lead": "La gara per il rilancio del gruppo siderurgico ex Ilva vede ora in corsa Arvedi e Jindal, mentre il fondo americano Flacks Group si è sfilato in attesa di un incontro con la premier Meloni.",
+          "body": "Flacks Group ha ritirato la sua offerta poche ore prima della scadenza per le proposte vincolanti, dichiarando di voler aggiornarla dopo un confronto diretto con la presidente del Consiglio. I commissari hanno intanto avviato l'esame delle proposte ricevute per il rilancio del gruppo.\nIl futuro dell'ex Ilva è cruciale per l'industria italiana e per l'occupazione, con la decisione finale che avrà significative implicazioni economiche e sociali per il paese, delineando il destino di un settore strategico.",
+          "why": "Il futuro dell'ex Ilva è cruciale per l'industria italiana e l'occupazione, con significative implicazioni economiche.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/economia",
+              "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://www.milanofinanza.it/",
+              "title": "milanofinanza.it"
+            },
+            {
+              "url": "https://www.soldionline.it/notizie/economia-politica/ex-ilva-flacks-si-sfila-dalla-gara-offerta-solo-dopo-incontro-con-meloni",
+              "title": "soldionline.it"
+            }
+          ],
+          "readSeconds": 41
+        },
+        {
+          "title": "Roma: il sindaco Gualtieri si ricandida e cerca appoggio di M5S e Azione",
+          "lead": "Il sindaco di Roma, Roberto Gualtieri, ha annunciato la sua intenzione di ricandidarsi per un secondo mandato, cercando l'appoggio di Movimento 5 Stelle e Azione.",
+          "body": "L'annuncio segna l'inizio della campagna elettorale per la capitale, definendo le prime alleanze politiche in vista del voto. Gualtieri ha dichiarato di voler proseguire il percorso \"avanti insieme\", puntando su una coalizione ampia che includa il Movimento 5 Stelle e Azione.\nLa ricandidatura di Gualtieri e la ricerca di un'ampia coalizione saranno un fattore determinante per la futura governance di Roma, una delle città più importanti d'Italia, influenzando le politiche urbane.",
+          "why": "La ricandidatura di Gualtieri e la ricerca di un'ampia coalizione saranno determinanti per la futura governance di Roma.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/politica",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 38
         }
       ]
     },
@@ -158,25 +200,63 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "USA: Democratici vincono Midterm, sconfitta per Trump",
-          "lead": "Le elezioni di metà mandato negli Stati Uniti hanno visto una \"vittoria schiacciante\" dei Democratici, che hanno ottenuto il controllo di Camera e Senato, segnando una \"sconfitta\" per Donald Trump.",
-          "body": "I Democratici hanno ribaltato il controllo di almeno cinque uffici di governatore e hanno ottenuto il controllo completo dei governi statali in altri cinque stati. Questa vittoria è stata in parte guidata da un forte sentimento anti-AI e anti-data center tra gli elettori, influenzando le dinamiche politiche.Questa vittoria cambia radicalmente il panorama politico statunitense per la seconda metà del secondo mandato del Presidente Trump. Si prevedono cambiamenti significativi nella supervisione del Congresso, con maggiore attenzione alla regolamentazione della tecnologia, dell'AI, della privacy e della sicurezza informatica.",
-          "why": "La vittoria democratica ridefinisce il panorama politico USA, promettendo maggiori controlli su tecnologia e AI e influenzando le future elezioni.",
+          "title": "Ucraina: Kiev registra perdite russe record, UE ai colloqui di pace",
+          "lead": "Kiev ha dichiarato un \"record\" di quasi 3.000 perdite russe in 24 ore, mentre la Presidente della Commissione Europea, Ursula von der Leyen, ha confermato la partecipazione dell'UE ai colloqui di pace ad Abu Dhabi.",
+          "body": "Il precedente primato di perdite russe in 24 ore era di circa 2.500 il primo novembre, indicando un'intensificazione dei combattimenti. Contemporaneamente, il G7 Esteri a Parigi ha avuto come focus la guerra ibrida e la situazione in Ucraina, sottolineando l'importanza di un fronte unito.\nL'escalation delle perdite sul campo di battaglia e la partecipazione dell'UE ai colloqui diplomatici evidenziano la gravità del conflitto e gli sforzi internazionali per trovare una soluzione pacifica e duratura.",
+          "why": "L'escalation delle perdite e la partecipazione UE ai colloqui sottolineano la gravità del conflitto e gli sforzi internazionali.",
           "sources": [
             {
-              "url": "https://iapp.org/news/a/democratic-midterm-wins-set-stage-for-tougher-tech-and-ai-scrutiny",
-              "title": "iapp.org"
+              "url": "https://tg24.sky.it/mondo/2026/11/09/guerra-ucraina-russia-ultime-notizie-diretta",
+              "title": "tg24.sky.it"
             },
             {
-              "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/06/ai-data-centres-took-a-beating-in-the-midterm-elections-a-reckoning-may-be-ahead-for-tech-giants/",
-              "title": "bnnbloomberg.ca"
-            },
-            {
-              "url": "https://time.com/article/2026/11/04/midterm-elections-results-ai-industry-data-centers/",
-              "title": "time.com"
+              "url": "https://it.euronews.com/notizie",
+              "title": "it.euronews.com"
             }
           ],
-          "readSeconds": 43
+          "readSeconds": 41
+        },
+        {
+          "title": "G7 Esteri a Parigi: focus su Ucraina, Iran e attacchi hacker",
+          "lead": "I ministri degli Esteri del G7 si sono riuniti a Parigi per discutere la guerra in Ucraina, la situazione in Iran e la crescente minaccia degli attacchi hacker.",
+          "body": "La riunione si svolge in un periodo di forte tensione geopolitica, con il conflitto ucraino e le tensioni in Medio Oriente che dominano l'agenda internazionale. Il ministro italiano Tajani ha evidenziato l'importanza di contrastare gli attacchi hacker, definendo la guerra ibrida una \"sfida epocale\".\nIl vertice è cruciale per coordinare le risposte delle principali potenze mondiali alle sfide globali attuali, dalla sicurezza internazionale alla stabilità regionale, cercando soluzioni comuni e rafforzando la cooperazione.",
+          "why": "Il vertice del G7 è cruciale per coordinare le risposte delle principali potenze mondiali alle sfide globali.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/",
+              "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://it.euronews.com/notizie",
+              "title": "it.euronews.com"
+            },
+            {
+              "url": "https://tg24.sky.it/mondo/2026/11/09/guerra-ucraina-russia-ultime-notizie-diretta",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 39
+        },
+        {
+          "title": "Israele: Gadi Eisenkot incaricato di formare il nuovo governo",
+          "lead": "Il presidente israeliano Isaac Herzog ha affidato ufficialmente a Gadi Eisenkot, leader del partito Yashar, l'incarico di formare un nuovo governo, con 28 giorni a disposizione.",
+          "body": "L'incarico arriva in un momento di urgenza per una nuova leadership di cui ci si possa fidare, come dichiarato da Herzog, sottolineando la necessità di stabilità politica. Il partito arabo Ra'am si è già detto pronto a sostenere il nuovo esecutivo, aprendo a una potenziale ampia coalizione.\nLa formazione di un nuovo governo in Israele è un evento politico di grande importanza per la stabilità interna del paese e per le sue relazioni regionali e internazionali, in un contesto mediorientale complesso e delicato.",
+          "why": "La formazione di un nuovo governo in Israele è un evento politico di grande importanza per la stabilità interna e regionale.",
+          "sources": [
+            {
+              "url": "https://it.euronews.com/notizie/internazionale",
+              "title": "it.euronews.com"
+            },
+            {
+              "url": "https://www.tgcom24.mediaset.it/mondo/",
+              "title": "tgcom24.mediaset.it"
+            },
+            {
+              "url": "https://tg24.sky.it/",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 42
         }
       ]
     }

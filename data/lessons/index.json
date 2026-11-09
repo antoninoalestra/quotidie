@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-09",
+      "title": "Auto-Tune: Dal Petrolio alla Rivoluzione Vocale",
+      "category": "Musica",
+      "categoryId": "musica",
+      "minutes": 4,
+      "hook": "Immagina un algoritmo concepito per sondare le profondità della Terra, decifrando echi sismici in cerca di idrocarburi. Come ha fatto questo strumento così specifico a diventare l'inconfondibile firma sonora della musica moderna, plasmando intere generazioni di artisti e ridefinendo il concetto stesso di \"voce perfetta\"?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-08",
       "title": "Robots.txt: Da Guardiano Web a Guida per l'Intelligenza Artificiale",
       "category": "Dall'attualità",
