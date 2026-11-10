@@ -10,13 +10,13 @@
       "generatedAt": "2026-11-05T10:05:00.414Z"
     },
     "lesson-latest.mp3": {
-      "date": "2026-11-09",
+      "date": "2026-11-10",
       "kind": "lesson",
       "engine": "qwen3-tts",
       "voice": "ryan",
-      "seconds": 416,
+      "seconds": 530,
       "rewritten": true,
-      "generatedAt": "2026-11-09T12:00:25.667Z"
+      "generatedAt": "2026-11-10T11:34:25.383Z"
     },
     "news-2026-11-05.mp3": {
       "date": "2026-11-05",
@@ -118,7 +118,16 @@
       "seconds": 750,
       "rewritten": true,
       "generatedAt": "2026-11-10T07:31:33.422Z"
+    },
+    "lesson-2026-11-10.mp3": {
+      "date": "2026-11-10",
+      "kind": "lesson",
+      "engine": "qwen3-tts",
+      "voice": "ryan",
+      "seconds": 530,
+      "rewritten": true,
+      "generatedAt": "2026-11-10T11:34:25.383Z"
     }
   },
-  "updatedAt": "2026-11-10T07:31:33.422Z"
+  "updatedAt": "2026-11-10T11:34:25.383Z"
 }
