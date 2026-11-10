@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-10",
+      "title": "Il Contro-spazio: Il Respiro Silenzioso delle Lettere",
+      "category": "Design",
+      "categoryId": "design",
+      "minutes": 5,
+      "hook": "Avete mai riflettuto su ciò che non vedete, ma che è essenziale per ciò che leggete? Scopriamo come il vuoto all'interno e attorno ai caratteri tipografici sia, in realtà, un elemento di design potente e spesso invisibile.",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-09",
       "title": "Auto-Tune: Dal Petrolio alla Rivoluzione Vocale",
       "category": "Musica",

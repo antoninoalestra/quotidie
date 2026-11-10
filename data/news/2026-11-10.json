@@ -1,0 +1,277 @@
+{
+  "date": "2026-11-10",
+  "kind": "daily",
+  "generatedAt": "2026-11-10T07:22:23.238Z",
+  "model": "gemini-2.5-flash",
+  "minutes": 8,
+  "words": 1680,
+  "brief": [
+    "I mercati tecnologici hanno registrato un significativo sell-off, con il Nasdaq in correzione e le azioni AI e semiconduttori che hanno perso trilioni di dollari.",
+    "Le probabilità di un aumento dei tassi da parte della Federal Reserve a dicembre sono salite al 76,8% dopo il rapporto sull'occupazione, influenzando negativamente i mercati.",
+    "L'Italia è sotto pressione per una \"guerra ibrida\" con cyberattacchi a infrastrutture e la comparsa di dati sensibili di figure istituzionali nel dark web."
+  ],
+  "sections": [
+    {
+      "id": "tech",
+      "title": "Tecnologia e AI",
+      "stories": [
+        {
+          "title": "Crollo azioni AI e semiconduttori trascina il Nasdaq in correzione",
+          "lead": "Giovedì 5 novembre 2026, un significativo sell-off ha colpito le azioni di chip e intelligenza artificiale sul Nasdaq, portando l'indice in correzione. Le \"Magnificent Seven\" hanno perso circa un trilione di dollari.",
+          "body": "Il calo complessivo del mercato ha raggiunto i tre trilioni di dollari, con l'S&P 500 in discesa del 4,4% e il Dow Jones di 1.800 punti. Questo evento segue l'ansia per le valutazioni dell'IA, già evidente con il -12,6% di Alphabet la settimana precedente.Il sell-off è stato accentuato dalle crescenti aspettative di un aumento dei tassi da parte della Fed a dicembre, in seguito al rapporto sull'occupazione. Gli investitori hanno mostrato una chiara tendenza alla riduzione del rischio, con impatto anche sulle altcoin.",
+          "why": "Questo evento sottolinea la volatilità del settore tecnologico e la sensibilità del mercato alle prospettive economiche e alle decisioni delle banche centrali.",
+          "sources": [
+            {
+              "url": "https://plainlycrypto.com/weekly-crypto-brief-2026-11-08/",
+              "title": "plainlycrypto.com"
+            },
+            {
+              "url": "https://cryptoticker.io/en/crypto-news-this-week-recap-key-dates-november-2026/",
+              "title": "cryptoticker.io"
+            }
+          ],
+          "readSeconds": 44
+        },
+        {
+          "title": "OpenAI lancia GPT-6 Cyber per rilevare vulnerabilità informatiche",
+          "lead": "OpenAI ha presentato GPT-6 Cyber, un nuovo modello di intelligenza artificiale progettato per analizzare il codice sorgente aziendale e identificare vulnerabilità critiche.",
+          "body": "Il modello è in grado di verificare le correzioni e, su Linux, ha già segnalato 948 potenziali criticità, di cui 588 non documentate in precedenza. Attualmente, l'accesso è limitato a un ristretto numero di organizzazioni e ricercatori.Questo sviluppo si inserisce in un contesto di crescente attenzione alla sicurezza informatica, evidenziando la necessità di strumenti avanzati per proteggere le infrastrutture digitali da attacchi sempre più sofisticati.",
+          "why": "GPT-6 Cyber rappresenta un passo significativo nell'applicazione dell'IA alla cybersecurity, offrendo un enorme potenziale per migliorare la resilienza dei sistemi informatici.",
+          "sources": [
+            {
+              "url": "https://tgai.it/settimana/2026-11-02.html",
+              "title": "tgai.it"
+            }
+          ],
+          "readSeconds": 35
+        },
+        {
+          "title": "L'89% dei giovani italiani tra 9 e 16 anni utilizza l'IA",
+          "lead": "Un rapporto del CNEL rivela che l'89% dei giovani italiani tra i 9 e i 16 anni e un docente su quattro utilizzano l'intelligenza artificiale. L'Italia è terza in Europa.",
+          "body": "Il rapporto, pubblicato il 9 novembre 2026, evidenzia una rapida adozione dell'IA tra le nuove generazioni e nel settore educativo, indicando una crescente familiarità con queste tecnologie. Circa il 25% dei docenti ne fa uso.Questi dati suggeriscono una buona integrazione dell'IA nella vita quotidiana dei giovani e nell'ambiente scolastico, ma sollevano anche interrogativi sull'alfabetizzazione digitale e sull'uso consapevole di tali strumenti.",
+          "why": "Questa notizia è rilevante per comprendere l'impatto sociale e culturale dell'IA in Italia, evidenziando opportunità e sfide.",
+          "sources": [
+            {
+              "url": "https://www.corrieredelleconomia.it/2026/11/09/tajani-a-parigi-per-il-g7-esteri-sicurezza-europea-ucraina-e-ai-al-centro-dei-lavori/",
+              "title": "corrieredelleconomia.it"
+            },
+            {
+              "url": "https://www.corrieredelleconomia.it/2026/11/09/approvato-il-decreto-bollette-come-funziona-il-rimborso/",
+              "title": "corrieredelleconomia.it"
+            }
+          ],
+          "readSeconds": 36
+        },
+        {
+          "title": "Anthropic torna in perdita operativa e svela impegni per il computing",
+          "lead": "Anthropic, startup leader nell'IA, è tornata in perdita operativa e ha rivelato impegni per 895 miliardi di dollari per il computing prima della sua IPO.",
+          "body": "Questo avviene in un periodo in cui il mercato tecnologico sta vivendo una correzione, con dubbi sui data center e le valutazioni delle aziende AI. Le enormi esigenze di capitale per lo sviluppo e l'implementazione di modelli avanzati sono evidenti.La notizia potrebbe generare preoccupazione tra gli investitori riguardo alla sostenibilità finanziaria delle startup AI ad alta intensità di capitale, nonostante il potenziale di crescita del settore.",
+          "why": "Sottolinea gli enormi costi operativi e le esigenze di capitale per lo sviluppo dell'IA, ponendo interrogativi sulla redditività a lungo termine.",
+          "sources": [
+            {
+              "url": "https://it.euronews.com/tag/nuove-tecnologie",
+              "title": "it.euronews.com"
+            },
+            {
+              "url": "https://plainlycrypto.com/weekly-crypto-brief-2026-11-08/",
+              "title": "plainlycrypto.com"
+            },
+            {
+              "url": "https://tgai.it/settimana/2026-11-02.html",
+              "title": "tgai.it"
+            }
+          ],
+          "readSeconds": 37
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "title": "Finanza e mercati",
+      "stories": [
+        {
+          "title": "Bitcoin crolla sotto i $74.000 dopo massicce liquidazioni",
+          "lead": "L'8 novembre 2026, il Bitcoin è sceso a $73.708, il suo livello più basso da agosto, a causa di liquidazioni diffuse che hanno intensificato la pressione di vendita.",
+          "body": "Il crollo ha annullato una breve ripresa sopra gli $80.000 e ha visto circa $855,69 milioni in posizioni crypto con leva finanziaria liquidate in 24 ore, colpendo oltre 140.000 trader. Il 90,2% delle posizioni lunghe è stato liquidato.Il calo è stato amplificato dal sentiment di mercato indebolito, dai prelievi sostanziali dagli ETF spot Bitcoin statunitensi e dall'incertezza regolamentare post elezioni di midterm.",
+          "why": "Questo evento evidenzia la persistente volatilità del mercato delle criptovalute e la sua sensibilità a fattori macroeconomici e normativi.",
+          "sources": [
+            {
+              "url": "https://financefeeds.com/bitcoin-falls-to-73708-as-856-million-in-crypto-liquidations-accelerates-market-selloff/",
+              "title": "financefeeds.com"
+            }
+          ],
+          "readSeconds": 35
+        },
+        {
+          "title": "Probabilità in aumento per un rialzo dei tassi Fed a dicembre",
+          "lead": "Dopo il rapporto sull'occupazione di ottobre, le probabilità di un aumento dei tassi di interesse da parte della Federal Reserve a dicembre sono salite al 76,8%.",
+          "body": "Il rapporto, pubblicato il 6 novembre 2026, ha mostrato la creazione di 165.000 nuovi posti di lavoro, un dato chiave per le decisioni di politica monetaria della Fed. L'aumento di queste probabilità ha contribuito al sell-off delle azioni tecnologiche e AI.L'indice dei prezzi al consumo (CPI) di ottobre, atteso per il 10 novembre, sarà l'ultima lettura sull'inflazione prima della decisione della Fed del 9 dicembre. I mercati finanziari hanno reagito con nervosismo.",
+          "why": "Le aspettative sui tassi della Fed sono un driver fondamentale per i mercati globali, influenzando investimenti, prestiti e crescita economica.",
+          "sources": [
+            {
+              "url": "https://cryptoticker.io/en/crypto-news-this-week-recap-key-dates-november-2026/",
+              "title": "cryptoticker.io"
+            },
+            {
+              "url": "https://plainlycrypto.com/weekly-crypto-brief-2026-11-08/",
+              "title": "plainlycrypto.com"
+            }
+          ],
+          "readSeconds": 39
+        },
+        {
+          "title": "Il MEF italiano emette nuovi BTP a medio e lungo termine",
+          "lead": "Il Ministero dell'Economia e delle Finanze italiano ha annunciato l'emissione di tre nuovi Buoni del Tesoro Poliennali, con regolamento previsto per il 16 novembre 2026.",
+          "body": "Tra i titoli figurano un BTP a tre anni con cedola annua del 3% per 2,5 miliardi di euro, un BTP a sette anni con cedola del 3,35% per 3,250 miliardi e un BTP Green a venti anni con cedola del 4,10% per 1,5 miliardi.Questa emissione rientra nella normale gestione del debito pubblico italiano, mirando a finanziare le esigenze dello Stato. L'Italia continua a monitorare l'andamento economico e le prospettive di crescita.",
+          "why": "La capacità dell'Italia di collocare con successo i propri titoli di debito è cruciale per la stabilità finanziaria del paese.",
+          "sources": [
+            {
+              "url": "https://www.corrieredelleconomia.it/2026/11/09/il-mef-informa-lemissione-di-titoli-a-medio-e-lungo-termine/",
+              "title": "corrieredelleconomia.it"
+            },
+            {
+              "url": "https://buongiornoeconomia.substack.com/p/piazza-affari-rimbalza-sopra-51mila",
+              "title": "buongiornoeconomia.substack.com"
+            }
+          ],
+          "readSeconds": 38
+        }
+      ]
+    },
+    {
+      "id": "italy",
+      "title": "Italia",
+      "stories": [
+        {
+          "title": "Approvato il \"Decreto Bollette bis\" con tetto al prezzo del gas",
+          "lead": "Il Consiglio dei Ministri ha approvato il \"Decreto Bollette bis\", introducendo un tetto di 58,9 euro/MWh per il gas usato nella produzione elettrica.",
+          "body": "Il meccanismo prevede rimborsi agli impianti legati al differenziale positivo rispetto al prezzo TTF del giorno precedente. La misura è volta a contenere i costi dell'energia e a proteggere famiglie e imprese dall'eccessiva volatilità dei prezzi del gas.L'approvazione del decreto è una risposta alle pressioni inflazionistiche e alle preoccupazioni per la sicurezza energetica, in un periodo di persistente rialzo dei prezzi.",
+          "why": "Questa decisione è di grande importanza per l'economia e la società italiana, incidendo direttamente sui costi energetici e sul potere d'acquisto.",
+          "sources": [
+            {
+              "url": "https://buongiornoeconomia.substack.com/p/piazza-affari-rimbalza-sopra-51mila",
+              "title": "buongiornoeconomia.substack.com"
+            },
+            {
+              "url": "https://www.corrieredelleconomia.it/2026/11/09/approvato-il-decreto-bollette-come-funziona-il-rimborso/",
+              "title": "corrieredelleconomia.it"
+            },
+            {
+              "url": "https://toscana.ance.it/2026/11/06/nota-sullandamento-dei-prezzi-delle-materie-prime-novembre-2026/?print=pdf",
+              "title": "toscana.ance.it"
+            }
+          ],
+          "readSeconds": 35
+        },
+        {
+          "title": "L'Italia nel mirino di una \"guerra ibrida\" con cyberattacchi",
+          "lead": "L'Italia è sotto pressione per una serie di cyberattacchi e minacce informatiche, definite dal Ministro Tajani una \"guerra ibrida\".",
+          "body": "Dati personali di Tajani, del procuratore di Roma Francesco Lo Voi, del capo della Polizia postale Ivano Gabrielli e di altri cittadini italiani sono comparsi nel dark web, attribuiti al gruppo filorusso NoName057(16). È stato segnalato anche un attacco alla società BBT Se, responsabile della Galleria di Base del Brennero.Questi episodi si inseriscono in un quadro di crescente pressione informatica sull'Europa. Tajani ha chiesto che la questione venga affrontata al G7 di Parigi. Le autorità hanno alzato il livello di allerta.",
+          "why": "Notizia di primaria importanza per la sicurezza nazionale e la stabilità delle infrastrutture critiche italiane ed europee.",
+          "sources": [
+            {
+              "url": "https://www.sarnonotizie.it/notizie-oggi-8-novembre-2026-hacker-italia-guerra-ibrida/",
+              "title": "sarnonotizie.it"
+            },
+            {
+              "url": "https://shattered.io/it/inkling-2-small-thinking-machines-594-miliardi-pesi-chiusi-2026/",
+              "title": "shattered.io"
+            },
+            {
+              "url": "https://www.corrieredelleconomia.it/2026/11/09/tajani-a-parigi-per-il-g7-esteri-sicurezza-europea-ucraina-e-ai-al-centro-dei-lavori/",
+              "title": "corrieredelleconomia.it"
+            }
+          ],
+          "readSeconds": 38
+        },
+        {
+          "title": "Presentato il Rapporto SVIMEZ 2026 sull'economia del Mezzogiorno",
+          "lead": "Il 10 novembre 2026, a Roma, è stato presentato il Rapporto SVIMEZ 2026 \"L'economia e la società del Mezzogiorno: il valore della coesione\".",
+          "body": "L'evento, tenutosi presso la Camera dei Deputati, ha visto la partecipazione del Presidente della Repubblica Sergio Mattarella, sottolineando l'importanza istituzionale del tema. Il rapporto analizza l'andamento economico e sociale del Sud Italia.Fornisce dati e prospettive cruciali per le politiche di sviluppo e coesione territoriale, in un momento in cui l'economia italiana mostra segnali di ripresa, con previsioni di crescita del fatturato manifatturiero.",
+          "why": "Il Rapporto SVIMEZ è un punto di riferimento fondamentale per il dibattito pubblico e le decisioni politiche relative allo sviluppo del Sud Italia.",
+          "sources": [
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/agenda-del-10-novembre-2026-1_2026-11-10_TLB-BIT.html",
+              "title": "borsaitaliana.it"
+            },
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-del-10-novembre-2026-15_2026-11-10_TLB.html?lang=it",
+              "title": "borsaitaliana.it"
+            },
+            {
+              "url": "https://buongiornoeconomia.substack.com/p/piazza-affari-rimbalza-sopra-51mila",
+              "title": "buongiornoeconomia.substack.com"
+            }
+          ],
+          "readSeconds": 35
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "Mondo",
+      "stories": [
+        {
+          "title": "G7 a Parigi: Ucraina, AI e minacce ibride al centro dei colloqui",
+          "lead": "I Ministri degli Esteri del G7 si sono riuniti a Parigi il 9 e 10 novembre 2026, concentrandosi su sicurezza europea, Ucraina e intelligenza artificiale.",
+          "body": "Su richiesta italiana, è stata posta attenzione anche all'escalation delle minacce ibride. L'incontro si svolge in un periodo di persistente conflitto in Ucraina e di crescenti tensioni geopolitiche, con un'attenzione sempre maggiore all'impatto dell'IA sulla sicurezza globale.Alcune sessioni sono state allargate a paesi come Arabia Saudita, Brasile, Corea del Sud, Egitto e Ucraina. La riunione mira a coordinare le risposte delle principali economie industrializzate alle sfide globali.",
+          "why": "Questo vertice è cruciale per definire le strategie comuni del G7 su sicurezza internazionale, supporto all'Ucraina e governance dell'intelligenza artificiale.",
+          "sources": [
+            {
+              "url": "https://www.corrieredelleconomia.it/2026/11/09/tajani-a-parigi-per-il-g7-esteri-sicurezza-europea-ucraina-e-ai-al-centro-dei-lavori/",
+              "title": "corrieredelleconomia.it"
+            },
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/agenda-del-10-novembre-2026-1_2026-11-10_TLB-BIT.html",
+              "title": "borsaitaliana.it"
+            },
+            {
+              "url": "https://www.sarnonotizie.it/notizie-oggi-8-novembre-2026-hacker-italia-guerra-ibrida/",
+              "title": "sarnonotizie.it"
+            }
+          ],
+          "readSeconds": 37
+        },
+        {
+          "title": "Negoziati USA-Russia-Ucraina ad Abu Dhabi escludono l'UE",
+          "lead": "Rappresentanti di Stati Uniti, Russia e Ucraina si incontreranno ad Abu Dhabi per colloqui di pace, con l'amministrazione Trump che intensifica gli sforzi diplomatici.",
+          "body": "Questo è il quarto round di negoziati mediato dall'amministrazione Trump, ma gli europei sono stati tenuti fuori dalla sala dei negoziati, generando un contrasto diplomatico. L'UE ha espresso preoccupazione per la sua esclusione.Gli Stati Uniti cercano di accelerare una soluzione al conflitto, mentre l'esclusione dell'Unione Europea solleva interrogativi sul ruolo dell'Europa nella diplomazia internazionale e sulle dinamiche delle relazioni transatlantiche.",
+          "why": "Questi negoziati sono un tentativo significativo di trovare una soluzione diplomatica al conflitto in Ucraina, con implicazioni per il ruolo dell'UE.",
+          "sources": [
+            {
+              "url": "https://www.ilfattoquotidiano.it/in-edicola/",
+              "title": "ilfattoquotidiano.it"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=Bil_UFwUdpQ",
+              "title": "youtube.com"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=fxD5pqlMcs4",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 34
+        },
+        {
+          "title": "Sparatoria di massa a Cracovia, Polonia: almeno sei morti",
+          "lead": "L'8 novembre 2026, almeno sei persone sono morte e altre 15 sono rimaste ferite in una sparatoria di massa nella piazza principale di Cracovia, Polonia.",
+          "body": "La polizia ha riferito che il sospettato è stato colpito dagli agenti e trasportato in ospedale. L'uomo armato ha preso di mira persone a caso. Le sparatorie di massa sono rare in Polonia, ma il paese era in massima allerta per aggressioni con arma da taglio a ottobre.Il governo polacco ha proclamato due giorni di lutto nazionale. L'evento ha scosso la Polonia e la comunità internazionale, portando all'avvio di indagini per ricostruire l'attacco.",
+          "why": "Questo tragico evento evidenzia la vulnerabilità delle aree pubbliche e la necessità di misure di sicurezza, anche in paesi dove tali episodi sono meno frequenti.",
+          "sources": [
+            {
+              "url": "https://www.sarnonotizie.it/notizie-oggi-8-novembre-2026-hacker-italia-guerra-ibrida/",
+              "title": "sarnonotizie.it"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=Bil_UFwUdpQ",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 40
+        }
+      ]
+    }
+  ],
+  "dropped": 0
+}
