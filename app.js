@@ -191,8 +191,314 @@
   const getLesson = (date) => getJSON(`data/lessons/${date}.json`);
   const getTopics = () => getJSON('data/topics.json');
 
+  /* ===================== QUOTIDIE ENGLISH (app) — INIZIO =====================
+     Pagina "Inglese": 5 schede al giorno + ripasso a ripetizione dilazionata.
+     Usa: $view, esc, inline, toast, getJSON, isoDay, addDays, fmt, cap,
+     emptyState, noEditionState, load, save, cleanup, speech.
+     ========================================================================== */
+  const EN_KEY = 'qd.english';
+  const EN_BOX_DAYS = [0, 1, 3, 7, 14, 30]; // scatola 1..5 → giorni al prossimo ripasso
+  const enState = Object.assign({ cards: {}, days: [], quizDone: {} }, load(EN_KEY, {}));
+  const enSave = () => save(EN_KEY, enState);
+  const enUi = { tab: 'today', q: '', filter: 'all' };
+
+  // Scheda di ripetizione dilazionata (sistema a scatole di Leitner)
+  const enCard = (id) => enState.cards[id] || (enState.cards[id] = { box: 0, due: isoDay(), seen: 0, right: 0 });
+  const enGrade = (id, good) => {
+    const c = enCard(id);
+    c.seen++;
+    // Parola nuova già nota: parte dalla scatola 2 (ripasso tra 3 giorni)
+    if (good) { c.right++; c.box = Math.min(5, Math.max(2, c.box + 1)); } else c.box = 1;
+    c.due = addDays(isoDay(), EN_BOX_DAYS[c.box]);
+    const t = isoDay();
+    if (!enState.days.includes(t)) enState.days.push(t);
+    enSave();
+  };
+  const enLearned = () => Object.values(enState.cards).filter((c) => c.box >= 4).length;
+  const enStreak = () => {
+    const days = new Set(enState.days);
+    let d = isoDay();
+    if (!days.has(d)) d = addDays(d, -1);
+    let n = 0;
+    while (days.has(d)) { n++; d = addDays(d, -1); }
+    return n;
+  };
+
+  const enSpeak = (w) => {
+    if (w.audio) {
+      const a = new Audio(w.audio);
+      a.play().catch(() => enSynth(w.word));
+    } else enSynth(w.word);
+  };
+  const enSynth = (text) => {
+    const s = window.speechSynthesis;
+    if (!s) return toast('Audio non disponibile su questo dispositivo');
+    s.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-GB';
+    const v = s.getVoices().find((x) => /^en-GB/i.test(x.lang));
+    if (v) u.voice = v;
+    u.rate = 0.9;
+    s.speak(u);
+  };
+
+  const enShuffle = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+  // Carica le parole di più giorni (per il ripasso e l'archivio)
+  async function enLoadDays(dates) {
+    const out = [];
+    for (const d of dates) {
+      try { const day = await getJSON(`data/english/${d}.json`); (day.words || []).forEach((w) => out.push({ ...w, date: d })); } catch { /* giorno non disponibile */ }
+    }
+    return out;
+  }
+
+  async function renderEnglish(param) {
+    let index;
+    try {
+      index = (await getJSON('data/english/index.json')).days || [];
+    } catch (err) {
+      if (err.status === 404) { $view.innerHTML = noEditionState(); return; }
+      throw err;
+    }
+    if (!index.length) { $view.innerHTML = noEditionState(); return; }
+    if (param === 'archivio') enUi.tab = 'archive';
+    else if (param && /^\d{4}-\d{2}-\d{2}$/.test(param)) enUi.tab = 'today';
+    else if (!param) enUi.tab = enUi.tab === 'archive' ? 'today' : enUi.tab;
+
+    const date = param && /^\d{4}-\d{2}-\d{2}$/.test(param) && index.some((d) => d.date === param) ? param : index[0].date;
+    const day = await getJSON(`data/english/${date}.json`);
+    const words = day.words || [];
+    const isToday = date === isoDay();
+    const due = Object.entries(enState.cards).filter(([id, c]) => c.box > 0 && c.due <= isoDay() && !id.startsWith(date)).length;
+
+    const subnav = `
+      <nav class="subnav" aria-label="Inglese">
+        <div class="segmented">
+          <a href="#/english" class="${enUi.tab !== 'archive' ? 'is-on' : ''}">${isToday || enUi.tab === 'archive' ? 'Oggi' : esc(cap(fmt(date, { day: 'numeric', month: 'short' })))}</a>
+          <a href="#/english/archivio" class="${enUi.tab === 'archive' ? 'is-on' : ''}">Tutte le parole${due ? `<span class="badge" aria-label="${due} da ripassare">${due}</span>` : ''}</a>
+        </div>
+      </nav>`;
+
+    if (enUi.tab === 'archive') return enRenderArchive(index, subnav);
+
+    const streak = enStreak();
+    $view.innerHTML = `${subnav}
+      <section class="en">
+        <header class="en-head">
+          <div class="dateline">
+            <span>${esc(cap(fmt(date, { weekday: 'long', day: 'numeric', month: 'long' })))}</span>
+            <span>${words.length} parole, circa 4 minuti</span>
+          </div>
+          <h1>${isToday ? 'Le parole <em>di oggi</em>' : 'Le parole <em>del giorno</em>'}</h1>
+          <div class="en-stats">
+            <span><b>${streak}</b> ${streak === 1 ? 'giorno di fila' : 'giorni di fila'}</span>
+            <span><b>${enLearned()}</b> parole imparate</span>
+            <span><b>${due}</b> da ripassare</span>
+          </div>
+        </header>
+
+        <div class="en-deck" id="en-deck" tabindex="0" aria-label="Schede delle parole">
+          ${words.map((w, i) => enCardHtml(w, i, words.length)).join('')}
+        </div>
+        <div class="en-nav">
+          <button class="icon-round" data-en="prev" aria-label="Scheda precedente"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <div class="en-dots" id="en-dots">${words.map((_, i) => `<i class="${i === 0 ? 'on' : ''}"></i>`).join('')}</div>
+          <button class="icon-round" data-en="next" aria-label="Scheda successiva"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <p class="en-hint">Tocca la scheda per girarla. Scorri per passare alla prossima.</p>
+
+        <section class="en-quiz" id="en-quiz">
+          <div class="en-quiz-head">
+            <h2>Ripasso</h2>
+            <span class="meta">${enState.quizDone[date] ? `Fatto: ${enState.quizDone[date]}` : 'circa 2 minuti'}</span>
+          </div>
+          <p>Le parole di oggi e quelle dei giorni scorsi che è il momento di ripassare.</p>
+          <button class="btn primary" data-en="quiz">Inizia il ripasso</button>
+        </section>
+      </section>`;
+
+    const deck = document.getElementById('en-deck');
+    const dots = [...document.querySelectorAll('#en-dots i')];
+    const current = () => Math.round(deck.scrollLeft / deck.clientWidth);
+    const go = (i) => deck.scrollTo({ left: Math.max(0, Math.min(words.length - 1, i)) * deck.clientWidth, behavior: 'smooth' });
+    const onScroll = () => { const i = current(); dots.forEach((d, k) => d.classList.toggle('on', k === i)); };
+    deck.addEventListener('scroll', onScroll, { passive: true });
+    deck.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') go(current() + 1);
+      if (e.key === 'ArrowLeft') go(current() - 1);
+    });
+
+    $view.querySelector('.en').addEventListener('click', async (e) => {
+      const b = e.target.closest('[data-en]');
+      const card = e.target.closest('.en-card');
+      if (!b && card) { card.classList.toggle('is-flipped'); return; }
+      if (!b) return;
+      const act = b.dataset.en;
+      const w = words[Number(b.dataset.i)];
+      if (act === 'prev') go(current() - 1);
+      else if (act === 'next') go(current() + 1);
+      else if (act === 'speak') enSpeak(w);
+      else if (act === 'know' || act === 'again') {
+        enGrade(w.id, act === 'know');
+        b.closest('.en-card').querySelectorAll('.en-grade button').forEach((x) => x.classList.toggle('is-on', x === b));
+        toast(act === 'know' ? 'Bene: la rivedrai tra qualche giorno' : 'La ripasserai domani');
+        setTimeout(() => go(Number(b.dataset.i) + 1), 350);
+      } else if (act === 'quiz') {
+        await enStartQuiz(words, index, date);
+      }
+    });
+  }
+
+  function enCardHtml(w, i, total) {
+    const c = enState.cards[w.id];
+    return `
+      <article class="en-card" data-id="${esc(w.id)}">
+        <div class="en-face en-front">
+          <div class="en-meta"><span>${esc(w.categoryLabel || '')}</span><span>${i + 1} di ${total}</span></div>
+          <h2 class="en-word" lang="en">${esc(w.word)}</h2>
+          <div class="en-pron">
+            <span lang="en">${esc(w.ipa)}</span>
+            <button class="icon-round small" data-en="speak" data-i="${i}" aria-label="Ascolta la pronuncia"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg></button>
+          </div>
+          <div class="en-tags"><span>${esc(w.partOfSpeech)}</span><span>${esc(w.level)}</span><span>${esc(w.register)}</span></div>
+          <p class="en-turn">Tocca per scoprire il significato</p>
+        </div>
+        <div class="en-face en-back">
+          <div class="en-meta"><span lang="en">${esc(w.word)}</span><span>${esc(w.ipa)}</span></div>
+          <p class="en-meaning">${inline(w.meaningIt)}</p>
+          <p class="en-def" lang="en">${inline(w.definitionEn)}</p>
+          <ul class="en-examples" lang="en">${(w.examples || []).map((x) => `<li>${inline(x)}</li>`).join('')}</ul>
+          ${w.exampleIt ? `<p class="en-tr">${inline(w.exampleIt)}</p>` : ''}
+          ${(w.collocations || []).length ? `<p class="en-row"><b>Si usa con</b> <span lang="en">${w.collocations.map(esc).join(' · ')}</span></p>` : ''}
+          ${(w.synonyms || []).length ? `<p class="en-row"><b>Simili</b> <span lang="en">${w.synonyms.map(esc).join(', ')}</span></p>` : ''}
+          ${w.commonMistake ? `<p class="en-warn">${inline(w.commonMistake)}</p>` : ''}
+          <div class="en-grade">
+            <button class="btn small ${c && c.box > 1 ? 'is-on' : ''}" data-en="know" data-i="${i}">La so già</button>
+            <button class="btn small ${c && c.box === 1 ? 'is-on' : ''}" data-en="again" data-i="${i}">Da ripassare</button>
+          </div>
+        </div>
+      </article>`;
+  }
+
+  async function enStartQuiz(todayWords, index, date) {
+    const box = document.getElementById('en-quiz');
+    box.innerHTML = '<div class="skeleton" style="height:18px;width:50%"></div><div class="skeleton" style="height:60px"></div>';
+    // Parole dei giorni passati "in scadenza" (al massimo 5) + quelle del giorno
+    const pastDates = index.map((d) => d.date).filter((d) => d !== date).slice(0, 30);
+    const pool = await enLoadDays(pastDates);
+    const dueWords = enShuffle(pool.filter((w) => { const c = enState.cards[w.id]; return c && c.box > 0 && c.due <= isoDay(); })).slice(0, 5);
+    const items = enShuffle([...todayWords, ...dueWords]).slice(0, Math.max(6, todayWords.length));
+    const distract = [...todayWords, ...pool];
+    const questions = items.map((w, i) => {
+      const others = enShuffle(distract.filter((x) => x.word !== w.word));
+      const cloze = i % 3 !== 2 && w.cloze?.includes('____');
+      const options = enShuffle([w, ...others.slice(0, 3)]);
+      return cloze
+        ? { w, kind: 'cloze', prompt: w.cloze, options: options.map((o) => ({ label: o.word, ok: o.word === w.word, en: true })) }
+        : { w, kind: 'meaning', prompt: `Che cosa significa “${w.word}”?`, options: options.map((o) => ({ label: o.meaningIt, ok: o.word === w.word })) };
+    });
+    let n = 0;
+    let right = 0;
+    const draw = () => {
+      if (n >= questions.length) {
+        const score = `${right} su ${questions.length}`;
+        enState.quizDone[date] = score;
+        const t = isoDay();
+        if (!enState.days.includes(t)) enState.days.push(t);
+        enSave();
+        box.innerHTML = `
+          <div class="en-quiz-head"><h2>Ripasso completato</h2><span class="meta">${score}</span></div>
+          <p>${right === questions.length ? 'Perfetto. Le parole tornano tra qualche giorno per fissarle.' : 'Le parole sbagliate torneranno domani: è così che restano in memoria.'}</p>
+          <button class="btn" data-en="quiz">Rifai il ripasso</button>`;
+        return;
+      }
+      const q = questions[n];
+      box.innerHTML = `
+        <div class="en-quiz-head"><h2>Ripasso</h2><span class="meta">${n + 1} di ${questions.length}</span></div>
+        <p class="en-q"${q.kind === 'cloze' ? ' lang="en"' : ''}>${q.kind === 'cloze' ? esc(q.prompt).replace('____', '<span class="en-blank">____</span>') : esc(q.prompt)}</p>
+        <div class="en-options">
+          ${q.options.map((o, k) => `<button class="en-opt" data-k="${k}"${o.en ? ' lang="en"' : ''}>${esc(o.label)}</button>`).join('')}
+        </div>
+        <div class="en-feedback" id="en-feedback"></div>`;
+      box.querySelectorAll('.en-opt').forEach((btn) => btn.addEventListener('click', () => {
+        const o = q.options[Number(btn.dataset.k)];
+        box.querySelectorAll('.en-opt').forEach((x, k) => { x.disabled = true; x.classList.toggle('ok', q.options[k].ok); });
+        if (!o.ok) btn.classList.add('ko'); else right++;
+        enGrade(q.w.id, o.ok);
+        document.getElementById('en-feedback').innerHTML = `
+          <p><b lang="en">${esc(q.w.word)}</b> ${esc(q.w.ipa)}: ${inline(q.w.meaningIt)}</p>
+          <p lang="en" class="en-tr">${inline(q.w.examples?.[0] || '')}</p>
+          <button class="btn primary" id="en-next">${n + 1 < questions.length ? 'Avanti' : 'Vedi il risultato'}</button>`;
+        document.getElementById('en-next').addEventListener('click', () => { n++; draw(); });
+      }));
+    };
+    draw();
+    box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  async function enRenderArchive(index, subnav) {
+    $view.innerHTML = `${subnav}<div class="loading"><div class="skeleton" style="height:46px"></div><div class="skeleton" style="height:60px"></div><div class="skeleton" style="height:60px"></div></div>`;
+    const all = await enLoadDays(index.map((d) => d.date).slice(0, 120));
+    $view.innerHTML = `${subnav}
+      <section class="en en-archive">
+        <div class="filters">
+          <label class="sr-only" for="en-q">Cerca una parola</label>
+          <input class="search" id="en-q" type="search" placeholder="Cerca una parola o un significato" value="${esc(enUi.q)}" autocomplete="off" enterkeyhint="search">
+          <div class="chips" role="group" aria-label="Filtra">
+            ${[['all', 'Tutte'], ['due', 'Da ripassare'], ['learned', 'Imparate']].map(([k, l]) => `<button class="chip ${enUi.filter === k ? 'is-on' : ''}" data-f="${k}">${l}</button>`).join('')}
+          </div>
+        </div>
+        <div id="en-list"></div>
+      </section>`;
+    const list = document.getElementById('en-list');
+    const draw = () => {
+      const q = enUi.q.trim().toLowerCase();
+      const rows = all.filter((w) => {
+        const c = enState.cards[w.id];
+        if (enUi.filter === 'due' && !(c && c.box > 0 && c.due <= isoDay())) return false;
+        if (enUi.filter === 'learned' && !(c && c.box >= 4)) return false;
+        return !q || `${w.word} ${w.meaningIt} ${(w.synonyms || []).join(' ')}`.toLowerCase().includes(q);
+      });
+      if (!rows.length) { list.innerHTML = '<div class="empty small"><p>Nessuna parola con questi filtri.</p></div>'; return; }
+      let month = '';
+      list.innerHTML = rows.map((w) => {
+        const m = fmt(w.date, { month: 'long', year: 'numeric' });
+        const head = m !== month ? `<h2 class="month">${esc(m)}</h2>` : '';
+        month = m;
+        const c = enState.cards[w.id];
+        const status = !c || !c.box ? '' : c.box >= 4 ? '<span class="en-pill ok">imparata</span>' : c.due <= isoDay() ? '<span class="en-pill due">da ripassare</span>' : '';
+        return `${head}
+          <details class="en-item">
+            <summary>
+              <span><b lang="en">${esc(w.word)}</b> <small>${esc(w.ipa)}</small></span>
+              <span class="en-item-sub">${esc(w.meaningIt)}</span>
+              ${status}
+            </summary>
+            <div class="en-item-body">
+              <p lang="en">${inline(w.definitionEn)}</p>
+              <ul class="en-examples" lang="en">${(w.examples || []).map((x) => `<li>${inline(x)}</li>`).join('')}</ul>
+              <button class="text-link" data-speak="${esc(w.id)}">Ascolta la pronuncia</button>
+            </div>
+          </details>`;
+      }).join('');
+    };
+    draw();
+    document.getElementById('en-q').addEventListener('input', (e) => { enUi.q = e.target.value; draw(); });
+    $view.querySelectorAll('[data-f]').forEach((b) => b.addEventListener('click', () => {
+      enUi.filter = b.dataset.f;
+      $view.querySelectorAll('[data-f]').forEach((x) => x.classList.toggle('is-on', x === b));
+      draw();
+    }));
+    list.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-speak]');
+      if (b) enSpeak(all.find((w) => w.id === b.dataset.speak));
+    });
+  }
+  /* ===================== QUOTIDIE ENGLISH (app) — FINE ===================== */
+
   /* ---------- Router ---------- */
-  const routes = { news: renderNews, learn: renderLearn, settings: renderSettings };
+  const routes = { english: renderEnglish, news: renderNews, learn: renderLearn, settings: renderSettings };
 
   let cleanup = [];
   let currentView = '';
