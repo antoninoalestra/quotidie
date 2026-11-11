@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-11",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-11T19:02:57.728Z",
+  "words": [
+    {
+      "id": "2026-11-11-1",
+      "word": "pernicious",
+      "category": "general",
+      "ipa": "/pəˈnɪʃəs/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Che ha un effetto dannoso o distruttivo, spesso in modo subdolo e graduale.",
+      "definitionEn": "Having a very harmful effect on something or someone, especially in a way that is not easily noticed.",
+      "examples": [
+        "The pernicious influence of social media on mental health is a growing concern.",
+        "He warned against the pernicious effects of corruption on society."
+      ],
+      "exampleIt": "La perniciosa influenza dei social media sulla salute mentale è una preoccupazione crescente.",
+      "synonyms": [
+        "detrimental",
+        "harmful",
+        "damaging"
+      ],
+      "collocations": [
+        "pernicious influence",
+        "pernicious effect",
+        "pernicious habit"
+      ],
+      "commonMistake": "Non confondere con \"permissive\" (permissivo). \"Pernicious\" ha sempre una connotazione negativa e distruttiva, riferendosi a qualcosa che causa danno.",
+      "cloze": "The company's ____ policies ultimately led to a decline in employee morale.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-11-1.mp3"
+    },
+    {
+      "id": "2026-11-11-2",
+      "word": "nuance",
+      "category": "general",
+      "ipa": "/ˈnjuːɑːns/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Una sottile differenza o sfumatura di significato, espressione o sentimento.",
+      "definitionEn": "A subtle difference in meaning, expression, sound, or colour, often difficult to perceive.",
+      "examples": [
+        "It's important to appreciate the subtle nuances of the language when translating.",
+        "The artist captured every nuance of the landscape's changing light."
+      ],
+      "exampleIt": "È importante apprezzare le sottili sfumature della lingua durante la traduzione.",
+      "synonyms": [
+        "subtlety",
+        "shade",
+        "distinction"
+      ],
+      "collocations": [
+        "subtle nuance",
+        "linguistic nuance",
+        "political nuance"
+      ],
+      "commonMistake": "Pronuncia. La 'u' iniziale è un dittongo /juː/, non una semplice /uː/. Quindi, non /nuːɑːns/ ma /njuːɑːns/.",
+      "cloze": "A good negotiator understands the cultural ____ that can affect international business deals.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-11-2.mp3"
+    },
+    {
+      "id": "2026-11-11-3",
+      "word": "streamline",
+      "category": "business",
+      "ipa": "/ˈstriːmlaɪn/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Semplificare un processo o un'organizzazione per renderlo più efficiente e produttivo.",
+      "definitionEn": "To make a system, organization, or process more effective by making it simpler and more efficient.",
+      "examples": [
+        "We need to streamline our workflow to reduce unnecessary delays.",
+        "The company aims to streamline its operations to cut costs and improve speed."
+      ],
+      "exampleIt": "Dobbiamo snellire il nostro flusso di lavoro per ridurre ritardi inutili.",
+      "synonyms": [
+        "optimize",
+        "simplify",
+        "rationalize"
+      ],
+      "collocations": [
+        "streamline processes",
+        "streamline operations",
+        "streamline workflow"
+      ],
+      "commonMistake": "Usare \"make easier\" al posto di \"streamline\" in contesti formali. \"Streamline\" implica un miglioramento sistemico dell'efficienza, non solo una generica semplificazione.",
+      "cloze": "The new software should help us to ____ our customer service inquiries.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-11-3.mp3"
+    },
+    {
+      "id": "2026-11-11-4",
+      "word": "că",
+      "category": "business",
+      "ipa": "/ˈliːvərɪdʒ/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Utilizzare, sfruttare o massimizzare qualcosa (risorse, influenza) per ottenere un vantaggio.",
+      "definitionEn": "To use something that you already have, such as resources or influence, to your advantage to achieve a better result.",
+      "examples": [
+        "We can leverage our strong brand reputation to enter new markets.",
+        "The company plans to leverage its existing technology to develop new products."
+      ],
+      "exampleIt": "Possiamo sfruttare la nostra solida reputazione del marchio per entrare in nuovi mercati.",
+      "synonyms": [
+        "exploit",
+        "utilise",
+        "capitalise on"
+      ],
+      "collocations": [
+        "leverage resources",
+        "leverage expertise",
+        "leverage data"
+      ],
+      "commonMistake": "Molti italiani lo usano come sostantivo in modo eccessivo o errato. Come verbo, significa \"sfruttare una leva\", non semplicemente \"dare una leva\". Evitare \"give leverage to\".",
+      "cloze": "Start-ups often need to ____ their limited resources very carefully to succeed.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-11-4.mp3"
+    },
+    {
+      "id": "2026-11-11-5",
+      "word": "iron out",
+      "category": "phrasal",
+      "ipa": "/ˈaɪən aʊt/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Risolvere piccoli problemi, difficoltà o disaccordi per eliminare ostacoli.",
+      "definitionEn": "To resolve small problems, difficulties, or disagreements, often through discussion or negotiation.",
+      "examples": [
+        "We need to meet to iron out the final details of the contract.",
+        "Let's try to iron out our differences before the meeting."
+      ],
+      "exampleIt": "Dobbiamo incontrarci per appianare gli ultimi dettagli del contratto.",
+      "synonyms": [
+        "resolve",
+        "settle",
+        "smooth out"
+      ],
+      "collocations": [
+        "iron out problems",
+        "iron out difficulties",
+        "iron out details"
+      ],
+      "commonMistake": "Non confonderlo con \"stir out\" (non è un'espressione comune con questo significato). Si riferisce metaforicamente a \"stirare\" via le pieghe (i problemi).",
+      "cloze": "Before we launch the new product, we need to ____ any remaining bugs in the software.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-11-5.mp3"
+    }
+  ]
+}

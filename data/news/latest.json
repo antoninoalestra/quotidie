@@ -1,14 +1,14 @@
 {
   "date": "2026-11-11",
   "kind": "daily",
-  "generatedAt": "2026-11-11T07:05:37.236Z",
+  "generatedAt": "2026-11-11T19:02:20.345Z",
   "model": "gemini-2.5-flash",
   "minutes": 9,
-  "words": 1828,
+  "words": 1733,
   "brief": [
-    "Jensen Huang di Nvidia è sotto esame per presunti legami con una spia cinese, inasprendo le tensioni geopolitiche nel settore tecnologico.",
-    "La Manovra Finanziaria 2027 italiana affronta forti resistenze per la scarsità di risorse, con la Premier Meloni che valuta un vertice.",
-    "Falliscono i colloqui di Abu Dhabi tra Ucraina e Russia per un cessate il fuoco immediato, prolungando l'incertezza sul conflitto."
+    "TSMC, leader mondiale dei chip, ha registrato un aumento del 60% nelle vendite di ottobre e conferma ingenti investimenti, segnalando una robusta domanda del settore tecnologico.",
+    "I mercati azionari europei hanno sovraperformato Wall Street dopo le elezioni di midterm USA, con le Big Tech che hanno perso oltre mille miliardi di dollari in un solo giorno.",
+    "Un attacco hacker al Brennero ha spinto il Ministro Tajani a parlare di \"guerra ibrida\", portando la cyber sicurezza all'attenzione del G7."
   ],
   "sections": [
     {
@@ -16,72 +16,56 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "Nvidia CEO Jensen Huang sotto esame per legami con spia cinese",
-          "lead": "Jensen Huang, CEO di Nvidia, è stato chiamato dal Congresso USA a chiarire i suoi rapporti con una donna d'affari sospettata di spionaggio per la Cina, una notizia emersa a inizio novembre 2026.",
-          "body": "La vicenda si inserisce nella crescente competizione geopolitica tra Stati Uniti e Cina per la supremazia tecnologica, in particolare nei semiconduttori e nell'intelligenza artificiale. I timori di spionaggio industriale sono elevati, con Nvidia attore chiave nella produzione di chip AI. Il gigante tech ha già registrato un calo in Borsa a seguito della notizia. Il CEO Huang ha dichiarato di assumersi la piena responsabilità, mentre il Congresso USA ha richiesto chiarimenti ufficiali. Questo caso evidenzia i rischi di sicurezza nazionale legati alla catena di approvvigionamento dei semiconduttori e all'innovazione nell'AI.",
-          "why": "La vicenda evidenzia le tensioni geopolitiche e i rischi di sicurezza nazionale legati alla catena di approvvigionamento dei semiconduttori.",
+          "title": "TSMC accelera vendite e conferma ingenti investimenti in chip",
+          "lead": "Taiwan Semiconductor Manufacturing Company (TSMC) ha registrato un aumento del 60% nelle vendite di ottobre, raggiungendo 17,9 miliardi di dollari, e conferma investimenti fino a 64 miliardi per l'anno.",
+          "body": "Il dato di ottobre 2026, pari a 586,9 miliardi di dollari taiwanesi, segna un'accelerazione rispetto al 51% del trimestre precedente, superando le aspettative degli analisti. TSMC, termometro del settore post-ChatGPT, prevede la costruzione di circa 20 nuovi stabilimenti globali.Nonostante le previsioni positive, gli investitori mantengono cautela sulle prospettive a lungo termine dell'AI, a causa dell'aumento dei costi di finanziamento per i data center. Le azioni di TSMC hanno mostrato volatilità, influenzate anche dai timori legati alle elezioni USA.",
+          "why": "La crescita di TSMC è cruciale per l'innovazione tecnologica globale e per la catena di approvvigionamento di componenti essenziali per l'AI.",
           "sources": [
             {
-              "url": "https://www.fanpage.it/esteri/",
-              "title": "fanpage.it"
-            },
-            {
-              "url": "https://ainews.it/ultime-notizie/",
-              "title": "ainews.it"
-            },
-            {
-              "url": "https://www.tgcom24.mediaset.it/mondo/",
-              "title": "tgcom24.mediaset.it"
-            }
-          ],
-          "readSeconds": 46
-        },
-        {
-          "title": "TSMC registra ricavi record a ottobre spinta da chip AI",
-          "lead": "Taiwan Semiconductor Manufacturing Company (TSMC) ha annunciato ricavi record per ottobre 2026, confermando la forte domanda globale di chip per l'intelligenza artificiale.",
-          "body": "Questo dato allontana i timori di un rallentamento nel settore dei semiconduttori e sottolinea il ruolo cruciale dei chip AI. I ricavi record rendono raggiungibile il punto medio della guidance per il quarto trimestre, pari a 52,3-54,3 miliardi di dollari. La produzione a 2 nanometri di TSMC sta già contribuendo alla crescita. Il mercato ha reagito positivamente, con l'indice SOX (semiconduttori) che ha iniziato la settimana con un rialzo del 6,85%. La performance di TSMC è un indicatore chiave della salute del settore tecnologico globale e dell'espansione dell'AI.",
-          "why": "La performance di TSMC è un indicatore chiave della salute del settore tecnologico globale e della continua espansione dell'AI.",
-          "sources": [
-            {
-              "url": "https://www.promptops.it/news/",
-              "title": "promptops.it"
-            },
-            {
-              "url": "https://www.websim.it/etf/notizie-etf/tematici/cpdi-chip-volano-gli-utili-e-i-ricavi-delle-societa-cadono-i-titoli/",
-              "title": "websim.it"
-            }
-          ],
-          "readSeconds": 42
-        },
-        {
-          "title": "Anthropic si prepara all'IPO con decisione sulla valutazione imminente",
-          "lead": "Anthropic, una delle principali società di intelligenza artificiale, è in procinto di fissare la valutazione per la sua Offerta Pubblica Iniziale (IPO), con una decisione attesa entro la settimana.",
-          "body": "Anthropic è un attore emergente e significativo nel campo dell'AI, in competizione con giganti come OpenAI. La sua rapida accelerazione nello sviluppo di intelligenze artificiali più avanzate è stata evidenziata da rapporti recenti, sollevando un allarme tra i ricercatori. Goldman Sachs aveva previsto per Anthropic un fatturato che sfiorerà i 700 miliardi di dollari entro il 2030. L'IPO rappresenterebbe un evento importante per il mercato dell'AI, indicando la fiducia degli investitori nel potenziale di crescita del settore.",
-          "why": "L'IPO di Anthropic è un evento importante per il mercato dell'AI, indicando la fiducia degli investitori nel potenziale di crescita del settore.",
-          "sources": [
-            {
-              "url": "https://www.promptops.it/news/",
-              "title": "promptops.it"
-            },
-            {
-              "url": "https://finanza.repubblica.it/News/Overview/",
+              "url": "https://finanza.repubblica.it/News/2026/11/10/tsmc_a_ottobre_vendite_accelerano_del_60percento_a_circa_18_miliardi_usd-91/",
               "title": "finanza.repubblica.it"
             }
           ],
           "readSeconds": 41
         },
         {
-          "title": "Perplexity lancia \"Teammates\", agenti AI sempre attivi per abbonati Max",
-          "lead": "Perplexity ha presentato \"Teammates\", agenti AI progettati per gestire lavori continuativi all'interno della piattaforma Perplexity Computer, riservati agli abbonati Max.",
-          "body": "Il servizio, lanciato intorno al 6 novembre 2026, ha un costo di 200 dollari al mese. Questa mossa posiziona Perplexity in diretta competizione con offerte analoghe di aziende come OpenAI e Anthropic, che stanno esplorando il campo degli agenti AI autonomi. La notizia è stata accolta come un'innovazione nel campo degli agenti AI, con implicazioni per l'automazione del lavoro e la produttività. Il lancio di Teammates segna un'ulteriore evoluzione nel mercato dell'intelligenza artificiale, intensificando la concorrenza.",
-          "why": "Il lancio di Teammates segna un'ulteriore evoluzione nel mercato dell'AI, spostando l'attenzione verso agenti autonomi e intensificando la concorrenza.",
+          "title": "Anthropic e Meta lanciano nuovi modelli di intelligenza artificiale",
+          "lead": "Anthropic ha rilasciato Claude Fable 5.2 e Mythos 5.2, mentre Meta ha introdotto Muse Ember, un modello AI più piccolo ed economico per compiti specifici.",
+          "body": "I lanci avvengono in un periodo di intensa competizione nel settore dell'AI. Muse Ember di Meta è pensato per essere un'alternativa più leggera ed economica, con un costo di 10 centesimi di dollaro per milione di token in input, rispetto a modelli più grandi come Aiku o Luna.Il mercato dell'AI continua a vedere un rapido sviluppo e una diversificazione delle offerte, con aziende che cercano di coprire diverse nicchie, dai modelli complessi a quelli più agili per l'automazione.",
+          "why": "Questi lanci dimostrano la continua innovazione nel campo dell'AI, ampliando le possibilità di applicazione in vari settori.",
           "sources": [
             {
-              "url": "https://ainews.it/ultime-notizie/",
-              "title": "ainews.it"
+              "url": "https://www.youtube.com/watch?v=Xz7AuIa_fLg",
+              "title": "youtube.com"
             }
           ],
-          "readSeconds": 38
+          "readSeconds": 39
+        },
+        {
+          "title": "Cina, impennata nelle esportazioni di circuiti integrati ad ottobre",
+          "lead": "Le esportazioni cinesi di circuiti integrati sono aumentate del 137,1% a ottobre, raggiungendo 39,59 miliardi di dollari, secondo i dati doganali.",
+          "body": "I dati, diffusi il 10 novembre 2026, indicano anche che l'export complessivo del paese è salito del 28,7% a 2,79 trilioni di yuan, mentre l'import è cresciuto del 34,7% a 2,08 trilioni. Questa crescita eccezionale avviene in un periodo di crescenti tensioni geopolitiche e restrizioni all'export di tecnologie avanzate.L'aumento significativo delle esportazioni cinesi di chip potrebbe indicare un rafforzamento della capacità produttiva interna o un riorientamento delle catene di approvvigionamento globali, evidenziando la resilienza del paese.",
+          "why": "Questi dati evidenziano la crescente influenza della Cina nel mercato globale dei semiconduttori e la sua resilienza tecnologica.",
+          "sources": [
+            {
+              "url": "https://www.elettronicanews.it/semiconduttori-notizie-10-novembre-2026/",
+              "title": "elettronicanews.it"
+            }
+          ],
+          "readSeconds": 37
+        },
+        {
+          "title": "UE propone \"Tech sovereignty package\" per autonomia digitale",
+          "lead": "La Commissione Europea ha annunciato un pacchetto di misure per rafforzare l'autonomia digitale in semiconduttori, AI e cloud, mirando a triplicare la capacità europea.",
+          "body": "Il \"Tech sovereignty package\", presentato il 3 giugno 2026, si concentra su quattro obiettivi strategici. Tra le misure, il Cloud and AI Development Act (CADA) prevede il sostegno alla ricerca di tecnologie sostenibili e la creazione di data center in territorio europeo, con l'obiettivo di triplicare la capacità comunitaria in 5-7 anni.L'iniziativa nasce dalla crescente preoccupazione per la dipendenza tecnologica dell'Europa da paesi terzi e dalla necessità di garantire la continuità operativa e la sicurezza dei dati. La vicepresidente esecutiva Henna Virkkunen ha sottolineato l'importanza di evitare un \"kill switch\" da parte di fornitori extra-UE.",
+          "why": "Questa proposta è cruciale per la strategia europea di autonomia digitale, bilanciando innovazione e sicurezza tecnologica.",
+          "sources": [
+            {
+              "url": "https://www.ictsecuritymagazine.com/notizie/tech-sovereignty-package-europa/",
+              "title": "ictsecuritymagazine.com"
+            }
+          ],
+          "readSeconds": 43
         }
       ]
     },
@@ -90,55 +74,59 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Bitcoin in calo per inflazione USA e deflussi dagli ETF",
-          "lead": "Il Bitcoin ha registrato un calo significativo, scendendo a circa 74.000 dollari, a causa dell'inflazione elevata negli Stati Uniti e dei deflussi dagli ETF spot.",
-          "body": "L'inflazione alimenta i timori di un approccio più aggressivo da parte della Federal Reserve, rendendo meno attraenti gli asset più rischiosi come le criptovalute. La capitalizzazione totale del mercato crypto è scesa dell'1,92% nelle ultime 24 ore, attestandosi a 2,65 trilioni di dollari. Il mercato delle criptovalute ha mostrato un generale \"affanno\" e panico, con gli investitori che monitorano attentamente le decisioni della Fed. Il calo riflette la sensibilità di questi asset alle condizioni macroeconomiche globali e alle politiche delle banche centrali.",
-          "why": "Il calo del Bitcoin e del mercato crypto riflette la sensibilità di questi asset alle condizioni macroeconomiche globali e alle politiche delle banche centrali.",
+          "title": "Mercati europei superano Wall Street, semiconduttori in calo post elezioni USA",
+          "lead": "I mercati azionari europei hanno sovraperformato Wall Street dopo le elezioni di midterm USA, mentre l'indice dei semiconduttori (SOX) ha perso il 12%.",
+          "body": "Nella settimana conclusasi il 6 novembre 2026, Wall Street ha subito la peggiore ondata di vendite dall'aprile 2025. Il SOX è stato trascinato al ribasso da Micron (-22%), Marvell (-28%) e Nvidia (-8,8%).La vittoria dei Democratici al Congresso ha generato incertezza sui mercati, in particolare per il settore tecnologico, a causa dei timori di maggiore regolamentazione. Alcune case di brokeraggio, come Morgan Stanley e UBS, hanno suggerito che il selloff sia stato eccessivo.",
+          "why": "L'esito delle elezioni USA ha avuto un impatto significativo sui mercati globali, evidenziando la sensibilità del settore tecnologico.",
           "sources": [
             {
-              "url": "https://www.soldionline.it/",
-              "title": "soldionline.it"
+              "url": "https://www.milanofinanza.it/news/semiconduttori-e-il-momento-di-comprare-dopo-il-crollo-i-titoli-con-piu-upside-in-usa-e-europa-202611101145531862",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://coinstats.app/it/market-report/",
-              "title": "coinstats.app"
+              "url": "https://mlq.ai/news/what-a-democratic-congress-means-for-ai-chips-crypto-and-big-tech/",
+              "title": "mlq.ai"
             },
             {
-              "url": "https://it.investing.com/news/cryptocurrency-news",
-              "title": "it.investing.com"
+              "url": "https://www.youtube.com/watch?v=71J06LFD2LU",
+              "title": "youtube.com"
             }
           ],
-          "readSeconds": 42
+          "readSeconds": 38
         },
         {
-          "title": "BPER Banca colloca bond AT1 da 500 milioni con ordini record",
-          "lead": "BPER Banca ha collocato con successo un bond Additional Tier 1 (AT1) da 500 milioni di euro, registrando ordini record per 4 miliardi di euro.",
-          "body": "I bond AT1 sono strumenti ibridi di capitale, considerati più rischiosi ma che offrono rendimenti più elevati. Il successo di questa emissione, con una domanda che ha superato di otto volte l'offerta, indica una forte fiducia degli investitori nella solidità finanziaria di BPER Banca e nel settore bancario italiano. L'operazione rafforza il capitale di BPER Banca, migliorando la sua capacità di assorbire perdite e sostenere la crescita. È anche un segnale positivo per il mercato obbligazionario e per la percezione del rischio delle banche italiane.",
-          "why": "Questa operazione rafforza il capitale di BPER Banca ed è un segnale positivo per il mercato obbligazionario e le banche italiane.",
+          "title": "Le \"Magnifiche Sette\" Big Tech USA perdono mille miliardi in un giorno",
+          "lead": "Le sette maggiori aziende tecnologiche statunitensi hanno perso oltre 1.000 miliardi di dollari in una singola seduta di borsa, la peggiore da aprile 2025.",
+          "body": "Il 6 novembre 2026, le \"Magnifiche Sette\" hanno registrato un tonfo significativo. Tesla ha subito il ribasso maggiore (-10,8%), seguita da Nvidia (-9,3%), Meta (-4%), Microsoft (-3,6%), Alphabet (-2,2%), Amazon (-2,2%) e Apple (-1,5%).Questo crollo è avvenuto in concomitanza con la vittoria dei Democratici alle elezioni di metà mandato, che ha generato preoccupazioni tra gli investitori riguardo a possibili politiche più restrittive per il settore tecnologico. La reazione del mercato riflette la nervosità degli investitori.",
+          "why": "La perdita di valore delle Big Tech sottolinea la loro importanza sistemica per i mercati globali e la loro vulnerabilità politica.",
           "sources": [
             {
-              "url": "https://finanza.repubblica.it/News/Overview/",
-              "title": "finanza.repubblica.it"
-            }
-          ],
-          "readSeconds": 43
-        },
-        {
-          "title": "Prezzi petrolio in calo, gas naturale ai massimi da sei settimane",
-          "lead": "Il petrolio ha chiuso in calo a New York a 85,96 dollari al barile, mentre i prezzi del gas naturale negli Stati Uniti hanno raggiunto i massimi da sei settimane.",
-          "body": "Il calo del petrolio è in parte attribuito alle speranze di un aumento delle esportazioni a seguito delle elezioni di midterm USA. L'aumento del gas naturale è guidato dalle previsioni di temperature più basse e dalle esportazioni record di GNL. Questi movimenti riflettono la complessa interazione tra fattori geopolitici, climatici e di domanda/offerta nel mercato delle materie prime, influenzando i costi energetici per consumatori e industrie a livello globale. Il mercato del greggio dell'Africa occidentale è rimasto tranquillo in vista di una gara.",
-          "why": "Questi movimenti riflettono la complessa interazione tra fattori geopolitici, climatici e di domanda/offerta nel mercato delle materie prime.",
-          "sources": [
-            {
-              "url": "https://it.marketscreener.com/notizie/materie-prime/",
-              "title": "it.marketscreener.com"
+              "url": "https://www.youtube.com/watch?v=71J06LFD2LU",
+              "title": "youtube.com"
             },
             {
-              "url": "https://it.investing.com/news/commodities-news",
-              "title": "it.investing.com"
+              "url": "https://corrierenet.com/tonfo-in-borsa-le-7-big-tech-usa-perdono-1-000-miliardi-in-un-giorno/",
+              "title": "corrierenet.com"
+            },
+            {
+              "url": "https://www.lindipendente.online/2026/11/06/usa-in-borsa-le-big-tech-affondano-con-trump-e-adesso-cambiano-atteggiamento/",
+              "title": "lindipendente.online"
             }
           ],
-          "readSeconds": 43
+          "readSeconds": 40
+        },
+        {
+          "title": "ING mette all'asta prestiti a data center per 500 milioni",
+          "lead": "ING sta mettendo all'asta circa 500 milioni di dollari di prestiti legati a data center, in un momento di cautela per il settore.",
+          "body": "Questa mossa avviene in un momento in cui i titoli del settore dei data center sono scesi a causa dei timori sul debito. Sebbene la vendita di prestiti da parte di una banca non indichi necessariamente un rischio imminente, può essere un segnale di riequilibrio di bilancio.Non sono stati forniti commenti specifici da parte di ING. Tuttavia, la notizia è stata notata nel contesto della volatilità del settore, cruciale per lo sviluppo dell'AI.",
+          "why": "L'operazione di ING potrebbe influenzare la disponibilità di capitale per futuri progetti di data center, cruciali per l'AI.",
+          "sources": [
+            {
+              "url": "https://www.youtube.com/watch?v=Xz7AuIa_fLg",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 37
         }
       ]
     },
@@ -147,59 +135,43 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Manovra Finanziaria 2027: tensioni su risorse e richieste",
-          "lead": "La Manovra Finanziaria 2027 continua a generare dibattito e tensioni in Italia, con numerose richieste e scarse risorse, portando la Premier Meloni a valutare un vertice.",
-          "body": "Le Regioni hanno attaccato la manovra, definendo i fondi per la sanità insufficienti, esprimendo unanime disapprovazione. Salvini ha suggerito un nuovo contributo dalle banche per reperire fondi. Le opposizioni hanno definito la manovra \"elettoralistica\". La legge di bilancio è cruciale per l'economia e la società italiana, definendo le priorità di spesa e le politiche fiscali. Le difficoltà nel trovare un equilibrio potrebbero portare a modifiche significative e influenzare la stabilità del governo.",
-          "why": "La Manovra 2027 è cruciale per l'economia italiana; le difficoltà nel trovare un equilibrio potrebbero influenzare la stabilità del governo.",
+          "title": "Attacco hacker al Brennero, Tajani parla di guerra ibrida al G7",
+          "lead": "Un attacco hacker ha colpito il Brennero il 17 ottobre; il Ministro Tajani ha parlato di \"guerra ibrida\" e il G7 ha discusso di cyber sicurezza su richiesta italiana.",
+          "body": "Il 7 novembre 2026, BBT SE ha reso pubblico l'incidente, e il Ministro degli Esteri italiano, Antonio Tajani, ha indicato sospetti verso l'Est, confermando che i suoi dati sono finiti sul dark web. Tra il 9 e il 10 novembre, si è tenuta a Parigi una riunione dei ministri degli Esteri del G7, con la cyber sicurezza in agenda.L'attacco al Brennero si inserisce in un quadro di crescenti minacce cibernetiche a livello globale. La richiesta italiana di inserire la cyber sicurezza nell'agenda del G7 sottolinea l'urgenza di affrontare queste minacce a livello diplomatico.",
+          "why": "L'incidente evidenzia la crescente importanza della cyber sicurezza come questione di sicurezza nazionale e internazionale.",
           "sources": [
             {
-              "url": "https://www.soldionline.it/",
-              "title": "soldionline.it"
-            },
-            {
-              "url": "https://www.ocio.news/macro",
-              "title": "ocio.news"
-            },
-            {
-              "url": "https://rtl.it/notizie/italia/politica/",
-              "title": "rtl.it"
+              "url": "https://shattered.io/it/attacco-hacker-brennero-bbt-tajani-guerra-ibrida-2026/",
+              "title": "shattered.io"
             }
           ],
-          "readSeconds": 38
+          "readSeconds": 44
         },
         {
-          "title": "Italia bersaglio di cyberattacchi, Russia ironizza sulle difese",
-          "lead": "L'Italia è stata colpita da una serie di cyberattacchi, con la Russia che ha schernito le difese informatiche italiane, definendo la situazione un \"teatro tragicomico\".",
-          "body": "La Russia ha offerto \"aiuto\" in un contesto di crescenti tensioni geopolitiche. Il Ministro degli Esteri Tajani ha definito le dichiarazioni russe \"propaganda e disinformazione\", sottolineando la possibilità che i cyberattacchi possano condizionare il voto. Un vertice si è tenuto al Viminale per approntare le difese. La sicurezza informatica è una priorità nazionale e questi attacchi evidenziano la vulnerabilità delle infrastrutture digitali italiane e la necessità di rafforzare le difese, anche in un contesto di crescente guerra ibrida.",
-          "why": "La sicurezza informatica è una priorità nazionale; questi attacchi evidenziano la vulnerabilità delle infrastrutture digitali italiane.",
+          "title": "Trieste ospita \"Connecting Life Sciences\" per ricerca e startup",
+          "lead": "Trieste ha ospitato \"Connecting Life Sciences\", un evento per analizzare gli investimenti pubblici e favorire collaborazioni tra ricerca, startup e investitori.",
+          "body": "L'evento, svoltosi il 9 e 10 novembre 2026, è stato promosso dalla Regione Autonoma Friuli Venezia Giulia. Ha analizzato i risultati degli investimenti pubblici nelle Scienze della Vita, con focus sui bandi regionali (LR 22/2022).L'iniziativa ha incluso presentazioni di progetti (pitch) e incontri B2B e B2VC tra startup, ricercatori, imprese e investitori, con l'obiettivo di creare nuove collaborazioni e opportunità di crescita in un comparto strategico.",
+          "why": "Questo evento sottolinea l'impegno dell'Italia nel promuovere l'innovazione e l'imprenditorialità nelle Scienze della Vita.",
           "sources": [
             {
-              "url": "https://www.adnkronos.com/internazionale/esteri/1/",
-              "title": "adnkronos.com"
-            },
-            {
-              "url": "https://tg24.sky.it/politica",
-              "title": "tg24.sky.it"
+              "url": "https://www.nordest24.it/trieste-connecting-life-sciences-9-10-novembre-ricerca-startup-investitori",
+              "title": "nordest24.it"
             }
           ],
-          "readSeconds": 38
+          "readSeconds": 33
         },
         {
-          "title": "Pubblicati documenti OPAS Intesa Sanpaolo su Monte dei Paschi",
-          "lead": "Sono stati pubblicati i documenti relativi all'Offerta Pubblica di Acquisto e Scambio (OPAS) lanciata da Intesa Sanpaolo su Monte dei Paschi di Siena (MPS).",
-          "body": "L'operazione, definita un'OPA da 2,8 miliardi di euro, rappresenta un passo significativo nel consolidamento del settore bancario italiano. Mira a risolvere la complessa situazione di MPS, banca storica che ha richiesto diversi interventi statali. La pubblicazione dei documenti segna l'avvio formale del processo, con gli operatori di mercato che analizzeranno i dettagli dell'offerta. Questa OPAS ha implicazioni profonde per il panorama bancario italiano, potenziando la posizione di Intesa Sanpaolo e potenzialmente risolvendo una delle questioni più spinose del sistema creditizio nazionale.",
-          "why": "Questa OPAS ha implicazioni profonde per il panorama bancario italiano, potenziando Intesa Sanpaolo e risolvendo una questione spinosa.",
+          "title": "L'innovazione italiana tra stallo nomine e incentivi fiscali scaduti",
+          "lead": "L'ecosistema dell'innovazione italiano è bloccato dallo stallo nelle nomine di CDP Venture Capital e dalla scadenza degli incentivi fiscali.",
+          "body": "Questi problemi rischiano di frenare la crescita delle startup e di favorire la \"fuga di cervelli\" e di capitali all'estero, compromettendo lo sviluppo del settore. La situazione genera preoccupazione tra gli operatori del settore.Gli operatori chiedono interventi rapidi per sbloccare le nomine e ripristinare gli incentivi, al fine di garantire un ambiente favorevole alla nascita e alla crescita di nuove imprese innovative.",
+          "why": "La risoluzione di questi nodi è fondamentale per sostenere la competitività dell'Italia e l'ambiente per le nuove imprese.",
           "sources": [
             {
-              "url": "https://www.soldionline.it/",
-              "title": "soldionline.it"
-            },
-            {
-              "url": "https://www.milanofinanza.it/",
-              "title": "milanofinanza.it"
+              "url": "https://www.startupnewsitalia.it/2026/11/",
+              "title": "startupnewsitalia.it"
             }
           ],
-          "readSeconds": 40
+          "readSeconds": 32
         }
       ]
     },
@@ -208,55 +180,47 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Colloqui Abu Dhabi su Ucraina e Russia: nessun cessate il fuoco",
-          "lead": "Colloqui ad Abu Dhabi tra rappresentanti di Ucraina e Russia, mediati da attori internazionali, non hanno raggiunto un accordo per un cessate il fuoco immediato.",
-          "body": "I negoziati, durati quattro ore, si inseriscono nel più ampio contesto della guerra in Ucraina, con tentativi diplomatici volti a trovare una soluzione al conflitto. Il Presidente ucraino Zelensky ha ribadito che Putin non si fermerà al Donbas e che prima è necessario un cessate il fuoco, poi la diplomazia. L'ex diplomatico USA ha suggerito che l'Ucraina potrebbe percepire Trump come più debole e resistere alle sue pressioni. La mancanza di un cessate il fuoco immediato indica la persistente difficoltà nel trovare un terreno comune tra le parti in conflitto.",
-          "why": "La mancanza di un cessate il fuoco immediato indica la persistente difficoltà nel trovare un terreno comune tra le parti in conflitto.",
+          "title": "Colloqui Ucraina-Russia riprendono ad Abu Dhabi con l'Europa",
+          "lead": "I dialoghi tra Ucraina e Russia sono ripresi ad Abu Dhabi il 10 novembre, con mediazione USA e partecipazione europea, in un clima di accuse reciproche.",
+          "body": "Il Presidente ucraino Zelensky ha accusato Putin di utilizzare la tregua di Oleshky per schierare soldati, evidenziando la persistente sfiducia tra le parti. La ripresa dei colloqui avviene in un contesto di conflitto continuo e di escalation militare.La presenza dell'Europa ai colloqui indica un tentativo di ampliare il fronte diplomatico per trovare una soluzione al conflitto, ma le dichiarazioni di Zelensky suggeriscono una profonda sfiducia tra le parti.",
+          "why": "La ripresa dei dialoghi rappresenta un passo importante verso una possibile risoluzione diplomatica del conflitto in corso.",
           "sources": [
             {
-              "url": "https://www.fanpage.it/esteri/",
-              "title": "fanpage.it"
-            },
-            {
-              "url": "https://www.ilfattoquotidiano.it/politica-palazzo/",
-              "title": "ilfattoquotidiano.it"
+              "url": "https://www.vivere.it/2026-11-10",
+              "title": "vivere.it"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 36
         },
         {
-          "title": "Scontro tra due treni in Egitto: 7 morti e 100 feriti",
-          "lead": "Un grave scontro tra due treni è avvenuto in Egitto, vicino a Giza, causando almeno 7 morti e circa 100 feriti, con quattro vagoni ribaltati.",
-          "body": "Gli incidenti ferroviari sono purtroppo frequenti in Egitto, spesso a causa della scarsa manutenzione delle infrastrutture e della segnaletica obsoleta. Le autorità egiziane hanno avviato indagini per determinare le cause dell'incidente e sono state mobilitate squadre di soccorso. La tragedia evidenzia le persistenti sfide infrastrutturali in Egitto e la necessità di investimenti urgenti per migliorare la sicurezza dei trasporti pubblici, con un impatto significativo sulla popolazione locale.",
-          "why": "La tragedia evidenzia le persistenti sfide infrastrutturali in Egitto e la necessità di investimenti urgenti per migliorare la sicurezza.",
+          "title": "Trump dichiara vittoria sulla guerra con l'Iran e fine conflitto",
+          "lead": "Il Presidente USA Donald Trump ha dichiarato la vittoria sulla guerra con l'Iran, affermando che una ripresa dei combattimenti è altamente improbabile.",
+          "body": "Trump ha affermato che l'Iran sta crollando finanziariamente e militarmente, e che gli Stati Uniti hanno individuato obiettivi infrastrutturali nel paese. Queste dichiarazioni seguono un periodo di intense tensioni tra USA e Iran.Il crollo del prezzo del petrolio Brent (-8,7% a 94,6 dollari) dopo le elezioni di midterm, con il mercato che scommette su una pace con l'Iran, fa da sfondo alle affermazioni di Trump, fatte senza citare prove specifiche e in un momento di incertezza politica interna.",
+          "why": "Le dichiarazioni di Trump potrebbero segnare una svolta nelle relazioni USA-Iran, con ampie ripercussioni geopolitiche ed energetiche.",
           "sources": [
             {
-              "url": "https://www.fanpage.it/esteri/",
-              "title": "fanpage.it"
+              "url": "https://www.youtube.com/watch?v=71J06LFD2LU",
+              "title": "youtube.com"
             },
             {
-              "url": "https://it.euronews.com/notizie/internazionale",
-              "title": "it.euronews.com"
-            },
-            {
-              "url": "https://www.virgilio.it/notizie/esteri/",
-              "title": "virgilio.it"
+              "url": "https://www.youtube.com/watch?v=0nk-opcCQlI",
+              "title": "youtube.com"
             }
           ],
-          "readSeconds": 37
+          "readSeconds": 38
         },
         {
-          "title": "Camera USA boccia impeachment Segretario Difesa Hegseth",
-          "lead": "La Camera dei Rappresentanti degli Stati Uniti ha bocciato la procedura di impeachment contro il Segretario alla Difesa Hegseth con 211 voti contrari e 204 a favore.",
-          "body": "La mozione di impeachment era stata presentata da un deputato repubblicano ma non ha ottenuto il sostegno sufficiente per procedere. Questo evento si inserisce nel contesto della politica interna statunitense, spesso caratterizzata da forti polarizzazioni e tentativi di delegittimazione politica. La bocciatura della mozione rappresenta una vittoria politica per Hegseth e per l'amministrazione in carica. L'esito del voto ha implicazioni per la stabilità politica dell'amministrazione statunitense e per la capacità del Congresso di portare avanti azioni di controllo sull'esecutivo.",
-          "why": "L'esito del voto ha implicazioni per la stabilità politica dell'amministrazione statunitense e per la capacità del Congresso di controllo.",
+          "title": "Gaza, cinque morti in campo sfollati per forti piogge",
+          "lead": "Tre bambini e due donne sono morti in un campo sfollati a Gaza a causa del crollo di un terrapieno sabbioso provocato da forti piogge.",
+          "body": "L'incidente è avvenuto sabato in un centro di accoglienza a sud di Deir al-Balah, nel centro della Striscia di Gaza. La tempesta ha lasciato decine di migliaia di sfollati senza riparo, aggravando una situazione umanitaria già critica.Secondo l'Ufficio delle Nazioni Unite per il Coordinamento degli Affari Umanitari, circa 950.000 sfollati palestinesi vivevano in siti a rischio di alluvione a ottobre. Un fragile cessate il fuoco è in vigore dall'ottobre 2025, ma gli attacchi israeliani hanno continuato a causare vittime.",
+          "why": "Questa tragedia sottolinea l'urgente necessità di assistenza umanitaria a Gaza e la vulnerabilità della popolazione civile.",
           "sources": [
             {
-              "url": "https://tg24.sky.it/mondo",
-              "title": "tg24.sky.it"
+              "url": "https://www.youtube.com/watch?v=0nk-opcCQlI",
+              "title": "youtube.com"
             }
           ],
-          "readSeconds": 40
+          "readSeconds": 39
         }
       ]
     }
