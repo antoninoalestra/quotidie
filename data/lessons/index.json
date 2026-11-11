@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-11",
+      "title": "La Matematica dei Nodi: Dal DNA allo Spazio-Tempo",
+      "category": "Matematica",
+      "categoryId": "matematica",
+      "minutes": 4,
+      "hook": "Quante volte abbiamo annodato un filo o una corda, senza dar peso alla complessità intrinseca di quel gesto? Eppure, dietro la più semplice delle trecce si cela una branca della matematica profonda e affascinante, capace di svelare segreti che vanno ben oltre l'arte marinaresca.",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-10",
       "title": "Il Contro-spazio: Il Respiro Silenzioso delle Lettere",
       "category": "Design",
