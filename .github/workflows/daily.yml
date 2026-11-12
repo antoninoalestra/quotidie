@@ -80,7 +80,7 @@ jobs:
           ffmpeg -version | head -n 1
 
       - name: Cache motore voce open source
-        if: github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true
+        if: (vars.AUDIO_ENGINE != 'edge' && vars.AUDIO_ENGINE != 'edge-tts') && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true)
         id: qwen-cache
         uses: actions/cache@v4
         with:
@@ -88,7 +88,7 @@ jobs:
           key: qwen3-tts-v1-${{ runner.os }}
 
       - name: Installa motore voce open source (Qwen3-TTS)
-        if: (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true) && steps.qwen-cache.outputs.cache-hit != 'true'
+        if: (vars.AUDIO_ENGINE != 'edge' && vars.AUDIO_ENGINE != 'edge-tts') && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true) && steps.qwen-cache.outputs.cache-hit != 'true'
         continue-on-error: true
         timeout-minutes: 20
         run: |
@@ -104,7 +104,7 @@ jobs:
           ) || { echo "Installazione non riuscita: si userà edge-tts"; rm -rf ~/qwen3-tts; exit 1; }
 
       - name: Verifica motore voce open source
-        if: github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true
+        if: (vars.AUDIO_ENGINE != 'edge' && vars.AUDIO_ENGINE != 'edge-tts') && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true)
         id: qwen-check
         continue-on-error: true
         run: |
@@ -215,6 +215,10 @@ jobs:
              writeJSON(), today, DATA, formatNewsSpeech(), formatLessonSpeech(),
              e gli import qdSpawn, qdMkdtemp, qdCopyFile, qdRm, qdOs (vedi istruzioni).
              ===================================================================== */
+          const isEdgeMode = (process.env.AUDIO_ENGINE || '').trim().toLowerCase() === 'edge' ||
+            (process.env.AUDIO_ENGINE || '').trim().toLowerCase() === 'edge-tts' ||
+            (process.env.QWEN_SPEAKER || '').trim().toLowerCase() === 'giuseppe';
+
           const AUDIO = {
             dir: path.resolve('data', 'audio'),
             qwenBin: process.env.QWEN_BIN || '',
@@ -222,7 +226,7 @@ jobs:
             qwenSpeakerNews: (process.env.QWEN_SPEAKER || '').trim() || 'ryan',
             qwenSpeakerLesson: (process.env.QWEN_SPEAKER_LESSON || '').trim() || (process.env.QWEN_SPEAKER || '').trim() || 'ryan',
             edgeVoice: (process.env.EDGE_VOICE || '').trim() || 'it-IT-GiuseppeMultilingualNeural',
-            useOpenSource: process.env.EVENT === 'schedule' || process.env.EVENT === 'repository_dispatch' || process.env.TEST_OPEN_SOURCE === 'true',
+            useOpenSource: !isEdgeMode && (process.env.EVENT === 'schedule' || process.env.EVENT === 'repository_dispatch' || process.env.TEST_OPEN_SOURCE === 'true'),
             qwenFileTimeoutMs: Number(process.env.QWEN_FILE_TIMEOUT_MIN || 45) * 60000,
             qwenBlockTimeoutMs: 6 * 60000,
             bitrate: process.env.AUDIO_BITRATE || '48k',
@@ -1529,6 +1533,7 @@ jobs:
           EVENT: ${{ github.event_name }}
           ONLY: ${{ inputs.only || github.event.client_payload.only }}
           AUDIO_ONLY: only
+          AUDIO_ENGINE: ${{ vars.AUDIO_ENGINE }}
           TEST_OPEN_SOURCE: ${{ inputs.test_open_source || github.event.client_payload.test_open_source }}
           QWEN_BIN: ${{ steps.qwen-check.outputs.bin }}
           QWEN_MODEL_DIR: ${{ steps.qwen-check.outputs.model }}
