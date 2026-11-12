@@ -12,11 +12,11 @@
     "lesson-latest.mp3": {
       "date": "2026-11-12",
       "kind": "lesson",
-      "engine": "qwen3-tts",
-      "voice": "ryan",
-      "seconds": 470,
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 446,
       "rewritten": true,
-      "generatedAt": "2026-11-12T10:31:29.118Z"
+      "generatedAt": "2026-11-12T11:38:30.690Z"
     },
     "news-2026-11-05.mp3": {
       "date": "2026-11-05",
@@ -158,12 +158,12 @@
     "lesson-2026-11-12.mp3": {
       "date": "2026-11-12",
       "kind": "lesson",
-      "engine": "qwen3-tts",
-      "voice": "ryan",
-      "seconds": 470,
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 446,
       "rewritten": true,
-      "generatedAt": "2026-11-12T10:31:29.118Z"
+      "generatedAt": "2026-11-12T11:38:30.690Z"
     }
   },
-  "updatedAt": "2026-11-12T10:45:49.051Z"
+  "updatedAt": "2026-11-12T11:38:30.690Z"
 }
