@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-12",
+      "title": "Le Sirene Alate: L'Inganno Mortale Prima della Coda di Pesce",
+      "category": "Mitologia",
+      "categoryId": "mitologia",
+      "minutes": 4,
+      "hook": "Immaginate un canto così soave da promettere la conoscenza più profonda, un'armonia capace di penetrare l'anima. Ora, dimenticate le sirene con la coda di pesce che popolano i nostri sogni marini. E se il loro vero volto fosse quello di creature alate, rapaci e mortali, il cui richiamo non portava a un abbraccio acquatico, ma a una fine ben più cruenta?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-11",
       "title": "La Matematica dei Nodi: Dal DNA allo Spazio-Tempo",
       "category": "Matematica",

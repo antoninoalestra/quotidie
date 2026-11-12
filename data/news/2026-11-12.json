@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-12",
+  "kind": "daily",
+  "generatedAt": "2026-11-12T09:31:53.813Z",
+  "model": "gemini-2.5-flash",
+  "minutes": 9,
+  "words": 1861,
+  "brief": [
+    "La crisi di leadership in Nvidia, con il CEO sotto indagine, ha scosso i mercati globali e il settore dei semiconduttori, generando incertezza.",
+    "Migliaia di scuole italiane sono state colpite da falsi allarmi bomba, generando preoccupazione e dibattito sulla sicurezza nazionale e la stabilità.",
+    "Riprendono i colloqui tra Russia, Ucraina e Stati Uniti per la guerra, con un focus su un possibile scambio di prigionieri e la ricerca di una soluzione."
+  ],
+  "sections": [
+    {
+      "id": "tech",
+      "title": "Tecnologia e AI",
+      "stories": [
+        {
+          "title": "Indagine sul CEO di Nvidia scuote il colosso dei chip e l'AI",
+          "lead": "Jensen Huang, CEO di Nvidia, è sotto indagine per una presunta relazione, mettendo a rischio la sua leadership e generando incertezza nel settore dei semiconduttori.",
+          "body": "Il consiglio di amministrazione di Nvidia si è riunito il 12 novembre 2026 per valutare il futuro del fondatore e figura chiave dell'azienda. La potenziale destituzione di Huang, 63 anni, rappresenta un'incertezza significativa per il colosso dei chip e leader nello sviluppo dell'intelligenza artificiale.\nIl titolo Nvidia ha registrato un calo dell'8,57% nelle contrattazioni after-hour, bruciando circa 600 miliardi di dollari di valore di mercato. I mercati azionari hanno reagito negativamente, con Technoprobe che ha ceduto il 6,75% e STMicroelectronics il 2,45% a Piazza Affari.",
+          "why": "Questa vicenda è cruciale per il futuro di Nvidia, attore dominante nell'AI, con ripercussioni dirette sull'ecosistema tecnologico e sui mercati globali.",
+          "sources": [
+            {
+              "url": "https://it.investing.com/news/stock-market-news/borse-oggi--ftse-mib--piazza-affari-piatta-il-caso-nvidia-affonda-technoprobe-3644749",
+              "title": "it.investing.com"
+            },
+            {
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-12-novembre-2026/1023901/",
+              "title": "quifinanza.it"
+            },
+            {
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-12-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611120744539370",
+              "title": "milanofinanza.it"
+            }
+          ],
+          "readSeconds": 43
+        },
+        {
+          "title": "AI Act dell'UE avanza, l'Italia definisce le autorità di vigilanza",
+          "lead": "L'Unione Europea prosegue con l'implementazione dell'AI Act, mentre l'Italia ha già adottato una legislazione nazionale complementare, designando ACN e AgID come autorità di vigilanza.",
+          "body": "Le scadenze per gli obblighi sui sistemi ad alto rischio sono fissate al 2 dicembre 2027, e al 2 agosto 2028 per l'IA integrata in prodotti regolamentati. La legislazione italiana, con la Legge n. 160 del 9 settembre 2026 e il Decreto Legislativo n. 179 del 7 ottobre 2026, anticipa le mosse europee.\nL'AI Act mira a creare un quadro normativo armonizzato per l'intelligenza artificiale, garantendo sicurezza e trasparenza. Le sanzioni massime previste possono arrivare a 35 milioni di euro o al 7% del fatturato mondiale. Le aziende sono chiamate ad adeguarsi, mappando gli strumenti AI e formando il personale.",
+          "why": "Questa regolamentazione è fondamentale per lo sviluppo etico e sicuro dell'AI in Europa, influenzando innovazione, investimenti e competitività.",
+          "sources": [
+            {
+              "url": "https://enigma-tech.it/blog/ai-act-aziende-cosa-cambia-2026/",
+              "title": "enigma-tech.it"
+            },
+            {
+              "url": "https://www.dlapiper.com/it-it/insights/publications/innovation-law-insights/2026/innovation-law-insights-11-november-2026",
+              "title": "dlapiper.com"
+            },
+            {
+              "url": "https://humanostech.com/it/eu-ai-act",
+              "title": "humanostech.com"
+            }
+          ],
+          "readSeconds": 46
+        },
+        {
+          "title": "Elezioni Midterm USA: più controlli sull'AI e le Big Tech",
+          "lead": "La vittoria dei Democratici alle elezioni di midterm statunitensi del 3 novembre 2026 preannuncia un maggiore controllo politico sull'intelligenza artificiale e le Big Tech.",
+          "body": "Si prevedono controlli di sicurezza più stringenti e un potenziale rallentamento nello sviluppo dei data center. La forte dipendenza dell'Europa dai servizi digitali e dalle infrastrutture statunitensi implica che le decisioni politiche americane avranno ripercussioni dirette anche sul continente europeo.\nI mercati europei hanno mostrato nervosismo per il possibile aumento della regolamentazione dell'AI e il rallentamento degli investimenti tecnologici. Questo scenario potrebbe portare a un avvicinamento tra gli obblighi normativi americani e l'AI Act europeo.",
+          "why": "Questo scenario ridefinirà il panorama globale della governance dell'AI, influenzando le strategie delle grandi aziende tecnologiche internazionali.",
+          "sources": [
+            {
+              "url": "https://www.agendadigitale.eu/industry-4-0/elezioni-usa-gli-effetti-su-digitale-e-ai-che-vedremo-anche-in-europa/",
+              "title": "agendadigitale.eu"
+            }
+          ],
+          "readSeconds": 38
+        },
+        {
+          "title": "Cina e USA dialogano sulla governance dell'Intelligenza Artificiale",
+          "lead": "Cina e Stati Uniti hanno avviato un dialogo \"positivo e costruttivo\" sulla governance dell'intelligenza artificiale, con Pechino che propone standard condivisi per il controllo umano.",
+          "body": "Il ministro degli Esteri cinese Wang Yi ha avuto un colloquio telefonico con il segretario di Stato americano Marco Rubio. La Cina ha espresso la volontà di rafforzare il dialogo e gestire le divergenze, con l'AI tra i dossier aperti.\nLa governance dell'intelligenza artificiale è un tema geopolitico emergente, con le due maggiori potenze mondiali che cercano di definire il proprio ruolo. Questo dialogo indica un tentativo di stabilizzare i rapporti su questioni tecnologiche sensibili.",
+          "why": "La cooperazione o la competizione tra Cina e Stati Uniti sull'AI avrà un impatto profondo sullo sviluppo tecnologico e sugli standard globali.",
+          "sources": [
+            {
+              "url": "https://www.radiobullets.com/notiziari/12-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
+            }
+          ],
+          "readSeconds": 39
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "title": "Finanza e mercati",
+      "stories": [
+        {
+          "title": "Mercati azionari in fibrillazione per il \"caso Nvidia\"",
+          "lead": "I mercati azionari europei mostrano debolezza nel settore tecnologico a causa delle incertezze sulla leadership di Nvidia, con il CdA riunito per discutere il futuro del CEO.",
+          "body": "Il consiglio di amministrazione di Nvidia si è riunito il 12 novembre 2026 per valutare la posizione del CEO Jensen Huang, oggetto di un'indagine interna. Questa crisi di governance ha generato nervosismo tra gli investitori, preoccupati per l'impatto di un possibile cambio al vertice.\nIl FTSE MIB di Milano ha aperto in rialzo ma ha poi segnato un leggero calo, frenato dai tecnologici. Technoprobe ha perso il 6,75% e STMicroelectronics il 2,45%. Le borse europee sono state miste, con Francoforte in rialzo ma Milano piatta.",
+          "why": "L'evento sottolinea la sensibilità dei mercati alle vicende di leadership delle grandi aziende tecnologiche e l'interconnessione con le performance azionarie.",
+          "sources": [
+            {
+              "url": "https://it.investing.com/news/stock-market-news/borse-oggi--ftse-mib--piazza-affari-piatta-il-caso-nvidia-affonda-technoprobe-3644749",
+              "title": "it.investing.com"
+            },
+            {
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-12-novembre-2026/1023901/",
+              "title": "quifinanza.it"
+            },
+            {
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-12-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611120744539370",
+              "title": "milanofinanza.it"
+            }
+          ],
+          "readSeconds": 42
+        },
+        {
+          "title": "Banche centrali pronte a nuovi rialzi dei tassi a dicembre",
+          "lead": "Le principali banche centrali si preparano a nuovi rialzi dei tassi di interesse a dicembre 2026, spinti da dati sull'inflazione statunitense più alti delle aspettative.",
+          "body": "La Federal Reserve, la BCE, la Banca d'Inghilterra e la Banca del Giappone stanno valutando questa mossa a seguito della pubblicazione dei dati sull'inflazione di ottobre, che indicano una pressione sui prezzi persistente. L'inflazione elevata, anche a causa dell'aumento dei prezzi globali dell'energia e dell'incertezza geopolitica, spinge a mantenere una politica monetaria restrittiva.\nIl rendimento dei Treasury USA a due anni è salito a 4,74%, mentre quello dei titoli di stato a dieci anni ha toccato il 5%. I future sui fondi federali indicano una probabilità quasi certa di un rialzo a dicembre.",
+          "why": "I prossimi rialzi avranno un impatto significativo sul costo del denaro, sui prestiti, sugli investimenti e sulla crescita economica globale.",
+          "sources": [
+            {
+              "url": "https://www.ekonomia.it/2026/11/11/le-banche-centrali-si-preparano-a-nuovi-rialzi-dei-tassi-a-dicembre/",
+              "title": "ekonomia.it"
+            },
+            {
+              "url": "https://www.mps.it/static/upload/dai/0003/daily_20261111.pdf",
+              "title": "mps.it"
+            },
+            {
+              "url": "https://www.investiremag.it/investire/2026/11/09/news/banche-centrali-muoversi-assieme-per-ora/",
+              "title": "investiremag.it"
+            }
+          ],
+          "readSeconds": 44
+        },
+        {
+          "title": "Aste BTP italiani: in offerta anche un BTP Green ventennale",
+          "lead": "Il Ministero dell'Economia e delle Finanze italiano ha annunciato aste di titoli di Stato a medio-lungo termine per giovedì 12 novembre 2026, inclusa la terza tranche di un BTP Green.",
+          "body": "L'offerta complessiva è fino a 7,25 miliardi di euro e comprende un BTP a 3 anni, un BTP a 7 anni e un BTP Green con scadenza 30 aprile 2046. L'ammontare offerto per il BTP Green è tra 1 e 1,5 miliardi di euro, con una cedola annuale lorda del 4,1%.\nLe aste di titoli di Stato sono cruciali per il finanziamento del debito pubblico italiano. L'emissione di BTP Green sottolinea l'impegno del governo verso la finanza sostenibile, con proventi vincolati a spese pubbliche con impatto ambientale positivo.",
+          "why": "Il successo di queste aste è un indicatore importante della fiducia degli investitori nella solidità finanziaria dell'Italia e della domanda di investimenti sostenibili.",
+          "sources": [
+            {
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-12-novembre-2026/1023901/",
+              "title": "quifinanza.it"
+            },
+            {
+              "url": "https://borsaefinanza.it/btp-aste-12-novembre-cosa-sapere/",
+              "title": "borsaefinanza.it"
+            }
+          ],
+          "readSeconds": 45
+        }
+      ]
+    },
+    {
+      "id": "italy",
+      "title": "Italia",
+      "stories": [
+        {
+          "title": "Falsi allarmi bomba in migliaia di scuole italiane: caos e preoccupazione",
+          "lead": "Centinaia di scuole in tutta Italia sono state colpite da falsi allarmi bomba nelle ultime 24-36 ore, causando evacuazioni e interruzioni delle lezioni.",
+          "body": "Oltre 6.000 istituti scolastici sono stati coinvolti, secondo il Ministero dell'Istruzione. Le email di minaccia sono state firmate \"Andropov\", un nome già comparso in altri Paesi europei in precedenti ondate di allarmi simili, la terza dal 19 ottobre 2026.\nIl governo italiano ha convocato un vertice con le opposizioni per discutere l'emergenza. Il Presidente del Consiglio Giorgia Meloni ha dichiarato che \"non c'è vero pericolo\", ma la situazione ha generato ansia tra genitori, studenti e personale scolastico.",
+          "why": "L'incidente evidenzia una potenziale minaccia di \"guerra ibrida\" o attacchi coordinati volti a creare caos e destabilizzazione.",
+          "sources": [
+            {
+              "url": "https://it.euronews.com/",
+              "title": "it.euronews.com"
+            },
+            {
+              "url": "https://tg24.sky.it/",
+              "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://tg24.sky.it/cronaca/2026/11/12/prime-pagine-quotidiani-oggi-12-novembre",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 38
+        },
+        {
+          "title": "Presentato il Rapporto SVIMEZ 2026 sull'economia del Mezzogiorno",
+          "lead": "Il 12 novembre 2026 è stato presentato il Rapporto SVIMEZ 2026 \"L'economia e la società del Mezzogiorno: il valore della coesione\" alla Camera dei Deputati.",
+          "body": "Alla presentazione ha partecipato il Presidente della Repubblica Sergio Mattarella, sottolineando l'importanza attribuita al tema del divario Nord-Sud. Il rapporto celebra gli ottant'anni dalla fondazione dell'associazione, fornendo un'analisi annuale fondamentale sullo stato dell'economia e della società nel Sud Italia.\nIl documento offre dati e prospettive cruciali per le politiche di sviluppo e coesione. La presenza di figure istituzionali di alto livello evidenzia l'attenzione verso le strategie per il rilancio del Mezzogiorno.",
+          "why": "Il rapporto offre spunti cruciali per il dibattito politico ed economico italiano, influenzando le decisioni per ridurre le disuguaglianze territoriali.",
+          "sources": [
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-settimana-del-9-novembre-2026-11_2026-11-09_TLB-AUTO.html?lang=it",
+              "title": "borsaitaliana.it"
+            }
+          ],
+          "readSeconds": 37
+        },
+        {
+          "title": "Manovra di Bilancio: il governo discute cambiamenti su scuola e sanità",
+          "lead": "Sono in corso discussioni sulla Manovra di Bilancio del governo italiano, con le prime pagine dei quotidiani che riportano cambiamenti su scuola e sanità.",
+          "body": "La legge di bilancio è lo strumento economico principale del governo per definire le spese e le entrate dello Stato per l'anno successivo. Le scelte operate influenzano direttamente la vita dei cittadini e delle imprese, in particolare sui servizi essenziali.\nLe discussioni sulla manovra sono sempre al centro del dibattito politico, con le forze di maggioranza e opposizione che cercano di influenzare le decisioni finali. La stabilità economica del Paese dipende in larga parte dalle scelte operate in questo contesto.",
+          "why": "Le scelte operate nella manovra avranno un impatto diretto sulla spesa pubblica, sui servizi essenziali e sulla stabilità economica del Paese.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/cronaca/2026/11/12/prime-pagine-quotidiani-oggi-12-novembre",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 41
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "Mondo",
+      "stories": [
+        {
+          "title": "Riprendono i colloqui sulla guerra in Ucraina: focus su scambio prigionieri",
+          "lead": "I colloqui trilaterali tra Russia, Ucraina e Stati Uniti sono ripresi ad Abu Dhabi, definiti \"molto produttivi\", con un accordo di principio su un grande scambio di prigionieri.",
+          "body": "Gli inviati statunitensi Steve Witkoff e Jared Kushner sono attesi a Mosca per incontrare Vladimir Putin e successivamente Volodymyr Zelensky a Dublino. Zelensky propone uno scambio di 1.000-1.200 prigionieri, mentre la parte russa parla di oltre mille per parte.\nQuesti incontri rappresentano un nuovo tentativo di trovare una via d'uscita al conflitto, nonostante le profonde divergenze. La ripresa del dialogo e l'accordo sui prigionieri sono segnali positivi, sebbene gli europei fossero presenti ad Abu Dhabi ma fuori dal tavolo negoziale diretto.",
+          "why": "La ripresa dei negoziati è cruciale per la ricerca di una soluzione diplomatica alla guerra in Ucraina, con implicazioni per la sicurezza globale.",
+          "sources": [
+            {
+              "url": "https://teleborsa.ansa.it/notiziario/finanza/borse-europee-positive-con-focus-su-tech-dopo-crisi-nvidia-piatta-milano/",
+              "title": "teleborsa.ansa.it"
+            },
+            {
+              "url": "https://www.radiobullets.com/notiziari/12-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
+            },
+            {
+              "url": "https://www.ilpoliticoweb.it/witkoff-kushner-mosca-putin-dublino-zelensky/",
+              "title": "ilpoliticoweb.it"
+            }
+          ],
+          "readSeconds": 43
+        },
+        {
+          "title": "COP31 ad Antalya: Guterres esorta all'uscita dai combustibili fossili",
+          "lead": "La COP31 sui cambiamenti climatici è in corso ad Antalya, Turchia, con l'ONU che esorta ad accelerare l'uscita dai combustibili fossili e denuncia le pressioni delle lobby.",
+          "body": "L'Organizzazione Meteorologica Mondiale ha ricordato che gli ultimi dodici anni sono stati i più caldi mai registrati, evidenziando l'urgenza della crisi climatica. La conferenza mira a definire le prossime azioni per accelerare l'attuazione dell'Accordo di Parigi.\nIl presidente brasiliano Lula ha evidenziato come guerre e dazi abbiano oscurato l'agenda climatica, chiedendo la mobilitazione di 1.300 miliardi di dollari all'anno. La Norvegia ha annunciato una partnership per mobilitare 10 miliardi di dollari entro il 2030.",
+          "why": "La COP31 è un appuntamento fondamentale per affrontare l'emergenza climatica globale, con decisioni che influenzeranno politiche energetiche e ambientali.",
+          "sources": [
+            {
+              "url": "https://www.radiobullets.com/notiziari/12-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
+            },
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-settimana-del-9-novembre-2026-11_2026-11-09_TLB-AUTO.html?lang=it",
+              "title": "borsaitaliana.it"
+            },
+            {
+              "url": "https://teleborsa.ansa.it/notiziario/finanza/eventi-e-scadenze-del-12-novembre-2026/",
+              "title": "teleborsa.ansa.it"
+            }
+          ],
+          "readSeconds": 39
+        },
+        {
+          "title": "Escalation russa nel Mar Nero: oltre 570 navi colpite nel 2026",
+          "lead": "Gli attacchi russi con droni e missili nel Mar Nero si sono intensificati, rendendo il bacino il più letale per la navigazione nel 2026, con oltre 570 navi colpite.",
+          "body": "Almeno nove navi mercantili sono state colpite al largo delle coste rumene e bulgare, alcune delle quali affondate. L'aggressione russa all'Ucraina sta sconfinando sistematicamente negli spazi marittimi di Paesi membri dell'UE e della NATO.\nFinora, questi attacchi sono stati considerati sotto la soglia dell'articolo 5 della NATO. Bulgaria e Romania hanno richiesto una riunione del Consiglio Atlantico per discutere la situazione. L'UE ha già stanziato finanziamenti di emergenza per rafforzare le operazioni di ricerca e soccorso.",
+          "why": "L'escalation nel Mar Nero minaccia la libertà di navigazione e la sicurezza regionale, con il rischio di un confronto diretto tra Russia e NATO.",
+          "sources": [
+            {
+              "url": "https://geopolitica.info/escalation-russa-nel-mar-nero-assumersi-dei-rischi-per-ripristinare-la-liberta-di-navigazione/",
+              "title": "geopolitica.info"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=Y_eaieuJ1yI",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 42
+        }
+      ]
+    }
+  ],
+  "dropped": 0
+}

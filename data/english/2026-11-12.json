@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-12",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-12T09:32:44.280Z",
+  "words": [
+    {
+      "id": "2026-11-12-1",
+      "word": "conundrum",
+      "category": "general",
+      "ipa": "/kəˈnʌndrəm/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Enigma, rompicapo, problema difficile da risolvere.",
+      "definitionEn": "A confusing and difficult problem or question.",
+      "examples": [
+        "The classic chicken-and-egg situation is a well-known philosophical conundrum.",
+        "Finding a balance between economic growth and environmental protection remains a global conundrum."
+      ],
+      "exampleIt": "La classica situazione dell'uovo e della gallina è un noto enigma filosofico.",
+      "synonyms": [
+        "dilemma",
+        "puzzle",
+        "riddle"
+      ],
+      "collocations": [
+        "solve a conundrum",
+        "face a conundrum",
+        "a difficult conundrum"
+      ],
+      "commonMistake": "A volte confuso con \"problem\" o \"dilemma\", ma \"conundrum\" implica una maggiore difficoltà o complessità, spesso con un elemento di mistero o gioco di parole.",
+      "cloze": "The government is grappling with the ____ of how to fund increasing healthcare costs.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-12-1.mp3"
+    },
+    {
+      "id": "2026-11-12-2",
+      "word": "ubiquitous",
+      "category": "general",
+      "ipa": "/juːˈbɪkwɪtəs/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Onnipresente, diffuso ovunque.",
+      "definitionEn": "Present, appearing, or found everywhere.",
+      "examples": [
+        "Smartphones have become ubiquitous in modern society, radically changing how we interact.",
+        "The company's logo is now ubiquitous, appearing on everything from billboards to social media ads."
+      ],
+      "exampleIt": "Gli smartphone sono diventati onnipresenti nella società moderna, cambiando radicalmente il modo in cui interagiamo.",
+      "synonyms": [
+        "omnipresent",
+        "pervasive",
+        "widespread"
+      ],
+      "collocations": [
+        "ubiquitous presence",
+        "increasingly ubiquitous",
+        "almost ubiquitous"
+      ],
+      "commonMistake": "Pronuncia: assicurati di pronunciare la \"u\" iniziale come /juː/ e non /uː/. È un aggettivo, quindi non è un verbo o un nome.",
+      "cloze": "In today's digital age, internet access is almost ____, even in remote areas.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-12-2.mp3"
+    },
+    {
+      "id": "2026-11-12-3",
+      "word": "leverage",
+      "category": "business",
+      "ipa": "/ˈliːvərɪdʒ/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Sfruttare, fare leva su, utilizzare qualcosa per massimizzare un vantaggio.",
+      "definitionEn": "To use something that you already have in order to achieve something new or better.",
+      "examples": [
+        "We need to leverage our existing customer base to launch this new product effectively.",
+        "Her past experience in sales allowed her to leverage her network for new business opportunities."
+      ],
+      "exampleIt": "Dobbiamo sfruttare la nostra base clienti esistente per lanciare efficacemente questo nuovo prodotto.",
+      "synonyms": [
+        "exploit",
+        "utilise",
+        "capitalise on"
+      ],
+      "collocations": [
+        "leverage resources",
+        "leverage expertise",
+        "leverage technology"
+      ],
+      "commonMistake": "Spesso gli italiani usano \"exploit\" con un'accezione negativa. \"Leverage\" è neutro o positivo nel contesto business, indicando l'uso strategico di una risorsa.",
+      "cloze": "The company plans to ____ its strong brand reputation to enter new markets.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-12-3.mp3"
+    },
+    {
+      "id": "2026-11-12-4",
+      "word": "disruptive",
+      "category": "business",
+      "ipa": "/dɪsˈrʌptɪv/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Dirompente, innovativo in modo radicale, che crea scompiglio nel mercato.",
+      "definitionEn": "Causing or tending to cause disruption; innovative or groundbreaking in a way that significantly changes an industry.",
+      "examples": [
+        "Artificial intelligence is a truly disruptive technology that is reshaping many industries.",
+        "The startup's disruptive business model allowed it to quickly gain market share from established competitors."
+      ],
+      "exampleIt": "L'intelligenza artificiale è una tecnologia davvero dirompente che sta rimodellando molti settori.",
+      "synonyms": [
+        "innovative",
+        "groundbreaking",
+        "revolutionary"
+      ],
+      "collocations": [
+        "disruptive technology",
+        "disruptive innovation",
+        "disruptive impact"
+      ],
+      "commonMistake": "Non confondere \"disruptive\" (che crea un cambiamento significativo, spesso positivo nel business) con \"disturbing\" (inquietante) o \"troublesome\" (fastidioso, problematico).",
+      "cloze": "Their new product is so ____ that it could completely change how we think about energy consumption.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-12-4.mp3"
+    },
+    {
+      "id": "2026-11-12-5",
+      "word": "pencil in",
+      "category": "phrasal",
+      "ipa": "/ˈpɛnsəl ɪn/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Annotare provvisoriamente, segnare un appuntamento non ancora confermato.",
+      "definitionEn": "To make a provisional appointment or arrangement for someone, usually in a diary or calendar.",
+      "examples": [
+        "Let's pencil in a meeting for next Tuesday, but I'll confirm the exact time later.",
+        "Can you pencil in a call with the client for late afternoon? I'm waiting for their final availability."
+      ],
+      "exampleIt": "Segniamoci una riunione per martedì prossimo, ma confermerò l'ora esatta più tardi.",
+      "synonyms": [
+        "tentatively schedule",
+        "provisionally book",
+        "make a provisional arrangement"
+      ],
+      "collocations": [
+        "pencil in a meeting",
+        "pencil in a date",
+        "pencil in a call"
+      ],
+      "commonMistake": "Non è \"write in\" o \"note down\" se si intende un appuntamento *provvisorio*. L'idea della \"matita\" implica la possibilità di cancellare facilmente.",
+      "cloze": "I'll ____ you ____ for a chat on Friday, but let's confirm closer to the date.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-12-5.mp3"
+    }
+  ]
+}

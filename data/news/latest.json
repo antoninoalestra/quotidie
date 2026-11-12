@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "kind": "daily",
-  "generatedAt": "2026-11-11T19:02:20.345Z",
+  "generatedAt": "2026-11-12T09:31:53.813Z",
   "model": "gemini-2.5-flash",
   "minutes": 9,
-  "words": 1733,
+  "words": 1861,
   "brief": [
-    "TSMC, leader mondiale dei chip, ha registrato un aumento del 60% nelle vendite di ottobre e conferma ingenti investimenti, segnalando una robusta domanda del settore tecnologico.",
-    "I mercati azionari europei hanno sovraperformato Wall Street dopo le elezioni di midterm USA, con le Big Tech che hanno perso oltre mille miliardi di dollari in un solo giorno.",
-    "Un attacco hacker al Brennero ha spinto il Ministro Tajani a parlare di \"guerra ibrida\", portando la cyber sicurezza all'attenzione del G7."
+    "La crisi di leadership in Nvidia, con il CEO sotto indagine, ha scosso i mercati globali e il settore dei semiconduttori, generando incertezza.",
+    "Migliaia di scuole italiane sono state colpite da falsi allarmi bomba, generando preoccupazione e dibattito sulla sicurezza nazionale e la stabilità.",
+    "Riprendono i colloqui tra Russia, Ucraina e Stati Uniti per la guerra, con un focus su un possibile scambio di prigionieri e la ricerca di una soluzione."
   ],
   "sections": [
     {
@@ -16,56 +16,72 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "TSMC accelera vendite e conferma ingenti investimenti in chip",
-          "lead": "Taiwan Semiconductor Manufacturing Company (TSMC) ha registrato un aumento del 60% nelle vendite di ottobre, raggiungendo 17,9 miliardi di dollari, e conferma investimenti fino a 64 miliardi per l'anno.",
-          "body": "Il dato di ottobre 2026, pari a 586,9 miliardi di dollari taiwanesi, segna un'accelerazione rispetto al 51% del trimestre precedente, superando le aspettative degli analisti. TSMC, termometro del settore post-ChatGPT, prevede la costruzione di circa 20 nuovi stabilimenti globali.Nonostante le previsioni positive, gli investitori mantengono cautela sulle prospettive a lungo termine dell'AI, a causa dell'aumento dei costi di finanziamento per i data center. Le azioni di TSMC hanno mostrato volatilità, influenzate anche dai timori legati alle elezioni USA.",
-          "why": "La crescita di TSMC è cruciale per l'innovazione tecnologica globale e per la catena di approvvigionamento di componenti essenziali per l'AI.",
+          "title": "Indagine sul CEO di Nvidia scuote il colosso dei chip e l'AI",
+          "lead": "Jensen Huang, CEO di Nvidia, è sotto indagine per una presunta relazione, mettendo a rischio la sua leadership e generando incertezza nel settore dei semiconduttori.",
+          "body": "Il consiglio di amministrazione di Nvidia si è riunito il 12 novembre 2026 per valutare il futuro del fondatore e figura chiave dell'azienda. La potenziale destituzione di Huang, 63 anni, rappresenta un'incertezza significativa per il colosso dei chip e leader nello sviluppo dell'intelligenza artificiale.\nIl titolo Nvidia ha registrato un calo dell'8,57% nelle contrattazioni after-hour, bruciando circa 600 miliardi di dollari di valore di mercato. I mercati azionari hanno reagito negativamente, con Technoprobe che ha ceduto il 6,75% e STMicroelectronics il 2,45% a Piazza Affari.",
+          "why": "Questa vicenda è cruciale per il futuro di Nvidia, attore dominante nell'AI, con ripercussioni dirette sull'ecosistema tecnologico e sui mercati globali.",
           "sources": [
             {
-              "url": "https://finanza.repubblica.it/News/2026/11/10/tsmc_a_ottobre_vendite_accelerano_del_60percento_a_circa_18_miliardi_usd-91/",
-              "title": "finanza.repubblica.it"
-            }
-          ],
-          "readSeconds": 41
-        },
-        {
-          "title": "Anthropic e Meta lanciano nuovi modelli di intelligenza artificiale",
-          "lead": "Anthropic ha rilasciato Claude Fable 5.2 e Mythos 5.2, mentre Meta ha introdotto Muse Ember, un modello AI più piccolo ed economico per compiti specifici.",
-          "body": "I lanci avvengono in un periodo di intensa competizione nel settore dell'AI. Muse Ember di Meta è pensato per essere un'alternativa più leggera ed economica, con un costo di 10 centesimi di dollaro per milione di token in input, rispetto a modelli più grandi come Aiku o Luna.Il mercato dell'AI continua a vedere un rapido sviluppo e una diversificazione delle offerte, con aziende che cercano di coprire diverse nicchie, dai modelli complessi a quelli più agili per l'automazione.",
-          "why": "Questi lanci dimostrano la continua innovazione nel campo dell'AI, ampliando le possibilità di applicazione in vari settori.",
-          "sources": [
+              "url": "https://it.investing.com/news/stock-market-news/borse-oggi--ftse-mib--piazza-affari-piatta-il-caso-nvidia-affonda-technoprobe-3644749",
+              "title": "it.investing.com"
+            },
             {
-              "url": "https://www.youtube.com/watch?v=Xz7AuIa_fLg",
-              "title": "youtube.com"
-            }
-          ],
-          "readSeconds": 39
-        },
-        {
-          "title": "Cina, impennata nelle esportazioni di circuiti integrati ad ottobre",
-          "lead": "Le esportazioni cinesi di circuiti integrati sono aumentate del 137,1% a ottobre, raggiungendo 39,59 miliardi di dollari, secondo i dati doganali.",
-          "body": "I dati, diffusi il 10 novembre 2026, indicano anche che l'export complessivo del paese è salito del 28,7% a 2,79 trilioni di yuan, mentre l'import è cresciuto del 34,7% a 2,08 trilioni. Questa crescita eccezionale avviene in un periodo di crescenti tensioni geopolitiche e restrizioni all'export di tecnologie avanzate.L'aumento significativo delle esportazioni cinesi di chip potrebbe indicare un rafforzamento della capacità produttiva interna o un riorientamento delle catene di approvvigionamento globali, evidenziando la resilienza del paese.",
-          "why": "Questi dati evidenziano la crescente influenza della Cina nel mercato globale dei semiconduttori e la sua resilienza tecnologica.",
-          "sources": [
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-12-novembre-2026/1023901/",
+              "title": "quifinanza.it"
+            },
             {
-              "url": "https://www.elettronicanews.it/semiconduttori-notizie-10-novembre-2026/",
-              "title": "elettronicanews.it"
-            }
-          ],
-          "readSeconds": 37
-        },
-        {
-          "title": "UE propone \"Tech sovereignty package\" per autonomia digitale",
-          "lead": "La Commissione Europea ha annunciato un pacchetto di misure per rafforzare l'autonomia digitale in semiconduttori, AI e cloud, mirando a triplicare la capacità europea.",
-          "body": "Il \"Tech sovereignty package\", presentato il 3 giugno 2026, si concentra su quattro obiettivi strategici. Tra le misure, il Cloud and AI Development Act (CADA) prevede il sostegno alla ricerca di tecnologie sostenibili e la creazione di data center in territorio europeo, con l'obiettivo di triplicare la capacità comunitaria in 5-7 anni.L'iniziativa nasce dalla crescente preoccupazione per la dipendenza tecnologica dell'Europa da paesi terzi e dalla necessità di garantire la continuità operativa e la sicurezza dei dati. La vicepresidente esecutiva Henna Virkkunen ha sottolineato l'importanza di evitare un \"kill switch\" da parte di fornitori extra-UE.",
-          "why": "Questa proposta è cruciale per la strategia europea di autonomia digitale, bilanciando innovazione e sicurezza tecnologica.",
-          "sources": [
-            {
-              "url": "https://www.ictsecuritymagazine.com/notizie/tech-sovereignty-package-europa/",
-              "title": "ictsecuritymagazine.com"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-12-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611120744539370",
+              "title": "milanofinanza.it"
             }
           ],
           "readSeconds": 43
+        },
+        {
+          "title": "AI Act dell'UE avanza, l'Italia definisce le autorità di vigilanza",
+          "lead": "L'Unione Europea prosegue con l'implementazione dell'AI Act, mentre l'Italia ha già adottato una legislazione nazionale complementare, designando ACN e AgID come autorità di vigilanza.",
+          "body": "Le scadenze per gli obblighi sui sistemi ad alto rischio sono fissate al 2 dicembre 2027, e al 2 agosto 2028 per l'IA integrata in prodotti regolamentati. La legislazione italiana, con la Legge n. 160 del 9 settembre 2026 e il Decreto Legislativo n. 179 del 7 ottobre 2026, anticipa le mosse europee.\nL'AI Act mira a creare un quadro normativo armonizzato per l'intelligenza artificiale, garantendo sicurezza e trasparenza. Le sanzioni massime previste possono arrivare a 35 milioni di euro o al 7% del fatturato mondiale. Le aziende sono chiamate ad adeguarsi, mappando gli strumenti AI e formando il personale.",
+          "why": "Questa regolamentazione è fondamentale per lo sviluppo etico e sicuro dell'AI in Europa, influenzando innovazione, investimenti e competitività.",
+          "sources": [
+            {
+              "url": "https://enigma-tech.it/blog/ai-act-aziende-cosa-cambia-2026/",
+              "title": "enigma-tech.it"
+            },
+            {
+              "url": "https://www.dlapiper.com/it-it/insights/publications/innovation-law-insights/2026/innovation-law-insights-11-november-2026",
+              "title": "dlapiper.com"
+            },
+            {
+              "url": "https://humanostech.com/it/eu-ai-act",
+              "title": "humanostech.com"
+            }
+          ],
+          "readSeconds": 46
+        },
+        {
+          "title": "Elezioni Midterm USA: più controlli sull'AI e le Big Tech",
+          "lead": "La vittoria dei Democratici alle elezioni di midterm statunitensi del 3 novembre 2026 preannuncia un maggiore controllo politico sull'intelligenza artificiale e le Big Tech.",
+          "body": "Si prevedono controlli di sicurezza più stringenti e un potenziale rallentamento nello sviluppo dei data center. La forte dipendenza dell'Europa dai servizi digitali e dalle infrastrutture statunitensi implica che le decisioni politiche americane avranno ripercussioni dirette anche sul continente europeo.\nI mercati europei hanno mostrato nervosismo per il possibile aumento della regolamentazione dell'AI e il rallentamento degli investimenti tecnologici. Questo scenario potrebbe portare a un avvicinamento tra gli obblighi normativi americani e l'AI Act europeo.",
+          "why": "Questo scenario ridefinirà il panorama globale della governance dell'AI, influenzando le strategie delle grandi aziende tecnologiche internazionali.",
+          "sources": [
+            {
+              "url": "https://www.agendadigitale.eu/industry-4-0/elezioni-usa-gli-effetti-su-digitale-e-ai-che-vedremo-anche-in-europa/",
+              "title": "agendadigitale.eu"
+            }
+          ],
+          "readSeconds": 38
+        },
+        {
+          "title": "Cina e USA dialogano sulla governance dell'Intelligenza Artificiale",
+          "lead": "Cina e Stati Uniti hanno avviato un dialogo \"positivo e costruttivo\" sulla governance dell'intelligenza artificiale, con Pechino che propone standard condivisi per il controllo umano.",
+          "body": "Il ministro degli Esteri cinese Wang Yi ha avuto un colloquio telefonico con il segretario di Stato americano Marco Rubio. La Cina ha espresso la volontà di rafforzare il dialogo e gestire le divergenze, con l'AI tra i dossier aperti.\nLa governance dell'intelligenza artificiale è un tema geopolitico emergente, con le due maggiori potenze mondiali che cercano di definire il proprio ruolo. Questo dialogo indica un tentativo di stabilizzare i rapporti su questioni tecnologiche sensibili.",
+          "why": "La cooperazione o la competizione tra Cina e Stati Uniti sull'AI avrà un impatto profondo sullo sviluppo tecnologico e sugli standard globali.",
+          "sources": [
+            {
+              "url": "https://www.radiobullets.com/notiziari/12-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
+            }
+          ],
+          "readSeconds": 39
         }
       ]
     },
@@ -74,59 +90,63 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Mercati europei superano Wall Street, semiconduttori in calo post elezioni USA",
-          "lead": "I mercati azionari europei hanno sovraperformato Wall Street dopo le elezioni di midterm USA, mentre l'indice dei semiconduttori (SOX) ha perso il 12%.",
-          "body": "Nella settimana conclusasi il 6 novembre 2026, Wall Street ha subito la peggiore ondata di vendite dall'aprile 2025. Il SOX è stato trascinato al ribasso da Micron (-22%), Marvell (-28%) e Nvidia (-8,8%).La vittoria dei Democratici al Congresso ha generato incertezza sui mercati, in particolare per il settore tecnologico, a causa dei timori di maggiore regolamentazione. Alcune case di brokeraggio, come Morgan Stanley e UBS, hanno suggerito che il selloff sia stato eccessivo.",
-          "why": "L'esito delle elezioni USA ha avuto un impatto significativo sui mercati globali, evidenziando la sensibilità del settore tecnologico.",
+          "title": "Mercati azionari in fibrillazione per il \"caso Nvidia\"",
+          "lead": "I mercati azionari europei mostrano debolezza nel settore tecnologico a causa delle incertezze sulla leadership di Nvidia, con il CdA riunito per discutere il futuro del CEO.",
+          "body": "Il consiglio di amministrazione di Nvidia si è riunito il 12 novembre 2026 per valutare la posizione del CEO Jensen Huang, oggetto di un'indagine interna. Questa crisi di governance ha generato nervosismo tra gli investitori, preoccupati per l'impatto di un possibile cambio al vertice.\nIl FTSE MIB di Milano ha aperto in rialzo ma ha poi segnato un leggero calo, frenato dai tecnologici. Technoprobe ha perso il 6,75% e STMicroelectronics il 2,45%. Le borse europee sono state miste, con Francoforte in rialzo ma Milano piatta.",
+          "why": "L'evento sottolinea la sensibilità dei mercati alle vicende di leadership delle grandi aziende tecnologiche e l'interconnessione con le performance azionarie.",
           "sources": [
             {
-              "url": "https://www.milanofinanza.it/news/semiconduttori-e-il-momento-di-comprare-dopo-il-crollo-i-titoli-con-piu-upside-in-usa-e-europa-202611101145531862",
+              "url": "https://it.investing.com/news/stock-market-news/borse-oggi--ftse-mib--piazza-affari-piatta-il-caso-nvidia-affonda-technoprobe-3644749",
+              "title": "it.investing.com"
+            },
+            {
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-12-novembre-2026/1023901/",
+              "title": "quifinanza.it"
+            },
+            {
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-12-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611120744539370",
               "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://mlq.ai/news/what-a-democratic-congress-means-for-ai-chips-crypto-and-big-tech/",
-              "title": "mlq.ai"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=71J06LFD2LU",
-              "title": "youtube.com"
             }
           ],
-          "readSeconds": 38
+          "readSeconds": 42
         },
         {
-          "title": "Le \"Magnifiche Sette\" Big Tech USA perdono mille miliardi in un giorno",
-          "lead": "Le sette maggiori aziende tecnologiche statunitensi hanno perso oltre 1.000 miliardi di dollari in una singola seduta di borsa, la peggiore da aprile 2025.",
-          "body": "Il 6 novembre 2026, le \"Magnifiche Sette\" hanno registrato un tonfo significativo. Tesla ha subito il ribasso maggiore (-10,8%), seguita da Nvidia (-9,3%), Meta (-4%), Microsoft (-3,6%), Alphabet (-2,2%), Amazon (-2,2%) e Apple (-1,5%).Questo crollo è avvenuto in concomitanza con la vittoria dei Democratici alle elezioni di metà mandato, che ha generato preoccupazioni tra gli investitori riguardo a possibili politiche più restrittive per il settore tecnologico. La reazione del mercato riflette la nervosità degli investitori.",
-          "why": "La perdita di valore delle Big Tech sottolinea la loro importanza sistemica per i mercati globali e la loro vulnerabilità politica.",
+          "title": "Banche centrali pronte a nuovi rialzi dei tassi a dicembre",
+          "lead": "Le principali banche centrali si preparano a nuovi rialzi dei tassi di interesse a dicembre 2026, spinti da dati sull'inflazione statunitense più alti delle aspettative.",
+          "body": "La Federal Reserve, la BCE, la Banca d'Inghilterra e la Banca del Giappone stanno valutando questa mossa a seguito della pubblicazione dei dati sull'inflazione di ottobre, che indicano una pressione sui prezzi persistente. L'inflazione elevata, anche a causa dell'aumento dei prezzi globali dell'energia e dell'incertezza geopolitica, spinge a mantenere una politica monetaria restrittiva.\nIl rendimento dei Treasury USA a due anni è salito a 4,74%, mentre quello dei titoli di stato a dieci anni ha toccato il 5%. I future sui fondi federali indicano una probabilità quasi certa di un rialzo a dicembre.",
+          "why": "I prossimi rialzi avranno un impatto significativo sul costo del denaro, sui prestiti, sugli investimenti e sulla crescita economica globale.",
           "sources": [
             {
-              "url": "https://www.youtube.com/watch?v=71J06LFD2LU",
-              "title": "youtube.com"
+              "url": "https://www.ekonomia.it/2026/11/11/le-banche-centrali-si-preparano-a-nuovi-rialzi-dei-tassi-a-dicembre/",
+              "title": "ekonomia.it"
             },
             {
-              "url": "https://corrierenet.com/tonfo-in-borsa-le-7-big-tech-usa-perdono-1-000-miliardi-in-un-giorno/",
-              "title": "corrierenet.com"
+              "url": "https://www.mps.it/static/upload/dai/0003/daily_20261111.pdf",
+              "title": "mps.it"
             },
             {
-              "url": "https://www.lindipendente.online/2026/11/06/usa-in-borsa-le-big-tech-affondano-con-trump-e-adesso-cambiano-atteggiamento/",
-              "title": "lindipendente.online"
+              "url": "https://www.investiremag.it/investire/2026/11/09/news/banche-centrali-muoversi-assieme-per-ora/",
+              "title": "investiremag.it"
             }
           ],
-          "readSeconds": 40
+          "readSeconds": 44
         },
         {
-          "title": "ING mette all'asta prestiti a data center per 500 milioni",
-          "lead": "ING sta mettendo all'asta circa 500 milioni di dollari di prestiti legati a data center, in un momento di cautela per il settore.",
-          "body": "Questa mossa avviene in un momento in cui i titoli del settore dei data center sono scesi a causa dei timori sul debito. Sebbene la vendita di prestiti da parte di una banca non indichi necessariamente un rischio imminente, può essere un segnale di riequilibrio di bilancio.Non sono stati forniti commenti specifici da parte di ING. Tuttavia, la notizia è stata notata nel contesto della volatilità del settore, cruciale per lo sviluppo dell'AI.",
-          "why": "L'operazione di ING potrebbe influenzare la disponibilità di capitale per futuri progetti di data center, cruciali per l'AI.",
+          "title": "Aste BTP italiani: in offerta anche un BTP Green ventennale",
+          "lead": "Il Ministero dell'Economia e delle Finanze italiano ha annunciato aste di titoli di Stato a medio-lungo termine per giovedì 12 novembre 2026, inclusa la terza tranche di un BTP Green.",
+          "body": "L'offerta complessiva è fino a 7,25 miliardi di euro e comprende un BTP a 3 anni, un BTP a 7 anni e un BTP Green con scadenza 30 aprile 2046. L'ammontare offerto per il BTP Green è tra 1 e 1,5 miliardi di euro, con una cedola annuale lorda del 4,1%.\nLe aste di titoli di Stato sono cruciali per il finanziamento del debito pubblico italiano. L'emissione di BTP Green sottolinea l'impegno del governo verso la finanza sostenibile, con proventi vincolati a spese pubbliche con impatto ambientale positivo.",
+          "why": "Il successo di queste aste è un indicatore importante della fiducia degli investitori nella solidità finanziaria dell'Italia e della domanda di investimenti sostenibili.",
           "sources": [
             {
-              "url": "https://www.youtube.com/watch?v=Xz7AuIa_fLg",
-              "title": "youtube.com"
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-12-novembre-2026/1023901/",
+              "title": "quifinanza.it"
+            },
+            {
+              "url": "https://borsaefinanza.it/btp-aste-12-novembre-cosa-sapere/",
+              "title": "borsaefinanza.it"
             }
           ],
-          "readSeconds": 37
+          "readSeconds": 45
         }
       ]
     },
@@ -135,43 +155,51 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Attacco hacker al Brennero, Tajani parla di guerra ibrida al G7",
-          "lead": "Un attacco hacker ha colpito il Brennero il 17 ottobre; il Ministro Tajani ha parlato di \"guerra ibrida\" e il G7 ha discusso di cyber sicurezza su richiesta italiana.",
-          "body": "Il 7 novembre 2026, BBT SE ha reso pubblico l'incidente, e il Ministro degli Esteri italiano, Antonio Tajani, ha indicato sospetti verso l'Est, confermando che i suoi dati sono finiti sul dark web. Tra il 9 e il 10 novembre, si è tenuta a Parigi una riunione dei ministri degli Esteri del G7, con la cyber sicurezza in agenda.L'attacco al Brennero si inserisce in un quadro di crescenti minacce cibernetiche a livello globale. La richiesta italiana di inserire la cyber sicurezza nell'agenda del G7 sottolinea l'urgenza di affrontare queste minacce a livello diplomatico.",
-          "why": "L'incidente evidenzia la crescente importanza della cyber sicurezza come questione di sicurezza nazionale e internazionale.",
+          "title": "Falsi allarmi bomba in migliaia di scuole italiane: caos e preoccupazione",
+          "lead": "Centinaia di scuole in tutta Italia sono state colpite da falsi allarmi bomba nelle ultime 24-36 ore, causando evacuazioni e interruzioni delle lezioni.",
+          "body": "Oltre 6.000 istituti scolastici sono stati coinvolti, secondo il Ministero dell'Istruzione. Le email di minaccia sono state firmate \"Andropov\", un nome già comparso in altri Paesi europei in precedenti ondate di allarmi simili, la terza dal 19 ottobre 2026.\nIl governo italiano ha convocato un vertice con le opposizioni per discutere l'emergenza. Il Presidente del Consiglio Giorgia Meloni ha dichiarato che \"non c'è vero pericolo\", ma la situazione ha generato ansia tra genitori, studenti e personale scolastico.",
+          "why": "L'incidente evidenzia una potenziale minaccia di \"guerra ibrida\" o attacchi coordinati volti a creare caos e destabilizzazione.",
           "sources": [
             {
-              "url": "https://shattered.io/it/attacco-hacker-brennero-bbt-tajani-guerra-ibrida-2026/",
-              "title": "shattered.io"
+              "url": "https://it.euronews.com/",
+              "title": "it.euronews.com"
+            },
+            {
+              "url": "https://tg24.sky.it/",
+              "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://tg24.sky.it/cronaca/2026/11/12/prime-pagine-quotidiani-oggi-12-novembre",
+              "title": "tg24.sky.it"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 38
         },
         {
-          "title": "Trieste ospita \"Connecting Life Sciences\" per ricerca e startup",
-          "lead": "Trieste ha ospitato \"Connecting Life Sciences\", un evento per analizzare gli investimenti pubblici e favorire collaborazioni tra ricerca, startup e investitori.",
-          "body": "L'evento, svoltosi il 9 e 10 novembre 2026, è stato promosso dalla Regione Autonoma Friuli Venezia Giulia. Ha analizzato i risultati degli investimenti pubblici nelle Scienze della Vita, con focus sui bandi regionali (LR 22/2022).L'iniziativa ha incluso presentazioni di progetti (pitch) e incontri B2B e B2VC tra startup, ricercatori, imprese e investitori, con l'obiettivo di creare nuove collaborazioni e opportunità di crescita in un comparto strategico.",
-          "why": "Questo evento sottolinea l'impegno dell'Italia nel promuovere l'innovazione e l'imprenditorialità nelle Scienze della Vita.",
+          "title": "Presentato il Rapporto SVIMEZ 2026 sull'economia del Mezzogiorno",
+          "lead": "Il 12 novembre 2026 è stato presentato il Rapporto SVIMEZ 2026 \"L'economia e la società del Mezzogiorno: il valore della coesione\" alla Camera dei Deputati.",
+          "body": "Alla presentazione ha partecipato il Presidente della Repubblica Sergio Mattarella, sottolineando l'importanza attribuita al tema del divario Nord-Sud. Il rapporto celebra gli ottant'anni dalla fondazione dell'associazione, fornendo un'analisi annuale fondamentale sullo stato dell'economia e della società nel Sud Italia.\nIl documento offre dati e prospettive cruciali per le politiche di sviluppo e coesione. La presenza di figure istituzionali di alto livello evidenzia l'attenzione verso le strategie per il rilancio del Mezzogiorno.",
+          "why": "Il rapporto offre spunti cruciali per il dibattito politico ed economico italiano, influenzando le decisioni per ridurre le disuguaglianze territoriali.",
           "sources": [
             {
-              "url": "https://www.nordest24.it/trieste-connecting-life-sciences-9-10-novembre-ricerca-startup-investitori",
-              "title": "nordest24.it"
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-settimana-del-9-novembre-2026-11_2026-11-09_TLB-AUTO.html?lang=it",
+              "title": "borsaitaliana.it"
             }
           ],
-          "readSeconds": 33
+          "readSeconds": 37
         },
         {
-          "title": "L'innovazione italiana tra stallo nomine e incentivi fiscali scaduti",
-          "lead": "L'ecosistema dell'innovazione italiano è bloccato dallo stallo nelle nomine di CDP Venture Capital e dalla scadenza degli incentivi fiscali.",
-          "body": "Questi problemi rischiano di frenare la crescita delle startup e di favorire la \"fuga di cervelli\" e di capitali all'estero, compromettendo lo sviluppo del settore. La situazione genera preoccupazione tra gli operatori del settore.Gli operatori chiedono interventi rapidi per sbloccare le nomine e ripristinare gli incentivi, al fine di garantire un ambiente favorevole alla nascita e alla crescita di nuove imprese innovative.",
-          "why": "La risoluzione di questi nodi è fondamentale per sostenere la competitività dell'Italia e l'ambiente per le nuove imprese.",
+          "title": "Manovra di Bilancio: il governo discute cambiamenti su scuola e sanità",
+          "lead": "Sono in corso discussioni sulla Manovra di Bilancio del governo italiano, con le prime pagine dei quotidiani che riportano cambiamenti su scuola e sanità.",
+          "body": "La legge di bilancio è lo strumento economico principale del governo per definire le spese e le entrate dello Stato per l'anno successivo. Le scelte operate influenzano direttamente la vita dei cittadini e delle imprese, in particolare sui servizi essenziali.\nLe discussioni sulla manovra sono sempre al centro del dibattito politico, con le forze di maggioranza e opposizione che cercano di influenzare le decisioni finali. La stabilità economica del Paese dipende in larga parte dalle scelte operate in questo contesto.",
+          "why": "Le scelte operate nella manovra avranno un impatto diretto sulla spesa pubblica, sui servizi essenziali e sulla stabilità economica del Paese.",
           "sources": [
             {
-              "url": "https://www.startupnewsitalia.it/2026/11/",
-              "title": "startupnewsitalia.it"
+              "url": "https://tg24.sky.it/cronaca/2026/11/12/prime-pagine-quotidiani-oggi-12-novembre",
+              "title": "tg24.sky.it"
             }
           ],
-          "readSeconds": 32
+          "readSeconds": 41
         }
       ]
     },
@@ -180,47 +208,63 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Colloqui Ucraina-Russia riprendono ad Abu Dhabi con l'Europa",
-          "lead": "I dialoghi tra Ucraina e Russia sono ripresi ad Abu Dhabi il 10 novembre, con mediazione USA e partecipazione europea, in un clima di accuse reciproche.",
-          "body": "Il Presidente ucraino Zelensky ha accusato Putin di utilizzare la tregua di Oleshky per schierare soldati, evidenziando la persistente sfiducia tra le parti. La ripresa dei colloqui avviene in un contesto di conflitto continuo e di escalation militare.La presenza dell'Europa ai colloqui indica un tentativo di ampliare il fronte diplomatico per trovare una soluzione al conflitto, ma le dichiarazioni di Zelensky suggeriscono una profonda sfiducia tra le parti.",
-          "why": "La ripresa dei dialoghi rappresenta un passo importante verso una possibile risoluzione diplomatica del conflitto in corso.",
+          "title": "Riprendono i colloqui sulla guerra in Ucraina: focus su scambio prigionieri",
+          "lead": "I colloqui trilaterali tra Russia, Ucraina e Stati Uniti sono ripresi ad Abu Dhabi, definiti \"molto produttivi\", con un accordo di principio su un grande scambio di prigionieri.",
+          "body": "Gli inviati statunitensi Steve Witkoff e Jared Kushner sono attesi a Mosca per incontrare Vladimir Putin e successivamente Volodymyr Zelensky a Dublino. Zelensky propone uno scambio di 1.000-1.200 prigionieri, mentre la parte russa parla di oltre mille per parte.\nQuesti incontri rappresentano un nuovo tentativo di trovare una via d'uscita al conflitto, nonostante le profonde divergenze. La ripresa del dialogo e l'accordo sui prigionieri sono segnali positivi, sebbene gli europei fossero presenti ad Abu Dhabi ma fuori dal tavolo negoziale diretto.",
+          "why": "La ripresa dei negoziati è cruciale per la ricerca di una soluzione diplomatica alla guerra in Ucraina, con implicazioni per la sicurezza globale.",
           "sources": [
             {
-              "url": "https://www.vivere.it/2026-11-10",
-              "title": "vivere.it"
-            }
-          ],
-          "readSeconds": 36
-        },
-        {
-          "title": "Trump dichiara vittoria sulla guerra con l'Iran e fine conflitto",
-          "lead": "Il Presidente USA Donald Trump ha dichiarato la vittoria sulla guerra con l'Iran, affermando che una ripresa dei combattimenti è altamente improbabile.",
-          "body": "Trump ha affermato che l'Iran sta crollando finanziariamente e militarmente, e che gli Stati Uniti hanno individuato obiettivi infrastrutturali nel paese. Queste dichiarazioni seguono un periodo di intense tensioni tra USA e Iran.Il crollo del prezzo del petrolio Brent (-8,7% a 94,6 dollari) dopo le elezioni di midterm, con il mercato che scommette su una pace con l'Iran, fa da sfondo alle affermazioni di Trump, fatte senza citare prove specifiche e in un momento di incertezza politica interna.",
-          "why": "Le dichiarazioni di Trump potrebbero segnare una svolta nelle relazioni USA-Iran, con ampie ripercussioni geopolitiche ed energetiche.",
-          "sources": [
-            {
-              "url": "https://www.youtube.com/watch?v=71J06LFD2LU",
-              "title": "youtube.com"
+              "url": "https://teleborsa.ansa.it/notiziario/finanza/borse-europee-positive-con-focus-su-tech-dopo-crisi-nvidia-piatta-milano/",
+              "title": "teleborsa.ansa.it"
             },
             {
-              "url": "https://www.youtube.com/watch?v=0nk-opcCQlI",
-              "title": "youtube.com"
+              "url": "https://www.radiobullets.com/notiziari/12-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
+            },
+            {
+              "url": "https://www.ilpoliticoweb.it/witkoff-kushner-mosca-putin-dublino-zelensky/",
+              "title": "ilpoliticoweb.it"
             }
           ],
-          "readSeconds": 38
+          "readSeconds": 43
         },
         {
-          "title": "Gaza, cinque morti in campo sfollati per forti piogge",
-          "lead": "Tre bambini e due donne sono morti in un campo sfollati a Gaza a causa del crollo di un terrapieno sabbioso provocato da forti piogge.",
-          "body": "L'incidente è avvenuto sabato in un centro di accoglienza a sud di Deir al-Balah, nel centro della Striscia di Gaza. La tempesta ha lasciato decine di migliaia di sfollati senza riparo, aggravando una situazione umanitaria già critica.Secondo l'Ufficio delle Nazioni Unite per il Coordinamento degli Affari Umanitari, circa 950.000 sfollati palestinesi vivevano in siti a rischio di alluvione a ottobre. Un fragile cessate il fuoco è in vigore dall'ottobre 2025, ma gli attacchi israeliani hanno continuato a causare vittime.",
-          "why": "Questa tragedia sottolinea l'urgente necessità di assistenza umanitaria a Gaza e la vulnerabilità della popolazione civile.",
+          "title": "COP31 ad Antalya: Guterres esorta all'uscita dai combustibili fossili",
+          "lead": "La COP31 sui cambiamenti climatici è in corso ad Antalya, Turchia, con l'ONU che esorta ad accelerare l'uscita dai combustibili fossili e denuncia le pressioni delle lobby.",
+          "body": "L'Organizzazione Meteorologica Mondiale ha ricordato che gli ultimi dodici anni sono stati i più caldi mai registrati, evidenziando l'urgenza della crisi climatica. La conferenza mira a definire le prossime azioni per accelerare l'attuazione dell'Accordo di Parigi.\nIl presidente brasiliano Lula ha evidenziato come guerre e dazi abbiano oscurato l'agenda climatica, chiedendo la mobilitazione di 1.300 miliardi di dollari all'anno. La Norvegia ha annunciato una partnership per mobilitare 10 miliardi di dollari entro il 2030.",
+          "why": "La COP31 è un appuntamento fondamentale per affrontare l'emergenza climatica globale, con decisioni che influenzeranno politiche energetiche e ambientali.",
           "sources": [
             {
-              "url": "https://www.youtube.com/watch?v=0nk-opcCQlI",
-              "title": "youtube.com"
+              "url": "https://www.radiobullets.com/notiziari/12-novembre-2026-notiziario-mondo/",
+              "title": "radiobullets.com"
+            },
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-settimana-del-9-novembre-2026-11_2026-11-09_TLB-AUTO.html?lang=it",
+              "title": "borsaitaliana.it"
+            },
+            {
+              "url": "https://teleborsa.ansa.it/notiziario/finanza/eventi-e-scadenze-del-12-novembre-2026/",
+              "title": "teleborsa.ansa.it"
             }
           ],
           "readSeconds": 39
+        },
+        {
+          "title": "Escalation russa nel Mar Nero: oltre 570 navi colpite nel 2026",
+          "lead": "Gli attacchi russi con droni e missili nel Mar Nero si sono intensificati, rendendo il bacino il più letale per la navigazione nel 2026, con oltre 570 navi colpite.",
+          "body": "Almeno nove navi mercantili sono state colpite al largo delle coste rumene e bulgare, alcune delle quali affondate. L'aggressione russa all'Ucraina sta sconfinando sistematicamente negli spazi marittimi di Paesi membri dell'UE e della NATO.\nFinora, questi attacchi sono stati considerati sotto la soglia dell'articolo 5 della NATO. Bulgaria e Romania hanno richiesto una riunione del Consiglio Atlantico per discutere la situazione. L'UE ha già stanziato finanziamenti di emergenza per rafforzare le operazioni di ricerca e soccorso.",
+          "why": "L'escalation nel Mar Nero minaccia la libertà di navigazione e la sicurezza regionale, con il rischio di un confronto diretto tra Russia e NATO.",
+          "sources": [
+            {
+              "url": "https://geopolitica.info/escalation-russa-nel-mar-nero-assumersi-dei-rischi-per-ripristinare-la-liberta-di-navigazione/",
+              "title": "geopolitica.info"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=Y_eaieuJ1yI",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 42
         }
       ]
     }
