@@ -1475,6 +1475,17 @@
         </div>
 
         <div class="group">
+          <h2>Voce di lettura</h2>
+          <p>Al mattino Quotidie legge il giornale e la lezione con il modello neurale open source <b>Qwen3-TTS</b>. Puoi ascoltare in anteprima tutte le 9 voci Qwen (e le 4 voci Edge-TTS) per scegliere la tua preferita.</p>
+          <div class="row">
+            <a class="btn" href="voci.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:.5rem">
+              <svg viewBox="0 0 24 24" style="width:1.1rem;height:1.1rem;fill:currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+              Ascolta e confronta le voci
+            </a>
+          </div>
+        </div>
+
+        <div class="group">
           <h2>Argomenti delle lezioni</h2>
           <p>Ogni mattina la lezione arriva da una di queste categorie, a rotazione e senza mai ripetere un argomento. Ogni due o tre settimane arriva un percorso di più lezioni collegate. Tocca una categoria per attivarla o disattivarla.</p>
           <div class="topic-list" id="topics"></div>
@@ -1700,7 +1711,17 @@
     .then((r) => (r.ok ? r.json() : null))
     .then((d) => { audioVoices = d?.files || {}; })
     .catch(() => {});
-  const VOICE_NAMES = { ryan: 'Ryan', eric: 'Eric', aiden: 'Aiden', dylan: 'Dylan', serena: 'Serena', vivian: 'Vivian' };
+  const VOICE_NAMES = {
+    ryan: 'Ryan',
+    aiden: 'Aiden',
+    dylan: 'Dylan',
+    eric: 'Eric',
+    uncle_fu: 'Uncle Fu',
+    serena: 'Serena',
+    vivian: 'Vivian',
+    ono_anna: 'Ono Anna',
+    sohee: 'Sohee',
+  };
   const voiceLabel = (url) => {
     const meta = audioVoices[String(url || '').split('/').pop()];
     if (!meta) return 'Voce';

@@ -1,0 +1,66 @@
+name: Campioni Voci Quotidie (Qwen & Edge)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-samples:
+    name: Sintesi campioni di tutte le voci
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Scarica il codice del repository
+        uses: actions/checkout@v4
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa edge-tts e dipendenze di sistema
+        run: |
+          pip install --quiet edge-tts
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libopenblas0 > /dev/null
+
+      - name: Cache motore voce open source (Qwen3-TTS)
+        id: qwen-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/qwen3-tts
+          key: qwen3-tts-v1-${{ runner.os }}
+
+      - name: Installa motore Qwen3-TTS (se assente in cache)
+        if: steps.qwen-cache.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get install -y -qq build-essential libopenblas-dev > /dev/null
+          rm -rf ~/qwen3-tts
+          git clone --depth 1 https://github.com/gabriele-mastrapasqua/qwen3-tts.git ~/qwen3-tts
+          cd ~/qwen3-tts
+          make blas SIMD=portable
+          ./download_model.sh --model small
+          ls -lh qwen3-tts-0.6b
+
+      - name: Esegui sintesi campioni
+        run: node scripts/generate_samples.mjs
+
+      - name: Pubblica i campioni su GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/audio/samples/
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica da registrare."
+          else
+            git commit -m "Audio: campioni di tutte le voci Qwen3-TTS ed Edge-TTS per ascolto e scelta"
+            git push
+          fi
