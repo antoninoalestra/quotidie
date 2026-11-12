@@ -32,10 +32,9 @@
       "kind": "news",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 855,
+      "seconds": 883,
       "rewritten": true,
-      "fallbackReason": "qwen_tts: tempo scaduto",
-      "generatedAt": "2026-11-12T10:18:58.186Z"
+      "generatedAt": "2026-11-12T10:45:49.051Z"
     },
     "news-2026-11-06.mp3": {
       "date": "2026-11-06",
@@ -152,10 +151,9 @@
       "kind": "news",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 855,
+      "seconds": 883,
       "rewritten": true,
-      "fallbackReason": "qwen_tts: tempo scaduto",
-      "generatedAt": "2026-11-12T10:18:58.186Z"
+      "generatedAt": "2026-11-12T10:45:49.051Z"
     },
     "lesson-2026-11-12.mp3": {
       "date": "2026-11-12",
@@ -167,5 +165,5 @@
       "generatedAt": "2026-11-12T10:31:29.118Z"
     }
   },
-  "updatedAt": "2026-11-12T10:31:29.118Z"
+  "updatedAt": "2026-11-12T10:45:49.051Z"
 }
