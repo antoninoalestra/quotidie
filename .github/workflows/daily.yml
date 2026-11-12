@@ -72,52 +72,13 @@ jobs:
       - name: Installa edge-tts
         run: pip install --upgrade edge-tts
 
-      # ===== QUOTIDIE AUDIO v2: voce open source (solo avvio programmato o test) =====
+      # ===== STRUMENTI AUDIO =====
       - name: Strumenti audio
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg > /dev/null
           ffmpeg -version | head -n 1
 
-      - name: Cache motore voce open source
-        if: (vars.AUDIO_ENGINE != 'edge' && vars.AUDIO_ENGINE != 'edge-tts') && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true)
-        id: qwen-cache
-        uses: actions/cache@v4
-        with:
-          path: ~/qwen3-tts
-          key: qwen3-tts-v1-${{ runner.os }}
-
-      - name: Installa motore voce open source (Qwen3-TTS)
-        if: (vars.AUDIO_ENGINE != 'edge' && vars.AUDIO_ENGINE != 'edge-tts') && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true) && steps.qwen-cache.outputs.cache-hit != 'true'
-        continue-on-error: true
-        timeout-minutes: 20
-        run: |
-          sudo apt-get install -y -qq build-essential libopenblas-dev > /dev/null
-          (
-            set -e
-            rm -rf ~/qwen3-tts
-            git clone --depth 1 https://github.com/gabriele-mastrapasqua/qwen3-tts.git ~/qwen3-tts
-            cd ~/qwen3-tts
-            make blas SIMD=portable
-            ./download_model.sh --model small
-            ls -lh qwen3-tts-0.6b
-          ) || { echo "Installazione non riuscita: si userà edge-tts"; rm -rf ~/qwen3-tts; exit 1; }
-
-      - name: Verifica motore voce open source
-        if: (vars.AUDIO_ENGINE != 'edge' && vars.AUDIO_ENGINE != 'edge-tts') && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || inputs.test_open_source == true)
-        id: qwen-check
-        continue-on-error: true
-        run: |
-          sudo apt-get install -y -qq libopenblas0 > /dev/null || true
-          cd ~/qwen3-tts
-          ./qwen_tts --self-test
-          ./qwen_tts -d qwen3-tts-0.6b -s "${QWEN_SPEAKER:-ryan}" -l Italian --int4 --silent --text "Buongiorno, questa è una prova." -o "$RUNNER_TEMP/prova.wav"
-          test -s "$RUNNER_TEMP/prova.wav"
-          echo "bin=$HOME/qwen3-tts/qwen_tts" >> "$GITHUB_OUTPUT"
-          echo "model=$HOME/qwen3-tts/qwen3-tts-0.6b" >> "$GITHUB_OUTPUT"
-        env:
-          QWEN_SPEAKER: ${{ vars.QWEN_SPEAKER }}
-      # ===== FINE QUOTIDIE AUDIO v2 =====
 
       - name: Prepara il generatore
         run: |
@@ -215,20 +176,10 @@ jobs:
              writeJSON(), today, DATA, formatNewsSpeech(), formatLessonSpeech(),
              e gli import qdSpawn, qdMkdtemp, qdCopyFile, qdRm, qdOs (vedi istruzioni).
              ===================================================================== */
-          const isEdgeMode = (process.env.AUDIO_ENGINE || '').trim().toLowerCase() === 'edge' ||
-            (process.env.AUDIO_ENGINE || '').trim().toLowerCase() === 'edge-tts' ||
-            (process.env.QWEN_SPEAKER || '').trim().toLowerCase() === 'giuseppe';
-
           const AUDIO = {
             dir: path.resolve('data', 'audio'),
-            qwenBin: process.env.QWEN_BIN || '',
-            qwenModel: process.env.QWEN_MODEL_DIR || '',
-            qwenSpeakerNews: (process.env.QWEN_SPEAKER || '').trim() || 'ryan',
-            qwenSpeakerLesson: (process.env.QWEN_SPEAKER_LESSON || '').trim() || (process.env.QWEN_SPEAKER || '').trim() || 'ryan',
             edgeVoice: (process.env.EDGE_VOICE || '').trim() || 'it-IT-GiuseppeMultilingualNeural',
-            useOpenSource: !isEdgeMode && (process.env.EVENT === 'schedule' || process.env.EVENT === 'repository_dispatch' || process.env.TEST_OPEN_SOURCE === 'true'),
-            qwenFileTimeoutMs: Number(process.env.QWEN_FILE_TIMEOUT_MIN || 45) * 60000,
-            qwenBlockTimeoutMs: 6 * 60000,
+            useOpenSource: false,
             bitrate: process.env.AUDIO_BITRATE || '48k',
             rate: 24000,
           };
@@ -1526,20 +1477,14 @@ jobs:
       - name: Genera l'audio
         id: audio
         continue-on-error: true
-        timeout-minutes: 90
+        timeout-minutes: 20
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           EVENT: ${{ github.event_name }}
           ONLY: ${{ inputs.only || github.event.client_payload.only }}
           AUDIO_ONLY: only
-          AUDIO_ENGINE: ${{ vars.AUDIO_ENGINE }}
-          TEST_OPEN_SOURCE: ${{ inputs.test_open_source || github.event.client_payload.test_open_source }}
-          QWEN_BIN: ${{ steps.qwen-check.outputs.bin }}
-          QWEN_MODEL_DIR: ${{ steps.qwen-check.outputs.model }}
-          QWEN_SPEAKER: ${{ vars.QWEN_SPEAKER }}
-          QWEN_SPEAKER_LESSON: ${{ vars.QWEN_SPEAKER_LESSON }}
-          EDGE_VOICE: ${{ vars.EDGE_VOICE }}
+          EDGE_VOICE: ${{ vars.EDGE_VOICE || 'it-IT-GiuseppeMultilingualNeural' }}
           AUDIO_BITRATE: ${{ vars.AUDIO_BITRATE }}
         run: |
           git pull --rebase || true
