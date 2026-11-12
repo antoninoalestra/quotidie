@@ -8,16 +8,20 @@ name: Edizione del mattino
 # Con un altro nome o in un'altra cartella GitHub lo ignora: niente avvio automatico
 # e niente pulsante "Run workflow".
 
-run-name: ${{ github.event_name == 'schedule' && 'Edizione automatica' || format('Edizione manuale ({0})', inputs.only || 'tutto') }}
+run-name: ${{ (github.event_name == 'schedule' || github.event_name == 'repository_dispatch') && 'Edizione automatica' || format('Edizione manuale ({0})', inputs.only || github.event.client_payload.only || 'tutto') }}
 
 on:
   schedule:
-    # Orari in UTC (GitHub non segue l'ora legale):
-    #   02:15 UTC = 03:15 in inverno, 04:15 in estate (ora italiana)
-    #   03:45 UTC = 04:45 in inverno, 05:45 in estate: riserva, completa solo ciò che manca
-    # Anche con i ritardi di GitHub (fino a 60 minuti) tutto è pronto prima delle 6:30.
-    - cron: "15 2 * * *"
-    - cron: "45 3 * * *"
+    # Orari UTC scaglionati nella notte a minuti non congestionati.
+    # Il generatore è idempotente: se l'edizione di oggi esiste già, salta in 5 secondi.
+    # 23:17 UTC = 00:17 ora solare italiana (subito dopo mezzanotte, assorbe i ritardi di 5-7h di GitHub)
+    # 01:23 UTC = 02:23 ora solare italiana
+    # 03:07 UTC = 04:07 ora solare italiana
+    # 04:41 UTC = 05:41 ora solare italiana (riserva prima delle 6:30)
+    - cron: "17 23 * * *"
+    - cron: "23 1 * * *"
+    - cron: "7 3 * * *"
+    - cron: "41 4 * * *"
   workflow_dispatch:
     inputs:
       only:
@@ -37,6 +41,8 @@ on:
         description: "Prova la voce open source (lenta, 20-40 minuti)"
         type: boolean
         default: false
+  repository_dispatch:
+    types: [daily, tutto, news, lesson]
 
 permissions:
   contents: write
@@ -395,25 +401,30 @@ jobs:
 
           async function ttsEdge(blocks, voice, rate, tmp) {
             const parts = [];
+            const voicesToTry = [voice, 'it-IT-DiegoNeural', 'it-IT-IsabellaNeural'].filter((v, idx, arr) => v && arr.indexOf(v) === idx);
             for (let i = 0; i < blocks.length; i++) {
               const txt = path.join(tmp, `edge-${i}.txt`);
               const mp3 = path.join(tmp, `edge-${i}.mp3`);
               const wavOut = path.join(tmp, `edge-${i}.wav`);
               await writeFile(txt, blocks[i], 'utf8');
               let lastErr;
-              for (let attempt = 1; attempt <= 3; attempt++) {
-                try {
-                  await audioRun('edge-tts', ['--voice', voice, `--rate=${rate}`, '-f', txt, '--write-media', mp3], { timeout: 3 * 60000 });
-                  lastErr = null;
-                  break;
-                } catch (err) {
-                  lastErr = err;
-                  await new Promise((r) => setTimeout(r, 3000 * attempt));
+              for (const v of voicesToTry) {
+                for (let attempt = 1; attempt <= 2; attempt++) {
+                  try {
+                    await audioRun('edge-tts', ['--voice', v, `--rate=${rate}`, '-f', txt, '--write-media', mp3], { timeout: 3 * 60000 });
+                    lastErr = null;
+                    break;
+                  } catch (err) {
+                    lastErr = err;
+                    await new Promise((r) => setTimeout(r, 2000 * attempt));
+                  }
                 }
+                if (!lastErr) break;
               }
               if (lastErr) throw lastErr;
               await audioRun('ffmpeg', ['-y', '-loglevel', 'error', '-i', mp3, '-ar', String(AUDIO.rate), '-ac', '1', '-c:a', 'pcm_s16le', wavOut]);
               parts.push(parseWav(await readFile(wavOut)).pcm);
+              await new Promise((r) => setTimeout(r, 400));
             }
             return parts;
           }
@@ -1484,9 +1495,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           EVENT: ${{ github.event_name }}
-          ONLY: ${{ inputs.only }}
-          FORCE: ${{ inputs.force }}
-          NEW_SERIES: ${{ inputs.new_series }}
+          ONLY: ${{ inputs.only || github.event.client_payload.only }}
+          FORCE: ${{ inputs.force || github.event.client_payload.force }}
+          NEW_SERIES: ${{ inputs.new_series || github.event.client_payload.new_series }}
           AUDIO_ONLY: skip
         run: node "$RUNNER_TEMP/gen/generate.mjs"
 
@@ -1516,9 +1527,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           EVENT: ${{ github.event_name }}
-          ONLY: ${{ inputs.only }}
+          ONLY: ${{ inputs.only || github.event.client_payload.only }}
           AUDIO_ONLY: only
-          TEST_OPEN_SOURCE: ${{ inputs.test_open_source }}
+          TEST_OPEN_SOURCE: ${{ inputs.test_open_source || github.event.client_payload.test_open_source }}
           QWEN_BIN: ${{ steps.qwen-check.outputs.bin }}
           QWEN_MODEL_DIR: ${{ steps.qwen-check.outputs.model }}
           QWEN_SPEAKER: ${{ vars.QWEN_SPEAKER }}
@@ -1550,5 +1561,10 @@ jobs:
       - name: Segnala errori di generazione
         if: steps.gen.outcome == 'failure' || steps.audio.outcome == 'failure'
         run: |
-          echo "::error::La generazione non è riuscita del tutto: apri lo step 'Genera notizie e lezione' per il dettaglio."
-          exit 1
+          if [ "${{ steps.gen.outcome }}" = "failure" ]; then
+            echo "::error::La generazione dei contenuti non è riuscita: apri lo step 'Genera notizie e lezione' per il dettaglio."
+            exit 1
+          fi
+          if [ "${{ steps.audio.outcome }}" = "failure" ]; then
+            echo "::warning::Alcuni file audio non sono stati completati: verranno completati alla successiva esecuzione programmata."
+          fi
