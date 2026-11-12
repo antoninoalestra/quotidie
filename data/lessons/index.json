@@ -2,11 +2,11 @@
   "lessons": [
     {
       "date": "2026-11-12",
-      "title": "Le Sirene Alate: L'Inganno Mortale Prima della Coda di Pesce",
-      "category": "Mitologia",
-      "categoryId": "mitologia",
+      "title": "Immagini che Ingannano: L'AI e la Fragilità Nascosta",
+      "category": "Intelligenza artificiale",
+      "categoryId": "intelligenza-artificiale",
       "minutes": 4,
-      "hook": "Immaginate un canto così soave da promettere la conoscenza più profonda, un'armonia capace di penetrare l'anima. Ora, dimenticate le sirene con la coda di pesce che popolano i nostri sogni marini. E se il loro vero volto fosse quello di creature alate, rapaci e mortali, il cui richiamo non portava a un abbraccio acquatico, ma a una fine ben più cruenta?",
+      "hook": "Immaginate di guardare un'immagine. Ai vostri occhi, è chiaramente un pinguino. Ma per un'intelligenza artificiale, quella stessa immagine potrebbe improvvisamente diventare un tostapane, senza che voi percepiate alcun cambiamento. Come è possibile una tale distorsione della realtà digitale?",
       "kind": "regular"
     },
     {
