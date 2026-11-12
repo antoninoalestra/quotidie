@@ -1,0 +1,116 @@
+{
+  "sampleText": "Buongiorno! Stai ascoltando Quotidie, la tua rassegna del mattino. Oggi esploriamo le notizie principali e una nuova lezione di storia e scienza.",
+  "updatedAt": "2026-11-12T11:22:15.820Z",
+  "qwen": [
+    {
+      "id": "ryan",
+      "name": "Ryan",
+      "gender": "male",
+      "desc": "Maschile, ritmo dinamico e incisivo",
+      "file": "data/audio/samples/sample-ryan.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "aiden",
+      "name": "Aiden",
+      "gender": "male",
+      "desc": "Maschile, tono solare, pulito e moderno",
+      "file": "data/audio/samples/sample-aiden.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "dylan",
+      "name": "Dylan",
+      "gender": "male",
+      "desc": "Maschile, voce naturale, giovanile e morbida",
+      "file": "data/audio/samples/sample-dylan.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "eric",
+      "name": "Eric",
+      "gender": "male",
+      "desc": "Maschile, vivace, brillante ed energico",
+      "file": "data/audio/samples/sample-eric.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "uncle_fu",
+      "name": "Uncle Fu",
+      "gender": "male",
+      "desc": "Maschile, profondo, caldo e maturo",
+      "file": "data/audio/samples/sample-uncle_fu.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "serena",
+      "name": "Serena",
+      "gender": "female",
+      "desc": "Femminile, calda, rassicurante e fluida",
+      "file": "data/audio/samples/sample-serena.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "vivian",
+      "name": "Vivian",
+      "gender": "female",
+      "desc": "Femminile, limpida, chiara e brillante",
+      "file": "data/audio/samples/sample-vivian.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "ono_anna",
+      "name": "Ono Anna",
+      "gender": "female",
+      "desc": "Femminile, vivace, spontanea e colloquiale",
+      "file": "data/audio/samples/sample-ono_anna.mp3",
+      "engine": "qwen3-tts"
+    },
+    {
+      "id": "sohee",
+      "name": "Sohee",
+      "gender": "female",
+      "desc": "Femminile, espressiva e armoniosa",
+      "file": "data/audio/samples/sample-sohee.mp3",
+      "engine": "qwen3-tts"
+    }
+  ],
+  "edge": [
+    {
+      "id": "giuseppe",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "name": "Giuseppe",
+      "gender": "male",
+      "desc": "Voce italiana predefinita Edge-TTS, rapida e chiara",
+      "file": "data/audio/samples/sample-giuseppe.mp3",
+      "engine": "edge-tts"
+    },
+    {
+      "id": "diego",
+      "voice": "it-IT-DiegoNeural",
+      "name": "Diego",
+      "gender": "male",
+      "desc": "Voce maschile classica Edge-TTS",
+      "file": "data/audio/samples/sample-diego.mp3",
+      "engine": "edge-tts"
+    },
+    {
+      "id": "isabella",
+      "voice": "it-IT-IsabellaNeural",
+      "name": "Isabella",
+      "gender": "female",
+      "desc": "Voce femminile naturale Edge-TTS",
+      "file": "data/audio/samples/sample-isabella.mp3",
+      "engine": "edge-tts"
+    },
+    {
+      "id": "elsa",
+      "voice": "it-IT-ElsaNeural",
+      "name": "Elsa",
+      "gender": "female",
+      "desc": "Voce femminile classica Edge-TTS",
+      "file": "data/audio/samples/sample-elsa.mp3",
+      "engine": "edge-tts"
+    }
+  ]
+}
