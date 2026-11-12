@@ -10,13 +10,13 @@
       "generatedAt": "2026-11-05T10:05:00.414Z"
     },
     "lesson-latest.mp3": {
-      "date": "2026-11-11",
+      "date": "2026-11-12",
       "kind": "lesson",
-      "engine": "edge-tts",
-      "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 305,
+      "engine": "qwen3-tts",
+      "voice": "ryan",
+      "seconds": 470,
       "rewritten": true,
-      "generatedAt": "2026-11-11T07:12:44.134Z"
+      "generatedAt": "2026-11-12T10:31:29.118Z"
     },
     "news-2026-11-05.mp3": {
       "date": "2026-11-05",
@@ -28,13 +28,14 @@
       "generatedAt": "2026-11-05T09:17:10.306Z"
     },
     "news-latest.mp3": {
-      "date": "2026-11-11",
+      "date": "2026-11-12",
       "kind": "news",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 684,
+      "seconds": 855,
       "rewritten": true,
-      "generatedAt": "2026-11-11T19:10:33.409Z"
+      "fallbackReason": "qwen_tts: tempo scaduto",
+      "generatedAt": "2026-11-12T10:18:58.186Z"
     },
     "news-2026-11-06.mp3": {
       "date": "2026-11-06",
@@ -145,7 +146,26 @@
       "seconds": 305,
       "rewritten": true,
       "generatedAt": "2026-11-11T07:12:44.134Z"
+    },
+    "news-2026-11-12.mp3": {
+      "date": "2026-11-12",
+      "kind": "news",
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 855,
+      "rewritten": true,
+      "fallbackReason": "qwen_tts: tempo scaduto",
+      "generatedAt": "2026-11-12T10:18:58.186Z"
+    },
+    "lesson-2026-11-12.mp3": {
+      "date": "2026-11-12",
+      "kind": "lesson",
+      "engine": "qwen3-tts",
+      "voice": "ryan",
+      "seconds": 470,
+      "rewritten": true,
+      "generatedAt": "2026-11-12T10:31:29.118Z"
     }
   },
-  "updatedAt": "2026-11-11T19:10:33.409Z"
+  "updatedAt": "2026-11-12T10:31:29.118Z"
 }
