@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-13",
+      "words": [
+        "Ponder",
+        "Resilient",
+        "Facilitate",
+        "Mitigate",
+        "Rely on"
+      ],
+      "levels": [
+        "B2",
+        "C1",
+        "C1",
+        "C1",
+        "B2"
+      ]
+    },
+    {
       "date": "2026-11-12",
       "words": [
         "conundrum",
@@ -35,5 +52,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-12T09:32:44.280Z"
+  "updatedAt": "2026-11-13T03:28:19.630Z"
 }

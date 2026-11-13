@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-13",
+      "title": "La Curvatura Nascosta del Partenone: L'Illusione Perfetta",
+      "category": "Architettura",
+      "categoryId": "architettura",
+      "minutes": 3,
+      "hook": "Immaginate di dover costruire un edificio così imponente da sfidare la percezione umana. Come fareste in modo che linee perfettamente dritte non sembrino incurvarsi, cadere o collassare? Il Partenone, capolavoro dell'antica Grecia, ci offre una risposta sorprendente, piegando le leggi dell'ottica a suo favore.",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-12",
       "title": "Immagini che Ingannano: L'AI e la Fragilità Nascosta",
       "category": "Intelligenza artificiale",

@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-13",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-13T03:28:19.630Z",
+  "words": [
+    {
+      "id": "2026-11-13-1",
+      "word": "Ponder",
+      "category": "general",
+      "ipa": "/ˈpɒndə/",
+      "partOfSpeech": "verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Riflettere profondamente su qualcosa, considerare attentamente.",
+      "definitionEn": "To think carefully about something for a period of time, often before making a decision.",
+      "examples": [
+        "She spent the afternoon pondering the meaning of life.",
+        "He paused to ponder his next move in the chess game."
+      ],
+      "exampleIt": "Ha passato il pomeriggio a riflettere sul significato della vita.",
+      "synonyms": [
+        "reflect",
+        "contemplate",
+        "muse"
+      ],
+      "collocations": [
+        "ponder a question",
+        "ponder a decision",
+        "ponder the implications"
+      ],
+      "commonMistake": "Gli italiani a volte usano \"ponder\" in modo troppo leggero; implica una riflessione più profonda e prolungata rispetto a un semplice \"think\".",
+      "cloze": "Before accepting the job offer, she needed a few days to ____ the pros and cons.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-13-1.mp3"
+    },
+    {
+      "id": "2026-11-13-2",
+      "word": "Resilient",
+      "category": "general",
+      "ipa": "/rɪˈzɪliənt/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Capace di riprendersi rapidamente da difficoltà o shock; elastico.",
+      "definitionEn": "Able to return to its original shape after being bent, stretched, or compressed; able to recover quickly.",
+      "examples": [
+        "Children are often very resilient and adapt quickly to new situations.",
+        "The economy has proven remarkably resilient despite global challenges."
+      ],
+      "exampleIt": "I bambini sono spesso molto resilienti e si adattano rapidamente a nuove situazioni.",
+      "synonyms": [
+        "strong",
+        "robust",
+        "tough"
+      ],
+      "collocations": [
+        "resilient community",
+        "mentally resilient",
+        "highly resilient"
+      ],
+      "commonMistake": "Non confondere con \"resistant\" (resistente a qualcosa, es. ai danni). \"Resilient\" si riferisce più alla capacità di recupero.",
+      "cloze": "After facing several setbacks, the team proved to be incredibly ____ and managed to win the championship.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-13-2.mp3"
+    },
+    {
+      "id": "2026-11-13-3",
+      "word": "Facilitate",
+      "category": "business",
+      "ipa": "/fəˈsɪlɪteɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Rendere più facile o possibile un processo o un'azione.",
+      "definitionEn": "To make an action or process easier or more likely to happen.",
+      "examples": [
+        "The new software will facilitate communication between departments.",
+        "A good leader should facilitate discussion, not dominate it."
+      ],
+      "exampleIt": "Il nuovo software faciliterà la comunicazione tra i dipartimenti.",
+      "synonyms": [
+        "enable",
+        "assist",
+        "expedite"
+      ],
+      "collocations": [
+        "facilitate communication",
+        "facilitate growth",
+        "facilitate learning"
+      ],
+      "commonMistake": "A volte gli italiani tendono a usare \"make easy\" o \"simplify\" quando \"facilitate\" sarebbe più appropriato in contesti formali di business.",
+      "cloze": "Our goal is to ____ the exchange of ideas among all team members during the workshop.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-13-3.mp3"
+    },
+    {
+      "id": "2026-11-13-4",
+      "word": "Mitigate",
+      "category": "business",
+      "ipa": "/ˈmɪtɪɡeɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Rendere meno grave, ridurre l'impatto o la severità di qualcosa.",
+      "definitionEn": "To make something less harmful, serious, or painful.",
+      "examples": [
+        "We need to find ways to mitigate the risks associated with this investment.",
+        "Emergency measures were put in place to mitigate the effects of the flood."
+      ],
+      "exampleIt": "Dobbiamo trovare modi per mitigare i rischi associati a questo investimento.",
+      "synonyms": [
+        "alleviate",
+        "lessen",
+        "reduce"
+      ],
+      "collocations": [
+        "mitigate risk",
+        "mitigate damage",
+        "mitigate impact"
+      ],
+      "commonMistake": "Gli italiani a volte usano \"reduce\" in contesti formali dove \"mitigate\" suona più specifico e appropriato per pericoli o problemi gravi.",
+      "cloze": "The company implemented new security protocols to ____ potential cyber threats.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-13-4.mp3"
+    },
+    {
+      "id": "2026-11-13-5",
+      "word": "Rely on",
+      "category": "phrasal",
+      "ipa": "/rɪˈlaɪ ɒn/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Dipendere da qualcuno/qualcosa; fidarsi di qualcuno/qualcosa.",
+      "definitionEn": "To need or depend on someone or something; to trust someone or something.",
+      "examples": [
+        "You can always rely on me for support.",
+        "Many people rely on public transport to get to work."
+      ],
+      "exampleIt": "Puoi sempre contare su di me per un supporto.",
+      "synonyms": [
+        "depend on",
+        "count on",
+        "trust"
+      ],
+      "collocations": [
+        "rely on instinct",
+        "heavily rely on",
+        "rely on data"
+      ],
+      "commonMistake": "Non confondere con \"rely to\". La preposizione corretta è sempre \"on\".",
+      "cloze": "In a crisis, it's good to know you have colleagues you can ____ for help.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-13-5.mp3"
+    }
+  ]
+}
