@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-14",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-14T03:21:06.571Z",
+  "words": [
+    {
+      "id": "2026-11-14-1",
+      "word": "Scrutinize",
+      "category": "general",
+      "ipa": "/ˈskruːtɪnaɪz/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Esaminare attentamente, analizzare minuziosamente qualcosa per trovare dettagli o errori.",
+      "definitionEn": "To examine something very carefully and thoroughly, often to find mistakes or details.",
+      "examples": [
+        "The police meticulously scrutinized the crime scene for any clues.",
+        "Before signing, it's crucial to scrutinize the contract for any hidden clauses."
+      ],
+      "exampleIt": "La polizia ha esaminato meticolosamente la scena del crimine in cerca di indizi.",
+      "synonyms": [
+        "examine",
+        "inspect",
+        "analyse"
+      ],
+      "collocations": [
+        "scrutinize documents",
+        "scrutinize data",
+        "scrutinize evidence"
+      ],
+      "commonMistake": "Non confonderlo con il sostantivo 'scrutiny'. Non si usa 'scrutinize' con il significato di votare o selezionare, che è un falso amico con 'scrutinio' in italiano.",
+      "cloze": "Auditors will ____ the company's financial records to ensure compliance.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-14-1.mp3"
+    },
+    {
+      "id": "2026-11-14-2",
+      "word": "Compelling",
+      "category": "general",
+      "ipa": "/kəmˈpelɪŋ/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Avvincente, convincente, irresistibile (riferito a argomenti, prove, storie).",
+      "definitionEn": "Evoking interest, attention, or admiration in a powerfully irresistible way; very convincing.",
+      "examples": [
+        "Her arguments for the new policy were so compelling that everyone agreed.",
+        "The novel told a compelling story of survival against all odds."
+      ],
+      "exampleIt": "Le sue argomentazioni a favore della nuova politica erano così convincenti che tutti furono d'accordo.",
+      "synonyms": [
+        "convincing",
+        "persuasive",
+        "captivating"
+      ],
+      "collocations": [
+        "compelling evidence",
+        "compelling argument",
+        "compelling narrative"
+      ],
+      "commonMistake": "Spesso confuso con 'obligatory' o 'mandatory'. 'Compelling' si riferisce alla forza persuasiva o all'attrattiva, non a un obbligo.",
+      "cloze": "The documentary presented a truly ____ case for environmental protection.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-14-2.mp3"
+    },
+    {
+      "id": "2026-11-14-3",
+      "word": "Incentivise",
+      "category": "business",
+      "ipa": "/ɪnˈsentɪvaɪz/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Incentivare, stimolare qualcuno a fare qualcosa, spesso offrendo premi o vantaggi.",
+      "definitionEn": "To motivate or encourage someone to do something, especially by offering a reward or benefit.",
+      "examples": [
+        "The company decided to incentivise employees with bonuses for meeting targets.",
+        "We need to find ways to incentivise innovation within the team."
+      ],
+      "exampleIt": "L'azienda ha deciso di incentivare i dipendenti con bonus per il raggiungimento degli obiettivi.",
+      "synonyms": [
+        "motivate",
+        "encourage",
+        "stimulate"
+      ],
+      "collocations": [
+        "incentivise staff",
+        "incentivise customers",
+        "incentivise growth"
+      ],
+      "commonMistake": "Non usare 'incentivate' come sostantivo al posto di 'incentive'. 'Incentivise' è il verbo, mentre 'incentive' è il nome (l'incentivo).",
+      "cloze": "Governments often ____ businesses to adopt greener practices through tax breaks.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-14-3.mp3"
+    },
+    {
+      "id": "2026-11-14-4",
+      "word": "Discrepancy",
+      "category": "business",
+      "ipa": "/dɪˈskrepənsi/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Discrepanza, differenza, incongruenza tra due o più fatti, cifre o cose.",
+      "definitionEn": "A lack of compatibility or similarity between two or more facts, figures, or things; a difference.",
+      "examples": [
+        "There was a significant discrepancy between the two reports' sales figures.",
+        "Auditors found a small discrepancy in the accounts that required further investigation."
+      ],
+      "exampleIt": "C'era una discrepanza significativa tra le cifre di vendita dei due rapporti.",
+      "synonyms": [
+        "inconsistency",
+        "divergence",
+        "variance"
+      ],
+      "collocations": [
+        "resolve a discrepancy",
+        "financial discrepancy",
+        "address a discrepancy"
+      ],
+      "commonMistake": "Non usare 'discrepancy' al posto di 'disagreement' se si parla di opinioni. Si riferisce a fatti, dati o registrazioni, non a persone.",
+      "cloze": "We need to clarify the ____ in the delivery dates provided by the supplier.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-14-4.mp3"
+    },
+    {
+      "id": "2026-11-14-5",
+      "word": "Delve into",
+      "category": "phrasal",
+      "ipa": "/delv ˈɪntuː/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Approfondire, addentrarsi in (un argomento, una ricerca, un'indagine) per scoprire informazioni.",
+      "definitionEn": "To search deeply and thoroughly into something, often to discover information or details.",
+      "examples": [
+        "The research team will delve into the historical archives to find more data.",
+        "I'd like to delve into the reasons behind the recent market fluctuations."
+      ],
+      "exampleIt": "Il team di ricerca approfondirà gli archivi storici per trovare più dati.",
+      "synonyms": [
+        "investigate",
+        "explore",
+        "probe into"
+      ],
+      "collocations": [
+        "delve into a topic",
+        "delve into details",
+        "delve into research"
+      ],
+      "commonMistake": "Gli italiani a volte usano 'deepen into' che non è corretto. L'espressione comune è 'delve into' o 'go deeper into'.",
+      "cloze": "Before making a decision, we need to ____ the potential risks.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-14-5.mp3"
+    }
+  ]
+}

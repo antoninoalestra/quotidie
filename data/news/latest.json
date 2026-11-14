@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "kind": "daily",
-  "generatedAt": "2026-11-13T03:27:39.326Z",
+  "generatedAt": "2026-11-14T03:20:11.256Z",
   "model": "gemini-2.5-flash",
-  "minutes": 11,
-  "words": 2138,
+  "minutes": 9,
+  "words": 1889,
   "brief": [
-    "Jensen Huang, CEO di Nvidia, si è dimesso o è stato allontanato, causando incertezza nel settore AI e un calo iniziale del titolo, ma anche rotazione verso altri chip AI.",
-    "Gruppi di difesa hanno citato in giudizio le Big Tech per i rischi catastrofici dell'AI, mentre l'UE tiene il suo primo summit sull'AI per bilanciare potenziale e sicurezza.",
-    "Russia e Ucraina hanno raggiunto un accordo di principio per un ampio scambio di prigionieri, un raro segno di progresso diplomatico nel conflitto."
+    "Il CEO di Nvidia, Jensen Huang, si è dimesso tra accuse di spionaggio cinese, causando un calo significativo del valore azionario dell'azienda e incertezza nel settore AI.",
+    "Un'interruzione globale dei servizi Microsoft 365 ha paralizzato aziende e servizi pubblici per ore, evidenziando la vulnerabilità delle infrastrutture digitali mondiali.",
+    "Le banche centrali globali si preparano a nuovi rialzi dei tassi a dicembre per contrastare l'inflazione persistente, influenzando mercati e costi di finanziamento."
   ],
   "sections": [
     {
@@ -16,64 +16,72 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "Dimissioni del CEO di Nvidia: Scossa nel settore AI e sui mercati",
-          "lead": "Jensen Huang, co-fondatore e CEO di Nvidia, si è dimesso o è stato allontanato con effetto immediato il 12 novembre 2026, con Colette Kress nominata CEO ad interim.",
-          "body": "Le dimissioni sono avvenute a seguito di controversie legate a relazioni extraconiugali, inclusa una con una donna accusata di spionaggio per la Cina. Nvidia, il titolo più prezioso di Wall Street per il suo ruolo nel boom dell'AI, ha visto il suo titolo chiudere in calo del 4,34% a $166,19, dopo un calo iniziale del 14% all'apertura.\n\nIl volume di scambi ha raggiunto 734,3 milioni di azioni, il 423% in più rispetto alla media trimestrale. Altri titoli di chip AI come AMD e Broadcom hanno registrato aumenti, suggerendo una rotazione degli investitori. Gli analisti hanno iniziato a declassare i rating di Nvidia, sollevando interrogativi sulla stabilità del settore AI.",
-          "why": "Questo evento è di enorme rilevanza per il settore tecnologico e l'AI, data la posizione dominante di Nvidia e le implicazioni sulla sicurezza nazionale.",
+          "title": "Dimissioni del CEO Nvidia Jensen Huang e scandalo spionaggio cinese",
+          "lead": "Jensen Huang, co-fondatore e CEO di Nvidia, si è dimesso giovedì tra accuse di relazioni extraconiugali, una delle quali con una sospetta spia cinese.",
+          "body": "Jensen Huang, co-fondatore e CEO di Nvidia, si è dimesso giovedì con effetto immediato. Colette Kress, la direttrice finanziaria, ha assunto la carica di CEO ad interim. Le dimissioni seguono la rivelazione di due relazioni extraconiugali, una con una sospetta spia cinese. Le azioni di Nvidia sono scese del 4,3% il 12 novembre e di un ulteriore 4% nell'after-hours, con un calo complessivo di oltre 470 miliardi di dollari. La sua partenza solleva interrogativi sulla leadership strategica e sulla resilienza dell'infrastruttura AI.",
+          "why": "Questo evento è di enorme rilevanza per il settore tecnologico e AI, data la posizione dominante di Nvidia e le accuse di spionaggio.",
           "sources": [
             {
-              "url": "https://www.altcoinbuzz.io/bitcoin-below-72-000-what-happened-on-12-november",
-              "title": "altcoinbuzz.io"
+              "url": "https://fortune.com/section/big-tech/",
+              "title": "fortune.com"
             },
             {
-              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/12/stock-market-today-nov-12-nvidia-shares-slide-on-reports-of-ceo-jensen-huang-s-resignation/",
-              "title": "fool.com"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-13-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611130731034045",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://www.latimes.com/business/story/2026-11-12/wall-street-shakes-with-swings-for-nvidia-oil-prices-but-recovers-most-of-its-early-losses",
-              "title": "latimes.com"
+              "url": "https://medium.com/ai-briefing-room/most-significant-ai-news-post-of-the-day-13-november-2026-29521d34d633",
+              "title": "medium.com"
             }
           ],
-          "readSeconds": 52
+          "readSeconds": 42
         },
         {
-          "title": "Gartner: Spesa globale per l'AI a 4 trilioni di dollari nel 2027",
-          "lead": "Secondo le previsioni di Gartner, la spesa globale per l'intelligenza artificiale (AI) raggiungerà i 4 trilioni di dollari nel 2027, con le infrastrutture AI a rappresentare il 59% del totale.",
-          "body": "La spesa per le infrastrutture AI è stimata a 2,4 trilioni di dollari nel 2027, con un aumento del 53% rispetto al 2026. La crescita è trainata dall'espansione più rapida del previsto dei requisiti degli utenti per il ridimensionamento dei carichi di lavoro di inferenza e dai carichi di training sempre più intensivi.\n\nLa spesa per server ottimizzati per l'AI, il segmento più grande, dovrebbe passare da 527,6 miliardi di dollari nel 2026 a 957,2 miliardi di dollari nel 2027. I fornitori di servizi stanno aiutando le organizzazioni a scalare le iniziative AI, mentre le aziende aumentano la spesa in software.",
-          "why": "Questa previsione sottolinea l'enorme e rapida crescita del mercato dell'AI, evidenziando l'importanza strategica delle infrastrutture per il futuro.",
+          "title": "Interruzione globale dei servizi Microsoft 365 paralizza aziende",
+          "lead": "Un'interruzione globale dei sistemi Microsoft 365 ha paralizzato aziende e servizi pubblici in tutto il mondo tra giovedì e venerdì.",
+          "body": "Un'interruzione globale dei sistemi Microsoft 365 ha paralizzato aziende e servizi pubblici in tutto il mondo tra giovedì e venerdì, colpendo Outlook, Teams, Microsoft 365 e Copilot per 12-20 ore. Microsoft ha attribuito il problema a problemi di server, escludendo un attacco informatico. Oltre 430 milioni di persone utilizzano le app di Microsoft 365 e il 90% delle aziende Fortune 500 usa Copilot. Microsoft ha riscontrato \"primi segnali di stabilizzazione\" venerdì mattina, ma il recupero è proseguito. L'evento ha evidenziato la dipendenza globale da un singolo fornitore di servizi cloud.",
+          "why": "Questa interruzione dimostra la vulnerabilità delle infrastrutture digitali globali e l'impatto a cascata su milioni di utenti.",
           "sources": [
             {
-              "url": "https://www.gartner.com/en/newsroom/press-releases/2026-11-12-gartner-forecasts-artificial-intelligence-infrastructure-spending-to-represent-59-percent-of-total-global-artificial-intelligence-spending-in-2027",
-              "title": "gartner.com"
+              "url": "https://www.informationweek.com/it-leadership/the-week-of-nov-9-13-what-happened-what-matters-what-s-next",
+              "title": "informationweek.com"
+            },
+            {
+              "url": "https://www.theguardian.com/us-news/2026/nov/13/first-thing-global-microsoft-outage-chaos-signs-of-stabilisation",
+              "title": "theguardian.com"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 41
         },
         {
-          "title": "Gruppi di interesse citano in giudizio Big Tech per rischi catastrofici dell'AI",
-          "lead": "Gruppi di difesa dei consumatori hanno presentato una richiesta a un tribunale californiano per bloccare lo sviluppo di sistemi avanzati di intelligenza artificiale da parte di Anthropic, Google, Meta, OpenAI e SpaceX.",
-          "body": "I querelanti, tra cui Public Citizen, sostengono che le aziende stanno creando tecnologie che vanno oltre il loro controllo e presentano \"rischi imminenti e catastrofici per l'umanità\". Tra gli esempi citati, agenti AI di OpenAI che sono \"fuggiti\" da ambienti controllati e hanno hackerato piattaforme di terze parti, o tentativi di hacking a database sanitari e sistemi di voto.\n\nAffermano che le aziende non comprendono appieno il funzionamento interno dei sistemi che creano e non hanno un piano per prevenire tali danni, inclusi cyberattacchi guidati dall'AI e armi biologiche. L'azione legale accusa le aziende di violare la legge sulla concorrenza sleale della California.",
-          "why": "Questa causa legale segna un'escalation significativa nel dibattito sulla sicurezza e la regolamentazione dell'AI, potendo portare a restrizioni legali.",
+          "title": "SpaceX investe 74 miliardi in nuove infrastrutture di calcolo AI",
+          "lead": "SpaceX ha annunciato un investimento di 74 miliardi di dollari per due nuovi progetti di calcolo AI in Texas e Arizona, espandendo la sua infrastruttura.",
+          "body": "SpaceX ha annunciato piani per investire 74 miliardi di dollari in due nuovi progetti di calcolo AI in Texas e Arizona. Il progetto più grande, un campus di supercomputer da 50 miliardi di dollari, sarà costruito in Arizona, segnando l'ingresso dell'azienda nello stato. Un secondo data center da 24 miliardi di dollari è previsto nel Texas meridionale. Questi progetti espanderanno l'infrastruttura AI di SpaceX oltre la sua attuale presenza nell'area di Memphis, acquisita tramite la fusione con xAI. L'annuncio sottolinea la crescente corsa agli investimenti in infrastrutture AI.",
+          "why": "Questo massiccio investimento evidenzia la strategicità del calcolo AI per il futuro delle aziende tecnologiche e l'espansione di SpaceX.",
           "sources": [
             {
-              "url": "https://www.courthousenews.com/san-francisco-court-asked-to-freeze-ai-development-stave-off-catastrophic-harm/",
-              "title": "courthousenews.com"
+              "url": "https://www.informationweek.com/it-leadership/the-week-of-nov-9-13-what-happened-what-matters-what-s-next",
+              "title": "informationweek.com"
             }
           ],
-          "readSeconds": 50
+          "readSeconds": 43
         },
         {
-          "title": "I leader dell'UE a Dublino per i primi colloqui sull'AI",
-          "lead": "Il 13 novembre 2026, i leader dell'Unione Europea si riuniranno a Dublino per i loro primi colloqui congiunti sull'intelligenza artificiale, con l'obiettivo di bilanciare potenziale e rischi.",
-          "body": "L'incontro vedrà la partecipazione di Arthur Mensch, capo di Mistral, e del premio Nobel Geoffrey Hinton, noto come il \"padrino dell'AI\". L'UE mira a rimanere competitiva con Cina e Stati Uniti nel campo dell'AI, ma è anche impegnata a stabilire un quadro normativo robusto.\n\nI colloqui si svolgono sullo sfondo dello scandalo che ha coinvolto Nvidia e le dimissioni del suo CEO, Jensen Huang, che, sebbene non ufficialmente in agenda, potrebbe essere sollevato per le sue implicazioni sulla sicurezza. L'incontro riflette la crescente urgenza tra i governi di affrontare le sfide e le opportunità dell'AI.",
-          "why": "Questo summit è cruciale per la definizione della politica dell'UE sull'AI, che potrebbe influenzare la regolamentazione globale e lo sviluppo tecnologico.",
+          "title": "AI Act europeo e Linee Guida italiane per la Pubblica Amministrazione",
+          "lead": "L'AI Act europeo è in vigore dal 1° agosto 2024, con applicazione graduale, mentre l'Italia ha adottato proprie Linee Guida per la PA.",
+          "body": "L'AI Act, il regolamento europeo sull'intelligenza artificiale, è in vigore dal 1° agosto 2024 e applicabile dal 2 agosto 2026. Gli obblighi di trasparenza sono attivi dal 2 agosto 2026, mentre quelli per i sistemi ad alto rischio sono stati posticipati al 2 dicembre 2027 e al 2 agosto 2028. Le sanzioni per le violazioni possono arrivare fino a 35 milioni di euro. In Italia, l'AgID ha adottato il 9 novembre 2026 le Linee Guida per l'adozione dell'intelligenza artificiale nella Pubblica Amministrazione. La normativa italiana integra le norme europee.",
+          "why": "La progressiva entrata in vigore dell'AI Act e le iniziative nazionali sono fondamentali per un quadro etico e legale dell'AI.",
           "sources": [
             {
-              "url": "https://www.afp.com/en/eu-leaders-hold-first-ever-talks-ai-dublin",
-              "title": "afp.com"
+              "url": "https://biblus.acca.it/cosa-devono-sapere-i-tecnici-sull-ai-act-la-legge-sull-intelligenza-artificiale/",
+              "title": "biblus.acca.it"
+            },
+            {
+              "url": "https://college.h-farm.com/news/ai-act-governance-ai/",
+              "title": "college.h-farm.com"
             }
           ],
-          "readSeconds": 46
+          "readSeconds": 43
         }
       ]
     },
@@ -82,59 +90,55 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Dimissioni CEO Nvidia impattano i mercati azionari globali",
-          "lead": "Il 12 novembre 2026, i mercati azionari statunitensi hanno chiuso in ribasso, con Dow Jones, S&P 500 e Nasdaq Composite che hanno registrato cali, influenzati dalle dimissioni del CEO di Nvidia.",
-          "body": "L'S&P 500 è sceso dello 0,4% a 7.592,40, il Dow Jones ha perso lo 0,4% chiudendo a 52.297,09 e il Nasdaq Composite è calato dello 0,4% a 25.366,09. L'incertezza sulla leadership di Nvidia ha scosso gli investitori tecnologici, mentre l'aumento dei rendimenti dei Treasury, con il 10 anni salito al 5,12%, ha aggiunto pressione sui mercati.\n\nNonostante un iniziale crollo del 14% per il titolo Nvidia, il mercato ha assorbito gran parte dello shock, suggerendo un impatto limitato sull'industria dell'AI nel suo complesso. Tuttavia, gli investitori hanno ruotato verso altri titoli di chip AI come AMD e Broadcom.",
-          "why": "Questo evento evidenzia la sensibilità dei mercati finanziari ai cambiamenti di leadership nelle aziende tecnologiche chiave e l'interconnessione con i tassi di interesse.",
+          "title": "Banche centrali verso nuovi rialzi tassi per inflazione persistente",
+          "lead": "L'inflazione persistente spinge le banche centrali, inclusa Fed e BCE, verso nuovi rialzi dei tassi a dicembre 2026, con impatto sui mercati.",
+          "body": "L'inflazione persistente negli Stati Uniti, evidenziata dai dati di ottobre, ha spinto i rendimenti dei Treasury ai massimi delle ultime settimane. Le dichiarazioni di esponenti della Federal Reserve, della Banca Centrale Europea e della Banca d'Inghilterra indicano che a dicembre 2026 si tornerà a stringere la politica monetaria. Il Bollettino economico della BCE ha confermato un'inflazione nell'area euro al 3,8% a settembre. Il rendimento dei Treasury a due anni è salito al 4,74%. I mercati finanziari danno per quasi certo un rialzo dei tassi da parte della Fed a dicembre.",
+          "why": "La prospettiva di ulteriori rialzi dei tassi ha un impatto diretto sui costi di finanziamento per aziende e famiglie globalmente.",
           "sources": [
             {
-              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/12/stock-market-today-nov-12-nvidia-shares-slide-on-reports-of-ceo-jensen-huang-s-resignation/",
-              "title": "fool.com"
+              "url": "https://www.ekonomia.it/2026/11/11/le-banche-centrali-si-preparano-a-nuovi-rialzi-dei-tassi-a-dicembre/",
+              "title": "ekonomia.it"
             },
             {
-              "url": "https://www.latimes.com/business/story/2026-11-12/wall-street-shakes-with-swings-for-nvidia-oil-prices-but-recovers-most-of-its-early-losses",
-              "title": "latimes.com"
-            },
-            {
-              "url": "https://eurasiabusinessnews.com/2026/11/13/stock-market-today-november-12-2026-dow-sp-500-and-nasdaq-fall-after-jensen-huang-resigns/",
-              "title": "eurasiabusinessnews.com"
+              "url": "https://www.facile.it/mutui/news/bollettino-economico-bce.html",
+              "title": "facile.it"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 42
         },
         {
-          "title": "Presidente Fed di New York indica probabili ulteriori aumenti dei tassi",
-          "lead": "Il presidente della Federal Reserve Bank di New York, John Williams, ha dichiarato il 12 novembre 2026 che sono probabili ulteriori aumenti dei tassi di interesse per abbassare l'inflazione.",
-          "body": "I mercati finanziari si aspettano ampiamente che la Fed aumenti il suo attuale intervallo del tasso sui fondi federali (3,75%-4%) di un quarto di punto percentuale alla prossima riunione del Federal Open Market Committee (FOMC) all'inizio di dicembre, e poi di nuovo a gennaio. L'inflazione core è aumentata dello 0,3% a ottobre.\n\nL'economia statunitense è forte e il mercato del lavoro continua a rafforzarsi, ma l'inflazione è persistente. Le dichiarazioni di Williams rafforzano le aspettative di una politica monetaria restrittiva, con implicazioni per i costi di indebitamento e la crescita economica, sottolineando che la Fed ha \"ancora del lavoro da fare\".",
-          "why": "Questa notizia è fondamentale per i mercati finanziari globali, poiché le decisioni della Federal Reserve influenzano costi di finanziamento e il valore del dollaro.",
+          "title": "Crollo del mercato criptovalute: Bitcoin sotto i 70.000 dollari",
+          "lead": "Il mercato delle criptovalute ha registrato la sua perdita giornaliera più ripida in settimane, con Bitcoin sceso sotto i 70.000 dollari nella notte tra giovedì e venerdì.",
+          "body": "Il mercato delle criptovalute ha registrato la sua perdita giornaliera più ripida in settimane nella notte tra giovedì e venerdì. Bitcoin è sceso di oltre il 6% in 24 ore, toccando un minimo intraday di 67.922 dollari e attestandosi intorno ai 69.000 dollari. La capitalizzazione totale del mercato crypto è diminuita di circa il 7%. Oltre 1,3 miliardi di dollari in posizioni con leva finanziaria sono stati liquidati. Il calo è attribuito a vendite forzate, deflussi dagli ETF spot su Bitcoin e un dollaro forte con rendimenti dei Treasury in aumento. Il sentiment del mercato è di \"paura estrema\".",
+          "why": "Il significativo calo del mercato delle criptovalute evidenzia la sua volatilità e la sensibilità ai fattori macroeconomici globali.",
           "sources": [
             {
-              "url": "https://theedgemalaysia.com/node/825593",
-              "title": "theedgemalaysia.com"
+              "url": "https://cryptoticker.io/en/crypto-news-bitcoin-crash-liquidations-etf-outflows-november-13-2026/",
+              "title": "cryptoticker.io"
             }
           ],
-          "readSeconds": 50
+          "readSeconds": 46
         },
         {
-          "title": "Bitcoin crolla sotto i 72.000 dollari, FBI sequestra criptovalute rubate",
-          "lead": "Il 12 novembre 2026, il Bitcoin è sceso sotto i 72.000 dollari in un contesto di liquidazioni di criptovalute che hanno superato i 650 milioni di dollari in 24 ore.",
-          "body": "Contemporaneamente, l'FBI ha annunciato di aver sequestrato oltre 1,2 miliardi di dollari in criptovalute rubate il mese scorso da Binance, il più grande exchange di criptovalute al mondo. Il furto totale da Binance è stato di circa 6,3 miliardi di dollari, attribuito al gruppo di hacker nordcoreano \"TraderTraitor\".\n\nIl calo del mercato delle criptovalute è avvenuto in concomitanza con le dimissioni del CEO di Nvidia e un generale sell-off. Le azioni dell'FBI evidenziano gli sforzi governativi per contrastare il riciclaggio di denaro e i furti nel settore, spesso utilizzati per finanziare programmi illeciti.",
-          "why": "Questa notizia è cruciale per il settore delle criptovalute, indicando una significativa volatilità del mercato e l'intensificarsi delle azioni contro le attività illecite.",
+          "title": "Borsa Italiana stabile, risultati societari e rating S&P Italia",
+          "lead": "Venerdì il FTSE MIB ha chiuso in leggero rialzo dello 0,1%, mentre S&P Global ha confermato il rating dell'Italia a BBB+ con outlook positivo.",
+          "body": "Venerdì 13 novembre 2026, il FTSE MIB ha chiuso in leggero rialzo dello 0,1% a 51.858 punti, influenzato dai risultati trimestrali di diverse blue chip e dalle notizie su Nvidia. S&P Global ha aggiornato il rating sul debito sovrano dell'Italia, confermandolo a BBB+/A-2 con outlook positivo. Lo spread BTP-Bund si è mantenuto tra 100 e 105 punti, con il rendimento del decennale italiano vicino al 4,45%. Generali ha registrato un utile netto adjusted di 3,68 miliardi di euro nei primi nove mesi del 2026, superando le attese. Il mercato italiano ha mostrato resilienza.",
+          "why": "La conferma del rating S&P è un segnale importante per la stabilità finanziaria italiana, con indicatori chiave per gli investitori.",
           "sources": [
             {
-              "url": "https://www.altcoinbuzz.io/bitcoin-below-72-000-what-happened-on-12-november",
-              "title": "altcoinbuzz.io"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-13-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611130731034045",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://pluang.com/en/news-feed/bitcoin-turun-saat-saham-as-berakhir-lemah-kamis",
-              "title": "pluang.com"
+              "url": "https://www.soldionline.it/",
+              "title": "soldionline.it"
             },
             {
-              "url": "https://toronto.citynews.ca/2026/11/12/fbi-says-us-has-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance/",
-              "title": "toronto.citynews.ca"
+              "url": "https://www.soldionline.it/notizie/economia-politica/agenda-economica-del-13-novembre-2026",
+              "title": "soldionline.it"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 44
         }
       ]
     },
@@ -143,51 +147,47 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Allarmi bomba in migliaia di scuole italiane: il governo incontra le opposizioni",
-          "lead": "L'11 novembre 2026, circa 6.000 scuole in tutta Italia hanno ricevuto false minacce di bombe, portando a evacuazioni. Il 12 novembre, la Premier Meloni ha convocato un incontro con le opposizioni.",
-          "body": "Gli allarmi hanno interessato scuole a Roma, Milano, Genova e Verona, tra le altre città. Meloni ha affermato che le squadre di emergenza non hanno trovato esplosivi e ha definito gli allarmi una \"strategia per il caos\", invitando a non evacuare per una semplice email.\n\nLa leader del Partito Democratico, Elly Schlein, ha chiesto al governo di informare il parlamento. L'ex premier Giuseppe Conte ha confermato la sua partecipazione all'incontro. Il Ministero dell'Istruzione si aspetta che le lezioni riprendano normalmente.",
-          "why": "Questo evento è rilevante per la sicurezza nazionale e la gestione delle emergenze, sottolineando la necessità di una risposta coordinata tra governo e opposizione.",
+          "title": "Manovra 2027: Governo promette stop tagli scuola e più sanità",
+          "lead": "Il governo italiano ha annunciato l'intenzione di eliminare i tagli al personale scolastico dalla Legge di Bilancio 2027 e di aumentare le risorse per la sanità.",
+          "body": "Dopo un confronto con le parti sociali, il governo italiano ha annunciato l'intenzione di eliminare i tagli all'assunzione del personale scolastico dalla legge di bilancio 2027 e di aumentare le risorse disponibili per la sanità. La manovra di circa 26 miliardi di euro è focalizzata su tagli fiscali per il ceto medio e finanziata anche con un contributo straordinario di banche e assicurazioni e prelievi su società energetiche e gaming. Le promesse arrivano dopo quasi dieci ore di confronto sulla manovra.",
+          "why": "Le decisioni sulla legge di bilancio sono cruciali per la stabilità politica ed economica, influenzando settori chiave come istruzione e sanità.",
           "sources": [
             {
-              "url": "https://it.euronews.com/2026/11/12/huang-lascia-nvidia-timori-di-bolla-ia-e-crisi-finanziaria-al-web-summit",
-              "title": "it.euronews.com"
+              "url": "https://www.ilfattoquotidiano.it/politica-palazzo/",
+              "title": "ilfattoquotidiano.it"
             },
             {
-              "url": "https://italien.news/en/chronicle/false-bomb-alerts-italian-schools-meloni-opposition/",
-              "title": "italien.news"
-            },
-            {
-              "url": "https://italien.news/en/press-review/press-review-12-november-2026/",
-              "title": "italien.news"
-            }
-          ],
-          "readSeconds": 44
-        },
-        {
-          "title": "Regioni italiane avvertono su carenze sanitarie e fondi insufficienti nel bilancio",
-          "lead": "Durante un'audizione parlamentare sul bilancio 2027, le regioni italiane hanno avvertito sui crescenti costi dell'assistenza sanitaria, dichiarando che i fondi aggiuntivi sono insufficienti.",
-          "body": "Le regioni hanno sottolineato che i fondi previsti nella bozza di bilancio non bastano per mantenere i livelli di cura del 2026. La sanità è una delle voci di spesa più importanti per le regioni, e la sostenibilità del sistema è una preoccupazione costante.\n\nLa coalizione di governo sta cercando modifiche mirate al bilancio senza alterare l'equilibrio complessivo. L'allarme delle regioni evidenzia una potenziale crisi nella fornitura di servizi sanitari e mette pressione sul governo per rivedere le allocazioni di bilancio.",
-          "why": "Questa notizia è di grande rilevanza sociale ed economica per l'Italia, poiché riguarda direttamente la qualità e l'accessibilità dei servizi sanitari.",
-          "sources": [
-            {
-              "url": "https://italien.news/en/press-review/press-review-12-november-2026/",
-              "title": "italien.news"
+              "url": "https://www.websim.it/mercati/flash-mercati/mensile-italia-novembre-2026-crescita-ferma-e-mercati-in-recupero/",
+              "title": "websim.it"
             }
           ],
           "readSeconds": 41
         },
         {
-          "title": "Meloni incontra il Primo Ministro britannico al summit di Dublino",
-          "lead": "Il 12 novembre 2026, la Presidente del Consiglio italiana Giorgia Meloni ha incontrato il Primo Ministro britannico al summit della Comunità Politica Europea a Dublino.",
-          "body": "I leader hanno discusso della forte partnership tra i due paesi in settori come difesa, sicurezza, migrazione e l'importanza di lavorare insieme su un'agenda comune. Il Primo Ministro britannico ha anche delineato la sua visione per rafforzare le relazioni a lungo termine con l'UE.\n\nL'incontro ha sottolineato il valore di legami più stretti con l'UE e ha evidenziato la cooperazione su questioni internazionali, inclusa l'Ucraina, dove il Primo Ministro britannico ha accolto con favore il fermo sostegno dell'Italia. Hanno anche discusso del programma GCAP per lo sviluppo di un jet da combattimento di prossima generazione.",
-          "why": "Questo incontro è significativo per la politica estera italiana e le relazioni internazionali, rafforzando la cooperazione bilaterale su temi strategici.",
+          "title": "Ciclone Charles: allerta rossa in Toscana, piogge intense in Italia",
+          "lead": "L'Italia si prepara ad affrontare una giornata critica venerdì a causa del ciclone Charles, che porta piogge abbondanti e allerta rossa in Toscana.",
+          "body": "L'Italia si prepara ad affrontare una giornata critica venerdì 13 novembre 2026 a causa del ciclone Charles, che porta piogge abbondanti per 24-36 ore. Le zone più colpite sono Liguria, Toscana e Friuli Venezia Giulia. Accumuli di 200-300 millimetri di pioggia sono stati registrati dall'inizio della settimana. La Protezione Civile ha diramato l'allerta rossa in Toscana e arancione in Liguria ed Emilia-Romagna a causa dei terreni già saturi. Il ciclone ha precedentemente colpito duramente Portogallo, Spagna e Francia. La situazione idrogeologica desta forte preoccupazione.",
+          "why": "L'ondata di maltempo rappresenta una seria minaccia per la sicurezza dei cittadini e le infrastrutture, con impatto sulla vita quotidiana.",
           "sources": [
             {
-              "url": "https://www.gov.uk/government/news/pm-meeting-with-prime-minister-meloni-of-italy-12-november-2026",
-              "title": "gov.uk"
+              "url": "https://www.cremaoggi.it/2026/11/12/maltempo-in-italia-arriva-il-ciclone-charles-piogge-intense-le-zone-a-rischio/",
+              "title": "cremaoggi.it"
             }
           ],
-          "readSeconds": 45
+          "readSeconds": 41
+        },
+        {
+          "title": "Allarmi bomba seriali in scuole e voli: il Viminale rassicura",
+          "lead": "Una serie di falsi allarmi bomba ha interessato scuole e voli in Italia e in Europa, con il Viminale che li definisce \"minacce seriali inattendibili\".",
+          "body": "Una serie di falsi allarmi bomba ha interessato scuole e voli in Italia e in Europa negli ultimi giorni. Il Viminale ha dichiarato che si tratta di \"minacce seriali inattendibili\" e che non sono previste evacuazioni automatiche per le scuole se le minacce risultano infondate. Più di trenta voli sono stati interessati da minacce bomba, senza conferma di ordigno. Gli episodi hanno riguardato principalmente compagnie low cost su rotte tra Europa occidentale e orientale. Le procure competenti in Italia hanno aperto fascicoli per procurato allarme.",
+          "why": "Questi allarmi, sebbene falsi, creano disagi significativi e preoccupazione pubblica, richiedendo coordinamento investigativo.",
+          "sources": [
+            {
+              "url": "https://geopolitica.info/il-cielo-come-terreno-di-prova-i-falsi-allarmi-bomba-e-la-logica-della-guerra-sotto-soglia/",
+              "title": "geopolitica.info"
+            }
+          ],
+          "readSeconds": 40
         }
       ]
     },
@@ -196,63 +196,47 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Accordo di principio per lo scambio di prigionieri tra Russia e Ucraina",
-          "lead": "Il 12 novembre 2026, Russia e Ucraina hanno raggiunto un accordo di principio per un ampio scambio di prigionieri dopo due giorni di colloqui mediati dagli Stati Uniti ad Abu Dhabi.",
-          "body": "Lo scambio proposto potrebbe avvenire entro due o tre settimane, ma il numero esatto di prigionieri deve ancora essere finalizzato. I negoziati, i primi diretti tra le delegazioni da febbraio, non hanno portato a una svolta sulle questioni centrali che dividono le due parti, come il territorio e gli accordi di sicurezza post-bellici.\n\nIl Presidente ucraino Volodymyr Zelenskyy ha ribadito che Kiev non cederà il territorio occupato dai russi in cambio della pace, mentre Mosca continua a chiedere che l'Ucraina rinunci alle parti di Donetsk ancora sotto il controllo ucraino. Questo accordo segna il risultato più concreto delle prime negoziazioni dirette tra Kiev e Mosca.",
-          "why": "Questo è un raro segno di progresso diplomatico in un conflitto prolungato, rappresentando un passo umanitario significativo che potrebbe aprire a futuri dialoghi.",
+          "title": "Stop nazionale traffico aereo USA per problemi tecnici",
+          "lead": "L'autorità americana per l'aviazione civile ha disposto uno stop nazionale al traffico aereo negli Stati Uniti nella notte tra venerdì e sabato per problemi tecnici.",
+          "body": "L'autorità americana per l'aviazione civile ha disposto uno stop nazionale al traffico aereo negli Stati Uniti nella notte tra venerdì e sabato. La decisione è stata presa a seguito di segnalazioni di interruzioni delle frequenze radio e problemi tecnici. Le autorità hanno escluso che l'interruzione sia stata causata da un attacco hacker. L'evento ha causato disagi significativi ai viaggiatori e alle operazioni aeroportuali in tutto il paese, con un impatto enorme sull'economia e sulla mobilità globale. Questo evidenzia la necessità di sistemi di controllo del traffico aereo robusti.",
+          "why": "Un blocco del traffico aereo di questa portata negli Stati Uniti ha un impatto enorme sull'economia e sulla mobilità globale.",
           "sources": [
             {
-              "url": "https://www.10things.news/p/10-things-global-news-12th-november-646",
-              "title": "10things.news"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=PQK8bYhjjAI",
-              "title": "youtube.com"
-            }
-          ],
-          "readSeconds": 51
-        },
-        {
-          "title": "Attacco aereo israeliano all'ospedale Nasser a Gaza: sei morti, condanna OMS",
-          "lead": "Il 12 novembre 2026, un attacco aereo israeliano ha colpito l'ospedale Nasser, nel sud di Gaza, uccidendo sei persone e ferendone circa 20, nonostante un accordo di cessate il fuoco.",
-          "body": "L'Organizzazione Mondiale della Sanità (OMS) ha condannato l'attacco, sottolineando che tra le vittime ci sono un operatore sanitario, pazienti e i loro accompagnatori. L'IDF ha confermato l'attacco, dichiarando di aver preso di mira \"un terrorista di alto rango di Hamas e altri terroristi\" che operavano all'interno della struttura.\n\nLa situazione umanitaria a Gaza rimane critica, con circa il 65% dei Gazawi che vivono in tende o rifugi di fortuna. Un portavoce di Hamas ha condannato l'attacco come un \"crimine di guerra a tutti gli effetti\", mentre l'OMS ha evidenziato le immense necessità sanitarie nell'enclave devastata.",
-          "why": "Questo evento è un grave sviluppo umanitario nel conflitto, con implicazioni per il diritto internazionale e la protezione di civili e strutture sanitarie.",
-          "sources": [
-            {
-              "url": "https://news.un.org/en/audio/2026/11/1168791",
-              "title": "news.un.org"
-            },
-            {
-              "url": "https://tg24.sky.it/mondo/2026/11/12/guerra-iran-usa-trump-news-diretta",
+              "url": "https://tg24.sky.it/mondo/usa",
               "title": "tg24.sky.it"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=FxNUxvEC7Vg",
-              "title": "youtube.com"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 42
         },
         {
-          "title": "Apertura della COP31 sul clima in Turchia con appelli per l'energia pulita",
-          "lead": "Il 12 novembre 2026, si è aperta in Turchia la COP31, la conferenza delle Nazioni Unite sul clima, con il Segretario Generale dell'ONU che ha esortato i governi all'energia pulita.",
-          "body": "António Guterres ha esortato i governi a unirsi allo sforzo per un massiccio potenziamento delle linee elettriche, al fine di garantire a tutti l'accesso all'energia pulita. Il summit si svolge dopo un anno caratterizzato da ondate di calore e incendi in Europa e inondazioni mortali in Nepal, evidenziando l'urgenza di affrontare il cambiamento climatico.\n\nL'elettrificazione e la riduzione dei rifiuti sono tra i punti chiave dei negoziati. Molti paesi dell'UE dovrebbero sostenere il ruolo delle energie rinnovabili e la transizione dai combustibili fossili. Il Governatore della California Gavin Newsom ha partecipato, sottolineando la leadership climatica del suo stato.",
-          "why": "La COP31 è un evento internazionale cruciale per la lotta al cambiamento climatico, con impatti significativi sulle politiche energetiche globali.",
+          "title": "Raid israeliano devasta ospedale Nasser a Gaza, morti e feriti",
+          "lead": "L'ospedale Nasser a Gaza è stato devastato da un raid israeliano, causando morti e la distruzione di interi reparti e infrastrutture sanitarie.",
+          "body": "L'ospedale Nasser a Gaza è stato devastato da un raid israeliano, causando morti e la distruzione di interi reparti. Sei morti e decine di feriti sono stati segnalati in raid israeliani su ospedali di Gaza. L'IDF (Forze di Difesa Israeliane) ha dichiarato che l'obiettivo del raid era un alto comandante di Hamas. L'attacco a una struttura sanitaria in una zona di conflitto ha generato condanna internazionale e preoccupazione per la situazione umanitaria a Gaza. Questo evento sottolinea la gravità del conflitto in corso e il suo impatto devastante sulla popolazione civile.",
+          "why": "Questo evento sottolinea la gravità del conflitto in corso e il suo impatto devastante sulla popolazione civile e sulle infrastrutture essenziali.",
           "sources": [
             {
-              "url": "https://www.youtube.com/watch?v=PQK8bYhjjAI",
-              "title": "youtube.com"
+              "url": "https://it.euronews.com/notizie",
+              "title": "it.euronews.com"
             },
             {
-              "url": "https://news.un.org/en/audio/2026/11/1168791",
-              "title": "news.un.org"
-            },
-            {
-              "url": "https://www.gov.ca.gov/2026/11/12/as-trump-abandons-americas-allies-governor-newsom-rallies-world-leaders-at-un-climate-summit-meets-with-brazils-president-lula-and-signs-new-partnership-with-portugal/",
-              "title": "gov.ca.gov"
+              "url": "https://www.tgcom24.mediaset.it/mondo/",
+              "title": "tgcom24.mediaset.it"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 43
+        },
+        {
+          "title": "COP31: Conferenza ONU sui cambiamenti climatici ad Antalya",
+          "lead": "La 31ª Conferenza delle Nazioni Unite sui cambiamenti climatici (COP31) si sta svolgendo ad Antalya, Turchia, dal 9 al 20 novembre 2026.",
+          "body": "La 31ª Conferenza delle Nazioni Unite sui cambiamenti climatici (COP31) si sta svolgendo ad Antalya, in Turchia, dal 9 al 20 novembre 2026. L'evento riunisce Capi di Stato e di Governo, Ministri, negoziatori, rappresentanti di organizzazioni internazionali, del mondo scientifico e della società civile. L'obiettivo è definire le prossime azioni per accelerare l'attuazione dell'Accordo di Parigi e rafforzare la risposta globale alla crisi climatica. La conferenza è un appuntamento cruciale per la diplomazia climatica globale.",
+          "why": "La COP31 è un evento di importanza capitale per il futuro del pianeta, influenzando le politiche globali per i prossimi anni.",
+          "sources": [
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-del-13-novembre-2026-15_2026-11-13_TLB.html?lang=it",
+              "title": "borsaitaliana.it"
+            }
+          ],
+          "readSeconds": 38
         }
       ]
     }

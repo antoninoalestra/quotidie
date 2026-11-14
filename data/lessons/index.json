@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-14",
+      "title": "Le Mappe T-O: La Terra Vista con gli Occhi della Fede",
+      "category": "Storia",
+      "categoryId": "storia",
+      "minutes": 4,
+      "hook": "Immaginate una mappa del mondo dove le proporzioni sono distorte, i continenti difficilmente riconoscibili e Gerusalemme è al centro. Erano i cartografi medievali ignoranti, o stavano forse cercando di comunicarci qualcosa di ben più profondo della mera geografia?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-13",
       "title": "La Curvatura Nascosta del Partenone: L'Illusione Perfetta",
       "category": "Architettura",

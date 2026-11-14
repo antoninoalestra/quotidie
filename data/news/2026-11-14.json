@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-14",
+  "kind": "daily",
+  "generatedAt": "2026-11-14T03:20:11.256Z",
+  "model": "gemini-2.5-flash",
+  "minutes": 9,
+  "words": 1889,
+  "brief": [
+    "Il CEO di Nvidia, Jensen Huang, si è dimesso tra accuse di spionaggio cinese, causando un calo significativo del valore azionario dell'azienda e incertezza nel settore AI.",
+    "Un'interruzione globale dei servizi Microsoft 365 ha paralizzato aziende e servizi pubblici per ore, evidenziando la vulnerabilità delle infrastrutture digitali mondiali.",
+    "Le banche centrali globali si preparano a nuovi rialzi dei tassi a dicembre per contrastare l'inflazione persistente, influenzando mercati e costi di finanziamento."
+  ],
+  "sections": [
+    {
+      "id": "tech",
+      "title": "Tecnologia e AI",
+      "stories": [
+        {
+          "title": "Dimissioni del CEO Nvidia Jensen Huang e scandalo spionaggio cinese",
+          "lead": "Jensen Huang, co-fondatore e CEO di Nvidia, si è dimesso giovedì tra accuse di relazioni extraconiugali, una delle quali con una sospetta spia cinese.",
+          "body": "Jensen Huang, co-fondatore e CEO di Nvidia, si è dimesso giovedì con effetto immediato. Colette Kress, la direttrice finanziaria, ha assunto la carica di CEO ad interim. Le dimissioni seguono la rivelazione di due relazioni extraconiugali, una con una sospetta spia cinese. Le azioni di Nvidia sono scese del 4,3% il 12 novembre e di un ulteriore 4% nell'after-hours, con un calo complessivo di oltre 470 miliardi di dollari. La sua partenza solleva interrogativi sulla leadership strategica e sulla resilienza dell'infrastruttura AI.",
+          "why": "Questo evento è di enorme rilevanza per il settore tecnologico e AI, data la posizione dominante di Nvidia e le accuse di spionaggio.",
+          "sources": [
+            {
+              "url": "https://fortune.com/section/big-tech/",
+              "title": "fortune.com"
+            },
+            {
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-13-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611130731034045",
+              "title": "milanofinanza.it"
+            },
+            {
+              "url": "https://medium.com/ai-briefing-room/most-significant-ai-news-post-of-the-day-13-november-2026-29521d34d633",
+              "title": "medium.com"
+            }
+          ],
+          "readSeconds": 42
+        },
+        {
+          "title": "Interruzione globale dei servizi Microsoft 365 paralizza aziende",
+          "lead": "Un'interruzione globale dei sistemi Microsoft 365 ha paralizzato aziende e servizi pubblici in tutto il mondo tra giovedì e venerdì.",
+          "body": "Un'interruzione globale dei sistemi Microsoft 365 ha paralizzato aziende e servizi pubblici in tutto il mondo tra giovedì e venerdì, colpendo Outlook, Teams, Microsoft 365 e Copilot per 12-20 ore. Microsoft ha attribuito il problema a problemi di server, escludendo un attacco informatico. Oltre 430 milioni di persone utilizzano le app di Microsoft 365 e il 90% delle aziende Fortune 500 usa Copilot. Microsoft ha riscontrato \"primi segnali di stabilizzazione\" venerdì mattina, ma il recupero è proseguito. L'evento ha evidenziato la dipendenza globale da un singolo fornitore di servizi cloud.",
+          "why": "Questa interruzione dimostra la vulnerabilità delle infrastrutture digitali globali e l'impatto a cascata su milioni di utenti.",
+          "sources": [
+            {
+              "url": "https://www.informationweek.com/it-leadership/the-week-of-nov-9-13-what-happened-what-matters-what-s-next",
+              "title": "informationweek.com"
+            },
+            {
+              "url": "https://www.theguardian.com/us-news/2026/nov/13/first-thing-global-microsoft-outage-chaos-signs-of-stabilisation",
+              "title": "theguardian.com"
+            }
+          ],
+          "readSeconds": 41
+        },
+        {
+          "title": "SpaceX investe 74 miliardi in nuove infrastrutture di calcolo AI",
+          "lead": "SpaceX ha annunciato un investimento di 74 miliardi di dollari per due nuovi progetti di calcolo AI in Texas e Arizona, espandendo la sua infrastruttura.",
+          "body": "SpaceX ha annunciato piani per investire 74 miliardi di dollari in due nuovi progetti di calcolo AI in Texas e Arizona. Il progetto più grande, un campus di supercomputer da 50 miliardi di dollari, sarà costruito in Arizona, segnando l'ingresso dell'azienda nello stato. Un secondo data center da 24 miliardi di dollari è previsto nel Texas meridionale. Questi progetti espanderanno l'infrastruttura AI di SpaceX oltre la sua attuale presenza nell'area di Memphis, acquisita tramite la fusione con xAI. L'annuncio sottolinea la crescente corsa agli investimenti in infrastrutture AI.",
+          "why": "Questo massiccio investimento evidenzia la strategicità del calcolo AI per il futuro delle aziende tecnologiche e l'espansione di SpaceX.",
+          "sources": [
+            {
+              "url": "https://www.informationweek.com/it-leadership/the-week-of-nov-9-13-what-happened-what-matters-what-s-next",
+              "title": "informationweek.com"
+            }
+          ],
+          "readSeconds": 43
+        },
+        {
+          "title": "AI Act europeo e Linee Guida italiane per la Pubblica Amministrazione",
+          "lead": "L'AI Act europeo è in vigore dal 1° agosto 2024, con applicazione graduale, mentre l'Italia ha adottato proprie Linee Guida per la PA.",
+          "body": "L'AI Act, il regolamento europeo sull'intelligenza artificiale, è in vigore dal 1° agosto 2024 e applicabile dal 2 agosto 2026. Gli obblighi di trasparenza sono attivi dal 2 agosto 2026, mentre quelli per i sistemi ad alto rischio sono stati posticipati al 2 dicembre 2027 e al 2 agosto 2028. Le sanzioni per le violazioni possono arrivare fino a 35 milioni di euro. In Italia, l'AgID ha adottato il 9 novembre 2026 le Linee Guida per l'adozione dell'intelligenza artificiale nella Pubblica Amministrazione. La normativa italiana integra le norme europee.",
+          "why": "La progressiva entrata in vigore dell'AI Act e le iniziative nazionali sono fondamentali per un quadro etico e legale dell'AI.",
+          "sources": [
+            {
+              "url": "https://biblus.acca.it/cosa-devono-sapere-i-tecnici-sull-ai-act-la-legge-sull-intelligenza-artificiale/",
+              "title": "biblus.acca.it"
+            },
+            {
+              "url": "https://college.h-farm.com/news/ai-act-governance-ai/",
+              "title": "college.h-farm.com"
+            }
+          ],
+          "readSeconds": 43
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "title": "Finanza e mercati",
+      "stories": [
+        {
+          "title": "Banche centrali verso nuovi rialzi tassi per inflazione persistente",
+          "lead": "L'inflazione persistente spinge le banche centrali, inclusa Fed e BCE, verso nuovi rialzi dei tassi a dicembre 2026, con impatto sui mercati.",
+          "body": "L'inflazione persistente negli Stati Uniti, evidenziata dai dati di ottobre, ha spinto i rendimenti dei Treasury ai massimi delle ultime settimane. Le dichiarazioni di esponenti della Federal Reserve, della Banca Centrale Europea e della Banca d'Inghilterra indicano che a dicembre 2026 si tornerà a stringere la politica monetaria. Il Bollettino economico della BCE ha confermato un'inflazione nell'area euro al 3,8% a settembre. Il rendimento dei Treasury a due anni è salito al 4,74%. I mercati finanziari danno per quasi certo un rialzo dei tassi da parte della Fed a dicembre.",
+          "why": "La prospettiva di ulteriori rialzi dei tassi ha un impatto diretto sui costi di finanziamento per aziende e famiglie globalmente.",
+          "sources": [
+            {
+              "url": "https://www.ekonomia.it/2026/11/11/le-banche-centrali-si-preparano-a-nuovi-rialzi-dei-tassi-a-dicembre/",
+              "title": "ekonomia.it"
+            },
+            {
+              "url": "https://www.facile.it/mutui/news/bollettino-economico-bce.html",
+              "title": "facile.it"
+            }
+          ],
+          "readSeconds": 42
+        },
+        {
+          "title": "Crollo del mercato criptovalute: Bitcoin sotto i 70.000 dollari",
+          "lead": "Il mercato delle criptovalute ha registrato la sua perdita giornaliera più ripida in settimane, con Bitcoin sceso sotto i 70.000 dollari nella notte tra giovedì e venerdì.",
+          "body": "Il mercato delle criptovalute ha registrato la sua perdita giornaliera più ripida in settimane nella notte tra giovedì e venerdì. Bitcoin è sceso di oltre il 6% in 24 ore, toccando un minimo intraday di 67.922 dollari e attestandosi intorno ai 69.000 dollari. La capitalizzazione totale del mercato crypto è diminuita di circa il 7%. Oltre 1,3 miliardi di dollari in posizioni con leva finanziaria sono stati liquidati. Il calo è attribuito a vendite forzate, deflussi dagli ETF spot su Bitcoin e un dollaro forte con rendimenti dei Treasury in aumento. Il sentiment del mercato è di \"paura estrema\".",
+          "why": "Il significativo calo del mercato delle criptovalute evidenzia la sua volatilità e la sensibilità ai fattori macroeconomici globali.",
+          "sources": [
+            {
+              "url": "https://cryptoticker.io/en/crypto-news-bitcoin-crash-liquidations-etf-outflows-november-13-2026/",
+              "title": "cryptoticker.io"
+            }
+          ],
+          "readSeconds": 46
+        },
+        {
+          "title": "Borsa Italiana stabile, risultati societari e rating S&P Italia",
+          "lead": "Venerdì il FTSE MIB ha chiuso in leggero rialzo dello 0,1%, mentre S&P Global ha confermato il rating dell'Italia a BBB+ con outlook positivo.",
+          "body": "Venerdì 13 novembre 2026, il FTSE MIB ha chiuso in leggero rialzo dello 0,1% a 51.858 punti, influenzato dai risultati trimestrali di diverse blue chip e dalle notizie su Nvidia. S&P Global ha aggiornato il rating sul debito sovrano dell'Italia, confermandolo a BBB+/A-2 con outlook positivo. Lo spread BTP-Bund si è mantenuto tra 100 e 105 punti, con il rendimento del decennale italiano vicino al 4,45%. Generali ha registrato un utile netto adjusted di 3,68 miliardi di euro nei primi nove mesi del 2026, superando le attese. Il mercato italiano ha mostrato resilienza.",
+          "why": "La conferma del rating S&P è un segnale importante per la stabilità finanziaria italiana, con indicatori chiave per gli investitori.",
+          "sources": [
+            {
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-13-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611130731034045",
+              "title": "milanofinanza.it"
+            },
+            {
+              "url": "https://www.soldionline.it/",
+              "title": "soldionline.it"
+            },
+            {
+              "url": "https://www.soldionline.it/notizie/economia-politica/agenda-economica-del-13-novembre-2026",
+              "title": "soldionline.it"
+            }
+          ],
+          "readSeconds": 44
+        }
+      ]
+    },
+    {
+      "id": "italy",
+      "title": "Italia",
+      "stories": [
+        {
+          "title": "Manovra 2027: Governo promette stop tagli scuola e più sanità",
+          "lead": "Il governo italiano ha annunciato l'intenzione di eliminare i tagli al personale scolastico dalla Legge di Bilancio 2027 e di aumentare le risorse per la sanità.",
+          "body": "Dopo un confronto con le parti sociali, il governo italiano ha annunciato l'intenzione di eliminare i tagli all'assunzione del personale scolastico dalla legge di bilancio 2027 e di aumentare le risorse disponibili per la sanità. La manovra di circa 26 miliardi di euro è focalizzata su tagli fiscali per il ceto medio e finanziata anche con un contributo straordinario di banche e assicurazioni e prelievi su società energetiche e gaming. Le promesse arrivano dopo quasi dieci ore di confronto sulla manovra.",
+          "why": "Le decisioni sulla legge di bilancio sono cruciali per la stabilità politica ed economica, influenzando settori chiave come istruzione e sanità.",
+          "sources": [
+            {
+              "url": "https://www.ilfattoquotidiano.it/politica-palazzo/",
+              "title": "ilfattoquotidiano.it"
+            },
+            {
+              "url": "https://www.websim.it/mercati/flash-mercati/mensile-italia-novembre-2026-crescita-ferma-e-mercati-in-recupero/",
+              "title": "websim.it"
+            }
+          ],
+          "readSeconds": 41
+        },
+        {
+          "title": "Ciclone Charles: allerta rossa in Toscana, piogge intense in Italia",
+          "lead": "L'Italia si prepara ad affrontare una giornata critica venerdì a causa del ciclone Charles, che porta piogge abbondanti e allerta rossa in Toscana.",
+          "body": "L'Italia si prepara ad affrontare una giornata critica venerdì 13 novembre 2026 a causa del ciclone Charles, che porta piogge abbondanti per 24-36 ore. Le zone più colpite sono Liguria, Toscana e Friuli Venezia Giulia. Accumuli di 200-300 millimetri di pioggia sono stati registrati dall'inizio della settimana. La Protezione Civile ha diramato l'allerta rossa in Toscana e arancione in Liguria ed Emilia-Romagna a causa dei terreni già saturi. Il ciclone ha precedentemente colpito duramente Portogallo, Spagna e Francia. La situazione idrogeologica desta forte preoccupazione.",
+          "why": "L'ondata di maltempo rappresenta una seria minaccia per la sicurezza dei cittadini e le infrastrutture, con impatto sulla vita quotidiana.",
+          "sources": [
+            {
+              "url": "https://www.cremaoggi.it/2026/11/12/maltempo-in-italia-arriva-il-ciclone-charles-piogge-intense-le-zone-a-rischio/",
+              "title": "cremaoggi.it"
+            }
+          ],
+          "readSeconds": 41
+        },
+        {
+          "title": "Allarmi bomba seriali in scuole e voli: il Viminale rassicura",
+          "lead": "Una serie di falsi allarmi bomba ha interessato scuole e voli in Italia e in Europa, con il Viminale che li definisce \"minacce seriali inattendibili\".",
+          "body": "Una serie di falsi allarmi bomba ha interessato scuole e voli in Italia e in Europa negli ultimi giorni. Il Viminale ha dichiarato che si tratta di \"minacce seriali inattendibili\" e che non sono previste evacuazioni automatiche per le scuole se le minacce risultano infondate. Più di trenta voli sono stati interessati da minacce bomba, senza conferma di ordigno. Gli episodi hanno riguardato principalmente compagnie low cost su rotte tra Europa occidentale e orientale. Le procure competenti in Italia hanno aperto fascicoli per procurato allarme.",
+          "why": "Questi allarmi, sebbene falsi, creano disagi significativi e preoccupazione pubblica, richiedendo coordinamento investigativo.",
+          "sources": [
+            {
+              "url": "https://geopolitica.info/il-cielo-come-terreno-di-prova-i-falsi-allarmi-bomba-e-la-logica-della-guerra-sotto-soglia/",
+              "title": "geopolitica.info"
+            }
+          ],
+          "readSeconds": 40
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "Mondo",
+      "stories": [
+        {
+          "title": "Stop nazionale traffico aereo USA per problemi tecnici",
+          "lead": "L'autorità americana per l'aviazione civile ha disposto uno stop nazionale al traffico aereo negli Stati Uniti nella notte tra venerdì e sabato per problemi tecnici.",
+          "body": "L'autorità americana per l'aviazione civile ha disposto uno stop nazionale al traffico aereo negli Stati Uniti nella notte tra venerdì e sabato. La decisione è stata presa a seguito di segnalazioni di interruzioni delle frequenze radio e problemi tecnici. Le autorità hanno escluso che l'interruzione sia stata causata da un attacco hacker. L'evento ha causato disagi significativi ai viaggiatori e alle operazioni aeroportuali in tutto il paese, con un impatto enorme sull'economia e sulla mobilità globale. Questo evidenzia la necessità di sistemi di controllo del traffico aereo robusti.",
+          "why": "Un blocco del traffico aereo di questa portata negli Stati Uniti ha un impatto enorme sull'economia e sulla mobilità globale.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/mondo/usa",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 42
+        },
+        {
+          "title": "Raid israeliano devasta ospedale Nasser a Gaza, morti e feriti",
+          "lead": "L'ospedale Nasser a Gaza è stato devastato da un raid israeliano, causando morti e la distruzione di interi reparti e infrastrutture sanitarie.",
+          "body": "L'ospedale Nasser a Gaza è stato devastato da un raid israeliano, causando morti e la distruzione di interi reparti. Sei morti e decine di feriti sono stati segnalati in raid israeliani su ospedali di Gaza. L'IDF (Forze di Difesa Israeliane) ha dichiarato che l'obiettivo del raid era un alto comandante di Hamas. L'attacco a una struttura sanitaria in una zona di conflitto ha generato condanna internazionale e preoccupazione per la situazione umanitaria a Gaza. Questo evento sottolinea la gravità del conflitto in corso e il suo impatto devastante sulla popolazione civile.",
+          "why": "Questo evento sottolinea la gravità del conflitto in corso e il suo impatto devastante sulla popolazione civile e sulle infrastrutture essenziali.",
+          "sources": [
+            {
+              "url": "https://it.euronews.com/notizie",
+              "title": "it.euronews.com"
+            },
+            {
+              "url": "https://www.tgcom24.mediaset.it/mondo/",
+              "title": "tgcom24.mediaset.it"
+            }
+          ],
+          "readSeconds": 43
+        },
+        {
+          "title": "COP31: Conferenza ONU sui cambiamenti climatici ad Antalya",
+          "lead": "La 31ª Conferenza delle Nazioni Unite sui cambiamenti climatici (COP31) si sta svolgendo ad Antalya, Turchia, dal 9 al 20 novembre 2026.",
+          "body": "La 31ª Conferenza delle Nazioni Unite sui cambiamenti climatici (COP31) si sta svolgendo ad Antalya, in Turchia, dal 9 al 20 novembre 2026. L'evento riunisce Capi di Stato e di Governo, Ministri, negoziatori, rappresentanti di organizzazioni internazionali, del mondo scientifico e della società civile. L'obiettivo è definire le prossime azioni per accelerare l'attuazione dell'Accordo di Parigi e rafforzare la risposta globale alla crisi climatica. La conferenza è un appuntamento cruciale per la diplomazia climatica globale.",
+          "why": "La COP31 è un evento di importanza capitale per il futuro del pianeta, influenzando le politiche globali per i prossimi anni.",
+          "sources": [
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/eventi-e-scadenze-del-13-novembre-2026-15_2026-11-13_TLB.html?lang=it",
+              "title": "borsaitaliana.it"
+            }
+          ],
+          "readSeconds": 38
+        }
+      ]
+    }
+  ],
+  "dropped": 0
+}
