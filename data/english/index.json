@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-15",
+      "words": [
+        "eloquence",
+        "apt",
+        "consensus",
+        "disseminate",
+        "hone in on"
+      ],
+      "levels": [
+        "C1",
+        "B2",
+        "C1",
+        "C1",
+        "C1"
+      ]
+    },
+    {
       "date": "2026-11-14",
       "words": [
         "Scrutinize",
@@ -69,5 +86,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-14T03:21:06.571Z"
+  "updatedAt": "2026-11-15T02:44:33.007Z"
 }

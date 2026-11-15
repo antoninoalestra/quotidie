@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-15",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-15T02:44:33.006Z",
+  "words": [
+    {
+      "id": "2026-11-15-1",
+      "word": "eloquence",
+      "category": "general",
+      "ipa": "/ˈɛləkwəns/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "La capacità di esprimersi in modo fluido, persuasivo ed efficace, sia oralmente che per iscritto.",
+      "definitionEn": "The ability to speak or write clearly, expressively, and persuasively.",
+      "examples": [
+        "Her eloquence captivated the audience during the keynote speech.",
+        "He lacked the eloquence to articulate his complex ideas in a simple way."
+      ],
+      "exampleIt": "La sua eloquenza ha catturato il pubblico durante il discorso programmatico.",
+      "synonyms": [
+        "articulacy",
+        "fluency",
+        "expressiveness"
+      ],
+      "collocations": [
+        "rhetorical eloquence",
+        "natural eloquence",
+        "command of language"
+      ],
+      "commonMistake": "Attenzione alla pronuncia della 'qu' come /kw/, non /k/. Spesso confuso con un semplice 'parlare bene', ma implica anche persuasività e stile.",
+      "cloze": "The lawyer's ____ in presenting his arguments ultimately swayed the jury in his favour.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-15-1.mp3"
+    },
+    {
+      "id": "2026-11-15-2",
+      "word": "apt",
+      "category": "general",
+      "ipa": "/æpt/",
+      "partOfSpeech": "adjective",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Appropriato, adatto, pertinente; anche propenso o incline a fare qualcosa.",
+      "definitionEn": "Suitable or appropriate in the circumstances; also, having a natural tendency to do something.",
+      "examples": [
+        "That was a very apt description of the current economic climate.",
+        "Children are apt to ask a lot of questions about the world around them."
+      ],
+      "exampleIt": "Quella è stata una descrizione molto appropriata dell'attuale clima economico.",
+      "synonyms": [
+        "appropriate",
+        "suitable",
+        "fitting",
+        "prone"
+      ],
+      "collocations": [
+        "apt description",
+        "apt metaphor",
+        "apt to forget"
+      ],
+      "commonMistake": "Non è un falso amico, ma spesso gli studenti italiani lo traducono solo con 'capace' invece che 'adatto' o 'propenso', perdendo parte del significato.",
+      "cloze": "His comments were particularly ____ given the sensitive nature of the discussion.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-15-2.mp3"
+    },
+    {
+      "id": "2026-11-15-3",
+      "word": "consensus",
+      "category": "business",
+      "ipa": "/kənˈsɛnsəs/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Accordo generale o unanime tra un gruppo di persone su una questione specifica.",
+      "definitionEn": "A general agreement among a group of people or parties regarding a particular issue.",
+      "examples": [
+        "After a lengthy debate, the committee finally reached a consensus on the new policy.",
+        "There is a growing consensus that urgent action is needed to address climate change."
+      ],
+      "exampleIt": "Dopo un lungo dibattito, il comitato ha finalmente raggiunto un consenso sulla nuova politica.",
+      "synonyms": [
+        "agreement",
+        "accord",
+        "concord"
+      ],
+      "collocations": [
+        "reach a consensus",
+        "build consensus",
+        "broad consensus"
+      ],
+      "commonMistake": "Attenzione alla pronuncia, l'accento è sulla seconda sillaba (/sɛn/). È un nome numerabile, quindi si usa 'a consensus' o 'the consensus'.",
+      "cloze": "Despite various viewpoints, we aim to achieve a strong ____ among all stakeholders before proceeding.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-15-3.mp3"
+    },
+    {
+      "id": "2026-11-15-4",
+      "word": "disseminate",
+      "category": "business",
+      "ipa": "/dɪˈsɛmɪneɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Diffondere ampiamente informazioni, idee, conoscenze o notizie a molte persone.",
+      "definitionEn": "To spread information, knowledge, or ideas widely among many people.",
+      "examples": [
+        "The organization aims to disseminate information about public health to rural communities.",
+        "Social media platforms are often used to rapidly disseminate news and trends."
+      ],
+      "exampleIt": "L'organizzazione mira a diffondere informazioni sulla salute pubblica nelle comunità rurali.",
+      "synonyms": [
+        "circulate",
+        "spread",
+        "propagate"
+      ],
+      "collocations": [
+        "disseminate information",
+        "disseminate findings",
+        "widely disseminated"
+      ],
+      "commonMistake": "Spesso confuso con 'seminar' o 'seminal'. La pronuncia della 's' è /s/, non /z/, e l'accento è sulla seconda sillaba.",
+      "cloze": "It is crucial to ____ these best practices across all departments to ensure consistency.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-15-4.mp3"
+    },
+    {
+      "id": "2026-11-15-5",
+      "word": "hone in on",
+      "category": "phrasal",
+      "ipa": "/həʊn ɪn ɒn/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Concentrarsi o focalizzarsi precisamente su qualcosa di specifico, spesso dopo un'analisi più ampia.",
+      "definitionEn": "To direct attention or focus precisely on a particular detail, issue, or target.",
+      "examples": [
+        "During the meeting, we need to hone in on the most critical challenges facing the project.",
+        "The detective began to hone in on a single suspect after reviewing all the evidence."
+      ],
+      "exampleIt": "Durante la riunione, dobbiamo concentrarci sulle sfide più critiche che il progetto deve affrontare.",
+      "synonyms": [
+        "focus on",
+        "zero in on",
+        "pinpoint"
+      ],
+      "collocations": [
+        "hone in on a problem",
+        "hone in on key details",
+        "hone in on the core issue"
+      ],
+      "commonMistake": "Alcuni potrebbero confonderlo con 'home in on', che ha un significato simile di dirigersi verso un obiettivo, ma 'hone' (affinare) enfatizza la precisione del focus.",
+      "cloze": "After a broad discussion, the team decided to ____ the budget allocation for marketing.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-15-5.mp3"
+    }
+  ]
+}

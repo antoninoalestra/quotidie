@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-15",
+      "title": "AI: La Corsa ai Tribunali per il Rischio Esistenziale",
+      "category": "Dall'attualità",
+      "categoryId": "attualita",
+      "minutes": 4,
+      "hook": "La recente notizia di gruppi di interesse che citano in giudizio giganti della tecnologia per i rischi catastrofici dell'intelligenza artificiale solleva una domanda cruciale: può il diritto rallentare o regolare un progresso tecnologico che alcuni temono possa sfuggire al nostro controllo?",
+      "kind": "news"
+    },
+    {
       "date": "2026-11-14",
       "title": "Le Mappe T-O: La Terra Vista con gli Occhi della Fede",
       "category": "Storia",
