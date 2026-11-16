@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-16",
+      "title": "Big Mac Index: Economia in un Panino",
+      "category": "Macroeconomia",
+      "categoryId": "macroeconomia",
+      "minutes": 4,
+      "hook": "Potrebbe un semplice cheeseburger svelarci i segreti delle economie globali e delle fluttuazioni valutarie? Sorprendentemente, sì: il Big Mac Index è un barometro inaspettato del potere d'acquisto mondiale.",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-15",
       "title": "AI: La Corsa ai Tribunali per il Rischio Esistenziale",
       "category": "Dall'attualità",

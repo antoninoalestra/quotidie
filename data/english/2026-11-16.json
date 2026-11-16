@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-16",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-16T02:47:01.965Z",
+  "words": [
+    {
+      "id": "2026-11-16-1",
+      "word": "underscore",
+      "category": "general",
+      "ipa": "/ˈʌndəskɔː/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Sottolineare, evidenziare, mettere in risalto l'importanza di qualcosa.",
+      "definitionEn": "To emphasize the importance of something or to show that something is true.",
+      "examples": [
+        "The report's findings underscore the urgent need for environmental protection.",
+        "His speech underscored the disparity between rich and poor in the country."
+      ],
+      "exampleIt": "I risultati del rapporto sottolineano l'urgente bisogno di protezione ambientale.",
+      "synonyms": [
+        "emphasise",
+        "highlight",
+        "stress"
+      ],
+      "collocations": [
+        "underscore the importance",
+        "underscore the need",
+        "underscore the fact"
+      ],
+      "commonMistake": "Non confonderlo con \"underline\" (sottolineare fisicamente). \"Underscore\" ha un significato più figurato di \"dare enfasi\".",
+      "cloze": "The recent data ____ the critical importance of digital literacy in today's job market.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-16-1.mp3"
+    },
+    {
+      "id": "2026-11-16-2",
+      "word": "profound",
+      "category": "general",
+      "ipa": "/prəˈfaʊnd/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Profondo, intenso, che ha un forte impatto o una grande importanza.",
+      "definitionEn": "Felt or experienced very strongly; having a very great effect or influence.",
+      "examples": [
+        "The discovery had a profound impact on the scientific community.",
+        "She has a profound understanding of complex philosophical concepts."
+      ],
+      "exampleIt": "La scoperta ebbe un impatto profondo sulla comunità scientifica.",
+      "synonyms": [
+        "deep",
+        "intense",
+        "significant"
+      ],
+      "collocations": [
+        "profound impact",
+        "profound effect",
+        "profound knowledge"
+      ],
+      "commonMistake": "A volte gli italiani usano \"deep\" per significati figurati dove \"profound\" sarebbe più appropriato per esprimere un'intensità maggiore o una profondità concettuale.",
+      "cloze": "The artist's work explores the ____ connection between nature and human emotion.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-16-2.mp3"
+    },
+    {
+      "id": "2026-11-16-3",
+      "word": "liaise",
+      "category": "business",
+      "ipa": "/liˈeɪz/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Mantenere i contatti, fare da tramite, coordinarsi tra diverse persone o gruppi.",
+      "definitionEn": "To work closely with someone and exchange information with them.",
+      "examples": [
+        "It's crucial to liaise with all departments to ensure smooth project execution.",
+        "Our team will liaise directly with the client throughout the development phase."
+      ],
+      "exampleIt": "È fondamentale mantenere i contatti con tutti i dipartimenti per garantire una fluida esecuzione del progetto.",
+      "synonyms": [
+        "coordinate",
+        "communicate",
+        "connect"
+      ],
+      "collocations": [
+        "liaise with",
+        "liaise between",
+        "liaise closely"
+      ],
+      "commonMistake": "Spesso gli italiani dicono \"make a liaison\" o \"do liaison\". Il verbo è \"to liaise\". Ricorda che è intransitivo, quindi si usa con \"with\" o \"between\".",
+      "cloze": "The project manager needs to ____ with the engineering team to confirm the technical specifications.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-16-3.mp3"
+    },
+    {
+      "id": "2026-11-16-4",
+      "word": "allocate",
+      "category": "business",
+      "ipa": "/ˈæləkeɪt/",
+      "partOfSpeech": "verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Assegnare, distribuire risorse (tempo, denaro, compiti) per uno scopo specifico.",
+      "definitionEn": "To distribute resources or tasks for a particular purpose or to specific people.",
+      "examples": [
+        "The budget committee decided to allocate more funds to research and development.",
+        "We need to allocate tasks effectively among team members to meet the deadline."
+      ],
+      "exampleIt": "Il comitato di bilancio ha deciso di assegnare più fondi alla ricerca e sviluppo.",
+      "synonyms": [
+        "assign",
+        "distribute",
+        "apportion"
+      ],
+      "collocations": [
+        "allocate resources",
+        "allocate funds",
+        "allocate time"
+      ],
+      "commonMistake": "Attenzione alla preposizione \"to\": \"allocate something to someone/something\". Non \"allocate something for someone/something\" in questo contesto.",
+      "cloze": "We must carefully ____ our limited resources to achieve the maximum output.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-16-4.mp3"
+    },
+    {
+      "id": "2026-11-16-5",
+      "word": "get to grips with",
+      "category": "phrasal",
+      "ipa": "/ɡɛt tuː ɡrɪps wɪð/",
+      "partOfSpeech": "idiom",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Affrontare e iniziare a capire o gestire con successo una situazione difficile o complessa.",
+      "definitionEn": "To begin to understand and deal with something difficult or complicated.",
+      "examples": [
+        "It took me a while to get to grips with the new software's interface.",
+        "The team is still trying to get to grips with the unexpected changes in the project scope."
+      ],
+      "exampleIt": "Mi ci è voluto un po' per familiarizzare con l'interfaccia del nuovo software.",
+      "synonyms": [
+        "understand",
+        "master",
+        "cope with"
+      ],
+      "collocations": [
+        "get to grips with a problem",
+        "get to grips with a concept",
+        "get to grips with new technology"
+      ],
+      "commonMistake": "Non è un falso amico, ma la sua struttura può essere complessa per gli italiani. Ricorda \"get to grips with something\". Non dire \"take grips\" o \"make grips\".",
+      "cloze": "After several training sessions, employees started to ____ the company's new accounting system.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-16-5.mp3"
+    }
+  ]
+}
