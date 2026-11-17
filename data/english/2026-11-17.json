@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-17",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-17T05:08:30.209Z",
+  "words": [
+    {
+      "id": "2026-11-17-1",
+      "word": "astute",
+      "category": "general",
+      "ipa": "/əˈstjuːt/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "abile, perspicace, scaltro (nel giudicare situazioni o persone)",
+      "definitionEn": "Having or showing an ability to accurately assess situations or people and turn this to one's advantage.",
+      "examples": [
+        "She was an astute businesswoman, always knowing how to close a deal successfully.",
+        "His astute observations helped us to identify the core problem quickly."
+      ],
+      "exampleIt": "Era un'imprenditrice abile, sapendo sempre come concludere un affare con successo.",
+      "synonyms": [
+        "shrewd",
+        "discerning",
+        "sagacious"
+      ],
+      "collocations": [
+        "astute observer",
+        "astute decision",
+        "astute judgment"
+      ],
+      "commonMistake": "Non confonderlo con \"astuto\" in italiano che può avere una connotazione negativa di furbizia eccessiva. \"Astute\" in inglese è solitamente positivo, indicando intelligenza pratica e perspicacia.",
+      "cloze": "An ____ negotiator can often find solutions that benefit all parties involved.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-17-1.mp3"
+    },
+    {
+      "id": "2026-11-17-2",
+      "word": "embrace",
+      "category": "general",
+      "ipa": "/ɪmˈbreɪs/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "abbracciare (un'idea, un concetto, un cambiamento), accogliere, accettare con entusiasmo",
+      "definitionEn": "To accept or support a belief, theory, or change willingly and enthusiastically.",
+      "examples": [
+        "The company decided to embrace the new technologies to stay competitive.",
+        "It's important to embrace different cultures and perspectives when working internationally."
+      ],
+      "exampleIt": "L'azienda ha deciso di abbracciare le nuove tecnologie per rimanere competitiva.",
+      "synonyms": [
+        "adopt",
+        "accept",
+        "welcome"
+      ],
+      "collocations": [
+        "embrace change",
+        "embrace an opportunity",
+        "embrace diversity"
+      ],
+      "commonMistake": "Sebbene \"embrace\" possa significare anche abbracciare fisicamente, nel contesto C1 è più spesso usato in senso figurato. Non usarlo per un abbraccio affettuoso, per cui \"hug\" è più comune.",
+      "cloze": "We should ____ new challenges as opportunities for growth and learning.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-17-2.mp3"
+    },
+    {
+      "id": "2026-11-17-3",
+      "word": "proactive",
+      "category": "business",
+      "ipa": "/prəʊˈæktɪv/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "proattivo; che agisce in anticipo per prevenire o gestire problemi futuri",
+      "definitionEn": "Acting in anticipation of future problems, needs, or changes, rather than reacting to them after they occur.",
+      "examples": [
+        "The team took a proactive approach to address potential client concerns before they escalated.",
+        "Being proactive in your career planning can open up many more opportunities."
+      ],
+      "exampleIt": "Il team ha adottato un approccio proattivo per affrontare potenziali preoccupazioni dei clienti prima che si aggravassero.",
+      "synonyms": [
+        "anticipatory",
+        "forward-thinking",
+        "preventive"
+      ],
+      "collocations": [
+        "proactive approach",
+        "proactive measures",
+        "proactive steps"
+      ],
+      "commonMistake": "Spesso gli italiani usano \"preventive\" o \"preventive actions\" quando \"proactive\" è più appropriato per indicare un atteggiamento generale di anticipazione e iniziativa, non solo una misura singola.",
+      "cloze": "It's essential to be ____ about cybersecurity, constantly updating systems and training staff.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-17-3.mp3"
+    },
+    {
+      "id": "2026-11-17-4",
+      "word": "expedite",
+      "category": "business",
+      "ipa": "/ˈekspɪdaɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "accelerare, sveltire (un processo, una procedura)",
+      "definitionEn": "To make a process happen more quickly or efficiently.",
+      "examples": [
+        "We need to expedite the approval process to meet the project deadline.",
+        "New software was implemented to expedite the customer service response times."
+      ],
+      "exampleIt": "Dobbiamo accelerare il processo di approvazione per rispettare la scadenza del progetto.",
+      "synonyms": [
+        "accelerate",
+        "speed up",
+        "hasten"
+      ],
+      "collocations": [
+        "expedite a process",
+        "expedite delivery",
+        "expedite approval"
+      ],
+      "commonMistake": "Attenzione alla pronuncia, la \"x\" si pronuncia /ks/ e non /z/ come in italiano. Evitare \"to make fast\" che è troppo semplice e meno formale.",
+      "cloze": "The company implemented new policies to ____ the onboarding of new employees.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-17-4.mp3"
+    },
+    {
+      "id": "2026-11-17-5",
+      "word": "flesh out",
+      "category": "phrasal",
+      "ipa": "/ˌfleʃ ˈaʊt/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "dare corpo a, sviluppare in dettaglio, aggiungere particolari a (un'idea, un piano)",
+      "definitionEn": "To add more details or information to a plan, idea, or story to make it more complete or substantial.",
+      "examples": [
+        "Let's meet next week to flesh out the details of the marketing campaign.",
+        "The author spent months fleshing out the characters before starting the novel."
+      ],
+      "exampleIt": "Incontriamoci la prossima settimana per dare corpo ai dettagli della campagna di marketing.",
+      "synonyms": [
+        "elaborate on",
+        "expand on",
+        "develop"
+      ],
+      "collocations": [
+        "flesh out an idea",
+        "flesh out a proposal",
+        "flesh out a concept"
+      ],
+      "commonMistake": "Non tradurre letteralmente \"flesh\" (carne) che potrebbe portare a fraintendimenti. Significa \"dare sostanza\", \"rendere più concreto\".",
+      "cloze": "Before presenting the concept to the board, we need to ____ the budget implications.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-17-5.mp3"
+    }
+  ]
+}

@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-17",
+      "title": "Sonoluminescenza: Il Suono che Accende la Luce",
+      "category": "Fisica",
+      "categoryId": "fisica",
+      "minutes": 4,
+      "hook": "Immaginate un fenomeno dove il semplice suono, invisibile e intangibile, possa generare lampi di luce visibili a occhio nudo e temperature paragonabili a quelle delle stelle. È pura fantascienza o una realtà fisica tangibile?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-16",
       "title": "Big Mac Index: Economia in un Panino",
       "category": "Macroeconomia",

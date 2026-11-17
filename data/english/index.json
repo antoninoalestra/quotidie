@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-17",
+      "words": [
+        "astute",
+        "embrace",
+        "proactive",
+        "expedite",
+        "flesh out"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "C1"
+      ]
+    },
+    {
       "date": "2026-11-16",
       "words": [
         "underscore",
@@ -103,5 +120,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-16T02:47:01.966Z"
+  "updatedAt": "2026-11-17T05:08:30.210Z"
 }
