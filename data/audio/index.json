@@ -1,40 +1,22 @@
 {
   "files": {
     "lesson-latest.mp3": {
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "kind": "lesson",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 367,
+      "seconds": 289,
       "rewritten": true,
-      "generatedAt": "2026-11-17T05:18:38.218Z"
+      "generatedAt": "2026-11-18T04:36:53.763Z"
     },
     "news-latest.mp3": {
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "kind": "news",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 769,
+      "seconds": 752,
       "rewritten": true,
-      "generatedAt": "2026-11-17T05:13:17.366Z"
-    },
-    "news-2026-11-09.mp3": {
-      "date": "2026-11-09",
-      "kind": "news",
-      "engine": "qwen3-tts",
-      "voice": "ryan",
-      "seconds": 871,
-      "rewritten": true,
-      "generatedAt": "2026-11-09T11:53:12.732Z"
-    },
-    "lesson-2026-11-09.mp3": {
-      "date": "2026-11-09",
-      "kind": "lesson",
-      "engine": "qwen3-tts",
-      "voice": "ryan",
-      "seconds": 416,
-      "rewritten": true,
-      "generatedAt": "2026-11-09T12:00:25.667Z"
+      "generatedAt": "2026-11-18T04:34:37.745Z"
     },
     "news-2026-11-10.mp3": {
       "date": "2026-11-10",
@@ -179,7 +161,25 @@
       "seconds": 367,
       "rewritten": true,
       "generatedAt": "2026-11-17T05:18:38.218Z"
+    },
+    "news-2026-11-18.mp3": {
+      "date": "2026-11-18",
+      "kind": "news",
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 752,
+      "rewritten": true,
+      "generatedAt": "2026-11-18T04:34:37.745Z"
+    },
+    "lesson-2026-11-18.mp3": {
+      "date": "2026-11-18",
+      "kind": "lesson",
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 289,
+      "rewritten": true,
+      "generatedAt": "2026-11-18T04:36:53.763Z"
     }
   },
-  "updatedAt": "2026-11-17T05:18:38.218Z"
+  "updatedAt": "2026-11-18T04:36:53.763Z"
 }
