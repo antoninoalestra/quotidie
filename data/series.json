@@ -1,4 +1,34 @@
 {
-  "current": null,
+  "current": {
+    "id": "2026-11-18-l-effetto-farfalla-del-tuo-denaro",
+    "title": "L'Effetto Farfalla del Tuo Denaro",
+    "intro": "Scopri come l'interesse composto può trasformare piccole somme in grandi ricchezze, nel bene e nel male, guidandoti verso una gestione finanziaria consapevole.",
+    "category": "Finanza personale",
+    "categoryId": "finanza-personale",
+    "parts": [
+      {
+        "title": "Interesse Composto: Il Denaro che Genera Denaro",
+        "focus": "Capirai il principio fondamentale per cui i tuoi guadagni futuri maturano non solo sul capitale iniziale ma anche sugli interessi accumulati."
+      },
+      {
+        "title": "Il Fattore Tempo: Il Tuo Alleato Più Potente",
+        "focus": "Vedremo con esempi pratici come più a lungo investi, più esponenzialmente cresce il tuo capitale grazie alla magia del tempo."
+      },
+      {
+        "title": "Costruire Ricchezza: Investire con l'Interesse Composto",
+        "focus": "Esplorerai come applicare l'interesse composto ai tuoi risparmi e investimenti per accelerare la crescita del tuo patrimonio."
+      },
+      {
+        "title": "Il Lato Oscuro: Quando il Debito Compone Contro di Te",
+        "focus": "Apprenderai come l'interesse composto può lavorare a tuo svantaggio con prestiti e carte di credito, rendendo i debiti più pesanti."
+      },
+      {
+        "title": "Massimizzare i Benefici: Strategie per la Crescita Futura",
+        "focus": "Scoprirai consigli pratici per sfruttare al meglio l'interesse composto, come iniziare presto e contribuire regolarmente per ottimizzare i rendimenti."
+      }
+    ],
+    "done": 1,
+    "startedAt": "2026-11-18"
+  },
   "history": []
 }

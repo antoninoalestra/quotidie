@@ -1,6 +1,21 @@
 {
   "lessons": [
     {
+      "date": "2026-11-18",
+      "title": "Interesse Composto: Il Denaro che Genera Denaro",
+      "category": "Finanza personale",
+      "categoryId": "finanza-personale",
+      "minutes": 4,
+      "hook": "Benvenuti a \"L'Effetto Farfalla del Tuo Denaro\", un percorso pensato per svelare come scelte finanziarie apparentemente piccole possano generare impatti enormi. Oggi iniziamo con il principio fondamentale che sta alla base di ogni grande fortuna e di ogni debito insidioso: l'interesse composto. Ma come fa il denaro a generare altro denaro, in una spirale virtuosa che molti definiscono l'ottava meraviglia del mondo?",
+      "kind": "series",
+      "series": {
+        "id": "2026-11-18-l-effetto-farfalla-del-tuo-denaro",
+        "title": "L'Effetto Farfalla del Tuo Denaro",
+        "part": 1,
+        "total": 5
+      }
+    },
+    {
       "date": "2026-11-17",
       "title": "Sonoluminescenza: Il Suono che Accende la Luce",
       "category": "Fisica",

@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-18",
+      "words": [
+        "Pervasive",
+        "Disparate",
+        "Remuneration",
+        "Imperative",
+        "Weigh up"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "B2"
+      ]
+    },
+    {
       "date": "2026-11-17",
       "words": [
         "astute",
@@ -120,5 +137,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-17T05:08:30.210Z"
+  "updatedAt": "2026-11-18T04:26:29.368Z"
 }

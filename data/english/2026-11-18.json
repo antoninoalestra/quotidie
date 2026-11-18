@@ -1,0 +1,161 @@
+{
+  "date": "2026-11-18",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-18T04:26:29.367Z",
+  "words": [
+    {
+      "id": "2026-11-18-1",
+      "word": "Pervasive",
+      "category": "general",
+      "ipa": "/pəˈveɪsɪv/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Diffuso, onnipresente, che si estende ovunque.",
+      "definitionEn": "Spreading widely throughout an area or a group of people; existing in or present throughout every part of something.",
+      "examples": [
+        "The impact of digital technology is pervasive in modern society.",
+        "There was a pervasive sense of anxiety before the exam results were announced."
+      ],
+      "exampleIt": "L'impatto della tecnologia digitale è pervasivo nella società moderna.",
+      "synonyms": [
+        "widespread",
+        "prevalent",
+        "omnipresent"
+      ],
+      "collocations": [
+        "pervasive influence",
+        "pervasive problem",
+        "pervasive trend"
+      ],
+      "commonMistake": "Attenzione alla pronuncia /pəˈveɪsɪv/, non 'per-va-sive' all'italiana. Spesso confuso con 'invasive', che ha una connotazione più negativa e di intrusione.",
+      "cloze": "The culture of innovation became so ____ that it permeated every department of the company.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-18-1.mp3"
+    },
+    {
+      "id": "2026-11-18-2",
+      "word": "Disparate",
+      "category": "general",
+      "ipa": "/ˈdɪspərət/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Diverso, differente, non correlato o non confrontabile.",
+      "definitionEn": "Essentially different in kind; not allowing comparison; containing elements very different from one another.",
+      "examples": [
+        "The team comprised individuals with disparate skills and backgrounds.",
+        "We need to find common ground among these disparate viewpoints."
+      ],
+      "exampleIt": "Il team era composto da individui con competenze e background disparati.",
+      "synonyms": [
+        "distinct",
+        "dissimilar",
+        "divergent"
+      ],
+      "collocations": [
+        "disparate elements",
+        "disparate sources",
+        "disparate ideas"
+      ],
+      "commonMistake": "Spesso confuso con 'desperate' (disperato). Attenzione alla pronuncia /ˈdɪspərət/, non /ˈdɛspərət/.",
+      "cloze": "The research project involved analyzing data from several ____ sources, each with its own methodology.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-18-2.mp3"
+    },
+    {
+      "id": "2026-11-18-3",
+      "word": "Remuneration",
+      "category": "business",
+      "ipa": "/rɪˌmjuːnəˈreɪʃn/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Retribuzione, compenso per servizi o lavoro, include salario, bonus, benefici.",
+      "definitionEn": "Money paid for work or a service, typically a salary, wages, or other financial compensation, including benefits.",
+      "examples": [
+        "The remuneration package for the new CEO includes a generous bonus scheme.",
+        "Employees are seeking fair remuneration for their increased workload."
+      ],
+      "exampleIt": "Il pacchetto di retribuzione per il nuovo CEO include un generoso sistema di bonus.",
+      "synonyms": [
+        "compensation",
+        "salary",
+        "wages",
+        "payment"
+      ],
+      "collocations": [
+        "remuneration package",
+        "fair remuneration",
+        "executive remuneration"
+      ],
+      "commonMistake": "Non è un falso amico, ma gli italiani tendono a usare 'salary' anche in contesti formali dove 'remuneration' sarebbe più appropriato per indicare il compenso totale, inclusi benefici e bonus.",
+      "cloze": "The company reviews its employee ____ annually to ensure competitiveness in the market and attract top talent.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-18-3.mp3"
+    },
+    {
+      "id": "2026-11-18-4",
+      "word": "Imperative",
+      "category": "business",
+      "ipa": "/ɪmˈpɛrətɪv/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Imperativo, essenziale, di vitale importanza; qualcosa che deve essere fatto.",
+      "definitionEn": "Of vital importance; crucial. Can also refer to an essential or urgent thing.",
+      "examples": [
+        "It is imperative that we respond to customer feedback promptly.",
+        "Cost reduction has become an imperative for many businesses facing economic uncertainty."
+      ],
+      "exampleIt": "È imperativo che rispondiamo prontamente al feedback dei clienti.",
+      "synonyms": [
+        "crucial",
+        "vital",
+        "essential",
+        "critical"
+      ],
+      "collocations": [
+        "a moral imperative",
+        "a strategic imperative",
+        "absolutely imperative"
+      ],
+      "commonMistake": "Non confonderlo con l'italiano 'imperativo' nel senso grammaticale. Qui significa 'essenziale' o 'urgente'. Attenzione alla pronuncia: lo stress è sulla seconda sillaba /ɪmˈpɛrətɪv/.",
+      "cloze": "Ensuring data security is an absolute ____ in today's digital landscape for any responsible company.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-18-4.mp3"
+    },
+    {
+      "id": "2026-11-18-5",
+      "word": "Weigh up",
+      "category": "phrasal",
+      "ipa": "/weɪ ʌp/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Valutare, soppesare (pro e contro), considerare attentamente prima di decidere.",
+      "definitionEn": "To consider carefully the good and bad aspects of something before making a decision or judgment.",
+      "examples": [
+        "We need to weigh up the pros and cons before making a final decision.",
+        "She was weighing up her options after receiving two job offers."
+      ],
+      "exampleIt": "Dobbiamo soppesare i pro e i contro prima di prendere una decisione finale.",
+      "synonyms": [
+        "evaluate",
+        "assess",
+        "consider",
+        "deliberate"
+      ],
+      "collocations": [
+        "weigh up the options",
+        "weigh up the risks",
+        "weigh up the evidence"
+      ],
+      "commonMistake": "Gli italiani potrebbero usare 'evaluate' o 'consider', ma 'weigh up' è più colloquiale e autentico per esprimere il bilanciamento di diverse parti. Non dire 'weigh up the decision', ma 'weigh up the options/pros and cons'.",
+      "cloze": "Before accepting the promotion, he had to ____ the increased responsibility against the higher salary and benefits.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-18-5.mp3"
+    }
+  ]
+}
