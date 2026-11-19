@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-19",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-19T04:28:12.374Z",
+  "words": [
+    {
+      "id": "2026-11-19-1",
+      "word": "Tantamount",
+      "category": "general",
+      "ipa": "/tænˈtaʊnt/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Equivalente a; uguale a; che equivale a (spesso in senso negativo).",
+      "definitionEn": "Having the same effect, meaning, or impact as something else, often something undesirable.",
+      "examples": [
+        "His refusal to cooperate was tantamount to an admission of guilt.",
+        "Ignoring the safety regulations is tantamount to risking lives."
+      ],
+      "exampleIt": "Il suo rifiuto di collaborare equivaleva a un'ammissione di colpa.",
+      "synonyms": [
+        "equivalent",
+        "equal to",
+        "virtually"
+      ],
+      "collocations": [
+        "tantamount to a betrayal",
+        "tantamount to a crime",
+        "tantamount to refusal"
+      ],
+      "commonMistake": "Spesso gli studenti cercano di tradurre \"tanto\" in italiano, ma \"tantamount\" non ha a che fare con la quantità. Ricorda la preposizione \"to\".",
+      "cloze": "For some, withdrawing from the competition at the last minute would be ____ to admitting defeat.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-19-1.mp3"
+    },
+    {
+      "id": "2026-11-19-2",
+      "word": "Conducive",
+      "category": "general",
+      "ipa": "/kənˈdjuːsɪv/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Favorevole, propizio; che contribuisce a; idoneo a.",
+      "definitionEn": "Providing the right conditions for something good to happen or exist, or making it easier.",
+      "examples": [
+        "A quiet environment is conducive to studying effectively.",
+        "The policies implemented were not conducive to economic growth."
+      ],
+      "exampleIt": "Un ambiente tranquillo è favorevole a uno studio efficace.",
+      "synonyms": [
+        "favourable",
+        "beneficial",
+        "advantageous"
+      ],
+      "collocations": [
+        "conducive to learning",
+        "conducive to growth",
+        "conducive to success"
+      ],
+      "commonMistake": "Non confondere con \"conductive\" (conduttivo, elettricamente). Ricorda la preposizione \"to\" che segue sempre \"conducive\".",
+      "cloze": "The dim lighting and soft music created an atmosphere ____ to relaxation.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-19-2.mp3"
+    },
+    {
+      "id": "2026-11-19-3",
+      "word": "Holistic",
+      "category": "business",
+      "ipa": "/həˈlɪstɪk/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Olistico; che considera l'insieme e non solo le singole parti.",
+      "definitionEn": "Considering the whole of something or someone, rather than just individual parts or aspects.",
+      "examples": [
+        "Our company takes a holistic approach to employee well-being.",
+        "A holistic view of the market allows us to identify broader trends."
+      ],
+      "exampleIt": "La nostra azienda adotta un approccio olistico al benessere dei dipendenti.",
+      "synonyms": [
+        "comprehensive",
+        "integrated",
+        "all-encompassing"
+      ],
+      "collocations": [
+        "holistic approach",
+        "holistic view",
+        "holistic strategy"
+      ],
+      "commonMistake": "Attenzione alla pronuncia della \"h\" iniziale, che non è muta, e alla \"o\" che è più simile a una \"u\" /əʊ/.",
+      "cloze": "We need to adopt a more ____ strategy to address climate change, looking at all contributing factors.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-19-3.mp3"
+    },
+    {
+      "id": "2026-11-19-4",
+      "word": "Synergy",
+      "category": "business",
+      "ipa": "/ˈsɪnədʒi/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Sinergia; l'effetto combinato di elementi è maggiore della somma delle parti.",
+      "definitionEn": "The increased effectiveness or benefit that results from two or more people or companies working together.",
+      "examples": [
+        "The merger aimed to create synergy between the two companies' product lines.",
+        "When team members collaborate effectively, a powerful synergy can emerge."
+      ],
+      "exampleIt": "La fusione mirava a creare sinergia tra le linee di prodotti delle due aziende.",
+      "synonyms": [
+        "collaboration",
+        "cooperation",
+        "symbiosis"
+      ],
+      "collocations": [
+        "create synergy",
+        "achieve synergy",
+        "strong synergy"
+      ],
+      "commonMistake": "Non è un falso amico, ma spesso si usa in contesti in cui non è appropriato. Si riferisce specificamente a un *effetto* positivo e potenziato dall'unione.",
+      "cloze": "There's great potential for ____ between our marketing and sales departments if they work closely.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-19-4.mp3"
+    },
+    {
+      "id": "2026-11-19-5",
+      "word": "Run into",
+      "category": "phrasal",
+      "ipa": "/rʌn ˈɪntuː/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Incontrare (per caso); imbattersi in (difficoltà/problemi).",
+      "definitionEn": "To meet someone unexpectedly, or to experience unexpected problems or difficulties.",
+      "examples": [
+        "I ran into an old friend at the supermarket this morning.",
+        "The project ran into financial difficulties early on."
+      ],
+      "exampleIt": "Ho incontrato un vecchio amico al supermercato stamattina.",
+      "synonyms": [
+        "encounter",
+        "bump into",
+        "face (difficulties)"
+      ],
+      "collocations": [
+        "run into trouble",
+        "run into problems",
+        "run into debt"
+      ],
+      "commonMistake": "La preposizione è \"into\", non \"in\". Ricorda che \"run into\" può significare anche \"scontrarsi con\" fisicamente, oltre che metaforicamente.",
+      "cloze": "If you ____ any issues while setting up the new software, don't hesitate to call IT support.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-19-5.mp3"
+    }
+  ]
+}

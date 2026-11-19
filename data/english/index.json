@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-19",
+      "words": [
+        "Tantamount",
+        "Conducive",
+        "Holistic",
+        "Synergy",
+        "Run into"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "B2"
+      ]
+    },
+    {
       "date": "2026-11-18",
       "words": [
         "Pervasive",
@@ -137,5 +154,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-18T04:26:29.368Z"
+  "updatedAt": "2026-11-19T04:28:12.374Z"
 }

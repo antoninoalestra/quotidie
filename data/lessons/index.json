@@ -1,6 +1,21 @@
 {
   "lessons": [
     {
+      "date": "2026-11-19",
+      "title": "Il Tempo: L'Acceleratore Invisibile della Tua Ricchezza",
+      "category": "Finanza personale",
+      "categoryId": "finanza-personale",
+      "minutes": 5,
+      "hook": "Abbiamo esplorato come il denaro possa generare altro denaro. Ma esiste un ingrediente segreto, spesso sottovalutato, che ha il potere di trasformare questa crescita da lineare a esponenziale. Qual è questo catalizzatore silenzioso?",
+      "kind": "series",
+      "series": {
+        "id": "2026-11-18-l-effetto-farfalla-del-tuo-denaro",
+        "title": "L'Effetto Farfalla del Tuo Denaro",
+        "part": 2,
+        "total": 5
+      }
+    },
+    {
       "date": "2026-11-18",
       "title": "Interesse Composto: Il Denaro che Genera Denaro",
       "category": "Finanza personale",
