@@ -1,6 +1,21 @@
 {
   "lessons": [
     {
+      "date": "2026-11-20",
+      "title": "Costruire Ricchezza: Il Potere Moltiplicatore degli Investimenti",
+      "category": "Finanza personale",
+      "categoryId": "finanza-personale",
+      "minutes": 4,
+      "hook": "Se nella lezione precedente abbiamo compreso come il tempo sia un motore inarrestabile per il denaro, ora è il momento di mettere quel motore in pista, guidandolo attivamente verso la creazione di valore. Non si tratta solo di aspettare, ma di agire, trasformando i risparmi in autentici generatori di ricchezza.",
+      "kind": "series",
+      "series": {
+        "id": "2026-11-18-l-effetto-farfalla-del-tuo-denaro",
+        "title": "L'Effetto Farfalla del Tuo Denaro",
+        "part": 3,
+        "total": 5
+      }
+    },
+    {
       "date": "2026-11-19",
       "title": "Il Tempo: L'Acceleratore Invisibile della Tua Ricchezza",
       "category": "Finanza personale",

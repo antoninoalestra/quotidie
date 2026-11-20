@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-20",
+      "words": [
+        "Meticulous",
+        "Paradigm",
+        "Pivotal",
+        "Consolidate",
+        "Grapple with"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "C1"
+      ]
+    },
+    {
       "date": "2026-11-19",
       "words": [
         "Tantamount",
@@ -154,5 +171,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-19T04:28:12.374Z"
+  "updatedAt": "2026-11-20T04:09:16.171Z"
 }

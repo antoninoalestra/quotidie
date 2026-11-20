@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-20",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-20T04:09:16.171Z",
+  "words": [
+    {
+      "id": "2026-11-20-1",
+      "word": "Meticulous",
+      "category": "general",
+      "ipa": "/mɪˈtɪkjələs/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Estremamente attento ai dettagli, preciso e accurato in ogni aspetto.",
+      "definitionEn": "Showing great attention to detail; very careful and precise when doing things.",
+      "examples": [
+        "The architect was meticulous in her planning, ensuring every measurement was exact.",
+        "He approached the task with meticulous care, checking every single component."
+      ],
+      "exampleIt": "L'architetto era meticolosa nella sua pianificazione, assicurandosi che ogni misura fosse esatta.",
+      "synonyms": [
+        "thorough",
+        "scrupulous",
+        "painstaking"
+      ],
+      "collocations": [
+        "meticulous attention to detail",
+        "meticulous planning",
+        "meticulous research"
+      ],
+      "commonMistake": "Gli italiani a volte confondono \"meticulous\" con \"pignolo\" in senso negativo. \"Meticulous\" è quasi sempre positivo, indicando grande attenzione e precisione.",
+      "cloze": "For the experiment to succeed, the lab work requires a ____ approach to data collection.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-20-1.mp3"
+    },
+    {
+      "id": "2026-11-20-2",
+      "word": "Paradigm",
+      "category": "general",
+      "ipa": "/ˈpærədaɪm/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Un modello, uno schema o un esempio chiaro che spiega come funziona qualcosa.",
+      "definitionEn": "A typical example or pattern of something; a framework representing a particular worldview or set of ideas.",
+      "examples": [
+        "The invention of the internet marked a new paradigm in communication.",
+        "Scientists are debating a shift in the current economic paradigm."
+      ],
+      "exampleIt": "L'invenzione di internet ha segnato un nuovo paradigma nella comunicazione.",
+      "synonyms": [
+        "model",
+        "pattern",
+        "framework",
+        "archetype"
+      ],
+      "collocations": [
+        "paradigm shift",
+        "dominant paradigm",
+        "changing paradigm"
+      ],
+      "commonMistake": "Attenzione alla pronuncia: \"paradigm\" non si pronuncia come si scrive. La 'g' finale è muta e la 'i' è lunga /aɪ/. Non è \"paradigma\" con la 'g' sonora.",
+      "cloze": "Quantum physics introduced a completely new ____ that challenged classical notions of reality.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-20-2.mp3"
+    },
+    {
+      "id": "2026-11-20-3",
+      "word": "Pivotal",
+      "category": "business",
+      "ipa": "/ˈpɪvətəl/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Estremamente importante e decisivo per il successo o lo sviluppo di qualcosa.",
+      "definitionEn": "Of crucial importance in relation to the development or success of something else; central and essential.",
+      "examples": [
+        "Her role in the negotiations was pivotal to securing the deal.",
+        "This decision will be pivotal for the future direction of the company."
+      ],
+      "exampleIt": "Il suo ruolo nei negoziati è stato fondamentale per assicurare l'accordo.",
+      "synonyms": [
+        "crucial",
+        "critical",
+        "central",
+        "key"
+      ],
+      "collocations": [
+        "pivotal role",
+        "pivotal moment",
+        "pivotal decision"
+      ],
+      "commonMistake": "Non confondere con \"pivot\" (il perno, o verbo \"fare perno\"). \"Pivotal\" è un aggettivo che descrive qualcosa di centrale e decisivo, non un movimento fisico.",
+      "cloze": "The acquisition of the smaller startup proved to be a ____ moment in the company's expansion strategy.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-20-3.mp3"
+    },
+    {
+      "id": "2026-11-20-4",
+      "word": "Consolidate",
+      "category": "business",
+      "ipa": "/kənˈsɒlɪdeɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Rafforzare o unire più cose per renderle più efficaci o stabili.",
+      "definitionEn": "To combine a number of things into a single more effective or coherent whole, or to strengthen one's position.",
+      "examples": [
+        "The company aims to consolidate its position as market leader.",
+        "We need to consolidate our efforts to achieve this goal faster."
+      ],
+      "exampleIt": "L'azienda mira a consolidare la sua posizione di leader di mercato.",
+      "synonyms": [
+        "strengthen",
+        "merge",
+        "integrate",
+        "reinforce"
+      ],
+      "collocations": [
+        "consolidate power",
+        "consolidate debt",
+        "consolidate market share"
+      ],
+      "commonMistake": "A volte gli italiani usano \"consolidate\" per indicare solo \"confermare\". Il significato principale in inglese è \"unire/rafforzare\" per creare qualcosa di più forte o stabile.",
+      "cloze": "After several small acquisitions, the firm decided to ____ its operations into a single, larger campus.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-20-4.mp3"
+    },
+    {
+      "id": "2026-11-20-5",
+      "word": "Grapple with",
+      "category": "phrasal",
+      "ipa": "/ˈɡræpəl wɪð/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Affrontare o lottare con un problema difficile, una questione o una decisione.",
+      "definitionEn": "To struggle to deal with or understand a difficult problem or concept; to try hard to solve something.",
+      "examples": [
+        "The government is grappling with the challenge of rising inflation.",
+        "She had to grapple with the complex ethical implications of the research."
+      ],
+      "exampleIt": "Il governo sta affrontando la sfida dell'inflazione in aumento.",
+      "synonyms": [
+        "contend with",
+        "struggle with",
+        "deal with",
+        "tackle"
+      ],
+      "collocations": [
+        "grapple with a problem",
+        "grapple with a concept",
+        "grapple with difficulties"
+      ],
+      "commonMistake": "Gli italiani tendono a tradurre letteralmente \"lottare con\", ma \"grapple with\" implica più uno sforzo mentale o concettuale per capire/risolvere, non solo un conflitto fisico.",
+      "cloze": "Many businesses are currently forced to ____ supply chain disruptions caused by global events.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-20-5.mp3"
+    }
+  ]
+}
