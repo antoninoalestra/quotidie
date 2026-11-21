@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-21",
+      "words": [
+        "Elucidate",
+        "Substantiate",
+        "Implement",
+        "Procure",
+        "Bring about"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "B2",
+        "C1",
+        "B2"
+      ]
+    },
+    {
       "date": "2026-11-20",
       "words": [
         "Meticulous",
@@ -171,5 +188,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-20T04:09:16.171Z"
+  "updatedAt": "2026-11-21T04:03:35.613Z"
 }

@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "kind": "daily",
-  "generatedAt": "2026-11-20T04:08:30.753Z",
+  "generatedAt": "2026-11-21T04:00:50.170Z",
   "model": "gemini-2.5-flash",
-  "minutes": 10,
-  "words": 1931,
+  "minutes": 9,
+  "words": 1780,
   "brief": [
-    "NVIDIA ha lanciato il chip Blackwell B200, potenziando i data center e l'addestramento di modelli AI su larga scala, con ordini arretrati fino a metà 2026.",
-    "L'UE ha raggiunto un accordo provvisorio sull'AI Act, la prima legge completa al mondo per l'AI, introducendo nuove scadenze e obblighi.",
-    "L'Istat ha rilevato un'accelerazione dell'inflazione italiana a ottobre 2026, trainata da energia e alimentari, superando le stime degli economisti."
+    "I mercati globali registrano una \"settimana nera\" con un sell-off nel settore tecnologico e AI, trascinando al ribasso anche le criptovalute.",
+    "L'escalation in Ucraina vede missili russi cadere in Polonia, territorio NATO, innalzando l'allerta e il rischio di un'estensione del conflitto.",
+    "In Italia, la Manovra 2027 è al centro di aggiustamenti e proteste sindacali, con uno sciopero generale che evidenzia forti tensioni sociali."
   ],
   "sections": [
     {
@@ -16,80 +16,72 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "NVIDIA lancia il chip Blackwell B200 per data center e AI",
-          "lead": "NVIDIA ha presentato il suo nuovo chip per l'intelligenza artificiale, il \"Blackwell B200\", progettato per potenziare i data center e l'addestramento di modelli AI su larga scala.",
-          "body": "Il lancio, avvenuto il 18 marzo 2024, precede le spedizioni e la produzione in volume, con ordini arretrati previsti fino a metà 2026. Il B200 integra 208 miliardi di transistor e promette un aumento delle prestazioni fino a 30 volte rispetto alla generazione precedente per carichi di lavoro specifici di inferenza AI. Offre inoltre 192 GB di memoria HBM3e con una larghezza di banda di 8 TB/s. Il settore dei semiconduttori è in forte crescita a causa della domanda di potenza di calcolo per l'AI, e NVIDIA detiene una posizione dominante nel mercato. Gli analisti prevedono che questo chip rafforzerà ulteriormente la leadership dell'azienda.",
-          "why": "Questo chip è cruciale per lo sviluppo e l'implementazione di AI complesse, influenzando settori dalla ricerca scientifica alla finanza.",
+          "title": "Anthropic debutta in borsa con valutazione record, ma il settore AI è in sell-off",
+          "lead": "La startup di intelligenza artificiale Anthropic ha debuttato in borsa con una valutazione di 1.500 miliardi di dollari, ma il suo sbarco è avvenuto in una \"settimana nera\" per il settore tecnologico.",
+          "body": "Anthropic ha raccolto 81,3 miliardi di dollari nell'IPO, superando SpaceX, con azioni a 83 dollari. Questo debutto, molto atteso come indicatore della fiducia degli investitori nell'AI, si è scontrato con un contesto di mercato difficile.\nIl Nasdaq ha chiuso in calo del 5,3% e l'S&P 500 del 3,7%, a causa di preoccupazioni sulla sostenibilità della spesa per l'IA e sulle valutazioni del settore. Nonostante l'enorme capitalizzazione, il debutto è stato accompagnato da un diffuso sell-off.",
+          "why": "La vicenda evidenzia l'enorme potenziale percepito dell'AI, ma anche l'estrema volatilità e le incertezze che circondano le valutazioni delle aziende del settore.",
           "sources": [
             {
-              "url": "https://history.itlibra.com/en/events/nvidia-blackwell-b200-2024",
-              "title": "history.itlibra.com"
+              "url": "https://quifinanza.it/economia/",
+              "title": "quifinanza.it"
             },
             {
-              "url": "https://inworld.ai/resources/nvidia-b200-gpu-cloud",
-              "title": "inworld.ai"
+              "url": "https://finanza.repubblica.it/",
+              "title": "finanza.repubblica.it"
             },
             {
-              "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-blackwell-gpus-allegedly-delayed-due-to-design-flaws",
-              "title": "tomshardware.com"
+              "url": "https://www.milanofinanza.it/mercati/commodity",
+              "title": "milanofinanza.it"
             }
           ],
-          "readSeconds": 48
+          "readSeconds": 43
         },
         {
-          "title": "AI Act europeo: accordo su estensioni e nuove proibizioni",
-          "lead": "I negoziatori dell'Unione Europea hanno raggiunto un accordo provvisorio su emendamenti all'AI Act, la prima legge completa al mondo per la regolamentazione dell'intelligenza artificiale.",
-          "body": "L'atto è entrato in vigore il 27 luglio 2026, introducendo aggiustamenti critici alle tempistiche di conformità. Le scadenze per i sistemi AI ad alto rischio (Allegato III) sono state posticipate al 2 dicembre 2027, e per quelli incorporati in prodotti regolamentati (Allegato I) al 2 agosto 2028. L'obbligo di etichettatura per i contenuti sintetici generati dall'AI è stato posticipato al 2 dicembre 2026. L'UE mira a stabilire uno standard globale per un'AI etica e sicura, bilanciando innovazione e protezione dei diritti fondamentali. Le aziende tecnologiche esprimono preoccupazioni sui potenziali oneri normativi, mentre le organizzazioni per i diritti civili accolgono con favore le misure di protezione.",
-          "why": "L'AI Act avrà un impatto profondo sulle aziende che sviluppano e utilizzano l'AI in Europa, fungendo da modello globale.",
+          "title": "Nvidia sotto indagine SEC nonostante utili record, preoccupazioni su Cina",
+          "lead": "Nvidia, leader nei semiconduttori per l'AI, ha annunciato utili record, ma sta affrontando un'indagine della SEC e della procura della California per la vendita di chip alla Cina.",
+          "body": "La società ha registrato utili per azione di 2,68 dollari e un fatturato di 115,84 miliardi di dollari, superando le attese. Tuttavia, l'indagine si concentra sulla possibilità che Nvidia abbia permesso alla Cina di ottenere semiconduttori avanzati e se abbia fuorviato gli investitori.\nLe tensioni geopolitiche tra Stati Uniti e Cina sui semiconduttori avanzati continuano a influenzare il settore. Gli investitori sono preoccupati, portando a un calo del 14,01% del titolo e trascinando al ribasso l'intero comparto.",
+          "why": "La notizia evidenzia la crescente pressione regolatoria e geopolitica sulle aziende tecnologiche strategiche, influenzando i mercati globali e le catene di approvvigionamento.",
           "sources": [
             {
-              "url": "https://www.globalpolicywatch.com/2026/05/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/",
-              "title": "globalpolicywatch.com"
+              "url": "https://www.tio.ch/dal-mondo/economia/1963516/azienda-miliardi-nvidia-ceo-trimestre-ricavi-utili-attese",
+              "title": "tio.ch"
             },
             {
-              "url": "https://eyreact.com/eu-ai-act-amendments-2026-what-the-extended-deadlines-and-updated-rules-mean-for-your-business/",
-              "title": "eyreact.com"
+              "url": "https://diariodelweb.it/esteri/usa/california-indagine-nvidia-chip-cina/",
+              "title": "diariodelweb.it"
             },
             {
-              "url": "https://alicelabs.ai/en/insights/eu-ai-act-timeline-2026",
-              "title": "alicelabs.ai"
+              "url": "https://it.investing.com/news/stock-market-news/perche-il-titolo-di-advanced-micro-devices-crolla-oggi-93CH-3660268",
+              "title": "it.investing.com"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 41
         },
         {
-          "title": "Investimento record per startup AI nella scoperta di farmaci",
-          "lead": "Isomorphic Labs, spin-off di Google DeepMind, ha chiuso un round di finanziamento di Serie C da 5 miliardi di dollari per la scoperta di farmaci basata sull'intelligenza artificiale.",
-          "body": "Questo massiccio finanziamento segue un precedente round di Serie B da 2,1 miliardi di dollari a maggio 2026, portando il finanziamento cumulativo della società a 7,7 miliardi di dollari. L'AI sta rivoluzionando la ricerca farmaceutica, riducendo significativamente i tempi e i costi associati allo sviluppo di nuovi trattamenti. L'annuncio è stato accolto con entusiasmo nel settore tech, evidenziando la fiducia degli investitori nel potenziale a lungo termine dell'AI nella scoperta di farmaci. Questo investimento sottolinea la crescente maturità e il potenziale commerciale del settore, accelerando la ricerca e lo sviluppo di nuove terapie.",
-          "why": "Questo investimento massiccio sottolinea la maturità e il potenziale commerciale dell'AI farmaceutica, accelerando la ricerca e lo sviluppo.",
+          "title": "Trump minaccia tasse pesanti per Big Tech con data center all'estero",
+          "lead": "Donald Trump ha dichiarato che imporrà \"una tassa pesante\" sulle grandi aziende tecnologiche che costruiranno data center fuori dagli Stati Uniti, citando rischi per la sicurezza.",
+          "body": "L'ex presidente ha specificamente menzionato la Cina come un rischio per la sicurezza nazionale. Questa dichiarazione si inserisce in una più ampia retorica protezionistica, volta a incentivare la localizzazione delle infrastrutture tecnologiche negli Stati Uniti.\nL'obiettivo è sia la sicurezza nazionale sia il contrasto all'influenza cinese. Tali affermazioni sono destinate a generare preoccupazione tra le Big Tech con operazioni e investimenti globali, preannunciando potenziali cambiamenti drastici nella politica tecnologica e commerciale.",
+          "why": "Preannuncia potenziali cambiamenti drastici nella politica tecnologica e commerciale degli Stati Uniti, con conseguenze significative per le strategie di investimento e l'espansione globale.",
           "sources": [
             {
-              "url": "https://finance.biggo.com/news/63d4bd1d-ca05-4bd9-9abb-97c0fcc1c66b",
-              "title": "finance.biggo.com"
-            },
+              "url": "https://www.lagazzettadelmezzogiorno.it/news/ultima-ora/2219075/trump-se-i-big-tech-costruiranno-i-data-center-all-estero-li-tasseremo-pesantemente.html",
+              "title": "lagazzettadelmezzogiorno.it"
+            }
+          ],
+          "readSeconds": 39
+        },
+        {
+          "title": "Class action contro Meta e TikTok in Italia, scontro con UE su minori",
+          "lead": "A Milano è in corso una class action contro Meta e TikTok, promossa da famiglie che chiedono il divieto di accesso ai social per i minori di 16 anni.",
+          "body": "La class action chiede anche modifiche agli algoritmi delle piattaforme. Tuttavia, la Commissione Europea si è schierata contro divieti nazionali, sostenendo che creerebbero uno scenario illegittimo e distorcerebbero il mercato in attesa di una regolamentazione europea (EU Kids Act).\nMeta sta utilizzando la posizione della Commissione UE come elemento di difesa, argomentando che le misure nazionali sarebbero discriminatorie e premature. È cruciale per definire il futuro della regolamentazione dei social media in Europa e la protezione dei minori online.",
+          "why": "È cruciale per definire il futuro della regolamentazione dei social media in Europa e la protezione dei minori online, impattando le politiche delle Big Tech.",
+          "sources": [
             {
-              "url": "https://theaiinsider.tech/2026/11/18/isomorphic-labs-secures-5b-to-push-ai-designed-drugs-toward-clinical-trials/",
-              "title": "theaiinsider.tech"
-            },
-            {
-              "url": "https://techfundingnews.com/deepmind-spinout-isomorphic-labs-lands-5b-series-c-to-take-ai-designed-medicines-into-the-clinic/",
-              "title": "techfundingnews.com"
+              "url": "https://www.ilfattoquotidiano.it/2026/11/19/class-action-meta-tiktok-minori-social-notizie/8576095/",
+              "title": "ilfattoquotidiano.it"
             }
           ],
           "readSeconds": 44
-        },
-        {
-          "title": "Google DeepMind introduce strumenti AI per scoperta farmaci",
-          "lead": "Google DeepMind ha presentato una serie di strumenti per la scoperta di farmaci basati sull'AI per la sua piattaforma Antigravity, accelerando la ricerca.",
-          "body": "Questi strumenti consentono ai ricercatori di analizzare composti chimici, prevedere la potenza dei farmaci e generare nuovi design molecolari per i test di laboratorio. In una dimostrazione, un agente AI ha analizzato composti esistenti e proposto nuove strutture molecolari in circa un'ora, rispetto ai diversi giorni che il processo richiederebbe tipicamente. L'AI sta accelerando notevolmente il processo di scoperta di farmaci, rendendolo più efficiente e meno costoso. La comunità scientifica ha espresso cauto ottimismo, riconoscendo il potenziale ma sottolineando la necessità di ulteriori validazioni cliniche.",
-          "why": "Questo sviluppo potrebbe accelerare significativamente la scoperta di farmaci, portando a nuove terapie e migliorando l'efficienza.",
-          "sources": [
-            {
-              "url": "https://www.digitalhealthnews.com/google-deepmind-adds-ai-drug-discovery-tools-to-antigravity-platform",
-              "title": "digitalhealthnews.com"
-            }
-          ],
-          "readSeconds": 40
         }
       ]
     },
@@ -98,59 +90,59 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Petrolio in rialzo per tensioni in Medio Oriente",
-          "lead": "I prezzi del petrolio greggio sono aumentati nelle ultime 24-36 ore a seguito di nuove tensioni geopolitiche in Medio Oriente, inclusi attacchi Houthi e interruzioni nello Stretto di Hormuz.",
-          "body": "Il Brent ha superato i 92 dollari al barile, mentre il WTI si è attestato sopra gli 83 dollari al barile. Nonostante il rialzo odierno, entrambi i benchmark sono destinati a un calo settimanale, con il Brent in calo del 3,5% e il WTI del 6%. Il Medio Oriente rimane una regione critica per l'approvvigionamento globale di petrolio, e qualsiasi instabilità può avere un impatto immediato sui prezzi. L'IEA ha avvertito che la crisi nello Stretto di Hormuz potrebbe rimodellare i mercati energetici globali per anni. Gli analisti prevedono una maggiore volatilità dei prezzi del petrolio nel breve termine se le tensioni dovessero persistere o aggravarsi.",
-          "why": "L'aumento dei prezzi del petrolio può alimentare l'inflazione e influenzare i costi di produzione e il potere d'acquisto globale.",
+          "title": "Mercati azionari in forte calo, il settore tech guida il sell-off",
+          "lead": "Le borse globali hanno registrato una \"settimana nera\" con un marcato sell-off guidato dal settore tecnologico, che ha trascinato al ribasso anche i listini europei.",
+          "body": "Il Nasdaq ha chiuso in profondo rosso con un calo del 5,3%, mentre l'S&P 500 ha perso il 3,7%. Anche il FTSE MIB di Milano è sceso del 2,5%, scivolando sotto i 49mila punti.\nIl calo è stato attribuito a una combinazione di fattori, incluse le preoccupazioni sulla sostenibilità delle valutazioni del settore AI e l'indagine su Nvidia. Gli investitori mostrano cautela, con un'ampia fuga dagli asset più rischiosi.",
+          "why": "Indica un cambiamento nel sentiment del mercato, con maggiore avversione al rischio e potenziali correzioni nel settore tecnologico che potrebbero influenzare l'economia.",
           "sources": [
             {
-              "url": "https://www.rigzone.com/news/wire/oil_prices_swing_on_middle_east_uncertainty-19-nov-2026-185129-article/",
-              "title": "rigzone.com"
+              "url": "https://finanza.repubblica.it/",
+              "title": "finanza.repubblica.it"
             },
             {
-              "url": "https://www.globalbankingandfinance.com/oil-prices-edge-higher-houthi-attacks-riyadh-raise-supply/",
-              "title": "globalbankingandfinance.com"
+              "url": "https://www.milanofinanza.it/",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://www.thestar.com.my/business/business-news/2026/11/20/oil-prices-edge-higher-as-houthi-attacks-on-riyadh-raise-supply-concerns",
-              "title": "thestar.com.my"
+              "url": "https://it.marketscreener.com/notizie/stmicroelectronics-rafforza-le-capacita-del-sito-di-rousset-ce785ed3d88ff023",
+              "title": "it.marketscreener.com"
             }
           ],
-          "readSeconds": 49
+          "readSeconds": 38
         },
         {
-          "title": "IPO tecnologiche 2026: risultati trimestrali deludenti",
-          "lead": "La maggior parte delle 15 più grandi offerte pubbliche iniziali (IPO) di tecnologia e AI del 2026 ha perso i forti guadagni iniziali, lasciando gli investitori in perdita.",
-          "body": "Le IPO avevano registrato un guadagno medio del 20,5% nel primo giorno di negoziazione, ma 13 delle 15 società monitorate sono ora scambiate al di sotto dei prezzi di chiusura iniziali del primo giorno, con un calo medio del 25,9%. Il settore tecnologico sta affrontando un periodo di incertezza. I gestori di fondi globali hanno ridotto il loro sovrappeso tecnologico a novembre, il calo più significativo da giugno 2006, a causa delle preoccupazioni sulla spesa per l'intelligenza artificiale. Questi risultati indicano una possibile \"bolla\" nel settore AI e tecnologico, con gli investitori che diventano più cauti.",
-          "why": "La performance deludente delle IPO tecnologiche potrebbe segnalare un cambiamento nel sentiment degli investitori e influenzare future quotazioni.",
+          "title": "Crollo criptovalute: Bitcoin ai minimi da mesi, deflussi record dagli ETF",
+          "lead": "Bitcoin e altre criptovalute hanno subito un significativo calo, con Bitcoin sceso sotto i 62.000 dollari, raggiungendo i minimi da cinque mesi e registrando deflussi record.",
+          "body": "Si sono registrati deflussi record dagli ETF di Bitcoin per 2,5 miliardi di dollari, e l'Ethereum ha perso il 10%. I guadagni del 2025 per Bitcoin sono stati quasi azzerati.\nIl crollo è stato collegato a diverse cause, tra cui i timori per il settore AI, i rialzi dei tassi di interesse e le incertezze normative. Questo ha generato un forte sell-off e preoccupazione tra gli investitori, impattando negativamente l'intero ecosistema.",
+          "why": "Sottolinea la persistente volatilità del mercato delle criptovalute e la sua sensibilità a fattori macroeconomici e alle dinamiche del settore tecnologico.",
           "sources": [
             {
-              "url": "https://seekingalpha.com/news/4674853-most-of-2026-s-15-biggest-tech-ipos-now-trade-below-day-1-close-datatrek",
-              "title": "seekingalpha.com"
+              "url": "https://it.investing.com/news/cryptocurrency-news",
+              "title": "it.investing.com"
             },
             {
-              "url": "https://www.tokenpost.com/news/investing/61618",
-              "title": "tokenpost.com"
+              "url": "https://www.milanofinanza.it/mercati/bitcoin-criptovalute",
+              "title": "milanofinanza.it"
+            },
+            {
+              "url": "https://www.websim.it/etf/notizie-etf/cripto/",
+              "title": "websim.it"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 39
         },
         {
-          "title": "BCE: tassi invariati, ma Lagarde usa toni cauti",
-          "lead": "La Banca Centrale Europea (BCE) ha mantenuto i suoi tassi di interesse principali invariati, ma la presidente Christine Lagarde ha espresso toni più cauti sulla crescita economica dell'Eurozona.",
-          "body": "Il tasso sui depositi rimane al 4,00%, il tasso di rifinanziamento principale al 4,50% e il tasso sui prestiti marginali al 4,75%. La BCE sta cercando di bilanciare la lotta all'inflazione con il sostegno a un'economia che mostra segnali di rallentamento. I mercati azionari europei hanno reagito con una leggera flessione, mentre l'euro ha mostrato una modesta debolezza contro il dollaro. La decisione e la comunicazione della BCE sono cruciali per le prospettive economiche dell'Eurozona, influenzando i costi di finanziamento per imprese e famiglie.",
-          "why": "La decisione della BCE è cruciale per le prospettive economiche dell'Eurozona, influenzando costi di finanziamento e mercati.",
+          "title": "Italia si aggiudica primo hub europeo per materie prime critiche",
+          "lead": "La Commissione Europea ha dato il via libera al progetto italiano per la realizzazione del primo hub europeo destinato allo stoccaggio di materie prime critiche.",
+          "body": "Questa decisione si inserisce nella strategia europea per rafforzare l'autonomia e la sicurezza dell'approvvigionamento di materiali essenziali per l'industria. L'obiettivo è ridurre la dipendenza da fornitori esterni in un contesto geopolitico complesso.\nLa notizia è stata accolta positivamente, rafforzando il ruolo dell'Italia nella catena di approvvigionamento europea. Rappresenta un passo importante per la sicurezza economica e industriale dell'Europa, con benefici strategici per l'Italia nella transizione energetica e digitale.",
+          "why": "Un passo importante per la sicurezza economica e industriale dell'Europa, con benefici strategici per l'Italia nel contesto della transizione energetica e digitale.",
           "sources": [
             {
-              "url": "https://netnordic.com/insights/article/eu-ai-act-what-changes-2-august-2026/",
-              "title": "netnordic.com"
-            },
-            {
-              "url": "https://www.legal500.com/intelligence/global/technology/eu-ai-act-amendments-defer-and-clarify-obligations",
-              "title": "legal500.com"
+              "url": "https://it.investing.com/news/commodities-news",
+              "title": "it.investing.com"
             }
           ],
-          "readSeconds": 41
+          "readSeconds": 38
         }
       ]
     },
@@ -159,63 +151,55 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Istat: inflazione italiana accelera a ottobre 2026",
-          "lead": "L'Istat ha pubblicato i dati definitivi sull'inflazione per ottobre 2026, indicando un'accelerazione rispetto al mese precedente, trainata da energia e alimentari.",
-          "body": "L'indice nazionale dei prezzi al consumo (NIC) è aumentato dell'1,0% su base mensile e del 5,5% su base annua (dal +4,2% di settembre), superando la stima preliminare del 5,4%. L'inflazione armonizzata (IPCA) è salita al 5,6% su base annua. I prezzi dei prodotti energetici regolamentati sono aumentati del 61,6% su base annua. L'inflazione è stata una delle principali sfide per l'economia italiana, erodendo il potere d'acquisto delle famiglie. L'accelerazione ha superato le aspettative degli economisti, evidenziando il crescente impatto delle tensioni geopolitiche sull'economia europea.",
-          "why": "Il persistere di un'inflazione elevata continua a pesare sui bilanci delle famiglie e delle imprese italiane, influenzando i consumi.",
+          "title": "Manovra 2027: aggiustamenti e proteste sindacali su pensioni, scuola e sanità",
+          "lead": "Il governo italiano sta apportando aggiustamenti alla Manovra di Bilancio 2027, con modifiche previste su pensioni, scuola e sanità, mentre i sindacati protestano.",
+          "body": "La CGIL ha indetto uno sciopero generale per chiedere cambiamenti alla legge di bilancio, riportando la partecipazione di 1,5 milioni di lavoratori in oltre 100 piazze. Il governo ha stimato un'adesione del 12% tra i dipendenti pubblici.\nLa Manovra è al centro di un acceso dibattito politico e sociale, con le opposizioni e i sindacati che criticano le misure proposte, in particolare i tagli ai servizi pubblici. Le opposizioni la definiscono \"elettoralistica\" e \"fa schifo alla stessa maggioranza\".",
+          "why": "È il principale tema di politica interna, con impatti diretti sulla vita dei cittadini, sui servizi essenziali e sulla stabilità del governo.",
           "sources": [
             {
-              "url": "https://www.istat.it/en/press-release/consumer-prices-provisional-data-october-2026/",
-              "title": "istat.it"
+              "url": "https://rtl.it/notizie/italia/politica/",
+              "title": "rtl.it"
             },
             {
-              "url": "https://www.istat.it/en/press-release/consumer-prices-october-2026/",
-              "title": "istat.it"
+              "url": "https://tg24.sky.it/politica",
+              "title": "tg24.sky.it"
             },
             {
-              "url": "https://www.theeuromagazine.com/italy-inflation-rises-5-4-percent-october-2026/",
-              "title": "theeuromagazine.com"
-            }
-          ],
-          "readSeconds": 39
-        },
-        {
-          "title": "Allerta meteo per maltempo al Centro-Nord Italia",
-          "lead": "Diverse regioni del Centro-Nord Italia sono state colpite da una perturbazione atlantica, portando piogge diffuse, temporali e venti intensi, con allerta gialla.",
-          "body": "La Protezione Civile ha diramato un'allerta meteo gialla per undici regioni. Sono previste raffiche di vento fino a burrasca forte, in particolare sui crinali alpini e appenninici, e forti mareggiate lungo le coste esposte. L'Italia è sempre più vulnerabile agli eventi meteorologici estremi a causa dei cambiamenti climatici. La Protezione Civile ha invitato la popolazione alla massima cautela e sta monitorando l'evoluzione delle condizioni meteorologiche. Questi eventi evidenziano l'urgenza di interventi di prevenzione e adattamento al cambiamento climatico per proteggere il territorio e la popolazione italiana.",
-          "why": "Questi eventi evidenziano l'urgenza di interventi di prevenzione e adattamento al cambiamento climatico per proteggere il territorio.",
-          "sources": [
-            {
-              "url": "https://www.emme24.it/attualita/maltempo-sullitalia-piogge-e-venti-di-burrasca-da-nord-a-sud-allerta-gialla-in-11-regioni",
-              "title": "emme24.it"
-            },
-            {
-              "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-previsioni-oggi-19-novembre_2IwWUHtCqrq9kDzX5JOcXe",
-              "title": "adnkronos.com"
-            },
-            {
-              "url": "https://tg24.sky.it/cronaca/2026/11/19/allerta-meteo-maltempo-oggi",
+              "url": "https://tg24.sky.it/economia",
               "title": "tg24.sky.it"
             }
           ],
           "readSeconds": 40
         },
         {
-          "title": "Dibattito acceso sulla Legge di Bilancio 2027",
-          "lead": "Il dibattito sulla Legge di Bilancio 2027 è in corso in Parlamento, con l'opposizione che ha presentato numerosi emendamenti e critiche sulle priorità del governo.",
-          "body": "La manovra prevede circa 25 miliardi di euro di interventi, con focus su taglio del cuneo fiscale e sostegno alle famiglie. La legge di bilancio è il principale strumento economico del governo per l'anno a venire e la sua approvazione è fondamentale per la stabilità politica ed economica. Le forze politiche sono in piena trattativa, con il governo che cerca di blindare i punti chiave e l'opposizione che punta a modifiche significative. L'approvazione della Legge di Bilancio determinerà le politiche economiche e sociali dell'Italia per il 2027, influenzando direttamente cittadini e imprese.",
-          "why": "L'approvazione della Legge di Bilancio determinerà le politiche economiche e sociali dell'Italia per il 2027, influenzando cittadini e imprese.",
+          "title": "Stellantis: delocalizzazione \"al contrario\" e preoccupazioni per fabbriche italiane",
+          "lead": "Stellantis starebbe importando manodopera da Asia e Nordafrica per le operazioni in Serbia, dove i costi del lavoro locale sono \"troppo alti\", sollevando interrogativi sul futuro in Italia.",
+          "body": "Questa strategia, definita \"delocalizzazione al contrario\", contrasta con la situazione italiana, dove la fabbrica di Cassino opera ormai solo per cinque o sei giorni al mese.\nLa situazione solleva preoccupazioni sul futuro dell'industria automobilistica italiana e sulla sicurezza occupazionale, evidenziando le sfide della competitività globale. Il dibattito sulla politica industriale del gruppo è acceso, con un impatto cruciale sull'economia e il mercato del lavoro italiano.",
+          "why": "Un tema cruciale per l'economia e il mercato del lavoro italiano, che riflette le dinamiche globali dell'industria manifatturiera e le scelte strategiche.",
           "sources": [
             {
-              "url": "https://www.digitalhealthnews.com/google-deepmind-adds-ai-drug-discovery-tools-to-antigravity-platform",
-              "title": "digitalhealthnews.com"
-            },
-            {
-              "url": "https://www.rigzone.com/news/wire/oil_prices_swing_on_middle_east_uncertainty-19-nov-2026-185129-article/",
-              "title": "rigzone.com"
+              "url": "https://www.ilfattoquotidiano.it/economia-lobby/",
+              "title": "ilfattoquotidiano.it"
             }
           ],
-          "readSeconds": 43
+          "readSeconds": 37
+        },
+        {
+          "title": "Consenso bipartisan in Italia per limiti ai social media under 13",
+          "lead": "In Italia si registra un consenso bipartisan per l'introduzione di limiti all'accesso ai social media per i giovanissimi, con un divieto assoluto proposto per i minori di 13 anni.",
+          "body": "La proposta nasce dalla crescente consapevolezza dei rischi legati all'uso precoce e incontrollato dei social media sulla salute mentale e lo sviluppo dei bambini. Questo si allinea con un dibattito più ampio a livello europeo.\nLa convergenza politica su questo tema mostra una forte volontà di proteggere i minori nel contesto digitale, nonostante la Commissione Europea abbia espresso riserve sui divieti nazionali in attesa di una normativa UE. È un'iniziativa importante per la protezione dell'infanzia.",
+          "why": "Un'iniziativa importante per la protezione dell'infanzia nell'era digitale, che potrebbe influenzare le future normative nazionali e il dibattito europeo.",
+          "sources": [
+            {
+              "url": "https://rtl.it/notizie/italia/politica/",
+              "title": "rtl.it"
+            },
+            {
+              "url": "https://www.ilfattoquotidiano.it/2026/11/19/class-action-meta-tiktok-minori-social-notizie/8576095/",
+              "title": "ilfattoquotidiano.it"
+            }
+          ],
+          "readSeconds": 40
         }
       ]
     },
@@ -224,59 +208,59 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Nuovi colloqui di pace per conflitto in Medio Oriente",
-          "lead": "Rappresentanti di diverse nazioni e fazioni coinvolte nel conflitto in Medio Oriente si sono incontrati per un nuovo round di colloqui volti a raggiungere un cessate il fuoco duraturo.",
-          "body": "Non sono stati resi noti dettagli specifici sui progressi, ma le discussioni sono descritte come \"intense\" e \"complesse\". Il conflitto continua a causare una grave crisi umanitaria e destabilizza l'intera regione, con ripercussioni globali. La comunità internazionale esprime cauta speranza per un esito positivo, mentre le parti in causa mantengono posizioni ferme. Il successo o il fallimento di questi colloqui avrà un impatto enorme sulla vita di milioni di persone e sulla stabilità geopolitica mondiale.",
-          "why": "Il successo di questi colloqui avrà un impatto enorme sulla vita di milioni e sulla stabilità geopolitica mondiale.",
+          "title": "Escalation Ucraina: missili russi cadono in Polonia, allerta NATO in Europa",
+          "lead": "Missili e droni russi sono caduti in Polonia, membro della NATO, in seguito a intensi bombardamenti su Kiev, portando all'allerta e al decollo di caccia NATO.",
+          "body": "L'incidente si inserisce in un contesto di azioni ostili contro l'Europa più che raddoppiate da ottobre, con 22 azioni censite tra il 14 e il 20 novembre. La parte orientale del continente è la più colpita.\nQuesto evento rappresenta una significativa escalation delle tensioni tra Russia e NATO, con il rischio di un'estensione del conflitto ucraino. La Polonia ha innalzato il livello di allerta e la NATO ha reagito con l'attivazione dei propri sistemi di difesa aerea.",
+          "why": "Un evento di portata geopolitica critica che aumenta la preoccupazione per la sicurezza europea e la stabilità internazionale, testando la risposta NATO.",
           "sources": [
             {
-              "url": "https://www.radiobullets.com/notiziari/19-novembre-2026-notiziario-mondo/",
-              "title": "radiobullets.com"
+              "url": "https://www.agi.it/estero/",
+              "title": "agi.it"
             },
             {
-              "url": "https://www.radiopopolare.it/puntata/popolare-esteri/esteri_19_11_2026_19_00",
-              "title": "radiopopolare.it"
+              "url": "https://tg24.sky.it/mondo",
+              "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://legrandcontinent.eu/it/2026/11/20/missili-russi-in-polonia-le-azioni-ostili-contro-leuropa-sono-piu-che-raddoppiate-da-ottobre-a-oggi/",
+              "title": "legrandcontinent.eu"
             }
           ],
-          "readSeconds": 39
+          "readSeconds": 41
         },
         {
-          "title": "Crisi energetica in Asia, impatto crisi Hormuz",
-          "lead": "Diversi paesi asiatici affrontano una crescente crisi energetica, con carenze di gas naturale e carbone, esacerbata dalla crisi nello Stretto di Hormuz.",
-          "body": "La crisi di Hormuz ha spinto i paesi a cercare alternative e accelerare la transizione energetica. Prima della crisi, circa l'80% del petrolio e quasi il 90% del gas naturale liquefatto (GNL) che transitava nello Stretto di Hormuz era destinato all'Asia. Dati del 2026 mostrano un rapido aumento delle importazioni di moduli fotovoltaici solari e batterie nei paesi africani e asiatici colpiti. La ripresa economica post-pandemia e le interruzioni delle catene di approvvigionamento globali hanno contribuito a una domanda energetica elevata e a un'offerta limitata. I governi stanno cercando soluzioni di emergenza, tra cui l'acquisto di forniture aggiuntive e misure di risparmio energetico.",
-          "why": "La crisi energetica in Asia potrebbe avere un impatto significativo sull'economia globale, influenzando produzione industriale e prezzi.",
+          "title": "Trump, Xi e Putin firmano \"dichiarazione di pace\" escludendo Ucraina e Iran",
+          "lead": "Donald Trump ha incontrato Xi Jinping e Vladimir Putin al vertice APEC, dove i tre leader hanno firmato una \"dichiarazione di pace\" che non menziona Ucraina né Iran.",
+          "body": "Trump ha anche dichiarato di non avere fretta di prendere decisioni sull'Iran prima dell'inizio del 2027. Questo vertice trilaterale, con la potenziale rielezione di Trump, segnala un possibile riassetto delle dinamiche geopolitiche globali.\nIn Europa, l'incontro ha sollevato timori di una \"nuova Yalta\" e preoccupazioni per il futuro dell'Ucraina e il ruolo dell'UE. L'evento potrebbe ridefinire gli equilibri di potere globali, influenzando le crisi internazionali e le relazioni tra potenze.",
+          "why": "Un evento di grande peso geopolitico che potrebbe ridefinire gli equilibri di potere globali, influenzando le crisi internazionali e le relazioni tra potenze.",
           "sources": [
             {
-              "url": "https://www.renewable-energy-industry.com/news/world/article-7774-hormuz-crisis-accelerates-energy-transition-iea-sees-potential-for-15-percent-lower-oil-and-gas-imports",
-              "title": "renewable-energy-industry.com"
+              "url": "https://www.agi.it/estero/",
+              "title": "agi.it"
             },
             {
-              "url": "https://www.iea.org/reports/world-energy-outlook-2026/executive-summary",
-              "title": "iea.org"
+              "url": "https://it.euronews.com/programs/mondo",
+              "title": "it.euronews.com"
             },
             {
-              "url": "https://tanahair.net/iea-warns-hormuz-crisis-could-reshape-global-energy-security-accelerate-electrification/",
-              "title": "tanahair.net"
-            }
-          ],
-          "readSeconds": 45
-        },
-        {
-          "title": "Vertice G20: impegni su clima ed economia globale",
-          "lead": "Il vertice dei leader del G20 si è concluso con una dichiarazione congiunta che riafferma gli impegni sulla lotta al cambiamento climatico e la stabilità economica globale.",
-          "body": "Non sono stati annunciati nuovi impegni finanziari significativi, ma è stata ribadita la necessità di raggiungere gli obiettivi dell'Accordo di Parigi. Il G20 rappresenta le maggiori economie mondiali e le sue decisioni hanno un peso considerevole sulle politiche globali. Gli attivisti climatici hanno espresso delusione per la mancanza di impegni più ambiziosi, mentre i leader hanno sottolineato l'importanza della cooperazione multilaterale. Le conclusioni del G20 delineano le priorità e le sfide globali, influenzando le politiche economiche e ambientali a livello internazionale.",
-          "why": "Le conclusioni del G20 delineano le priorità e le sfide globali, influenzando le politiche economiche e ambientali internazionali.",
-          "sources": [
-            {
-              "url": "https://www.thehindu.com/news/international/west-asia-crisis-largest-threat-to-energy-security-ever-iea/article71718854.ece",
-              "title": "thehindu.com"
-            },
-            {
-              "url": "https://seekingalpha.com/news/4674853-most-of-2026-s-15-biggest-tech-ipos-now-trade-below-day-1-close-datatrek",
-              "title": "seekingalpha.com"
+              "url": "https://tg24.sky.it/mondo/2026/11/19/guerra-iran-usa-trump-news-diretta",
+              "title": "tg24.sky.it"
             }
           ],
           "readSeconds": 40
+        },
+        {
+          "title": "Petroliera colpita da proiettile non identificato nello Stretto di Hormuz",
+          "lead": "Una petroliera è stata colpita da un \"proiettile non identificato\" e ha preso fuoco a est dello Stretto di Hormuz, vicino all'Oman, con l'equipaggio illeso.",
+          "body": "L'incidente rappresenta un rischio significativo per il commercio marittimo e l'ambiente. Avviene in un periodo di elevate tensioni nel Medio Oriente, con preoccupazioni per la sicurezza delle rotte marittime vitali per il trasporto di petrolio.\nL'agenzia marittima britannica UKMTO ha segnalato l'incidente e sta conducendo accertamenti. L'episodio aumenta l'instabilità geopolitica in una regione cruciale per l'approvvigionamento energetico mondiale, con potenziali ripercussioni sui prezzi del petrolio.",
+          "why": "Aumenta l'instabilità geopolitica in una regione cruciale per l'approvvigionamento energetico mondiale, con potenziali ripercussioni sui prezzi del petrolio.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/mondo/2026/11/19/guerra-iran-usa-trump-news-diretta",
+              "title": "tg24.sky.it"
+            }
+          ],
+          "readSeconds": 35
         }
       ]
     }

@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-21",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-21T04:03:35.612Z",
+  "words": [
+    {
+      "id": "2026-11-21-1",
+      "word": "Elucidate",
+      "category": "general",
+      "ipa": "/ɪˈluːsɪdeɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Chiarire o spiegare qualcosa, specialmente se complesso o difficile da capire.",
+      "definitionEn": "To make something clear or easier to understand, especially complex information or ideas.",
+      "examples": [
+        "Could you please elucidate the main points of your proposal for those who weren't at the last meeting?",
+        "The professor was excellent at elucidating abstract concepts with practical examples."
+      ],
+      "exampleIt": "Potrebbe per favore chiarire i punti principali della sua proposta per coloro che non erano all'ultima riunione?",
+      "synonyms": [
+        "Clarify",
+        "explain",
+        "illuminate"
+      ],
+      "collocations": [
+        "Elucidate a concept",
+        "elucidate a point",
+        "elucidate the findings"
+      ],
+      "commonMistake": "Non confonderlo con \"illustrate\" (illustrare con immagini o esempi). \"Elucidate\" si concentra sul rendere chiaro un concetto.",
+      "cloze": "The speaker was asked to ____ the complex economic theory for the general audience.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-21-1.mp3"
+    },
+    {
+      "id": "2026-11-21-2",
+      "word": "Substantiate",
+      "category": "general",
+      "ipa": "/səbˈstænʃieɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Fornire prove o fatti per dimostrare che qualcosa è vero o valido.",
+      "definitionEn": "To provide evidence or facts to support the truth or validity of a claim or statement.",
+      "examples": [
+        "The lawyer struggled to substantiate his client's alibi with concrete evidence.",
+        "Before making a serious accusation, you must be able to substantiate it with reliable data."
+      ],
+      "exampleIt": "L'avvocato ha faticato a sostanziare l'alibi del suo cliente con prove concrete.",
+      "synonyms": [
+        "Prove",
+        "confirm",
+        "verify"
+      ],
+      "collocations": [
+        "Substantiate a claim",
+        "substantiate an argument",
+        "substantiate allegations"
+      ],
+      "commonMistake": "Non confondere con \"sustain\" (sostenere, mantenere) o \"substance\" (sostanza). Il focus è sulla verifica della verità.",
+      "cloze": "We need more data to ____ the hypothesis presented in the research paper.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-21-2.mp3"
+    },
+    {
+      "id": "2026-11-21-3",
+      "word": "Implement",
+      "category": "business",
+      "ipa": "/ˈɪmplɪmɛnt/",
+      "partOfSpeech": "verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Mettere in pratica o attuare un piano, una decisione o un sistema.",
+      "definitionEn": "To put a decision, plan, or agreement into effect; to start using a system or policy.",
+      "examples": [
+        "The company plans to implement new software to improve efficiency across all departments.",
+        "It's one thing to propose a strategy, quite another to successfully implement it."
+      ],
+      "exampleIt": "L'azienda prevede di implementare un nuovo software per migliorare l'efficienza in tutti i reparti.",
+      "synonyms": [
+        "Execute",
+        "enact",
+        "carry out"
+      ],
+      "collocations": [
+        "Implement a strategy",
+        "implement a policy",
+        "implement changes"
+      ],
+      "commonMistake": "Gli italiani a volte usano \"implementare\" in italiano con un significato più vicino a \"aggiungere\" o \"integrare\", mentre in inglese \"implement\" significa \"mettere in atto\".",
+      "cloze": "After months of planning, it's finally time to ____ the new marketing campaign.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-21-3.mp3"
+    },
+    {
+      "id": "2026-11-21-4",
+      "word": "Procure",
+      "category": "business",
+      "ipa": "/prəˈkjʊə/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Ottenere qualcosa, specialmente con cura o sforzo, o per scopi commerciali.",
+      "definitionEn": "To obtain something, especially with care or effort, or for commercial purposes.",
+      "examples": [
+        "The purchasing department is responsible for procuring raw materials from various suppliers.",
+        "We need to procure the necessary permits before construction can begin."
+      ],
+      "exampleIt": "Il reparto acquisti è responsabile per l'ottenimento delle materie prime da vari fornitori.",
+      "synonyms": [
+        "Obtain",
+        "acquire",
+        "source"
+      ],
+      "collocations": [
+        "Procure supplies",
+        "procure goods",
+        "procure funding"
+      ],
+      "commonMistake": "A volte gli studenti italiani usano \"procure\" quando \"get\" o \"obtain\" sarebbero più appropriati in contesti meno formali o di affari.",
+      "cloze": "The library aims to ____ rare books for its special collection.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-21-4.mp3"
+    },
+    {
+      "id": "2026-11-21-5",
+      "word": "Bring about",
+      "category": "phrasal",
+      "ipa": "/brɪŋ əˈbaʊt/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Causare l'accadere di qualcosa; produrre un risultato o un cambiamento.",
+      "definitionEn": "To cause something to happen, especially a change or result.",
+      "examples": [
+        "The new regulations are expected to bring about significant changes in the industry.",
+        "His persistent efforts eventually brought about a successful resolution to the conflict."
+      ],
+      "exampleIt": "Le nuove normative dovrebbero portare a cambiamenti significativi nel settore.",
+      "synonyms": [
+        "Cause",
+        "lead to",
+        "effect"
+      ],
+      "collocations": [
+        "Bring about change",
+        "bring about a solution",
+        "bring about reform"
+      ],
+      "commonMistake": "A volte confuso con \"bring up\" (sollevare un argomento, crescere un bambino) o \"bring in\" (introdurre). \"Bring about\" è specificamente \"causare\".",
+      "cloze": "The manager's innovative ideas are likely to ____ a positive shift in team morale.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-21-5.mp3"
+    }
+  ]
+}

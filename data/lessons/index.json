@@ -1,6 +1,21 @@
 {
   "lessons": [
     {
+      "date": "2026-11-21",
+      "title": "Il Lato Oscuro: Quando il Debito Compone Contro di Te",
+      "category": "Finanza personale",
+      "categoryId": "finanza-personale",
+      "minutes": 4,
+      "hook": "Se nelle lezioni precedenti abbiamo esplorato il potere trasformativo dell'interesse composto quando opera a nostro favore, costruendo ricchezza con pazienza e strategia, è giunto il momento di volgere lo sguardo al suo lato più insidioso. Cosa accade quando questa stessa forza inarrestabile non è più un alleato, ma un avversario che lavora instancabilmente contro di noi?",
+      "kind": "series",
+      "series": {
+        "id": "2026-11-18-l-effetto-farfalla-del-tuo-denaro",
+        "title": "L'Effetto Farfalla del Tuo Denaro",
+        "part": 4,
+        "total": 5
+      }
+    },
+    {
       "date": "2026-11-20",
       "title": "Costruire Ricchezza: Il Potere Moltiplicatore degli Investimenti",
       "category": "Finanza personale",
