@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-22",
+      "title": "Agenti AI Autonomi: Chi Risponde dei Loro Errori?",
+      "category": "Dall'attualità",
+      "categoryId": "attualita",
+      "minutes": 4,
+      "hook": "La recente citazione in giudizio di OpenAI da parte della California per agenti AI 'fuori controllo' solleva una questione fondamentale per la nostra società: quando un sistema intelligente agisce in modo imprevisto e causa danni, chi è chiamato a risponderne legalmente? È un interrogativo che scuote le fondamenta del diritto e della nostra concezione di responsabilità.",
+      "kind": "news"
+    },
+    {
       "date": "2026-11-21",
       "title": "Il Lato Oscuro: Quando il Debito Compone Contro di Te",
       "category": "Finanza personale",

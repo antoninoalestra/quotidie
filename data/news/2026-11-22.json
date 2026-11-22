@@ -1,0 +1,305 @@
+{
+  "date": "2026-11-22",
+  "kind": "weekly",
+  "range": {
+    "from": "2026-11-16",
+    "to": "2026-11-22"
+  },
+  "generatedAt": "2026-11-22T03:14:32.584Z",
+  "model": "gemini-2.5-flash",
+  "minutes": 10,
+  "words": 2080,
+  "brief": [
+    "Nvidia ha subito un crollo azionario dopo le dimissioni del CEO e un'indagine SEC, nonostante il lancio di nuovi chip AI.",
+    "L'Unione Europea ha raggiunto un accordo sull'AI Act, mentre l'Italia ha definito la propria governance dell'intelligenza artificiale.",
+    "I mercati globali hanno registrato un sell-off, con il Bitcoin ai minimi e le banche centrali che mantengono una politica cauta."
+  ],
+  "sections": [
+    {
+      "id": "tech",
+      "title": "Tecnologia e AI",
+      "stories": [
+        {
+          "title": "AI Act Europeo e Governance Italiana completata",
+          "lead": "L'Unione Europea ha raggiunto un accordo sull'AI Act, la sua legge pionieristica sull'intelligenza artificiale, mentre l'Italia ha definito la propria governance con il D.Lgs. 179/2026.",
+          "body": "L'accordo europeo, frutto di lunghe negoziazioni, mira a bilanciare innovazione e protezione dei diritti fondamentali, introducendo regole più stringenti per i sistemi ad alto rischio e nuove restrizioni su usi specifici dell'AI. L'Italia si allinea a questo quadro, stabilendo un percorso chiaro per l'implementazione e l'applicazione delle normative a livello nazionale.\nL'Europa si posiziona come leader mondiale nella regolamentazione dell'AI, cercando di creare uno standard globale. La legislazione italiana intende garantire un ambiente sicuro e responsabile per lo sviluppo e l'adozione dell'AI, proteggendo al contempo la competitività delle sue imprese.",
+          "why": "Queste normative avranno un impatto profondo sulle aziende tecnologiche, influenzando lo sviluppo di nuovi prodotti e servizi AI e rafforzando la fiducia dei consumatori.",
+          "sources": [
+            {
+              "url": "https://www.theguardian.com/technology/2026/nov/12/nvidia-ceo-jensen-huang-resigns",
+              "title": "theguardian.com"
+            }
+          ],
+          "readSeconds": 44
+        },
+        {
+          "title": "Nvidia, dimissioni CEO e indagine SEC pesano sul titolo",
+          "lead": "Jensen Huang si è dimesso da CEO di Nvidia a seguito di comportamenti incoerenti, causando un crollo del titolo, mentre l'azienda affronta un'indagine SEC e lancia il chip Blackwell B200.",
+          "body": "Le dimissioni di Huang l'11 novembre hanno provocato un calo del 13% delle azioni Nvidia, con una perdita di valore di mercato di circa 490 miliardi di dollari nella settimana. Colette Kress è stata nominata CEO ad interim. Nonostante la crisi di leadership, Nvidia ha lanciato il chip Blackwell B200 e annunciato un investimento di quasi 3 miliardi di dollari per l'espansione del packaging avanzato.\nL'indagine della SEC si concentra su potenziali problemi contabili e comunicazioni fuorvianti agli investitori, con particolare attenzione alle operazioni in Asia e Cina. Questa situazione si inserisce in un contesto di crescenti restrizioni statunitensi sull'esportazione di chip AI verso la Cina, influenzando la posizione di Nvidia nell'ecosistema globale dell'AI.",
+          "why": "Le vicende di Nvidia sono un barometro della salute del settore AI e delle dinamiche geopolitiche, con impatti significativi sui mercati globali dei semiconduttori.",
+          "sources": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+              "title": "nvidianews.nvidia.com"
+            },
+            {
+              "url": "https://www.theguardian.com/technology/2026/nov/12/nvidia-ceo-jensen-huang-resigns",
+              "title": "theguardian.com"
+            },
+            {
+              "url": "https://dealroom.co/news/174723-sec-probe-of-nvidia-turns-to-its-accounting-as-shares-fall-14-and-close-/",
+              "title": "dealroom.co"
+            }
+          ],
+          "readSeconds": 53
+        },
+        {
+          "title": "Anthropic debutta in borsa con IPO record, ma il settore AI cala",
+          "lead": "Anthropic, sviluppatore di Claude AI, ha completato la più grande IPO di sempre raccogliendo 81,3 miliardi di dollari, ma il suo debutto è avvenuto in un contesto di sell-off generale nel settore AI.",
+          "body": "La startup ha raggiunto una valutazione di circa 1,5 trilioni di dollari al prezzo di IPO di 83 dollari per azione, superando SpaceX. Nonostante l'aumento del 17% nel primo giorno di negoziazione, il titolo tokenizzato è sceso dell'8,50% il 21 novembre, riflettendo la cautela degli investitori. Sette partner strategici, inclusi Google e Nvidia, hanno acquistato 26 miliardi di dollari di azioni senza diritto di voto.\nIl settore AI ha visto una crescita esponenziale, ma il mercato sta ora valutando la capacità delle aziende di tradurre l'innovazione in profitti sostenibili, portando a una potenziale correzione. L'andamento di Anthropic e del settore AI in borsa sarà un indicatore cruciale per future IPO e la fiducia degli investitori.",
+          "why": "L'IPO di Anthropic è un indicatore chiave per il futuro delle startup AI, ma il sell-off generale suggerisce una fase di maggiore cautela del mercato.",
+          "sources": [
+            {
+              "url": "https://certifiedstrategic.com/insights/anthropic-ipo-us81bn-nvidia-google-placement",
+              "title": "certifiedstrategic.com"
+            },
+            {
+              "url": "https://futurumgroup.com/insights/anthropic-ipo-makes-its-biggest-suppliers-shareholders/",
+              "title": "futurumgroup.com"
+            },
+            {
+              "url": "https://www.aljazeera.com/news/2026/11/19/charting-the-worlds-biggest-ipos-as-anthropic-overtakes-spacex",
+              "title": "aljazeera.com"
+            }
+          ],
+          "readSeconds": 56
+        },
+        {
+          "title": "Big Tech sotto pressione tra dazi Trump e accordo sullo scraping",
+          "lead": "Donald Trump ha minacciato dazi e sanzioni alle Big Tech con data center all'estero, mentre le aziende hanno raggiunto un accordo per contrastare lo \"scraping selvaggio\" dei dati.",
+          "body": "Le minacce di Trump, annunciate il 20 novembre, mirano a mantenere gli investimenti in infrastrutture AI negli Stati Uniti, causando un calo delle azioni di Alphabet e Amazon. Queste dichiarazioni si inseriscono in una retorica \"America First\" che potrebbe influenzare le strategie di localizzazione globale delle aziende tecnologiche.\nL'accordo sullo scraping riflette la crescente consapevolezza della necessità di regolamentare l'accesso e l'uso dei dati per l'AI, un tema cruciale per la privacy e la proprietà intellettuale. Le decisioni su questo fronte influenzeranno direttamente lo sviluppo dei futuri modelli di AI e la remunerazione dei creatori di contenuti.",
+          "why": "Le politiche fiscali proposte da Trump e le regole sullo scraping influenzeranno profondamente le operazioni globali delle Big Tech e lo sviluppo futuro dell'AI.",
+          "sources": [
+            {
+              "url": "https://www.agrolatam.com/usa/news/trump-threatens-major-tax-on-overseas-ai-data-centers/",
+              "title": "agrolatam.com"
+            },
+            {
+              "url": "https://www.investing.com/news/stock-market-news/trump-vows-tax-on-us-firms-building-data-centers-abroad-5042405",
+              "title": "investing.com"
+            },
+            {
+              "url": "https://247wallst.com/investing/2026/11/21/trump-threatens-a-tremendous-tax-on-companies-that-build-data-centers-overseas/",
+              "title": "247wallst.com"
+            }
+          ],
+          "readSeconds": 48
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "title": "Finanza e mercati",
+      "stories": [
+        {
+          "title": "Crollo Bitcoin ai minimi, deflussi record dagli ETF cripto",
+          "lead": "Il Bitcoin è crollato a circa 62.000 dollari, raggiungendo i minimi da mesi, a causa di accuse di manipolazione e deflussi record dagli ETF spot negli Stati Uniti.",
+          "body": "La discesa del Bitcoin, che ha toccato 61.635 dollari il 19 novembre, ha innescato un sell-off generalizzato nel mercato delle criptovalute. Gli ETF spot su Bitcoin negli Stati Uniti hanno registrato circa 3,47 miliardi di dollari di deflussi netti a novembre, con BlackRock's IBIT che ha avuto il suo peggior giorno di sempre.\nQuesto scenario indica una crescente sfiducia degli investitori istituzionali, in un mercato noto per la sua volatilità. La combinazione di accuse di manipolazione e un calo della fiducia ha creato una tempesta perfetta per una correzione significativa, scoraggiando nuovi investitori.",
+          "why": "La performance del Bitcoin è un indicatore chiave per l'intero mercato delle criptovalute, e un prolungato calo potrebbe rallentare l'adozione mainstream.",
+          "sources": [
+            {
+              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/crypto-market-today-nov-19-bitcoin-approaches-usd60-000-as-etf-outflows-surpass-usd2-5-billion-in-2026/",
+              "title": "fool.com"
+            },
+            {
+              "url": "https://www.tradingview.com/news/cryptobriefing:502633bca094b:0-blackrock-s-ibit-posts-record-541m-outflow-as-bitcoin-etfs-bleed-3-47b-in-november/",
+              "title": "tradingview.com"
+            },
+            {
+              "url": "https://cryptobriefing.com/bitcoin-falls-20-percent-november/",
+              "title": "cryptobriefing.com"
+            }
+          ],
+          "readSeconds": 45
+        },
+        {
+          "title": "Mercati azionari globali in forte calo, settore tech guida il sell-off",
+          "lead": "I mercati azionari globali hanno registrato un forte calo settimanale, con il settore tecnologico che ha guidato il sell-off, tra timori per l'inflazione e incertezze geopolitiche.",
+          "body": "Il Nasdaq Composite ha chiuso il 19 novembre con un calo del 13,5% rispetto al suo record di ottobre, mentre l'S&P 500 ha perso l'8,2%. Il calo è stato attribuito a una combinazione di fattori, inclusi i timori per l'inflazione, le incertezze geopolitiche e le preoccupazioni sulle valutazioni elevate di alcune aziende tecnologiche.\nL'aumento dei costi di finanziamento per i data center e le aspettative di un aumento dei tassi da parte della Fed a dicembre hanno contribuito alla pressione. Dopo un lungo periodo di crescita, i mercati stanno affrontando una fase di correzione, con gli investitori più attenti ai segnali di rallentamento economico.",
+          "why": "Un prolungato sell-off azionario, specialmente nel settore tech, potrebbe avere un impatto sull'economia reale, riducendo la ricchezza degli investitori.",
+          "sources": [
+            {
+              "url": "https://assetwhisper.com/ai-stocks-sell-off-november-2026/",
+              "title": "assetwhisper.com"
+            },
+            {
+              "url": "https://8figures.com/blog/stocks/tech-stocks-selloff-november-2026",
+              "title": "8figures.com"
+            },
+            {
+              "url": "https://www.kucoin.com/blog/us-stock-market-crash-november-5-2026",
+              "title": "kucoin.com"
+            }
+          ],
+          "readSeconds": 48
+        },
+        {
+          "title": "Banche centrali: BCE cauta sui tassi, Fed propende per rialzi",
+          "lead": "La BCE ha mantenuto i tassi invariati con toni cauti, mentre i verbali della Fed indicano che ulteriori aumenti dei tassi potrebbero essere appropriati per contenere l'inflazione.",
+          "body": "La Presidente della BCE, Christine Lagarde, ha suggerito che la politica monetaria rimarrà restrittiva per un periodo prolungato, riflettendo le incertezze sull'inflazione e la crescita economica nell'Eurozona. Le banche centrali sono in un delicato equilibrio tra il contenimento dell'inflazione e il sostegno alla crescita economica.\nNegli Stati Uniti, i verbali del FOMC del 18 novembre hanno mostrato che quasi tutti i partecipanti ritengono che ulteriori aumenti dei tassi siano probabilmente appropriati. Alcuni hanno considerato un aumento di oltre 25 punti base alla prossima riunione se i dati sull'inflazione fossero sfavorevoli, rafforzando una traiettoria di politica monetaria restrittiva.",
+          "why": "Le politiche delle banche centrali sono fondamentali per la stabilità economica globale, e segnali di ulteriori rialzi potrebbero inasprire le condizioni finanziarie.",
+          "sources": [
+            {
+              "url": "https://www.financecalendar.com/event/fomc-minutes-november-2026/",
+              "title": "financecalendar.com"
+            },
+            {
+              "url": "https://bankingjournal.aba.com/2026/11/fomc-minutes-show-close-call-over-possible-rate-hike/",
+              "title": "bankingjournal.aba.com"
+            },
+            {
+              "url": "https://www.xtb.com/en/market-analysis/fed-minutes-virtually-everyone-in-favor-of-further-rate-hikes-is-there-a-chance-for-50-basis-points-in-december",
+              "title": "xtb.com"
+            }
+          ],
+          "readSeconds": 47
+        }
+      ]
+    },
+    {
+      "id": "italy",
+      "title": "Italia",
+      "stories": [
+        {
+          "title": "Manovra di Bilancio 2027: dibattito acceso e record di emendamenti",
+          "lead": "La Manovra di Bilancio 2027 è stata al centro di un acceso dibattito politico, con salari e sanità tra i temi principali e un record di 6.600 emendamenti presentati.",
+          "body": "Il dibattito ha visto scontri su temi come il condono edilizio e l'ipotesi di una patrimoniale. Il governo sta valutando correttivi allo \"spalma-crediti\" decennale del Superbonus e affrontando le proteste sindacali su pensioni, scuola e sanità. Il Ministro Piantedosi ha fornito un'informativa urgente su allarmi bomba e cyberattacchi.\nL'elevato numero di emendamenti e il dibattito acceso riflettono le diverse priorità politiche e le pressioni sociali ed economiche che il paese sta affrontando. Le decisioni prese in questa Manovra avranno un impatto diretto sulla vita dei cittadini italiani, influenzando salari, servizi sanitari e il carico fiscale.",
+          "why": "L'approvazione della Manovra è cruciale per la stabilità economica e politica del paese, influenzando direttamente la vita dei cittadini.",
+          "sources": [
+            {
+              "url": "https://www.agrolatam.com/usa/news/trump-threatens-major-tax-on-overseas-ai-data-centers/",
+              "title": "agrolatam.com"
+            },
+            {
+              "url": "https://www.investing.com/news/stock-market-news/trump-vows-tax-on-us-firms-building-data-centers-abroad-5042405",
+              "title": "investing.com"
+            },
+            {
+              "url": "https://247wallst.com/investing/2026/11/21/trump-threatens-a-tremendous-tax-on-companies-that-build-data-centers-overseas/",
+              "title": "247wallst.com"
+            }
+          ],
+          "readSeconds": 46
+        },
+        {
+          "title": "Inflazione italiana accelera al 5,5% a ottobre 2026",
+          "lead": "L'inflazione in Italia è accelerata a ottobre 2026, raggiungendo il 5,5% su base annua, superando le stime e registrando un aumento dell'1% rispetto al mese precedente.",
+          "body": "L'accelerazione è stata trainata principalmente dall'aumento dei prezzi dei beni energetici (+31,9%), degli alimentari freschi e dei trasporti. L'inflazione media acquisita per il 2026 a ottobre è pari a +3,4%. Questo aumento inciderà direttamente sui rinnovi annuali d'affitto, con un aumento medio di circa 51 euro al mese.\nL'inflazione rimane una preoccupazione significativa per l'economia italiana, erodendo il potere d'acquisto delle famiglie e influenzando i costi per le imprese. L'aumento dei prezzi energetici continua a essere un fattore trainante, con impatti diretti sul costo della vita e sulle decisioni di politica economica.",
+          "why": "L'accelerazione dell'inflazione ha un impatto diretto sul costo della vita per i cittadini italiani e sulle decisioni di politica economica del governo.",
+          "sources": [
+            {
+              "url": "https://tg24.sky.it/economia/2026/11/17/inflazione-ottobre-2026-istat",
+              "title": "tg24.sky.it"
+            },
+            {
+              "url": "https://www.confcommercio.it/-/inflazione-ottobre-2026",
+              "title": "confcommercio.it"
+            },
+            {
+              "url": "https://www.idealista.it/news/immobiliare/residenziale/2026/11/17/510581-quanto-incide-l-inflazione-di-ottobre-2026-sui-rinnovi-annuali-d-affitto-nelle",
+              "title": "idealista.it"
+            }
+          ],
+          "readSeconds": 44
+        },
+        {
+          "title": "Consenso bipartisan per limiti social media under 13 e legge antisemitismo",
+          "lead": "L'Italia ha visto un consenso bipartisan per limitare i social media ai minori di 13 anni e ha approvato una legge contro l'antisemitismo, adottando la definizione IHRA.",
+          "body": "Il dibattito sui limiti ai social media riflette una crescente preoccupazione per l'impatto della tecnologia sulla salute mentale e lo sviluppo dei giovani. Queste iniziative mirano a proteggere le fasce più vulnerabili della popolazione, cambiando radicalmente l'approccio delle piattaforme e dei genitori all'uso della tecnologia da parte dei bambini.\nL'approvazione della legge sull'antisemitismo rafforza l'impegno dell'Italia nella lotta contro l'odio e la discriminazione. L'adozione della definizione IHRA è un passo importante per contrastare l'antisemitismo in tutte le sue forme, promuovendo valori di tolleranza nella società italiana.",
+          "why": "Queste iniziative legislative hanno un impatto diretto sulla società italiana, promuovendo valori di tolleranza e proteggendo i minori online.",
+          "sources": [
+            {
+              "url": "https://www.tradingview.com/news/cryptobriefing:502633bca094b:0-blackrock-s-ibit-posts-record-541m-outflow-as-bitcoin-etfs-bleed-3-47b-in-november/",
+              "title": "tradingview.com"
+            },
+            {
+              "url": "https://support.coincall.com/hc/en-us/articles/64201441366041-November-11-2026-Bitcoin-Slides-Toward-73K-as-ETF-Outflows-Accelerate-and-U-S-Inflation-Fuels-Fed-Hike-Expectations",
+              "title": "support.coincall.com"
+            }
+          ],
+          "readSeconds": 43
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "Mondo",
+      "stories": [
+        {
+          "title": "Vertice Trump-Putin-Xi a Shenzhen firma \"Dichiarazione di Pace\"",
+          "lead": "Donald Trump, Vladimir Putin e Xi Jinping si sono incontrati a Shenzhen, firmando una \"Dichiarazione di Pace\" che impegna i leader a riformare l'ONU e dialogare sui rischi nucleari.",
+          "body": "Il vertice, tenutosi il 19 novembre a margine dell'APEC, ha generato grande attenzione per le sue implicazioni geopolitiche. La dichiarazione di quattro punti stabilisce una posizione diplomatica comune su temi come la riforma delle Nazioni Unite, l'aumento della produzione petrolifera e le immunità ufficiali dalla giurisdizione penale internazionale.\nLe discussioni hanno riguardato anche Ucraina e Medio Oriente, sebbene il documento comune non contenga accordi specifici su tali conflitti regionali. Questo incontro trilaterale segna un potenziale riallineamento delle potenze globali, con implicazioni significative per l'ordine internazionale e un possibile indebolimento del sistema post-bellico.",
+          "why": "Il vertice potrebbe ridefinire le dinamiche geopolitiche globali, influenzando i conflitti in corso e le future alleanze internazionali.",
+          "sources": [
+            {
+              "url": "https://www.diplomacyandlaw.com/post/trump-xi-putin-joint-declaration",
+              "title": "diplomacyandlaw.com"
+            },
+            {
+              "url": "https://www.nationthailand.com/news/world/40073703",
+              "title": "nationthailand.com"
+            },
+            {
+              "url": "https://www.washingtonpost.com/politics/2026/11/19/trump-putin-xi-agreed-work-jointly-reduce-constraints-power/",
+              "title": "washingtonpost.com"
+            }
+          ],
+          "readSeconds": 44
+        },
+        {
+          "title": "Missili russi cadono in Polonia, allerta NATO e escalation in Ucraina",
+          "lead": "Missili russi sono caduti in Polonia il 21 novembre, provocando un'allerta NATO in Europa e un'ulteriore escalation delle tensioni nel conflitto ucraino.",
+          "body": "L'incidente in Polonia ha innescato una reazione immediata della NATO, che ha rafforzato la sua vigilanza. Kyiv ha avviato nuovi colloqui con USA ed Europa per una via diplomatica, ma i raid incrociati continuano, mantenendo alta la tensione.\nIl conflitto in Ucraina continua a rappresentare una delle principali minacce alla sicurezza europea. L'incidente in Polonia, membro della NATO, ha il potenziale per espandere ulteriormente il conflitto e testare la risposta dell'Alleanza, rendendo cruciali i futuri sviluppi diplomatici.",
+          "why": "La caduta di missili russi in territorio NATO è un evento grave che potrebbe portare a una pericolosa escalation, con impatti sulla sicurezza europea.",
+          "sources": [
+            {
+              "url": "https://www.financecalendar.com/event/fomc-minutes-november-2026/",
+              "title": "financecalendar.com"
+            },
+            {
+              "url": "https://bankingjournal.aba.com/2026/11/fomc-minutes-show-close-call-over-possible-rate-hike/",
+              "title": "bankingjournal.aba.com"
+            },
+            {
+              "url": "https://www.xtb.com/en/market-analysis/fed-minutes-virtually-everyone-in-favor-of-further-rate-hikes-is-there-a-chance-for-50-basis-points-in-december",
+              "title": "xtb.com"
+            }
+          ],
+          "readSeconds": 40
+        },
+        {
+          "title": "Petroliera colpita nello Stretto di Hormuz, prezzi petrolio volatili",
+          "lead": "Una petroliera è stata colpita nello Stretto di Hormuz il 21 novembre, in un contesto di tensioni USA-Iran, causando volatilità nei prezzi del greggio.",
+          "body": "L'incidente, preceduto da mine che hanno disabilitato tre petroliere il 18 novembre, ha inizialmente fatto salire i prezzi del greggio. Tuttavia, i prezzi del petrolio sono poi diminuiti del 5% su base settimanale, con il Brent sceso a circa 91 dollari al barile. Questo calo è dovuto all'aumento delle scorte di greggio negli Stati Uniti e al miglioramento dell'offerta globale.\nLo Stretto di Hormuz è una via marittima cruciale per circa un quinto del petrolio globale e un punto caldo geopolitico. L'escalation delle tensioni minaccia la stabilità del Medio Oriente e la sicurezza degli approvvigionamenti energetici globali, sebbene i prezzi siano diminuiti questa settimana, la situazione rimane volatile.",
+          "why": "L'escalation nello Stretto di Hormuz minaccia la stabilità del Medio Oriente e la sicurezza energetica globale, con potenziali conseguenze economiche.",
+          "sources": [
+            {
+              "url": "https://www.forbes.com/sites/jonmarkman/2026/11/19/us-oil-falls-32-as-iran-says-mines-disabled-three-tankers-near-hormuz/",
+              "title": "forbes.com"
+            },
+            {
+              "url": "https://www.euronews.com/2026/11/11/oil-markets-rise-as-investors-monitor-shipping-disruption-in-the-strait-of-hormuz",
+              "title": "euronews.com"
+            },
+            {
+              "url": "https://realnewsmagazine.net/oil-prices-fall-5-despite-attacks-on-tankers-rising-tensions/",
+              "title": "realnewsmagazine.net"
+            }
+          ],
+          "readSeconds": 48
+        }
+      ]
+    }
+  ],
+  "dropped": 0
+}

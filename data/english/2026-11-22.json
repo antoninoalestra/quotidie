@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-22",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-22T03:15:40.944Z",
+  "words": [
+    {
+      "id": "2026-11-22-1",
+      "word": "poignant",
+      "category": "general",
+      "ipa": "/ˈpɔɪnjənt/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Che suscita un profondo senso di malinconia o tristezza, toccante, commovente.",
+      "definitionEn": "Causing a strong feeling of sadness or regret, often mixed with a sense of nostalgia.",
+      "examples": [
+        "The photograph captured a poignant moment of farewell.",
+        "His speech was a poignant reminder of the sacrifices made."
+      ],
+      "exampleIt": "La fotografia ha immortalato un momento toccante di addio.",
+      "synonyms": [
+        "moving",
+        "touching",
+        "heartbreaking"
+      ],
+      "collocations": [
+        "poignant reminder",
+        "poignant moment",
+        "poignant memory"
+      ],
+      "commonMistake": "A volte confuso con 'pointy' (a punta). La pronuncia è /ˈpɔɪnjənt/, non *poi-gant* o *poignant* all'italiana.",
+      "cloze": "The old letter contained a ____ message from his grandmother, bringing tears to his eyes.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-22-1.mp3"
+    },
+    {
+      "id": "2026-11-22-2",
+      "word": "delineate",
+      "category": "general",
+      "ipa": "/dɪˈlɪnɪeɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Descrivere o tracciare chiaramente i contorni o le caratteristiche di qualcosa.",
+      "definitionEn": "To describe or portray something precisely; to clearly show the border or outline of something.",
+      "examples": [
+        "The report aims to delineate the responsibilities of each team member.",
+        "The artist carefully delineated the features of the landscape."
+      ],
+      "exampleIt": "Il rapporto mira a delineare le responsabilità di ciascun membro del team.",
+      "synonyms": [
+        "describe",
+        "outline",
+        "define"
+      ],
+      "collocations": [
+        "delineate responsibilities",
+        "delineate boundaries",
+        "delineate a strategy"
+      ],
+      "commonMistake": "Spesso gli italiani usano 'describe' o 'explain' quando 'delineate' è più appropriato per descrivere contorni precisi o limiti.",
+      "cloze": "Before starting the project, we need to ____ the scope and objectives clearly.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-22-2.mp3"
+    },
+    {
+      "id": "2026-11-22-3",
+      "word": "augment",
+      "category": "business",
+      "ipa": "/ɔːɡˈmɛnt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Aumentare, accrescere o migliorare qualcosa in termini di dimensione, quantità o valore.",
+      "definitionEn": "To make something greater in size, quantity, or value by adding to it.",
+      "examples": [
+        "The company decided to augment its workforce to meet growing demand.",
+        "These new features will augment the user experience significantly."
+      ],
+      "exampleIt": "L'azienda ha deciso di aumentare la propria forza lavoro per soddisfare la crescente domanda.",
+      "synonyms": [
+        "increase",
+        "enhance",
+        "expand"
+      ],
+      "collocations": [
+        "augment income",
+        "augment staff",
+        "augment capabilities"
+      ],
+      "commonMistake": "Non è un falso amico, ma gli studenti a volte usano 'increase' o 'improve' quando 'augment' dà un tono più formale e specifico sull'aggiunta per rendere più grande o migliore.",
+      "cloze": "We are looking for ways to ____ our online presence and reach a wider audience.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-22-3.mp3"
+    },
+    {
+      "id": "2026-11-22-4",
+      "word": "venture",
+      "category": "business",
+      "ipa": "/ˈvɛntʃə/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Un'impresa (spesso rischiosa), un progetto commerciale o una nuova azienda.",
+      "definitionEn": "A new business activity or project, especially one that involves risk or uncertainty.",
+      "examples": [
+        "His latest business venture proved to be highly successful.",
+        "They formed a joint venture to develop the new technology."
+      ],
+      "exampleIt": "La sua ultima impresa commerciale si è rivelata di grande successo.",
+      "synonyms": [
+        "enterprise",
+        "undertaking",
+        "startup"
+      ],
+      "collocations": [
+        "business venture",
+        "joint venture",
+        "new venture"
+      ],
+      "commonMistake": "Non confondere con il verbo 'to venture' (avventurarsi). Come sostantivo, si riferisce a un'impresa commerciale.",
+      "cloze": "The startup secured significant funding for its ambitious new ____ in renewable energy.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-22-4.mp3"
+    },
+    {
+      "id": "2026-11-22-5",
+      "word": "brush up on",
+      "category": "phrasal",
+      "ipa": "/brʌʃ ʌp ɒn/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Rinfrescare o migliorare una conoscenza o abilità che non si usa da tempo.",
+      "definitionEn": "To quickly improve a skill or knowledge you haven't used for a while.",
+      "examples": [
+        "I need to brush up on my Spanish before my trip to Madrid.",
+        "He spent the weekend brushing up on his presentation skills."
+      ],
+      "exampleIt": "Devo rinfrescare il mio spagnolo prima del mio viaggio a Madrid.",
+      "synonyms": [
+        "revise",
+        "review",
+        "refresh"
+      ],
+      "collocations": [
+        "brush up on skills",
+        "brush up on knowledge",
+        "brush up on a language"
+      ],
+      "commonMistake": "Spesso si omette 'on' o si usa una preposizione sbagliata. La forma corretta è 'brush up on something'.",
+      "cloze": "Before the interview, she decided to ____ her knowledge of the company's recent projects.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-22-5.mp3"
+    }
+  ]
+}
