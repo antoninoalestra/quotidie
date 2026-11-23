@@ -1,6 +1,21 @@
 {
   "lessons": [
     {
+      "date": "2026-11-23",
+      "title": "Il Tuo Futuro Finanziario: Strategie per la Massima Crescita",
+      "category": "Finanza personale",
+      "categoryId": "finanza-personale",
+      "minutes": 4,
+      "hook": "Abbiamo esplorato come il debito possa agire da moltiplicatore negativo, trascinandoci in un vortice di costi che si accumulano inesorabilmente. È tempo di volgere lo sguardo all'opportunità, di comprendere come la stessa forza possa essere imbrigliata per il nostro vantaggio. Come possiamo trasformare la potenza dell'interesse composto in un alleato inarrestabile per la nostra prosperità futura?",
+      "kind": "series",
+      "series": {
+        "id": "2026-11-18-l-effetto-farfalla-del-tuo-denaro",
+        "title": "L'Effetto Farfalla del Tuo Denaro",
+        "part": 5,
+        "total": 5
+      }
+    },
+    {
       "date": "2026-11-22",
       "title": "Agenti AI Autonomi: Chi Risponde dei Loro Errori?",
       "category": "Dall'attualità",

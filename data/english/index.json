@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-23",
+      "words": [
+        "Discern",
+        "Resonate",
+        "Appraisal",
+        "Trajectory",
+        "Come across as"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "B2"
+      ]
+    },
+    {
       "date": "2026-11-22",
       "words": [
         "poignant",
@@ -205,5 +222,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-22T03:15:40.944Z"
+  "updatedAt": "2026-11-23T03:46:13.238Z"
 }

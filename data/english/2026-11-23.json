@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-23",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-23T03:46:13.237Z",
+  "words": [
+    {
+      "id": "2026-11-23-1",
+      "word": "Discern",
+      "category": "general",
+      "ipa": "/dɪˈsɜːn/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Distinguere, percepire chiaramente, comprendere (spesso con difficoltà).",
+      "definitionEn": "To perceive or recognise something, often with difficulty, by using your senses or intellect.",
+      "examples": [
+        "It was hard to discern the truth from all the conflicting reports.",
+        "She could discern a faint outline of a figure in the mist."
+      ],
+      "exampleIt": "Era difficile discernere la verità da tutti i resoconti contrastanti.",
+      "synonyms": [
+        "perceive",
+        "distinguish",
+        "detect"
+      ],
+      "collocations": [
+        "discern the truth",
+        "discern a pattern",
+        "discern a difference"
+      ],
+      "commonMistake": "Spesso confuso con \"distinguish\", ma \"discern\" implica più una percezione sottile o una comprensione profonda, non solo una separazione visiva.",
+      "cloze": "Through careful observation, scientists were able to ____ a faint signal from the distant galaxy.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-23-1.mp3"
+    },
+    {
+      "id": "2026-11-23-2",
+      "word": "Resonate",
+      "category": "general",
+      "ipa": "/ˈrɛzəneɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Risuonare, trovare risonanza, avere un forte impatto emotivo o intellettuale.",
+      "definitionEn": "To have a particular meaning or importance for someone; to evoke a strong feeling or agreement.",
+      "examples": [
+        "Her speech on environmental protection truly resonated with the audience.",
+        "The themes in the novel still resonate with contemporary issues."
+      ],
+      "exampleIt": "Il suo discorso sulla protezione ambientale ha davvero risuonato con il pubblico.",
+      "synonyms": [
+        "echo",
+        "connect",
+        "strike a chord"
+      ],
+      "collocations": [
+        "resonate with an audience",
+        "resonate deeply",
+        "emotionally resonate"
+      ],
+      "commonMistake": "Gli italiani a volte usano \"resonate\" solo per il suono fisico, ma è molto più comune nel senso figurato di \"avere un impatto\" o \"trovare risonanza\".",
+      "cloze": "The artist's powerful message about social justice continues to ____ with young people today.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-23-2.mp3"
+    },
+    {
+      "id": "2026-11-23-3",
+      "word": "Appraisal",
+      "category": "business",
+      "ipa": "/əˈpreɪzl/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Valutazione, stima (spesso di performance, valore o beni).",
+      "definitionEn": "An act of assessing something or someone, especially for performance, value, or quality.",
+      "examples": [
+        "We have our annual performance appraisal next month to discuss career goals.",
+        "The bank ordered an independent appraisal of the property before approving the loan."
+      ],
+      "exampleIt": "Abbiamo la nostra valutazione annuale delle prestazioni il mese prossimo per discutere gli obiettivi di carriera.",
+      "synonyms": [
+        "evaluation",
+        "assessment",
+        "review"
+      ],
+      "collocations": [
+        "performance appraisal",
+        "property appraisal",
+        "conduct an appraisal"
+      ],
+      "commonMistake": "Può essere confuso con \"appreciation\" (apprezzamento), ma \"appraisal\" è specifico per una valutazione formale e oggettiva, specialmente in contesti professionali o finanziari.",
+      "cloze": "During the year-end ____, employees have the opportunity to discuss their achievements and set new objectives.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-23-3.mp3"
+    },
+    {
+      "id": "2026-11-23-4",
+      "word": "Trajectory",
+      "category": "business",
+      "ipa": "/ˈtrædʒɪktəri/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Traiettoria, percorso previsto o attuale di sviluppo o progresso.",
+      "definitionEn": "The path followed by something moving through the air; a course of development or progress.",
+      "examples": [
+        "The company's new strategy aims to put us on a rapid growth trajectory.",
+        "We need to assess the long-term trajectory of the market before making a big investment."
+      ],
+      "exampleIt": "La nuova strategia dell'azienda mira a metterci su una traiettoria di rapida crescita.",
+      "synonyms": [
+        "path",
+        "course",
+        "trend"
+      ],
+      "collocations": [
+        "growth trajectory",
+        "upward trajectory",
+        "career trajectory"
+      ],
+      "commonMistake": "Anche se ha un significato fisico, è molto comune nel linguaggio aziendale e dei media in senso figurato per indicare la direzione o il corso di qualcosa. Non è un falso amico.",
+      "cloze": "After several successful product launches, the startup is clearly on an upward ____.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-23-4.mp3"
+    },
+    {
+      "id": "2026-11-23-5",
+      "word": "Come across as",
+      "category": "phrasal",
+      "ipa": "/kʌm əˈkrɒs æz/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Apparire, sembrare, dare l'impressione di essere o di avere certe qualità.",
+      "definitionEn": "To make a particular impression; to seem to have a certain quality or character to others.",
+      "examples": [
+        "He can sometimes come across as arrogant, but he's actually very kind.",
+        "During the interview, she came across as very confident and well-prepared."
+      ],
+      "exampleIt": "A volte può sembrare arrogante, ma in realtà è molto gentile.",
+      "synonyms": [
+        "appear to be",
+        "seem",
+        "give the impression of"
+      ],
+      "collocations": [
+        "come across as confident",
+        "come across as rude",
+        "come across well"
+      ],
+      "commonMistake": "Gli italiani tendono a usare \"appear\" o \"seem\" direttamente. \"Come across as\" è più colloquiale e si riferisce all'impressione che si fa agli altri, spesso in modo involontario.",
+      "cloze": "Despite his serious expression, the new manager tends to ____ friendly and approachable.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-23-5.mp3"
+    }
+  ]
+}
