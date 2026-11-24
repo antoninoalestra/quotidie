@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-24",
+  "kind": "daily",
+  "generatedAt": "2026-11-24T07:02:49.053Z",
+  "model": "gemini-2.5-flash",
+  "minutes": 10,
+  "words": 2055,
+  "brief": [
+    "Il ritorno di Jensen Huang alla guida di Nvidia ha scatenato un rally sui titoli tecnologici globali, segnalando fiducia nel settore dei semiconduttori e dell'AI dopo un periodo di incertezza.",
+    "Un vertice trilaterale inedito tra Trump, Putin e Xi a Shenzhen ha prodotto una \"Dichiarazione per la pace\", affrontando temi globali senza riferimenti espliciti ai conflitti attuali.",
+    "La Libia ha chiesto spiegazioni all'Ucraina per attacchi con droni navali a Bengasi contro unità russe, sollevando preoccupazioni per l'estensione del conflitto nel Mediterraneo centrale."
+  ],
+  "sections": [
+    {
+      "id": "tech",
+      "title": "Tecnologia e AI",
+      "stories": [
+        {
+          "title": "Jensen Huang torna CEO di Nvidia, rally dei titoli tech",
+          "lead": "Lunedì 23 novembre 2026, il consiglio di amministrazione di Nvidia ha reintegrato Jensen Huang nelle cariche di presidente e CEO, scatenando un'ondata di acquisti sui titoli tecnologici.",
+          "body": "La notizia ha generato un entusiasmo diffuso a Wall Street e nelle borse europee. Nvidia ha registrato un impressionante rally del 31% a Wall Street, mentre il Nasdaq è volato del 7%, il Dow Jones del 2,7% e l'S&P 500 del 4,8%. Anche a Piazza Affari, Technoprobe, Stmicroelectronics e Prysmian hanno segnato rialzi significativi. Il settore tecnologico e dei semiconduttori aveva attraversato una settimana difficile, con il Nasdaq che aveva registrato la peggiore performance dal 2020. La leadership di Nvidia era stata sotto pressione a causa di turbolenze interne. I mercati hanno interpretato il ritorno di Huang come un segnale di stabilità e fiducia per il futuro del colosso dei chip e dell'intero settore tech.",
+          "why": "La leadership di Nvidia è cruciale per il mercato dei semiconduttori e dell'AI, influenzando l'andamento generale dei mercati azionari globali.",
+          "sources": [
+            {
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-23-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611230748404021",
+              "title": "milanofinanza.it"
+            },
+            {
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-23-novembre-2026",
+              "title": "soldionline.it"
+            },
+            {
+              "url": "https://it.investing.com/news/stock-market-news/titoli-chip-e-neocloud-usa-in-rialzo-nel-premarket-dopo-il-crollo-della-scorsa-settimana-3661331",
+              "title": "it.investing.com"
+            }
+          ],
+          "readSeconds": 52
+        },
+        {
+          "title": "Trump minaccia stop all'export di data center AI americani",
+          "lead": "L'ex presidente Donald Trump ha minacciato di vietare alle aziende americane di costruire data center AI in altri Paesi, puntando a favorire l'industria nazionale.",
+          "body": "La potenziale mossa mira a impedire che la tecnologia avanzata finisca in mani cinesi, seguendo altre misure già annunciate per limitare l'esportazione di chip AI avanzati. Un sondaggio di agosto ha rivelato che il 61% degli americani è contrario alla costruzione di nuovi data center nelle proprie zone di residenza. Negli Stati Uniti sono presenti circa 3.000 data center, con altri 1.500 in varie fasi di approvazione o costruzione. La dichiarazione si inserisce in un contesto di crescente resistenza locale alla costruzione di data center negli Stati Uniti, che ha già portato all'annullamento di progetti per un valore di almeno 260 miliardi di dollari quest'anno.",
+          "why": "Questa politica potrebbe avere un impatto significativo sulle strategie di espansione globale delle Big Tech e sulla competizione tecnologica internazionale.",
+          "sources": [
+            {
+              "url": "https://www.key4biz.it/trump-minaccia-le-big-tech-niente-data-center-ai-americani-in-giro-per-il-mondo/594046/",
+              "title": "key4biz.it"
+            }
+          ],
+          "readSeconds": 47
+        },
+        {
+          "title": "Rimbalzo dei titoli chip e neocloud dopo il crollo",
+          "lead": "Lunedì 23 novembre 2026, i titoli dei produttori di chip e dei fornitori di servizi neocloud statunitensi hanno registrato un balzo nel premarket, recuperando dopo forti perdite.",
+          "body": "Micron, Lam Research e Marvell hanno guadagnato oltre il 7%, mentre gli ADR di SK Hynix sono saliti di quasi il 10%. Advanced Micro Devices, Intel e Applied Materials hanno registrato aumenti superiori al 6%, con Nvidia che ha guadagnato circa il 7%. Il rimbalzo segue un crollo che aveva inflitto al Nasdaq la peggior settimana dal 2020, innescato da una vendita generalizzata di asset rischiosi a livello globale e da dubbi sulla redditività degli investimenti in data center AI. Le autorità asiatiche sono intervenute per sostenere i mercati, mentre gli investitori si interrogano sulla capacità degli ingenti investimenti nell'IA di generare profitti sufficienti a giustificare la spesa.",
+          "why": "La volatilità di questi titoli evidenzia l'incertezza e le elevate aspettative che circondano il settore dell'intelligenza artificiale e dei semiconduttori.",
+          "sources": [
+            {
+              "url": "https://it.investing.com/news/stock-market-news/titoli-chip-e-neocloud-usa-in-rialzo-nel-premarket-dopo-il-crollo-della-scorsa-settimana-3661331",
+              "title": "it.investing.com"
+            },
+            {
+              "url": "https://www.focusrisparmio.com/news/scelti-da-noi-le-notizie-del-23-novembre-2026",
+              "title": "focusrisparmio.com"
+            }
+          ],
+          "readSeconds": 49
+        },
+        {
+          "title": "Pressione democratica sulle Big Tech per regolamentazione AI",
+          "lead": "Dopo le elezioni di metà mandato, i Democratici statunitensi, che controllano Camera e Senato, preparano audizioni e nuove regole per AI e data center.",
+          "body": "Questa iniziativa segna un brusco cambio di stagione per le Big Tech, che avevano cercato un'alleanza con l'amministrazione Trump. Le preoccupazioni riguardano la tutela dei consumatori, l'ambiente, l'energia pulita e il contenimento del potere delle grandi piattaforme. L'accountability delle aziende tecnologiche è un tema presente nel 74% delle campagne democratiche \"Red-to-Blue\" per la Camera e nell'86% delle sfide per il Senato. Esponenti democratici hanno già chiesto che i CEO delle aziende di AI testimonino sotto giuramento, evocando un'ondata di mandati di comparizione.",
+          "why": "L'inasprimento della regolamentazione potrebbe avere un impatto significativo sulle operazioni e sui modelli di business delle Big Tech e sugli investimenti in AI.",
+          "sources": [
+            {
+              "url": "https://www.agendadigitale.eu/cultura-digitale/big-tech-sotto-pressione-le-mosse-dei-democratici-dopo-le-midterm/",
+              "title": "agendadigitale.eu"
+            }
+          ],
+          "readSeconds": 41
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "title": "Finanza e mercati",
+      "stories": [
+        {
+          "title": "FTSE MIB chiude in positivo grazie ai titoli tecnologici",
+          "lead": "Lunedì 23 novembre 2026, i maggiori indici di Borsa Italiana e le principali piazze finanziarie europee hanno chiuso in positivo, trainati dal settore tecnologico.",
+          "body": "Il FTSEMIB ha guadagnato lo 0,65% a 49.022 punti, con un controvalore degli scambi sceso a 3,57 miliardi di euro. Lo spread Btp-Bund si è riportato a 105 punti, con il rendimento del Btp decennale sceso al 4,35%. L'euro è sceso sotto gli 1,09 dollari. La seduta è stata influenzata dallo stacco dei dividendi di alcuni colossi del paniere, il cui effetto tecnico sul principale indice di Borsa Italiana è stimato in circa l'1,4%. Il rally di Nvidia a Wall Street ha alimentato gli acquisti sui titoli tecnologici. Il mercato ha mostrato resilienza, con i titoli bancari anch'essi in forte rialzo.",
+          "why": "L'andamento positivo del FTSE MIB indica fiducia degli investitori nel settore tecnologico e nella stabilità del mercato italiano, nonostante lo stacco dei dividendi.",
+          "sources": [
+            {
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-23-novembre-2026",
+              "title": "soldionline.it"
+            }
+          ],
+          "readSeconds": 47
+        },
+        {
+          "title": "Bitcoin oscilla intorno ai 60.000 dollari tra timori",
+          "lead": "Martedì 24 novembre 2026, Bitcoin è sceso, mantenendosi vicino ai minimi recenti degli ultimi due anni, ignorato dai trader nel rimbalzo azionario.",
+          "body": "Bitcoin è sceso dell'1,7% a $60.435,3 alle 07:03 ora italiana. Nel fine settimana ha toccato un minimo di 26 mesi, crollando ben al di sotto dei $60.000 prima di recuperare marginalmente lunedì. Le persistenti preoccupazioni per i tassi di interesse statunitensi più elevati e le prospettive normative più severe hanno continuato a pesare sui prezzi delle criptovalute. Il settore si avvia verso un secondo mese consecutivo di perdite a novembre. Il mercato delle criptovalute sta attraversando una fase delicata, con gli investitori che riducono la propria esposizione agli asset digitali. L'indice di paura e avidità delle crypto è sceso a 10, indicando \"paura estrema\".",
+          "why": "La volatilità di Bitcoin e il sentiment negativo del mercato crypto riflettono l'incertezza macroeconomica e le sfide normative del settore.",
+          "sources": [
+            {
+              "url": "https://it.investing.com/news/cryptocurrency-news/bitcoin-si-aggira-intorno-ai-60k-tra-timori-sui-tassi-e-normative-3662967",
+              "title": "it.investing.com"
+            },
+            {
+              "url": "https://valutevirtuali.com/bitcoin-etf-fuga-capitali-deflussi-179-miliardi-novembre-2026/",
+              "title": "valutevirtuali.com"
+            },
+            {
+              "url": "https://paybis.com/it/news/230-billion-wiped-off-crypto-in-24-hours-whats-next-50-off-every-trade-with-fearless50-until-18-november/",
+              "title": "paybis.com"
+            }
+          ],
+          "readSeconds": 46
+        },
+        {
+          "title": "Deflussi record dagli ETF spot su Bitcoin",
+          "lead": "Nella settimana tra il 16 e il 20 novembre 2026, gli ETF spot su Bitcoin quotati negli Stati Uniti hanno registrato deflussi netti per 1,79 miliardi di dollari.",
+          "body": "Questo è il peggior risultato settimanale dalla fine di giugno e la quarta settimana consecutiva con un saldo negativo. L'iShares Bitcoin Trust (IBIT) di BlackRock ha registrato i maggiori deflussi settimanali, pari a 1,37 miliardi di dollari. Le vendite avvengono in un contesto complesso, caratterizzato da difficoltà nel settore tecnologico, incertezza sulla politica monetaria americana e crescente avversione al rischio. I deflussi evidenziano un deterioramento della domanda da parte degli investitori istituzionali e al dettaglio per gli strumenti finanziari legati a Bitcoin.",
+          "why": "Questi deflussi significativi indicano una crescente cautela degli investitori e potrebbero esercitare ulteriore pressione sul prezzo della criptovaluta.",
+          "sources": [
+            {
+              "url": "https://valutevirtuali.com/bitcoin-etf-fuga-capitali-deflussi-179-miliardi-novembre-2026/",
+              "title": "valutevirtuali.com"
+            }
+          ],
+          "readSeconds": 41
+        }
+      ]
+    },
+    {
+      "id": "italy",
+      "title": "Italia",
+      "stories": [
+        {
+          "title": "OPA di Intesa Sanpaolo su Monte dei Paschi di Siena",
+          "lead": "Lunedì 23 novembre 2026, è partita l'offerta pubblica di acquisto e scambio (OPAS) volontaria totalitaria promossa da Intesa Sanpaolo sul Monte dei Paschi di Siena.",
+          "body": "L'operazione, di natura totalitaria, terminerà il 22 gennaio 2027 e rappresenta un passaggio significativo nel consolidamento del sistema bancario italiano e nel futuro del Monte dei Paschi di Siena, storica banca senese. Il Monte dei Paschi di Siena ha puntualizzato che l'OPAS non riflette pienamente il valore dell'istituto e le prospettive di crescita e creazione di valore, sulla base del percorso industriale avviato con Mediobanca. L'esito di questa OPAS avrà implicazioni importanti per il settore bancario italiano, la stabilità finanziaria e la riorganizzazione di uno degli istituti più antichi del Paese.",
+          "why": "L'esito di questa OPAS avrà implicazioni importanti per il settore bancario italiano e la riorganizzazione di uno degli istituti più antichi del Paese.",
+          "sources": [
+            {
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-23-novembre-2026",
+              "title": "soldionline.it"
+            },
+            {
+              "url": "https://www.soldionline.it/notizie/economia-politica/agenda-economica-del-24-novembre-2026",
+              "title": "soldionline.it"
+            }
+          ],
+          "readSeconds": 45
+        },
+        {
+          "title": "Dibattito sulla Legge di Bilancio e il condono edilizio",
+          "lead": "Lunedì 23 novembre 2026, il dibattito sulla Legge di Bilancio italiana continua a concentrarsi sul capitolo del condono edilizio.",
+          "body": "Le pratiche di condono ferme nei comuni sono stimate in oltre 4 milioni, con una stima del Sole 24 Ore che le indicava in circa 3 milioni calcolando i tempi di smaltimento. La questione del condono sembra essere appannaggio di Fratelli d'Italia e Forza Italia, ma è entrata in campo anche la Lega, con un emendamento per bloccare completamente le telefonate di telemarketing. La cifra enorme delle pratiche di condono solleva interrogativi su come smaltirle e sulle implicazioni per il bilancio dello Stato e per l'assetto urbanistico.",
+          "why": "Le decisioni sul condono edilizio e su altre misure della Legge di Bilancio avranno un impatto diretto sull'economia e la politica italiana.",
+          "sources": [
+            {
+              "url": "https://www.youtube.com/watch?v=5kwzjvNpeQ8",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 41
+        },
+        {
+          "title": "L'Italia torna nella Commissione Umanitaria di Accertamento dei Fatti",
+          "lead": "Lunedì 23 novembre 2026, il Ministero degli Affari Esteri ha espresso soddisfazione per l'elezione del Professor Giulio Bartolini nella IHFFC.",
+          "body": "Il Professor Bartolini è uno dei 15 membri eletti della Commissione Internazionale Umanitaria di Accertamento dei Fatti (IHFFC), un organismo internazionale che si occupa di accertare i fatti in caso di presunte violazioni del diritto internazionale umanitario. L'elezione di un rappresentante italiano in questa commissione è vista come un rafforzamento del ruolo dell'Italia nel contesto della diplomazia umanitaria internazionale. Il ritorno dell'Italia in un organismo così importante sottolinea l'impegno del Paese per il diritto internazionale umanitario e la sua volontà di contribuire alla risoluzione di conflitti e alla protezione delle vittime.",
+          "why": "Il ritorno dell'Italia in questo organismo sottolinea l'impegno del Paese per il diritto internazionale umanitario e la protezione delle vittime.",
+          "sources": [
+            {
+              "url": "https://gazzettadiplomatica.it/author/finellipbc_9sgwh095/",
+              "title": "gazzettadiplomatica.it"
+            }
+          ],
+          "readSeconds": 42
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "Mondo",
+      "stories": [
+        {
+          "title": "Libia, tensione diplomatica con Ucraina dopo attacchi a Bengasi",
+          "lead": "Il Ministero degli Affari Esteri libico ha chiesto spiegazioni ufficiali all'Ucraina dopo attacchi con droni navali contro unità russe nelle acque di Bengasi.",
+          "body": "Il presidente ucraino Volodymyr Zelensky ha rivendicato l'operazione militare, avvenuta domenica 22 novembre 2026, che ha colpito una corvetta russa (Merkury) e un mercantile (MV Angara) utilizzato per il trasporto di armamenti, impiegando sette droni navali di produzione nazionale ucraina. Tripoli denuncia il rischio che il conflitto tra Mosca e Kiev possa estendersi al Mediterraneo centrale e coinvolgere direttamente il territorio libico, riaffermando la propria sovranità e non partecipazione alla guerra russo-ucraina. Il governo libico ha chiesto un'indagine sull'eventuale impiego di porti, infrastrutture e installazioni libiche per pianificare o sostenere le operazioni ucraine. Il ministro degli Esteri italiano Antonio Tajani ha espresso preoccupazione, invitando a evitare una guerra nel Mediterraneo.",
+          "why": "Questo incidente rappresenta un significativo ampliamento geografico delle operazioni militari ucraine, sollevando gravi preoccupazioni per la stabilità del Mediterraneo centrale.",
+          "sources": [
+            {
+              "url": "https://gazzettadiplomatica.it/author/finellipbc_9sgwh095/",
+              "title": "gazzettadiplomatica.it"
+            },
+            {
+              "url": "https://agenparl.eu/2026/11/23/libia-tensione-diplomatica-con-lucraina-dopo-gli-attacchi-a-bengasi-tripoli-chiede-chiarimenti-a-kiev-e-unindagine-sullutilizzo-del-territorio-libico-per-operazioni-milita/",
+              "title": "agenparl.eu"
+            },
+            {
+              "url": "https://agenparl.eu/2026/11/23/ucraina-affondata-una-corvetta-russa-nel-porto-libico-di-bengasi-attacco-con-sette-droni-navali-colpita-anche-una-nave-cargo-di-mosca/",
+              "title": "agenparl.eu"
+            }
+          ],
+          "readSeconds": 49
+        },
+        {
+          "title": "NATO in allarme per possibile satellite nucleare russo",
+          "lead": "La sicurezza dello spazio è tornata al centro del confronto strategico tra NATO e Russia, per un satellite russo con testata nucleare.",
+          "body": "Informazioni di intelligence suggeriscono che Mosca potrebbe prepararsi a lanciare entro la fine del 2026 un satellite dotato di una testata nucleare, denominato Sputnik-S. Il segretario generale dell'Alleanza Atlantica, Mark Rutte, ha ribadito l'impegno della NATO nella difesa collettiva, che include la protezione delle capacità spaziali essenziali per comunicazioni, navigazione e attività militari. La dichiarazione di Rutte, sebbene non una conferma ufficiale, è una risposta politica e strategica alle informazioni diffuse dalla stampa tedesca, in un contesto di crescente preoccupazione occidentale per lo sviluppo di sistemi antisatellite russi.",
+          "why": "La potenziale militarizzazione dello spazio con armi nucleari rappresenta una grave minaccia alla sicurezza globale e potrebbe innescare una nuova corsa agli armamenti.",
+          "sources": [
+            {
+              "url": "https://agenparl.eu/2026/11/23/nato-allarme-per-un-possibile-satellite-nucleare-russo-rutte-conferma-limpegno-dellalleanza-nella-difesa-spaziale-cresce-la-tensione-con-mosca/",
+              "title": "agenparl.eu"
+            }
+          ],
+          "readSeconds": 42
+        },
+        {
+          "title": "Primo vertice trilaterale Trump-Putin-Xi a Shenzhen",
+          "lead": "A Shenzhen, a margine dell'APEC, si è tenuto il primo vertice trilaterale tra Donald Trump, Vladimir Putin e Xi Jinping, producendo una \"Dichiarazione per la pace\".",
+          "body": "La dichiarazione, raggiunta in novanta minuti, tocca la riforma delle Nazioni Unite, l'espansione di produzione e forniture petrolifere raffinate, la protezione dell'immunità statale, limiti alla Corte penale internazionale e l'impegno a dialogare sulla riduzione dei rischi nucleari, ribadendo che una guerra nucleare non va combattuta né può essere vinta. Non ci sono riferimenti espliciti all'Ucraina. L'analisi suggerisce che l'intesa non ridisegna confini né fissa impegni operativi su Ucraina, Taiwan o Iran, configurandosi più come una legittimazione reciproca tra membri permanenti del Consiglio di sicurezza ONU. Nei colloqui bilaterali, Trump e Xi hanno trattato scambi commerciali, tregua sui dazi, Taiwan e governance dell'intelligenza artificiale, mentre Trump e Putin si sono confrontati sull'Ucraina.",
+          "why": "Questo vertice storico tra le tre potenze mondiali segna un tentativo di definire le basi della coesistenza in un periodo di forti tensioni geopolitiche.",
+          "sources": [
+            {
+              "url": "https://gazzettadiplomatica.it/author/finellipbc_9sgwh095/",
+              "title": "gazzettadiplomatica.it"
+            },
+            {
+              "url": "https://cesmar.it/23-11-26-news-dal-mondo/",
+              "title": "cesmar.it"
+            }
+          ],
+          "readSeconds": 50
+        }
+      ]
+    }
+  ],
+  "dropped": 0
+}

@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-24",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-24T07:03:38.612Z",
+  "words": [
+    {
+      "id": "2026-11-24-1",
+      "word": "Inherent",
+      "category": "general",
+      "ipa": "/ɪnˈhɛrənt/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Essenziale e permanente, parte intrinseca di qualcosa o qualcuno.",
+      "definitionEn": "Existing as a natural or essential part of something; intrinsic.",
+      "examples": [
+        "The desire for success is often inherent in competitive individuals.",
+        "There are inherent risks in any business venture, regardless of how well planned it is."
+      ],
+      "exampleIt": "Il desiderio di successo è spesso intrinseco negli individui competitivi.",
+      "synonyms": [
+        "intrinsic",
+        "innate",
+        "essential"
+      ],
+      "collocations": [
+        "inherent risk",
+        "inherent quality",
+        "inherent flaw"
+      ],
+      "commonMistake": "Gli italiani potrebbero confonderlo con \"inerente\" (related to), ma \"inherent\" si riferisce a una qualità intrinseca, non semplicemente correlata.",
+      "cloze": "Stress is an ____ part of working in a high-pressure environment.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-24-1.mp3"
+    },
+    {
+      "id": "2026-11-24-2",
+      "word": "Dichotomy",
+      "category": "general",
+      "ipa": "/daɪˈkɒtəmi/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Una divisione o contrasto tra due cose che sono o sembrano essere opposte.",
+      "definitionEn": "A division or contrast between two things that are or are represented as being opposed or entirely different.",
+      "examples": [
+        "The classic dichotomy between good and evil is a central theme in many stories.",
+        "There is a clear dichotomy in public opinion regarding the new policy."
+      ],
+      "exampleIt": "La classica dicotomia tra bene e male è un tema centrale in molte storie.",
+      "synonyms": [
+        "contrast",
+        "division",
+        "polarity"
+      ],
+      "collocations": [
+        "sharp dichotomy",
+        "false dichotomy",
+        "clear dichotomy"
+      ],
+      "commonMistake": "Assicurati di pronunciare correttamente la 'ch' come /k/ e non come /tʃ/. È un sostantivo che indica una divisione, non un aggettivo.",
+      "cloze": "The novel explores the ____ between tradition and modernity in a rapidly changing society.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-24-2.mp3"
+    },
+    {
+      "id": "2026-11-24-3",
+      "word": "Expansive",
+      "category": "business",
+      "ipa": "/ɪkˈspænsɪv/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Vasto, ampio, che si espande; anche aperto e comunicativo (riferito a persona).",
+      "definitionEn": "Covering a large area or range; extensive. Also, a person who is communicative and open.",
+      "examples": [
+        "The company has an expansive vision for growth in new markets.",
+        "Her expansive knowledge of the industry made her an invaluable asset to the team."
+      ],
+      "exampleIt": "L'azienda ha una visione espansiva per la crescita in nuovi mercati.",
+      "synonyms": [
+        "extensive",
+        "broad",
+        "wide-ranging"
+      ],
+      "collocations": [
+        "expansive growth",
+        "expansive view",
+        "expansive knowledge"
+      ],
+      "commonMistake": "Non confondere con \"expensive\" (costoso). Concentrati sul significato di \"espansivo\", sia in termini di dimensioni che di apertura/ampiezza.",
+      "cloze": "The new CEO outlined an ____ strategy to double market share within five years.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-24-3.mp3"
+    },
+    {
+      "id": "2026-11-24-4",
+      "word": "Prudent",
+      "category": "business",
+      "ipa": "/ˈpruːdnt/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Saggio e attento nel prendere decisioni, specialmente riguardo al denaro o al futuro.",
+      "definitionEn": "Acting with or showing care and thought for the future; cautious and sensible.",
+      "examples": [
+        "It is always prudent to save some money for unexpected expenses.",
+        "The board made a prudent decision to diversify their investments."
+      ],
+      "exampleIt": "È sempre prudente risparmiare denaro per le spese impreviste.",
+      "synonyms": [
+        "sensible",
+        "wise",
+        "cautious"
+      ],
+      "collocations": [
+        "prudent decision",
+        "prudent investment",
+        "act prudently"
+      ],
+      "commonMistake": "Attenzione a non confonderlo con \"presumptuous\" (presuntuoso) per via della somiglianza fonetica iniziale. Il significato è \"prudente\", \"accorto\".",
+      "cloze": "Given the current economic climate, it would be ____ to delay large-scale expansion plans.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-24-4.mp3"
+    },
+    {
+      "id": "2026-11-24-5",
+      "word": "Map out",
+      "category": "phrasal",
+      "ipa": "/mæp aʊt/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Pianificare in dettaglio, delineare una strategia o un percorso.",
+      "definitionEn": "To plan the details of something carefully, especially a route or a strategy.",
+      "examples": [
+        "We need to map out a clear strategy for launching the new product.",
+        "Before starting the project, it's essential to map out all the necessary steps."
+      ],
+      "exampleIt": "Dobbiamo delineare una strategia chiara per il lancio del nuovo prodotto.",
+      "synonyms": [
+        "plan",
+        "outline",
+        "devise"
+      ],
+      "collocations": [
+        "map out a strategy",
+        "map out a plan",
+        "map out a route"
+      ],
+      "commonMistake": "Non tradurre letteralmente con \"mappare fuori\". Il significato è sempre figurato, \"pianificare\" o \"delineare\". È un verbo frasale transitivo.",
+      "cloze": "The team spent hours trying to ____ the most efficient workflow for the upcoming campaign.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-24-5.mp3"
+    }
+  ]
+}

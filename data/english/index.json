@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-24",
+      "words": [
+        "Inherent",
+        "Dichotomy",
+        "Expansive",
+        "Prudent",
+        "Map out"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "B2"
+      ]
+    },
+    {
       "date": "2026-11-23",
       "words": [
         "Discern",
@@ -222,5 +239,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-23T03:46:13.238Z"
+  "updatedAt": "2026-11-24T07:03:38.613Z"
 }

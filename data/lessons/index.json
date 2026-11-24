@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-24",
+      "title": "Diogene e la Vera Ricchezza: Il Minimalismo Radicale Antico",
+      "category": "Filosofia",
+      "categoryId": "filosofia",
+      "minutes": 4,
+      "hook": "Immaginate un uomo che vive in una botte, non possiede quasi nulla eppure si considera il più ricco di tutti. Cosa può insegnarci Diogene di Sinope sulla felicità e la nostra incessante ricerca di beni materiali?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-23",
       "title": "Il Tuo Futuro Finanziario: Strategie per la Massima Crescita",
       "category": "Finanza personale",
