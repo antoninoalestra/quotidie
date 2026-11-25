@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-25",
+      "title": "Ingannare l'AI: Voci Silenziose che Falsano la Realtà",
+      "category": "Intelligenza artificiale",
+      "categoryId": "intelligenza-artificiale",
+      "minutes": 4,
+      "hook": "Immaginate un'intelligenza artificiale all'avanguardia, capace di riconoscere oggetti con una precisione sorprendente. E se un'alterazione quasi impercettibile potesse farle scambiare un gatto per un tostapane?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-24",
       "title": "Diogene e la Vera Ricchezza: Il Minimalismo Radicale Antico",
       "category": "Filosofia",

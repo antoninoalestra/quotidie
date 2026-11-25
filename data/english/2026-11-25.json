@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-25",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-25T05:33:55.305Z",
+  "words": [
+    {
+      "id": "2026-11-25-1",
+      "word": "Invaluable",
+      "category": "general",
+      "ipa": "/ɪnˈvæljʊəb(ə)l/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Estremamente prezioso, di valore inestimabile; indispensabile.",
+      "definitionEn": "Extremely useful or valuable; having a worth that is too great to be calculated.",
+      "examples": [
+        "Her experience in crisis management proved invaluable during the recent emergency.",
+        "The team's feedback was invaluable for improving the new software."
+      ],
+      "exampleIt": "La sua esperienza nella gestione delle crisi si è rivelata inestimabile durante la recente emergenza.",
+      "synonyms": [
+        "priceless",
+        "indispensable",
+        "crucial"
+      ],
+      "collocations": [
+        "invaluable asset",
+        "invaluable contribution",
+        "invaluable insight"
+      ],
+      "commonMistake": "Attenzione a non confonderlo con \"worthless\" (senza valore). \"Invaluable\" significa di valore così alto da non poter essere stimato.",
+      "cloze": "The mentor's guidance was truly ____ to my career development.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-25-1.mp3"
+    },
+    {
+      "id": "2026-11-25-2",
+      "word": "Elicit",
+      "category": "general",
+      "ipa": "/ɪˈlɪsɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Suscitare, ottenere o estrarre (una risposta, una reazione, informazioni) da qualcuno.",
+      "definitionEn": "To draw out or obtain a reaction, response, or information from someone or something.",
+      "examples": [
+        "The interviewer tried to elicit a direct answer from the politician.",
+        "Her passionate speech managed to elicit strong emotions from the audience."
+      ],
+      "exampleIt": "L'intervistatore ha cercato di ottenere una risposta diretta dal politico.",
+      "synonyms": [
+        "draw out",
+        "evoke",
+        "extract"
+      ],
+      "collocations": [
+        "elicit a response",
+        "elicit a reaction",
+        "elicit information"
+      ],
+      "commonMistake": "Non confonderlo con \"illicit\" (illegale), che ha una pronuncia e un significato completamente diversi. Questo è un errore di ortografia comune.",
+      "cloze": "The survey was designed to ____ honest feedback from customers.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-25-2.mp3"
+    },
+    {
+      "id": "2026-11-25-3",
+      "word": "Discretion",
+      "category": "business",
+      "ipa": "/dɪˈskrɛʃən/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "La libertà o il potere di decidere o agire in base al proprio giudizio; prudenza.",
+      "definitionEn": "The freedom to decide or act on one's own judgment; the quality of being careful.",
+      "examples": [
+        "Managers have a certain degree of discretion in how they allocate resources.",
+        "It is important to handle sensitive client data with the utmost discretion."
+      ],
+      "exampleIt": "I manager hanno un certo grado di discrezionalità su come allocano le risorse.",
+      "synonyms": [
+        "judgment",
+        "freedom of choice",
+        "prudence"
+      ],
+      "collocations": [
+        "exercise discretion",
+        "at one's discretion",
+        "professional discretion"
+      ],
+      "commonMistake": "Non confondere con \"discrepancy\" (discrepanza), che significa una differenza tra due cose, o con l'aggettivo \"discrete\" (separato, distinto).",
+      "cloze": "The employee showed great ____ in keeping the merger talks confidential.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-25-3.mp3"
+    },
+    {
+      "id": "2026-11-25-4",
+      "word": "Underpin",
+      "category": "business",
+      "ipa": "/ˌʌndəˈpɪn/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Sostenere, essere alla base di, rafforzare le fondamenta o la base di qualcosa.",
+      "definitionEn": "To support or form the basis for an argument, a system, a belief, or a structure.",
+      "examples": [
+        "The entire business model is underpinned by robust customer service.",
+        "Strong ethical values should underpin all corporate decisions."
+      ],
+      "exampleIt": "L'intero modello di business è sostenuto da un solido servizio clienti.",
+      "synonyms": [
+        "support",
+        "bolster",
+        "reinforce"
+      ],
+      "collocations": [
+        "underpin a strategy",
+        "underpin an argument",
+        "underpin a philosophy"
+      ],
+      "commonMistake": "Non è un phrasal verb, ma un verbo singolo. Non usare preposizioni come \"up\" o \"down\" dopo, ad esempio, \"to underpin up\" è sbagliato.",
+      "cloze": "A commitment to innovation must ____ our long-term growth strategy.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-25-4.mp3"
+    },
+    {
+      "id": "2026-11-25-5",
+      "word": "Hinge on",
+      "category": "phrasal",
+      "ipa": "/ˈhɪndʒ ɒn/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Dipendere interamente da qualcosa; essere il fattore determinante per il successo o il risultato.",
+      "definitionEn": "To depend entirely on something; to be determined or decided by it.",
+      "examples": [
+        "The success of the project will hinge on securing adequate funding.",
+        "Their decision to expand into new markets hinges heavily on consumer demand."
+      ],
+      "exampleIt": "Il successo del progetto dipenderà interamente dall'ottenimento di finanziamenti adeguati.",
+      "synonyms": [
+        "depend on",
+        "rely on",
+        "revolve around"
+      ],
+      "collocations": [
+        "hinge on success",
+        "hinge on a decision",
+        "hinge on an outcome"
+      ],
+      "commonMistake": "Usare \"hinge\" come verbo transitivo senza la preposizione \"on\". È sempre \"hinge on something/someone\".",
+      "cloze": "The outcome of the negotiation will ____ the final offer from the supplier.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-25-5.mp3"
+    }
+  ]
+}

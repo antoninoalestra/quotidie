@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-25",
+      "words": [
+        "Invaluable",
+        "Elicit",
+        "Discretion",
+        "Underpin",
+        "Hinge on"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "C1"
+      ]
+    },
+    {
       "date": "2026-11-24",
       "words": [
         "Inherent",
@@ -239,5 +256,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-24T07:03:38.613Z"
+  "updatedAt": "2026-11-25T05:33:55.305Z"
 }
