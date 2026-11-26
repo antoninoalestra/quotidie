@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-26",
+      "title": "Cavi Sottomarini: La Guerra Silente del Digitale",
+      "category": "Geopolitica",
+      "categoryId": "geopolitica",
+      "minutes": 4,
+      "hook": "Immaginate una rete invisibile che regge l'intero traffico digitale del pianeta. Questa rete, fatta di fragili cavi sottomarini, è il vero campo di battaglia silente per il controllo dell'informazione e del potere globale. Ma chi la controlla davvero e quali sono i rischi?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-25",
       "title": "Ingannare l'AI: Voci Silenziose che Falsano la Realtà",
       "category": "Intelligenza artificiale",

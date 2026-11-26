@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "kind": "daily",
-  "generatedAt": "2026-11-25T05:32:50.975Z",
+  "generatedAt": "2026-11-26T05:07:47.394Z",
   "model": "gemini-2.5-flash",
-  "minutes": 10,
-  "words": 2056,
+  "minutes": 11,
+  "words": 2161,
   "brief": [
-    "L'Unione Europea ha pubblicato gli orientamenti per la trasparenza dell'AI Act, rafforzando la sua leadership nella regolamentazione dell'intelligenza artificiale e stabilendo standard globali.",
-    "Amazon investe circa 7,5 miliardi di dollari nella startup israeliana Decart AI, un'operazione strategica per potenziare la sua posizione nel competitivo mercato dei chip per l'IA.",
-    "L'inflazione annua nell'Eurozona è salita al 4,0% a ottobre 2026, un dato cruciale che potrebbe influenzare le future decisioni di politica monetaria della Banca Centrale Europea."
+    "L'Unione Europea ha lanciato un fondo da 50 miliardi di euro per sostenere l'intelligenza artificiale e il quantum computing, rafforzando la sovranità tecnologica del continente.",
+    "L'Australia ha approvato una legge sul \"Digital Duty of Care\" che impone nuove regole di sicurezza online alle Big Tech, con sanzioni fino al 5% del fatturato globale.",
+    "Il suicidio dell'ex capo della polizia Gianni De Gennaro assume nuove dimensioni con lettere che accusano il procuratore di Caltanissetta di averlo colpito \"dove neanche la mafia era riuscita ad arrivare\"."
   ],
   "sections": [
     {
@@ -16,72 +16,68 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "UE pubblica orientamenti su trasparenza dell'AI Act",
-          "lead": "La Commissione Europea ha emesso direttive per l'attuazione degli obblighi di trasparenza dell'AI Act, fornendo indicazioni operative a fornitori e utilizzatori di sistemi di intelligenza artificiale.",
-          "body": "Il documento di 43 pagine, Comunicazione C/2026/6005, chiarisce le responsabilità per un'applicazione coerente delle norme, in particolare per sistemi che interagiscono con persone, generano contenuti sintetici o deepfake, e utilizzano riconoscimento biometrico. Le sanzioni per violazioni possono raggiungere i 15 milioni di euro o il 3% del fatturato mondiale.\nIl Regolamento UE 2024/1689, primo quadro giuridico mondiale sull'IA, è entrato in vigore nel 2024 con applicazione graduale. Gli orientamenti, pur non introducendo nuovi obblighi vincolanti, sono cruciali per la compliance e per rafforzare la leadership europea nella regolamentazione dell'IA.",
-          "why": "Questa mossa rafforza la leadership dell'UE nella regolamentazione dell'IA, stabilendo standard globali per la trasparenza e la responsabilità.",
+          "title": "UE: Fondo da 50 Miliardi per AI e Quantum Computing per la Sovranità Tecnologica",
+          "lead": "La Commissione Europea ha proposto il \"Quantum Act\" e un fondo sovrano da 50 miliardi di euro per sostenere investimenti in AI e quantum computing, rafforzando la sovranità tecnologica dell'UE.",
+          "body": "L'iniziativa, presentata il 25 novembre 2026, mira a catalizzare investimenti fino a 400-500 miliardi di euro. Si stima che il solo calcolo quantistico potrebbe generare tra 1.3 e 2.7 trilioni di dollari di valore economico entro il 2035. L'Europa intende posizionarsi come leader mondiale nel settore quantistico entro il 2030, sfruttando il fatto che un'azienda su tre del settore ha sede nell'UE e il 44% dei brevetti quantistici globali proviene dall'Unione.\nLa vicepresidente esecutiva Henna Virkkunen ha dichiarato che la ricerca quantistica, insieme ad AI, cloud e chip, completa l'approccio strategico dell'Europa alla sovranità tecnologica, sfidando la leadership di Stati Uniti e Cina.",
+          "why": "Questa mossa è cruciale per ridurre la dipendenza tecnologica esterna e trasformare la ricerca europea in prodotti concreti, migliorando la sicurezza digitale.",
           "sources": [
             {
-              "url": "https://www.federprivacy.org/informazione/primo-piano/artificial-intelligence-act-la-commissione-ue-pubblica-i-propri-orientamenti-sulla-trasparenza-gli-impatti-per-i-dpo",
-              "title": "federprivacy.org"
+              "url": "https://www.milanofinanza.it/news/l-ue-lancia-un-fondo-sovrano-da-50-miliardi-per-investire-in-tecnologia-cosi-vuole-rendersi-indipendente-202611251105553950",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://www.techpost.it/notizie/business/enterprise-startup/ai-act-la-commissione-europea-pubblica-i-criteri-di-trasparenza-per-chi-sviluppa/",
-              "title": "techpost.it"
+              "url": "https://it.euronews.com/2026/11/25/ue-lancia-il-quantum-act-e-un-fondo-da-50-miliardi-per-tecnologie-quantistiche-e-ia",
+              "title": "it.euronews.com"
             },
             {
-              "url": "https://college.h-farm.com/news/ai-act-governance-ai/",
-              "title": "college.h-farm.com"
+              "url": "https://www.eunews.it/2026/11/25/la-commissione-propone-il-quantum-act-obiettivo-50-miliardi-per-le-tecnologie-strategiche/",
+              "title": "eunews.it"
             }
           ],
-          "readSeconds": 42
+          "readSeconds": 51
         },
         {
-          "title": "Amazon investe 7,5 miliardi in Decart AI per chip",
-          "lead": "Amazon ha siglato un accordo da circa 7,5 miliardi di dollari per acquisire gran parte degli asset della startup israeliana Decart AI, rafforzando la sua strategia sui chip per l'intelligenza artificiale.",
-          "body": "L'operazione, riportata da Bloomberg, include la tecnologia alla base del \"Decart Optimization Stack\", una piattaforma software per ottimizzare l'esecuzione dei modelli di IA su diversi hardware. L'acquisizione comprende anche il team fondatore e i ricercatori di Decart AI, fondata nel 2023.\nQuesto investimento si inserisce nella strategia di Amazon per competere nel mercato dei chip AI, attualmente dominato da Nvidia. Amazon intende rendere i suoi chip proprietari Trainium più competitivi, preparandone la commercializzazione anche ad altri operatori di data center dal 2027.",
-          "why": "L'investimento sottolinea la crescente competizione nel settore dei semiconduttori per l'IA e l'importanza strategica di sviluppare hardware proprietario.",
+          "title": "Australia: Nuova Legge su \"Digital Duty of Care\" per le Big Tech",
+          "lead": "Il Parlamento australiano ha approvato il disegno di legge \"Digital Duty of Care\", che impone nuove e stringenti regole di sicurezza online alle grandi aziende tecnologiche.",
+          "body": "La legislazione, approvata mercoledì 25 novembre 2026, prevede sanzioni fino al 5% del fatturato globale per le aziende che violano le nuove norme. L'Australia è stata pioniera nella protezione dai danni online, avendo già implementato un divieto globale sui social media per i minori di 16 anni lo scorso dicembre.\nLa nuova legge introduce anche protezioni più stringenti per la privacy degli utenti e poteri normativi ampliati per rimuovere servizi \"nudificanti\". Il ministro delle Comunicazioni Anika Wells ha sottolineato che la legge è un passo avanti per l'Australia nell'agire a favore di genitori e figli.",
+          "why": "Questa legislazione stabilisce un precedente internazionale significativo, dimostrando come i governi cerchino di regolamentare l'influenza delle piattaforme digitali.",
           "sources": [
             {
-              "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/amazon-pronta-a-investire-75-miliardi-su-decart-ai-trattativa-per-la-tecnologia-della-startup-137_2026-11-23_TLB.html",
-              "title": "borsaitaliana.it"
+              "url": "https://time.com/article/2026/11/25/australia-digital-duty-of-care-big-tech-fines-social-media-platforms-risks-harms-safety/",
+              "title": "time.com"
             }
           ],
-          "readSeconds": 42
+          "readSeconds": 45
         },
         {
-          "title": "Matters.AI raccoglie 12 milioni per sicurezza dati AI",
-          "lead": "Matters.AI, startup specializzata nella sicurezza dei dati basata sull'intelligenza artificiale, ha raccolto 12 milioni di dollari in un round di finanziamento pre-Serie A, portando il totale a 18,25 milioni.",
-          "body": "Il round è stato guidato da Tanglin Venture Partners, come annunciato dal cofondatore e CEO Keshava Murthy il 24 novembre 2026. La piattaforma di Matters.AI combina la comprensione dei dati con il contesto comportamentale per indagare autonomamente sui rischi di sicurezza, mantenendo l'approvazione umana prima di agire.\nTanglin Venture Partners ha riconosciuto la capacità della startup di affrontare il sovraccarico di avvisi e falsi positivi che affliggono i team di sicurezza. Questo finanziamento evidenzia la crescente domanda di soluzioni avanzate per la protezione dei dati nell'era dell'intelligenza artificiale.",
-          "why": "Questo finanziamento evidenzia la crescente domanda di soluzioni di sicurezza avanzate per l'IA e la fiducia degli investitori nel settore.",
+          "title": "OpenAI Unifica Chat e Work in ChatGPT: Preoccupazioni per i Limiti d'Uso",
+          "lead": "OpenAI sta unificando le esperienze Chat e Work in ChatGPT, una mossa che potrebbe portare gli utenti più assidui a raggiungere più rapidamente i limiti di utilizzo.",
+          "body": "L'implementazione di un'esperienza unificata, annunciata dal product lead Thibault Sottiaux il 25 novembre 2026, arriva in un momento di crescenti costi infrastrutturali e domanda per modelli AI più capaci. Anche Anthropic, un rivale di OpenAI, ha adottato una strategia simile a settembre, evidenziando la pressione sulle risorse di calcolo.\nAlcuni abbonati a ChatGPT hanno espresso preoccupazione sui social media, temendo che la fusione dei limiti di utilizzo possa ridurre il loro accesso ai modelli di ragionamento avanzati, pur continuando a pagare le stesse tariffe di abbonamento.",
+          "why": "La modifica riflette le sfide di OpenAI nel bilanciare innovazione e sostenibilità operativa, influenzando milioni di utenti e la gestione delle risorse computazionali.",
           "sources": [
             {
-              "url": "https://www.unite.ai/it/matters-ai-raises-12m-pre-series-a-led-by-tanglin-venture-partners/",
-              "title": "unite.ai"
+              "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+              "title": "techcrunch.com"
             }
           ],
           "readSeconds": 44
         },
         {
-          "title": "Volatilità nei titoli tech: dubbi riaffiorano sull'AI",
-          "lead": "Martedì 24 novembre 2026, i mercati azionari europei hanno registrato un calo diffuso, con forti perdite per i titoli tecnologici e dei semiconduttori, tra cui Nvidia e Anthropic.",
-          "body": "Milano (FTSEMib) ha perso l'1,84%, appesantita da STMicroelectronics (-10,21%) e Technoprobe (-10,09%). A Wall Street, Nvidia è scesa del 6% e Anthropic del 6,5%. Questo calo segue un'euforia dei giorni precedenti, alimentata dal reintegro di Jensen Huang come CEO di Nvidia, che aveva portato a un rally del titolo.\nIl crollo attuale non è attribuito solo a prese di beneficio, ma anche al riaffiorare di dubbi sulla sostenibilità del boom dell'intelligenza artificiale. Voci di nuovi dazi statunitensi su Cina e altri paesi hanno contribuito al ritiro, indicando una fase di incertezza e riconsiderazione da parte degli investitori.",
-          "why": "La forte volatilità dei titoli legati all'AI indica una fase di incertezza da parte degli investitori riguardo alla crescita futura e alla redditività del settore.",
+          "title": "Crollo Titoli AI: Preoccupazioni sui Costi di Finanziamento delle Infrastrutture",
+          "lead": "I titoli legati all'intelligenza artificiale hanno subito un'ondata di vendite, con Nvidia in calo dell'8,7%, a causa delle crescenti preoccupazioni sui finanziamenti infrastrutturali.",
+          "body": "Mercoledì 25 novembre 2026, Nvidia è scesa dell'8,7%, Broadcom del 6,3% e CoreWeave di oltre il 10%. Anche Microsoft ha registrato un calo del 3,7%. Il calo è attribuito alle crescenti preoccupazioni sui rendimenti degli investimenti e sui massicci costi necessari per lo sviluppo dell'AI, innescando una svendita diffusa tra produttori di semiconduttori, giganti del cloud computing e operatori di data center.\nLe aziende più grandi del settore AI potrebbero raccogliere circa 250 miliardi di dollari tramite obbligazioni quest'anno, con un potenziale di prestito totale tra 300 e 570 miliardi di dollari per l'intera infrastruttura AI. Il ritorno di Jensen Huang come CEO di Nvidia non è riuscito a placare le preoccupazioni finanziarie che guidano la correzione del mercato AI.",
+          "why": "Questo trend evidenzia la crescente cautela degli investitori sulla sostenibilità dei massicci investimenti nell'AI e una rivalutazione delle prospettive di spesa.",
           "sources": [
             {
-              "url": "https://it.tradingeconomics.com/italy/stock-market",
-              "title": "it.tradingeconomics.com"
+              "url": "https://coinpaper.com/39419/ai-stocks-crash-as-nvidia-falls-8-broadcom-loses-6-and-core-weave-plunges-over-10",
+              "title": "coinpaper.com"
             },
             {
-              "url": "https://www.dire.it/24-11-2026/1292982-borse-europee-calo-titoli-tech-ftse-mib-stm-technoprobe/",
-              "title": "dire.it"
-            },
-            {
-              "url": "https://www.firstonline.info/borse-24-novembre-di-nuovo-nella-bufera-il-rally-e-finito-crollano-nvidia-6-e-anthropic-65-e-riaffiorano-le-paure-sullai/",
-              "title": "firstonline.info"
+              "url": "https://www.briefs.co/news/debt-gets-choosy-as-big-tech-banks-on-ai/",
+              "title": "briefs.co"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 52
         }
       ]
     },
@@ -90,67 +86,55 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "Piazza Affari chiude in forte ribasso, tech in calo",
-          "lead": "Martedì 24 novembre 2026, Piazza Affari ha chiuso la seduta in rosso, con l'indice FTSEMib che ha registrato una perdita dell'1,84%, risultando la peggiore tra le borse europee.",
-          "body": "Il calo è stato guidato principalmente dai titoli tecnologici, con STMicroelectronics (-10,21%) e Technoprobe (-10,09%) che hanno subito tonfi a doppia cifra. Il controvalore degli scambi è sceso a 3,04 miliardi di euro, mentre lo spread Btp-Bund ha superato i 105 punti, con il rendimento del Btp decennale oltre il 4,35%.\nLa discesa dei titoli tecnologici a Milano ha seguito l'andamento negativo del Nasdaq, dove Nvidia e Anthropic hanno registrato cali significativi. Gli analisti indicano una prudenza del mercato legata anche a dubbi sull'inflazione e sulle prossime mosse della Federal Reserve, riflettendo un'ampia incertezza sui mercati globali.",
-          "why": "La performance negativa di Piazza Affari riflette una più ampia incertezza sui mercati globali, influenzata da fattori settoriali e macroeconomici.",
+          "title": "Borse Europee in Rosso: I Nuovi Dazi Proposti da Trump Spaventano",
+          "lead": "I mercati azionari europei hanno chiuso in negativo, con Piazza Affari a -1,81%, a causa dei nuovi dazi proposti da Donald Trump contro 14 partner commerciali.",
+          "body": "Mercoledì 25 novembre 2026, il FTSE MIB ha registrato la performance peggiore, chiudendo a 47.249 punti. Il future sul Nasdaq 100 ha perso il 2,93% e lo spread BTP-Bund è salito a 111 punti base. Le proposte di dazi di Trump, anche se ancora in fase di discussione, hanno riacceso le preoccupazioni per una potenziale guerra commerciale globale, creando incertezza sui mercati.\nLe vendite hanno colpito in particolare i titoli tecnologici e bancari. Alcuni titoli, come Stellantis e Ferrari, hanno mostrato un rimbalzo, ma non sono stati sufficienti a invertire il trend negativo generale che ha dominato la giornata.",
+          "why": "La minaccia di nuove barriere commerciali dagli USA impatta direttamente sulla fiducia degli investitori e sulla stabilità dei mercati finanziari europei.",
           "sources": [
             {
-              "url": "https://www.dire.it/24-11-2026/1292982-borse-europee-calo-titoli-tech-ftse-mib-stm-technoprobe/",
-              "title": "dire.it"
+              "url": "https://www.milanofinanza.it/news/borse-oggi-diretta-25-novembre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202611250832178799",
+              "title": "milanofinanza.it"
             },
             {
-              "url": "https://www.firstonline.info/borse-24-novembre-di-nuovo-nella-bufera-il-rally-e-finito-crollano-nvidia-6-e-anthropic-65-e-riaffiorano-le-paure-sullai/",
-              "title": "firstonline.info"
+              "url": "https://quifinanza.it/dirette/borsa-ultime-notizie-25-novembre-2026/1025636/",
+              "title": "quifinanza.it"
             },
             {
-              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-24-novembre-2026",
+              "url": "https://www.soldionline.it/notizie/azioni-italia/borsa-italiana-commento-giornata-25-novembre-2026",
               "title": "soldionline.it"
             }
           ],
+          "readSeconds": 47
+        },
+        {
+          "title": "Bitcoin Sotto i 60.000 Dollari: Galaxy Research Ritira Previsione di Minimo",
+          "lead": "Il Bitcoin è sceso sotto i 60.000 dollari, e Galaxy Research ha ritirato la sua previsione di minimo, avvertendo di un potenziale ulteriore calo verso i 48.500 dollari.",
+          "body": "Mercoledì 25 novembre 2026, il mercato delle criptovalute è rimasto sotto pressione, con Bitcoin che ha oscillato tra circa 58.527 e 60.619 dollari. Galaxy Research ha ritirato la sua precedente previsione di minimo del mercato ribassista di Bitcoin, fatta a ottobre, avvertendo di un potenziale calo del 17% se la criptovaluta dovesse rompere un livello di supporto critico di 58.525 dollari.\nIl mercato ribassista di Bitcoin dura da 412 giorni, superando i cicli precedenti, ma solo due dei 13 indicatori storici di minimo di Galaxy sono stati soddisfatti. La debolezza ha seguito un periodo volatile in cui i rimbalzi non sono riusciti a cancellare le perdite settimanali sostanziali, suggerendo che i prezzi più alti durante una breve ripresa non indicano necessariamente una domanda duratura.",
+          "why": "La rottura di livelli tecnici importanti e il ritiro di previsioni ottimistiche segnalano incertezza e potenziale correzione per le criptovalute.",
+          "sources": [
+            {
+              "url": "https://eurasiabusinessnews.com/2026/11/25/crypto-market-today-november-25-2026-bitcoin-below-60000-as-ethereum-xrp-and-solana-slide/",
+              "title": "eurasiabusinessnews.com"
+            },
+            {
+              "url": "https://www.tmgm.com/en-in/analysis/market-news/article/galaxy-withdraws-bitcoin-bottom-call-warns-of-potential-drop-to-48-500-202611260325",
+              "title": "tmgm.com"
+            }
+          ],
+          "readSeconds": 55
+        },
+        {
+          "title": "Eurozona: Pagamenti con Carta Superano il Contante per la Prima Volta",
+          "lead": "Per la prima volta dal 2016, i pagamenti con carta hanno superato il contante nei punti vendita fisici dell'Eurozona, secondo i dati della Banca Centrale Europea (BCE).",
+          "body": "I dati, pubblicati il 25 novembre 2026, rivelano una chiara tendenza verso la digitalizzazione dei pagamenti. La percentuale di consumatori che ritiene facile l'accesso al contante è scesa all'85%, dall'87% del 2024. Lo studio sulle abitudini di pagamento dei consumatori dell'Eurozona evidenzia una crescita significativa delle operazioni effettuate tramite cellulare.\nQuesto cambiamento nelle preferenze di pagamento ha implicazioni significative per il settore bancario, i fornitori di servizi di pagamento e i commercianti. Conferma una trasformazione strutturale nelle abitudini di spesa dei cittadini europei, accelerando la transizione verso una società meno dipendente dal contante.",
+          "why": "Questo cambiamento strutturale nelle abitudini di spesa ha implicazioni significative per banche, fornitori di servizi e commercianti, accelerando la transizione digitale.",
+          "sources": [
+            {
+              "url": "https://www.milanofinanza.it/news/negozi-le-carte-superano-il-cash-nelle-transazioni-in-crescita-le-operazioni-attraverso-cellulare-i-dati-202611251655045502",
+              "title": "milanofinanza.it"
+            }
+          ],
           "readSeconds": 46
-        },
-        {
-          "title": "Inflazione Eurozona sale al 4,0% a ottobre 2026",
-          "lead": "Il tasso di inflazione annuo nell'area dell'euro è aumentato al 4,0% a ottobre 2026, rispetto al 3,8% di settembre, segnalando una persistenza delle pressioni sui prezzi.",
-          "body": "Un anno prima, il tasso era pari al 2,1%. Secondo Eurostat, i principali contributi all'inflazione di ottobre sono venuti dall'energia (+1,89 punti percentuali), dai servizi (+1,55 pp), dai beni industriali non energetici (+0,30 pp) e da alimentari, alcol e tabacco (+0,29 pp).\nLe previsioni economiche d'autunno 2026 della Commissione Europea indicavano una crescita costante ma con pressioni inflazionistiche più forti. L'aumento dell'inflazione potrebbe influenzare le decisioni delle banche centrali, con S&P Global Ratings che prevede un picco intorno al 4% nel primo trimestre 2027 e un atteso rialzo dei tassi da parte della BCE a dicembre.",
-          "why": "L'accelerazione dell'inflazione nell'Eurozona è un dato cruciale per la politica monetaria della BCE e per il potere d'acquisto dei cittadini.",
-          "sources": [
-            {
-              "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-18112026-ap",
-              "title": "ec.europa.eu"
-            },
-            {
-              "url": "https://www.ilnordest.it/italia-ed-esteri/eurostat-a-ottobre-linflazione-sale-al-4-nelleurozona-nk39yxgf",
-              "title": "ilnordest.it"
-            },
-            {
-              "url": "https://www.rivaluta.it/inflazione/ultimo-dato-inflazione-areaeuro.asp",
-              "title": "rivaluta.it"
-            }
-          ],
-          "readSeconds": 45
-        },
-        {
-          "title": "Allarme energia Europa, attesi rialzi tassi BCE",
-          "lead": "L'AD di Eni, Claudio Descalzi, ha espresso preoccupazione per le difficoltà legate al gas in Europa quest'inverno, mentre S&P Global Ratings prevede rialzi dei tassi da parte della BCE e della Bank of England a dicembre.",
-          "body": "L'avvertimento di Descalzi si inserisce in un contesto di crisi energetica del 2026, esacerbata da tensioni in Medio Oriente e interruzioni dei traffici nello Stretto di Hormuz. Il gas all'ingrosso è vicino ai 100 euro per megawattora, con un aumento del 173% rispetto a ottobre 2025.\nGli analisti si aspettano che l'allentamento dei tassi inizi solo nel 2028. L'economia europea ha incassato lo shock energetico meglio del previsto nel 2026, ma la crescita è destinata a stabilizzarsi o rallentare nel 2027. L'inflazione di fondo, dopo un picco atteso nel primo trimestre 2027, rimarrà ostinata.",
-          "why": "La combinazione di allarme energetico e prospettive di rialzi dei tassi segnala sfide significative per l'economia europea, con impatti su costi e crescita.",
-          "sources": [
-            {
-              "url": "https://www.focusrisparmio.com/news/europa-sp-2027-outlook",
-              "title": "focusrisparmio.com"
-            },
-            {
-              "url": "https://www.fortuneita.com/2026/11/24/gas-linverno-delleuropa-tra-lallarme-di-descalzi-e-la-cautela-di-bruxelles/",
-              "title": "fortuneita.com"
-            },
-            {
-              "url": "https://www.rinnovabili.it/energia/infrastrutture/crisi-energetica-world-energy-outlook-aie-2026/",
-              "title": "rinnovabili.it"
-            }
-          ],
-          "readSeconds": 48
         }
       ]
     },
@@ -159,55 +143,51 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Dibattito parlamentare sul \"Decreto Scuola\" in Italia",
-          "lead": "Martedì 24 novembre 2026, la Camera dei Deputati ha discusso il disegno di legge di conversione del decreto 30 settembre 2026, n. 170, contenente misure urgenti per l'avvio dell'anno scolastico.",
-          "body": "Il decreto include anche disposizioni per l'accompagnamento delle misure del Piano Nazionale di Ripresa e Resilienza (PNRR) di competenza del Ministero dell'Istruzione e del Merito, e per la promozione dell'integrazione degli studenti stranieri.\nIl dibattito parlamentare è in corso, con la presentazione di emendamenti che potrebbero ampliare il decreto, introducendo ad esempio la revoca di borse di studio per studenti indagati o un nuovo reato di \"squadrismo eversivo\". Le decisioni su questo decreto avranno un impatto diretto sull'organizzazione e la qualità del sistema educativo italiano.",
-          "why": "Le decisioni su questo decreto avranno un impatto diretto sull'organizzazione e la qualità del sistema educativo italiano, toccando milioni di studenti e famiglie.",
+          "title": "Caso De Gennaro: Lettere Accusano il Procuratore di Caltanissetta",
+          "lead": "Il suicidio dell'ex capo della polizia Gianni De Gennaro, 78 anni, assume nuove dimensioni con lettere che accusano il procuratore di Caltanissetta, Salvatore De Luca.",
+          "body": "Nelle lettere, l'ex prefetto avrebbe accusato De Luca di averlo colpito \"dove neanche la mafia era riuscita ad arrivare\". De Luca aveva in precedenza accusato De Gennaro di depistaggio nell'inchiesta sulla strage di via D'Amelio. Le indagini si concentrano ora sulle lettere e sugli sviluppi del caso, che tocca temi delicati come le stragi e la trattativa Stato-mafia.\nL'autopsia sul corpo di De Gennaro è prevista per venerdì a Firenze, mentre i funerali si terranno lunedì a Roma. Il caso ha suscitato ampio dibattito politico e mediatico, con i quotidiani che hanno dato grande risalto alle accuse contenute nelle missive lasciate dall'ex capo della polizia.",
+          "why": "La vicenda scuote le istituzioni e riapre interrogativi su pagine complesse della storia italiana, con possibili ripercussioni giudiziarie e politiche.",
           "sources": [
             {
-              "url": "https://comunicazione.camera.it/archivio-prima-pagina/19-64411",
-              "title": "comunicazione.camera.it"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=U1l9H-Pm11w",
-              "title": "youtube.com"
-            }
-          ],
-          "readSeconds": 44
-        },
-        {
-          "title": "Giornata contro la violenza sulle donne: mobilitazione e protocollo",
-          "lead": "Mercoledì 25 novembre 2026, l'Italia celebra la Giornata internazionale per l'eliminazione della violenza contro le donne con numerose iniziative e la firma di un protocollo al Viminale per la tutela delle vittime.",
-          "body": "Il protocollo d'intesa \"Insieme per la tutela delle vittime della violenza e della criminalità\" è stato sottoscritto martedì 24 novembre 2026 tra il Commissario per il coordinamento delle iniziative di solidarietà e la Fondazione AIGA \"Tommaso Bucciarelli\" ETS. È un accordo triennale senza oneri finanziari, volto a rafforzare il sostegno alle vittime di reati mafiosi, intenzionali violenti e orfani di crimini domestici e femminicidio.\nIl Sottosegretario all'Interno Emanuele Prisco ha sottolineato l'importanza di anticipare l'azione e mettere in rete istituzioni, Forze dell'ordine e centri antiviolenza per prevenire i crimini violenti, in particolare quelli di genere. La vasta mobilitazione sociale e l'impegno istituzionale evidenziano la crescente attenzione e la volontà di contrastare la violenza di genere in Italia.",
-          "why": "La mobilitazione sociale e l'impegno istituzionale evidenziano la crescente attenzione e la volontà di contrastare la violenza di genere in Italia.",
-          "sources": [
-            {
-              "url": "https://tg24.sky.it/cronaca/2026/11/24/giornata-contro-violenza-donne-manifestazioni-eventi-italia",
+              "url": "https://tg24.sky.it/cronaca/2026/11/25/prime-pagine-quotidiani-oggi-25-novembre",
               "title": "tg24.sky.it"
             },
             {
-              "url": "https://www.gonews.it/2026/11/23/25-novembre-limpegno-dellunifi-contro-la-violenza-sulle-donne/",
-              "title": "gonews.it"
-            },
-            {
-              "url": "https://www.interno.gov.it/it/notizie/firmato-viminale-protocollo-corretta-diffusione-iniziative-favore-vittime-reati-violenti-crimini-domestici-e-femminicidio",
-              "title": "interno.gov.it"
+              "url": "https://www.dire.it/25-11-2026/1293328-tg-politico-parlamentare-ledizione-di-mercoledi-25-novembre-2026/",
+              "title": "dire.it"
             }
           ],
-          "readSeconds": 54
+          "readSeconds": 48
         },
         {
-          "title": "Confcommercio lancia allarme caro energia per terziario",
-          "lead": "Confcommercio ha lanciato l'allarme sui costi dell'energia per il settore terziario italiano, con la spesa elettrica che nel terzo trimestre 2026 ha raggiunto i 3,8 miliardi di euro, in aumento del 46% su base annua.",
-          "body": "L'Osservatorio di Confcommercio ha evidenziato che il gas all'ingrosso è vicino ai 100 euro per megawattora (+173% rispetto a ottobre 2025), e il prezzo unico nazionale dell'elettricità è oltre i 250 euro, più che raddoppiato in dodici mesi. Le aziende italiane pagano l'elettricità significativamente di più rispetto ai concorrenti europei.\nGiovanni Acampora, membro di Giunta nazionale di Confcommercio, ha dichiarato che queste risorse sono sottratte alla capacità delle imprese di investire, innovare e creare occupazione. L'associazione chiede misure strutturali per ridurre stabilmente il costo dell'energia, evidenziando l'impatto gravoso sull'economia italiana.",
-          "why": "L'allarme di Confcommercio evidenzia l'impatto persistente del caro energia sull'economia italiana, minacciando investimenti e occupazione.",
+          "title": "Economia Italiana Rallenta: PIL Fermo e Inflazione in Aumento",
+          "lead": "L'economia italiana ha perso slancio, con il PIL fermo nel terzo trimestre 2026 e l'inflazione salita al 5,4% in ottobre a causa di rincari energetici e alimentari.",
+          "body": "Il Prodotto Interno Lordo (PIL) nazionale è rimasto fermo rispetto ai tre mesi precedenti, interrompendo quattro trimestri consecutivi di espansione. A pesare sull'economia italiana sono il caro energia, l'accelerazione dell'inflazione e il progressivo esaurimento degli investimenti legati al PNRR. La crescita italiana è prevista rallentare allo 0,6% nel 2027.\nQuesto contrasta con lo scenario internazionale, dove l'economia mondiale mostra una tenuta superiore alle attese, sostenuta dagli investimenti nell'intelligenza artificiale e dalla crescita degli scambi commerciali. Prometeia ha rivisto al rialzo le stime per il PIL mondiale (3% nel 2026) e il commercio globale (5%), ma ha evidenziato il contributo più debole dell'Europa, penalizzata dalla limitata disponibilità di risorse naturali strategiche.",
+          "why": "Il rallentamento economico e l'inflazione persistente rappresentano sfide significative per l'Italia, che rischia di rimanere indietro rispetto alla crescita globale.",
           "sources": [
             {
-              "url": "https://www.confcommercio.it/-/stati-generali-energia",
-              "title": "confcommercio.it"
+              "url": "https://www.fondionline.it/news-fondi/economia-l-italia-rallenta-mentre-il-mondo-cresce-grazie-all-ia-00048915.html",
+              "title": "fondionline.it"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 50
+        },
+        {
+          "title": "Allarme Materie Prime: Italia Leader nel Recupero ma Difficoltà d'Impiego",
+          "lead": "L'Italia eccelle nel recupero di materia, ma affronta crescenti difficoltà nell'impiego effettivo delle risorse recuperate nei processi produttivi, secondo il Rapporto Assoambiente.",
+          "body": "Il Rapporto annuale \"L'Italia che Ricicla 2026\" di Assoambiente con Ref, pubblicato il 25 novembre 2026, evidenzia che nel 2025, 79,4 milioni di tonnellate di materiali hanno cessato di essere rifiuti diventando materie prime seconde. Tuttavia, la concorrenza delle materie prime vergini e la difficoltà di trovare sbocchi commerciali per i materiali recuperati mettono in difficoltà diverse filiere.\nAd esempio, il tasso di avvio a recupero dei rifiuti da costruzione e demolizione è dell'82,4%, ma si stima che il 30-40% degli aggregati riciclati rimanga invenduto. L'Italia importa materie prime per 20 miliardi di euro. Assoambiente chiede misure normative e fiscali per rendere l'impiego delle materie prime seconde una scelta sicura e conveniente.",
+          "why": "Nonostante l'eccellenza nel riciclo, l'Italia rischia di non sfruttare il potenziale dell'economia circolare, mantenendo dipendenza dalle importazioni.",
+          "sources": [
+            {
+              "url": "https://www.borsaitaliana.it/borsa/notizie/radiocor/economia/dettaglio/materie-prime-assoambiente-italia-leader-in-recupero-ma-va-incentivato-riuso-nRC_25112026_1230_319170807.html",
+              "title": "borsaitaliana.it"
+            },
+            {
+              "url": "https://askanews.it/2026/11/25/litalia-che-ricicla-2026-allarme-per-le-materie-prime-seconde/",
+              "title": "askanews.it"
+            }
+          ],
+          "readSeconds": 48
         }
       ]
     },
@@ -216,51 +196,43 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Allarme crisi energetica Europa e tensioni a Hormuz",
-          "lead": "L'amministratore delegato di Eni, Claudio Descalzi, ha avvertito di \"difficoltà\" per l'approvvigionamento di gas in Europa quest'inverno, in un contesto di crisi energetica esacerbata da tensioni in Medio Oriente.",
-          "body": "Le interruzioni dei traffici attraverso lo Stretto di Hormuz stanno spingendo i governi a ripensare le proprie strategie energetiche. Il prezzo del gas all'ingrosso è vicino ai 100 euro per megawattora, con un aumento del 173% rispetto a ottobre 2025.\nIl World Energy Outlook 2026 dell'AIE evidenzia il ruolo crescente di rinnovabili, nucleare ed elettrificazione per rafforzare la sicurezza degli approvvigionamenti. L'avvertimento di Descalzi e le analisi dell'AIE mostrano la persistente vulnerabilità energetica dell'Europa e la necessità di bilanciare sicurezza delle forniture, prezzi e scelte geopolitiche.",
-          "why": "La combinazione di crisi energetica e tensioni geopolitiche rappresenta una minaccia significativa per la stabilità economica e la sicurezza degli approvvigionamenti globali.",
+          "title": "UE Propone Nuove Sanzioni contro la Russia per Attacchi in Ucraina",
+          "lead": "La Commissione Europea ha proposto il 22° pacchetto di sanzioni contro la Russia, mirando a colpire la sua capacità di finanziare la guerra e gli attacchi alle infrastrutture ucraine.",
+          "body": "Il nuovo pacchetto di misure, proposto lunedì 24 novembre 2026, è il 22° dall'inizio dell'invasione nel febbraio 2022. Bruxelles intende che gli Stati membri approvino le nuove misure entro dicembre, mirando a colpire banche e piattaforme di criptovalute, isolando ulteriormente la Russia e limitando la sua partecipazione a eventi sportivi e culturali europei.\nIl ministro degli Esteri italiano Antonio Tajani ha ribadito la ferma condanna italiana dell'aggressione russa, confermando la sintonia con Varsavia sulla necessità di un'Europa forte e coesa nel sostegno a Kiev. Le sanzioni mirano a ridurre la capacità della Russia di finanziare il conflitto in Ucraina.",
+          "why": "Questo pacchetto sottolinea la continua pressione dell'UE sulla Russia e il suo impegno a sostenere l'Ucraina, con impatti geopolitici globali.",
           "sources": [
             {
-              "url": "https://www.fortuneita.com/2026/11/24/gas-linverno-delleuropa-tra-lallarme-di-descalzi-e-la-cautela-di-bruxelles/",
-              "title": "fortuneita.com"
-            },
+              "url": "https://www.youtube.com/watch?v=cny6ekmXSno",
+              "title": "youtube.com"
+            }
+          ],
+          "readSeconds": 48
+        },
+        {
+          "title": "Conflitto Arabia Saudita-Houthi si Aggrava: Ribelli Avanzano nello Yemen",
+          "lead": "Il conflitto tra Arabia Saudita e ribelli Houthi si sta aggravando, con il gruppo che prende di mira distretti finanziari sauditi e avanza verso la strategica città portuale di Aden nello Yemen.",
+          "body": "Il gruppo Houthi, sostenuto dall'Iran, sta intensificando gli attacchi contro il principale distretto finanziario e i porti energetici del regno saudita. Le ultime conquiste degli Houthi rientrano in un'offensiva lanciata a settembre, che li ha visti spingersi a sud dai territori nord-occidentali che controllano da oltre un decennio.\nL'avanzata degli Houthi consoliderebbe il loro controllo su due vie navigabili vitali per il commercio marittimo globale e i mercati energetici: il Golfo di Aden e lo stretto di Bab el-Mandeb. L'aggravarsi del conflitto ha implicazioni significative per la stabilità regionale e per i mercati energetici globali.",
+          "why": "L'escalation in Yemen minaccia la sicurezza marittima e l'approvvigionamento energetico globale, destabilizzando ulteriormente una regione già fragile.",
+          "sources": [
             {
-              "url": "https://www.rinnovabili.it/energia/infrastrutture/crisi-energetica-world-energy-outlook-aie-2026/",
-              "title": "rinnovabili.it"
-            },
+              "url": "https://www.voce.it/it/articolo/2/attualita/global-le-notizie-dal-mondo-di-oggi-25-novembre",
+              "title": "voce.it"
+            }
+          ],
+          "readSeconds": 46
+        },
+        {
+          "title": "Gaza: Oxfam Denuncia Contaminazione del 99% del Territorio da Esplosivi",
+          "lead": "Un rapporto di Oxfam denuncia che il 99% del territorio della Striscia di Gaza è contaminato da esplosivi, con gravi conseguenze ambientali e sanitarie.",
+          "body": "Il rapporto, citato il 25 novembre 2026, rivela che negli ultimi tre anni sono cadute 200.000 tonnellate di esplosivi, equivalenti a tredici bombe atomiche. Questo ha prodotto 61 milioni di tonnellate di residui tossici, con un impatto a lungo termine sulla popolazione e sull'ecosistema della Striscia di Gaza.\nLa denuncia di Oxfam evidenzia le devastanti conseguenze ambientali e sanitarie del conflitto. L'organizzazione umanitaria ha lanciato l'allarme sulla tossicità del territorio, con gravi rischi per la salute pubblica e la necessità urgente di interventi per la bonifica e il supporto alla popolazione colpita.",
+          "why": "Questo dato evidenzia la catastrofe umanitaria e ambientale a Gaza, richiamando attenzione urgente su bonifica e supporto alla popolazione.",
+          "sources": [
             {
-              "url": "https://www.confcommercio.it/-/stati-generali-energia",
-              "title": "confcommercio.it"
+              "url": "https://www.dire.it/25-11-2026/1293221-tg-esteri-ledizione-di-mercoledi-25-novembre-2026/",
+              "title": "dire.it"
             }
           ],
           "readSeconds": 44
-        },
-        {
-          "title": "Conclusa 72esima Sessione Assemblea Parlamentare NATO",
-          "lead": "La 72esima Sessione Annuale dell'Assemblea Parlamentare della NATO si è conclusa a Berlino lunedì 23 novembre 2026, riunendo parlamentari e esperti per discutere di sicurezza euro-atlantica.",
-          "body": "L'evento ha visto la partecipazione di parlamentari dei Paesi NATO e partner, rappresentanti istituzionali ed esperti, che si sono confrontati sulle principali questioni di sicurezza e difesa euro-atlantica. L'Assemblea Parlamentare della NATO è un forum cruciale per il dialogo interparlamentare e la discussione sulle sfide alla sicurezza collettiva, in un periodo di complesse dinamiche geopolitiche.\nLa sessione ha permesso un confronto approfondito su temi di sicurezza e difesa, contribuendo a rafforzare la cooperazione tra i membri dell'Alleanza e i loro partner. La conclusione di questo importante appuntamento internazionale sottolinea l'impegno continuo della NATO nel mantenere la sicurezza e la stabilità nella regione euro-atlantica, affrontando le minacce emergenti.",
-          "why": "La conclusione di questo appuntamento sottolinea l'impegno della NATO nel mantenere la sicurezza e la stabilità euro-atlantica attraverso il dialogo e la collaborazione.",
-          "sources": [
-            {
-              "url": "https://www.teleborsa.it/News/2026/11/23/eventi-e-scadenze-settimana-del-23-novembre-2026-7_TLB-AUTO.html",
-              "title": "teleborsa.it"
-            }
-          ],
-          "readSeconds": 49
-        },
-        {
-          "title": "Discussioni in Parlamento italiano per COP31 Antalya",
-          "lead": "Nel Parlamento italiano sono state presentate e discusse martedì 24 novembre 2026 mozioni riguardanti le politiche per il clima e gli impegni in vista della 31a Conferenza delle Nazioni Unite sui cambiamenti climatici (COP31) ad Antalya.",
-          "body": "La COP31 è un vertice internazionale fondamentale per affrontare la crisi climatica e definire le strategie globali per la riduzione delle emissioni e l'adattamento ai cambiamenti climatici. La discussione parlamentare italiana riflette l'impegno del paese nel contribuire agli sforzi internazionali per contrastare il riscaldamento globale.\nLe mozioni presentate indicano la volontà politica di definire una posizione chiara e ambiziosa dell'Italia in vista della conferenza, sottolineando l'importanza delle politiche climatiche. Queste discussioni evidenziano la crescente urgenza e l'attenzione globale verso le politiche climatiche, con i paesi che si preparano a negoziare nuovi impegni e strategie.",
-          "why": "Le discussioni preparatorie alla COP31 evidenziano la crescente urgenza e l'attenzione globale verso le politiche climatiche e gli impegni internazionali.",
-          "sources": [
-            {
-              "url": "https://comunicazione.camera.it/archivio-prima-pagina/19-64411",
-              "title": "comunicazione.camera.it"
-            }
-          ],
-          "readSeconds": 47
         }
       ]
     }

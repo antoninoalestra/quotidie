@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-26",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-26T05:08:36.835Z",
+  "words": [
+    {
+      "id": "2026-11-26-1",
+      "word": "intrinsic",
+      "category": "general",
+      "ipa": "/ɪnˈtrɪnsɪk/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Parte essenziale o fondamentale di qualcosa, che non è acquisito dall'esterno.",
+      "definitionEn": "Being an essential and natural part of something, belonging to its true nature.",
+      "examples": [
+        "The intrinsic value of the artwork is independent of its market price.",
+        "Many believe that creativity is an intrinsic human characteristic."
+      ],
+      "exampleIt": "Il valore intrinseco dell'opera d'arte è indipendente dal suo prezzo di mercato.",
+      "synonyms": [
+        "inherent",
+        "fundamental",
+        "essential"
+      ],
+      "collocations": [
+        "intrinsic value",
+        "intrinsic quality",
+        "intrinsic motivation"
+      ],
+      "commonMistake": "Attenzione alla pronuncia, la \"c\" finale è un suono /k/ non /tʃ/. Non confondere con \"intricate\" (complesso).",
+      "cloze": "The team lacked ____ motivation, relying instead on external rewards.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-26-1.mp3"
+    },
+    {
+      "id": "2026-11-26-2",
+      "word": "hapless",
+      "category": "general",
+      "ipa": "/ˈhæpləs/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Sfortunato, sventurato; che non ha fortuna.",
+      "definitionEn": "Unfortunate or unlucky, often used to describe someone who always seems to have bad things happen to them.",
+      "examples": [
+        "The hapless victim of the scam lost all his savings.",
+        "Despite his diligent efforts, the hapless inventor never managed to get his ideas off the ground."
+      ],
+      "exampleIt": "La sfortunata vittima della truffa perse tutti i suoi risparmi.",
+      "synonyms": [
+        "unfortunate",
+        "unlucky",
+        "ill-fated"
+      ],
+      "collocations": [
+        "hapless victim",
+        "hapless soul",
+        "hapless attempt"
+      ],
+      "commonMistake": "Non usare \"unhappy\" per \"sfortunato\" in questo contesto. \"Hapless\" implica una mancanza di fortuna piuttosto che una condizione emotiva.",
+      "cloze": "The ____ explorer found himself lost in the dense jungle with no map or compass.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-26-2.mp3"
+    },
+    {
+      "id": "2026-11-26-3",
+      "word": "rapport",
+      "category": "business",
+      "ipa": "/ræˈpɔːr/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Relazione di intesa, fiducia e comprensione reciproca tra persone.",
+      "definitionEn": "A close and harmonious relationship in which the people or groups concerned understand each other's feelings or ideas.",
+      "examples": [
+        "Building a good rapport with clients is crucial for long-term business success.",
+        "The doctor quickly established a rapport with the nervous patient."
+      ],
+      "exampleIt": "Costruire una buona intesa con i clienti è cruciale per il successo aziendale a lungo termine.",
+      "synonyms": [
+        "affinity",
+        "bond",
+        "connection"
+      ],
+      "collocations": [
+        "build rapport",
+        "establish rapport",
+        "good rapport"
+      ],
+      "commonMistake": "Spesso si tende a confondere la pronuncia con \"report\". La 't' finale non è sempre udibile o è molto leggera, e l'accento è sulla seconda sillaba. Non usare \"report\" per indicare una relazione.",
+      "cloze": "It's important for a manager to develop a strong ____ with their team members to ensure effective communication.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-26-3.mp3"
+    },
+    {
+      "id": "2026-11-26-4",
+      "word": "framework",
+      "category": "business",
+      "ipa": "/ˈfreɪmwɜːk/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Struttura concettuale o sistema di regole che fornisce le basi per qualcosa.",
+      "definitionEn": "A basic structure or system of ideas, rules, or beliefs on which something is built or developed.",
+      "examples": [
+        "The company developed a new strategic framework to guide its future growth.",
+        "We need a robust legal framework to protect consumer data."
+      ],
+      "exampleIt": "L'azienda ha sviluppato un nuovo quadro strategico per guidare la sua crescita futura.",
+      "synonyms": [
+        "structure",
+        "schema",
+        "outline"
+      ],
+      "collocations": [
+        "strategic framework",
+        "legal framework",
+        "regulatory framework"
+      ],
+      "commonMistake": "Non è un falso amico, ma attenzione a non usarlo come sinonimo di \"cornice\" (picture frame). Qui si riferisce a una struttura concettuale o organizzativa.",
+      "cloze": "Before starting the project, we must establish a clear ____ of objectives and responsibilities.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-26-4.mp3"
+    },
+    {
+      "id": "2026-11-26-5",
+      "word": "get across",
+      "category": "phrasal",
+      "ipa": "/ɡɛt əˈkrɒs/",
+      "partOfSpeech": "phrasal verb",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Riuscire a comunicare o far comprendere un'idea, un messaggio o un sentimento.",
+      "definitionEn": "To succeed in making people understand what you are saying or trying to say.",
+      "examples": [
+        "It was difficult to get my point across during the heated debate.",
+        "She used visual aids to help get her complex ideas across to the audience."
+      ],
+      "exampleIt": "È stato difficile far passare il mio punto di vista durante il dibattuto acceso.",
+      "synonyms": [
+        "convey",
+        "communicate",
+        "express"
+      ],
+      "collocations": [
+        "get a message across",
+        "get an idea across",
+        "get a point across"
+      ],
+      "commonMistake": "Non usare \"make understand\" direttamente come in italiano. Il phrasal verb \"get across\" è molto più naturale. Anche la preposizione è importante, \"get across\" non \"get through\" (che ha un'enfasi diversa, es. \"get through to someone\" - farsi ascoltare da qualcuno).",
+      "cloze": "Despite his clear explanation, the speaker struggled to ____ the urgency of the situation to some attendees.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-26-5.mp3"
+    }
+  ]
+}
