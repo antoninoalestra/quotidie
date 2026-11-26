@@ -1,40 +1,22 @@
 {
   "files": {
     "lesson-latest.mp3": {
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "kind": "lesson",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 397,
+      "seconds": 357,
       "rewritten": true,
-      "generatedAt": "2026-11-25T05:52:00.788Z"
+      "generatedAt": "2026-11-26T05:19:17.025Z"
     },
     "news-latest.mp3": {
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "kind": "news",
       "engine": "edge-tts",
       "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 700,
+      "seconds": 929,
       "rewritten": true,
-      "generatedAt": "2026-11-25T05:47:09.258Z"
-    },
-    "news-2026-11-17.mp3": {
-      "date": "2026-11-17",
-      "kind": "news",
-      "engine": "edge-tts",
-      "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 769,
-      "rewritten": true,
-      "generatedAt": "2026-11-17T05:13:17.366Z"
-    },
-    "lesson-2026-11-17.mp3": {
-      "date": "2026-11-17",
-      "kind": "lesson",
-      "engine": "edge-tts",
-      "voice": "it-IT-GiuseppeMultilingualNeural",
-      "seconds": 367,
-      "rewritten": true,
-      "generatedAt": "2026-11-17T05:18:38.218Z"
+      "generatedAt": "2026-11-26T05:16:09.035Z"
     },
     "news-2026-11-18.mp3": {
       "date": "2026-11-18",
@@ -179,7 +161,25 @@
       "seconds": 397,
       "rewritten": true,
       "generatedAt": "2026-11-25T05:52:00.788Z"
+    },
+    "news-2026-11-26.mp3": {
+      "date": "2026-11-26",
+      "kind": "news",
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 929,
+      "rewritten": true,
+      "generatedAt": "2026-11-26T05:16:09.035Z"
+    },
+    "lesson-2026-11-26.mp3": {
+      "date": "2026-11-26",
+      "kind": "lesson",
+      "engine": "edge-tts",
+      "voice": "it-IT-GiuseppeMultilingualNeural",
+      "seconds": 357,
+      "rewritten": true,
+      "generatedAt": "2026-11-26T05:19:17.025Z"
     }
   },
-  "updatedAt": "2026-11-25T05:52:00.788Z"
+  "updatedAt": "2026-11-26T05:19:17.025Z"
 }
