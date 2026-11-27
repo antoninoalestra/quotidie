@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-27",
+      "title": "Il Suono delle Forme: L'Effetto Bouba-Kiki e la Sinestesia Linguistica",
+      "category": "Linguistica ed etimologia",
+      "categoryId": "linguistica-ed-etimologia",
+      "minutes": 4,
+      "hook": "Avete mai riflettuto su come un suono possa evocare una forma, o viceversa? Immaginate una forma morbida e arrotondata, e poi una spigolosa e aguzza: quale delle due chiamereste \"Bouba\" e quale \"Kiki\"?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-26",
       "title": "Cavi Sottomarini: La Guerra Silente del Digitale",
       "category": "Geopolitica",

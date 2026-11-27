@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-27",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-27T05:10:27.585Z",
+  "words": [
+    {
+      "id": "2026-11-27-1",
+      "word": "Exacerbate",
+      "category": "general",
+      "ipa": "/ɪɡˈzæsəbeɪt/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Peggiorare una situazione o un problema, renderlo più grave o intenso.",
+      "definitionEn": "To make a problem, bad situation, or negative feeling worse or more intense.",
+      "examples": [
+        "The economic downturn could exacerbate social tensions in the region.",
+        "Lack of proper funding will only exacerbate the existing issues within the department."
+      ],
+      "exampleIt": "La recessione economica potrebbe esacerbare le tensioni sociali nella regione.",
+      "synonyms": [
+        "aggravate",
+        "worsen",
+        "intensify"
+      ],
+      "collocations": [
+        "exacerbate a problem",
+        "exacerbate tensions",
+        "exacerbate suffering"
+      ],
+      "commonMistake": "Spesso confuso con l'italiano 'esasperare' che significa irritare. 'Exacerbate' si riferisce a un peggioramento oggettivo di una situazione, non a un'irritazione.",
+      "cloze": "His careless comment only served to ____ an already difficult situation.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-27-1.mp3"
+    },
+    {
+      "id": "2026-11-27-2",
+      "word": "Conjecture",
+      "category": "general",
+      "ipa": "/kənˈdʒektʃə/",
+      "partOfSpeech": "noun",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Un'opinione o conclusione basata su informazioni incomplete; una supposizione.",
+      "definitionEn": "An opinion or conclusion formed on the basis of incomplete information; a guess.",
+      "examples": [
+        "The detective's theory was pure conjecture, lacking concrete evidence.",
+        "Much of what has been written about his early life is mere conjecture, not proven fact."
+      ],
+      "exampleIt": "La teoria del detective era pura congettura, priva di prove concrete.",
+      "synonyms": [
+        "speculation",
+        "guess",
+        "hypothesis"
+      ],
+      "collocations": [
+        "pure conjecture",
+        "wild conjecture",
+        "based on conjecture"
+      ],
+      "commonMistake": "Attenzione alla pronuncia della 'j' /dʒ/ e a non confonderlo con 'conjuncture' (congiuntura, situazione) o 'conjecture' (verbo).",
+      "cloze": "Without further data, any conclusion we draw would be mere ____.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-27-2.mp3"
+    },
+    {
+      "id": "2026-11-27-3",
+      "word": "Uphold",
+      "category": "business",
+      "ipa": "/ʌpˈhəʊld/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Sostenere o difendere un principio, una decisione, una legge o uno standard.",
+      "definitionEn": "To maintain or affirm a principle, standard, or decision; to support something that is good and right.",
+      "examples": [
+        "The company prides itself on its commitment to uphold ethical standards.",
+        "The court's decision was to uphold the previous ruling, setting a clear precedent."
+      ],
+      "exampleIt": "L'azienda si vanta del suo impegno a sostenere gli standard etici.",
+      "synonyms": [
+        "maintain",
+        "support",
+        "defend"
+      ],
+      "collocations": [
+        "uphold standards",
+        "uphold values",
+        "uphold a decision"
+      ],
+      "commonMistake": "Non confondere con 'hold up' (ritardare, rapinare) o 'hold on' (aspettare). 'Uphold' ha un significato specifico di sostenere o difendere qualcosa di astratto.",
+      "cloze": "It's crucial for leaders to always ____ the values of the organization.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-27-3.mp3"
+    },
+    {
+      "id": "2026-11-27-4",
+      "word": "Ascertain",
+      "category": "business",
+      "ipa": "/ˌæsəˈteɪn/",
+      "partOfSpeech": "verb",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Scoprire o stabilire con certezza un fatto o una verità dopo un'indagine.",
+      "definitionEn": "To find out something for certain; to make sure of something, often after investigating.",
+      "examples": [
+        "We need to ascertain the cause of the delay before proceeding with the next phase.",
+        "The audit aims to ascertain the financial health of the subsidiary."
+      ],
+      "exampleIt": "Dobbiamo accertare la causa del ritardo prima di procedere con la fase successiva.",
+      "synonyms": [
+        "determine",
+        "establish",
+        "verify"
+      ],
+      "collocations": [
+        "ascertaiń the facts",
+        "ascertain the truth",
+        "ascertain the cause"
+      ],
+      "commonMistake": "Pronunciare la 'c' come in italiano invece che /s/. A volte usato in modo eccessivamente formale dove 'find out' sarebbe più appropriato in contesti meno formali.",
+      "cloze": "Before making any changes, we must ____ the exact requirements of the client.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-27-4.mp3"
+    },
+    {
+      "id": "2026-11-27-5",
+      "word": "Stand by",
+      "category": "phrasal",
+      "ipa": "/stænd baɪ/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Mantenere una promessa o un accordo; sostenere una persona o decisione.",
+      "definitionEn": "To adhere to a promise or agreement; to support a person or decision, especially in difficult times.",
+      "examples": [
+        "The company decided to stand by its original offer despite the counter-proposal.",
+        "I will stand by you no matter what difficulties you face in your career."
+      ],
+      "exampleIt": "L'azienda ha deciso di mantenere la sua offerta originale nonostante la controproposta.",
+      "synonyms": [
+        "adhere to",
+        "uphold",
+        "support"
+      ],
+      "collocations": [
+        "stand by a decision",
+        "stand by a promise",
+        "stand by someone"
+      ],
+      "commonMistake": "Spesso tradotto letteralmente come 'stare in piedi vicino'. Il significato di 'sostenere' o 'mantenere' (un impegno) è cruciale e non intuitivo.",
+      "cloze": "Despite the public criticism, the minister chose to ____ his policy.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-27-5.mp3"
+    }
+  ]
+}

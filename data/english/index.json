@@ -1,6 +1,23 @@
 {
   "days": [
     {
+      "date": "2026-11-27",
+      "words": [
+        "Exacerbate",
+        "Conjecture",
+        "Uphold",
+        "Ascertain",
+        "Stand by"
+      ],
+      "levels": [
+        "C1",
+        "C1",
+        "C1",
+        "C1",
+        "C1"
+      ]
+    },
+    {
       "date": "2026-11-26",
       "words": [
         "intrinsic",
@@ -273,5 +290,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-26T05:08:36.835Z"
+  "updatedAt": "2026-11-27T05:10:27.585Z"
 }
