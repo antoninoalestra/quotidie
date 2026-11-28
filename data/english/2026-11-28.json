@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-28",
+  "level": "B2/C1",
+  "voice": "en-GB-RyanNeural",
+  "generatedAt": "2026-11-28T04:47:10.004Z",
+  "words": [
+    {
+      "id": "2026-11-28-1",
+      "word": "Venerable",
+      "category": "general",
+      "ipa": "/ˈvɛnərəbəl/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Molto rispettato e ammirato a causa dell'età, della saggezza o del carattere.",
+      "definitionEn": "Deserving great respect, especially because of age, wisdom, or character.",
+      "examples": [
+        "The venerable professor shared insights from his decades of research.",
+        "We visited a venerable old oak tree, hundreds of years old, in the national park."
+      ],
+      "exampleIt": "Il venerabile professore ha condiviso intuizioni dai suoi decenni di ricerca.",
+      "synonyms": [
+        "esteemed",
+        "revered",
+        "respected"
+      ],
+      "collocations": [
+        "venerable institution",
+        "venerable tradition",
+        "venerable figure"
+      ],
+      "commonMistake": "Non confonderlo con \"vulnerable\" (vulnerabile). \"Venerable\" implica rispetto e importanza, non debolezza.",
+      "cloze": "The ancient library, with its countless manuscripts, was a truly ____ place.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-28-1.mp3"
+    },
+    {
+      "id": "2026-11-28-2",
+      "word": "Quintessential",
+      "category": "general",
+      "ipa": "/ˌkwɪntɪˈsɛnʃəl/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Che rappresenta l'esempio perfetto o più tipico di qualcosa.",
+      "definitionEn": "Representing the most perfect or typical example of a quality or class.",
+      "examples": [
+        "The small village pub is the quintessential British experience.",
+        "His wit and charm were quintessential of the golden age of Hollywood."
+      ],
+      "exampleIt": "Il piccolo pub del villaggio è l'esperienza britannica per eccellenza.",
+      "synonyms": [
+        "typical",
+        "representative",
+        "archetypal"
+      ],
+      "collocations": [
+        "quintessential example",
+        "quintessential style",
+        "quintessential British"
+      ],
+      "commonMistake": "La pronuncia può essere difficile per gli italiani; attenzione alla \"qu\" iniziale e alla \"ssential\" finale.",
+      "cloze": "With its elegant design and powerful engine, the new sports car is the ____ example of luxury automotive engineering.",
+      "categoryLabel": "Inglese colto",
+      "audio": "data/audio/en-2026-11-28-2.mp3"
+    },
+    {
+      "id": "2026-11-28-3",
+      "word": "Diligent",
+      "category": "business",
+      "ipa": "/ˈdɪlɪdʒənt/",
+      "partOfSpeech": "adjective",
+      "level": "B2",
+      "register": "neutro",
+      "meaningIt": "Che lavora sodo e con attenzione, mostra cura e persistenza.",
+      "definitionEn": "Showing care and conscientiousness in one's work or duties; hardworking.",
+      "examples": [
+        "She is a diligent worker who always completes her tasks on time and to a high standard.",
+        "The team made diligent efforts to meet the project deadline, working late nights."
+      ],
+      "exampleIt": "È una lavoratrice diligente che completa sempre i suoi compiti in tempo e con uno standard elevato.",
+      "synonyms": [
+        "assiduous",
+        "painstaking",
+        "conscientious"
+      ],
+      "collocations": [
+        "diligent efforts",
+        "diligent student",
+        "diligent research"
+      ],
+      "commonMistake": "A volte confuso con \"intelligent\". Mentre una persona intelligente può essere diligente, non sono sinonimi; \"diligent\" si riferisce all'impegno e alla cura nel lavoro.",
+      "cloze": "The auditor was very ____ in checking every single financial record, ensuring there were no errors.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-28-3.mp3"
+    },
+    {
+      "id": "2026-11-28-4",
+      "word": "Provisional",
+      "category": "business",
+      "ipa": "/prəˈvɪʒənl/",
+      "partOfSpeech": "adjective",
+      "level": "C1",
+      "register": "formale",
+      "meaningIt": "Temporaneo, valido solo per un certo periodo o fino a quando non viene sostituito.",
+      "definitionEn": "Arranged or accepted for the present time but likely to be changed later; temporary.",
+      "examples": [
+        "The company gave a provisional offer of employment, pending background checks.",
+        "We have made a provisional booking for the conference venue, but it's not confirmed yet."
+      ],
+      "exampleIt": "L'azienda ha fatto un'offerta di lavoro provvisoria, in attesa dei controlli sul background.",
+      "synonyms": [
+        "temporary",
+        "interim",
+        "tentative"
+      ],
+      "collocations": [
+        "provisional agreement",
+        "provisional budget",
+        "provisional government"
+      ],
+      "commonMistake": "Non usare \"provvisory\" che non esiste. La forma corretta è \"provisional\".",
+      "cloze": "The committee approved the budget on a ____ basis, with a full review planned for next quarter.",
+      "categoryLabel": "Business e lavoro",
+      "audio": "data/audio/en-2026-11-28-4.mp3"
+    },
+    {
+      "id": "2026-11-28-5",
+      "word": "Put something down to something",
+      "category": "phrasal",
+      "ipa": "/pʊt ˈsʌmθɪŋ daʊn tuː ˈsʌmθɪŋ/",
+      "partOfSpeech": "phrasal verb",
+      "level": "C1",
+      "register": "neutro",
+      "meaningIt": "Attribuire la causa di qualcosa a qualcos'altro; spiegare qualcosa come risultato di.",
+      "definitionEn": "To consider that something is caused by something else; to explain an event or situation as being the result of something.",
+      "examples": [
+        "I put her bad mood down to tiredness, as she'd been working all night.",
+        "His success can be put down to sheer hard work and determination."
+      ],
+      "exampleIt": "Ho attribuito il suo cattivo umore alla stanchezza, dato che aveva lavorato tutta la notte.",
+      "synonyms": [
+        "attribute to",
+        "ascribe to",
+        "explain by"
+      ],
+      "collocations": [
+        "put it down to",
+        "put his failure down to",
+        "put their success down to"
+      ],
+      "commonMistake": "Non tradurre letteralmente \"mettere giù\". Il significato è figurato, per indicare una causa o una ragione.",
+      "cloze": "Many experts ____ the recent increase in sales ____ effective marketing strategies.",
+      "categoryLabel": "Phrasal verb e idiomi",
+      "audio": "data/audio/en-2026-11-28-5.mp3"
+    }
+  ]
+}

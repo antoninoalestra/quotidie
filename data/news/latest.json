@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "kind": "daily",
-  "generatedAt": "2026-11-27T05:09:31.083Z",
+  "generatedAt": "2026-11-28T04:46:21.232Z",
   "model": "gemini-2.5-flash",
   "minutes": 10,
-  "words": 2012,
+  "words": 2018,
   "brief": [
-    "Il 2 dicembre 2026 scatta l'obbligo per i fornitori di AI generativa di marcare i contenuti sintetici in formato leggibile dalle macchine, un passo cruciale per la trasparenza.",
-    "La morte di Gianni De Gennaro, ex capo della Polizia, ha scatenato un dibattito politico e giudiziario a seguito della pubblicazione di due lettere postume contenenti gravi accuse.",
-    "Due tecnici italiani sono morti in Kuwait in un attacco con droni iraniani, un grave episodio che riaccende le tensioni geopolitiche nel Golfo Persico e nel Medio Oriente."
+    "SpaceX investe 24 miliardi di dollari in un supercomputer AI in Texas, evidenziando la corsa globale alla potenza di calcolo e l'importanza strategica delle infrastrutture.",
+    "L'Italia esprime preoccupazione per un'operazione ucraina a Bengasi, Libia, temendo un'estensione del conflitto nel Mediterraneo e tensioni diplomatiche.",
+    "Un vertice trilaterale tra Trump, Putin e Xi a Shenzhen ridefinisce gli equilibri geopolitici, segnalando un sistema mondiale sempre più multipolare."
   ],
   "sections": [
     {
@@ -16,84 +16,64 @@
       "title": "Tecnologia e AI",
       "stories": [
         {
-          "title": "AI Act, scadenza imminente per la marcatura dei contenuti generati",
-          "lead": "Il 2 dicembre 2026 segna una data cruciale per l'AI Act europeo: i fornitori di sistemi AI generativa devono garantire la marcatura leggibile dalle macchine dei contenuti sintetici.",
-          "body": "Da questa data, l'articolo 50, paragrafo 2 del regolamento impone che i contenuti prodotti da sistemi già sul mercato prima del 2 agosto 2026 siano chiaramente identificabili. Questa disposizione segue l'approvazione del Digital Omnibus nell'estate 2026, che ha posticipato gli obblighi sui sistemi ad alto rischio al 2 dicembre 2027 o al 2 agosto 2028.\nL'AI Act, primo quadro giuridico globale sull'IA, è entrato in vigore il 1° agosto 2024 con un'applicazione progressiva. Le aziende, anche non tecnologiche, sono chiamate a censire i sistemi AI, classificarne il rischio e verificarne la conformità, con l'obbligo di marcatura che ricade sui fornitori ma implica verifiche da parte di chi pubblica.",
-          "why": "Questa scadenza è fondamentale per la trasparenza e l'affidabilità dei contenuti generati dall'IA, influenzando operazioni aziendali e percezione pubblica.",
+          "title": "SpaceX annuncia supercomputer AI da 24 miliardi in Texas",
+          "lead": "SpaceX, l'azienda di Elon Musk, ha rivelato un progetto per la costruzione di un supercomputer di intelligenza artificiale in Texas, con un investimento stimato di circa 24 miliardi di dollari.",
+          "body": "L'iniziativa include anche una centrale elettrica a gas dedicata per alimentare l'infrastruttura, sottolineando la crescente domanda di potenza di calcolo per lo sviluppo di modelli AI avanzati. Questa mossa si inserisce in un contesto di forte competizione globale per le infrastrutture dedicate all'intelligenza artificiale. Gli analisti interpretano l'investimento come un segnale della crescente corsa alla potenza di calcolo, un tema che incrocia sia il mondo dell'AI sia quello delle blockchain. L'investimento massiccio di SpaceX evidenzia l'accelerazione della corsa all'AI e l'importanza strategica di possedere infrastrutture all'avanguardia, potendo influenzare il futuro sviluppo dell'intelligenza artificiale a livello globale.",
+          "why": "L'investimento di SpaceX evidenzia la corsa globale all'AI e l'importanza strategica delle infrastrutture di calcolo avanzate per il futuro tecnologico.",
           "sources": [
             {
-              "url": "https://easytechgroup.it/blog/sicurezza-informatica/ai-act-dopo-agosto-2026/",
-              "title": "easytechgroup.it"
-            },
-            {
-              "url": "https://biblus.acca.it/cosa-devono-sapere-i-tecnici-sull-ai-act-la-legge-sull-intelligenza-artificiale/",
-              "title": "biblus.acca.it"
-            },
-            {
-              "url": "https://mediastrategies.it/ai-act-entrata-in-vigore/",
-              "title": "mediastrategies.it"
+              "url": "https://www.soldionline.it/notizie/forex-commodities/crypto-tra-maxi-supercomputer-hack-e-politica-usa-cosa-cambia-ora",
+              "title": "soldionline.it"
             }
           ],
-          "readSeconds": 50
+          "readSeconds": 47
         },
         {
-          "title": "Mercato dei semiconduttori in forte espansione, l'Europa punta all'autonomia",
-          "lead": "Il mercato mondiale dei chip è previsto superare i 1.500 miliardi di dollari nel 2026, con l'Europa che mira al 20% della quota globale entro il 2030 grazie a ingenti investimenti.",
-          "body": "Si stima una crescita del 90% in un solo anno rispetto ai 769 miliardi di dollari del 2025. L'European Chips Act, aggiornato a giugno 2026, prevede oltre 43 miliardi di euro di investimenti pubblici per raggiungere l'obiettivo di autonomia tecnologica.\nLa centralità dei semiconduttori è cruciale per settori strategici come l'IA, l'automotive e le telecomunicazioni. In Italia, la Fondazione Chips-IT ha superato i 100 ricercatori, lavorando allo sviluppo di una filiera nazionale focalizzata su progettazione, trasferimento tecnologico e formazione.",
-          "why": "L'espansione del mercato dei semiconduttori è un indicatore chiave della trasformazione digitale globale e della corsa all'autonomia tecnologica.",
+          "title": "Cina accelera nella corsa all'AI con IPO tech e sostegno governativo",
+          "lead": "La Cina sta vivendo una nuova fase di apertura dei suoi listini alle società innovative nel settore dell'intelligenza artificiale, con oltre 160 \"unicorni\" potenzialmente pronti a quotarsi in borsa.",
+          "body": "Tra le aziende attese, DeepSeek potrebbe sbarcare in Borsa nel 2027. Il governo cinese sta sostenendo attivamente questa crescita, in particolare nei settori della robotica umanoide e dei semiconduttori, con Bank of America che stima una crescita delle consegne di robotica umanoide da 90.000 unità nel 2026 a 1,2 milioni entro il 2030. Dopo anni di stagnazione, l'ecosistema tecnologico cinese si riposiziona per competere con i giganti statunitensi, focalizzandosi sulla monetizzazione dell'AI tramite il cloud computing. Gli analisti vedono opportunità di investimento in questo settore, notando che molte società locali quotano a sconto rispetto alle azioni USA.",
+          "why": "Questo sviluppo segnala un'intensificazione della competizione globale nell'AI e una potenziale ridefinizione degli equilibri di potere tecnologico ed economico.",
+          "sources": [
+            {
+              "url": "https://www.focusrisparmio.com/news/cina-ai-borsa-ipo-tech",
+              "title": "focusrisparmio.com"
+            }
+          ],
+          "readSeconds": 47
+        },
+        {
+          "title": "Nvidia limita server AI, Huawei sviluppa memorie HBM custom",
+          "lead": "Nvidia starebbe bloccando l'invio di server AI verso quattro Paesi del Sud-est asiatico, mentre Huawei presenterà all'ISSCC 2027 un'architettura di memoria HBM sviluppata internamente.",
+          "body": "Secondo il Financial Times, le restrizioni di Nvidia mettono a rischio la consegna di ordini già assegnati, evidenziando le crescenti tensioni geopolitiche e le preoccupazioni sulla sicurezza tecnologica che influenzano la catena di approvvigionamento dei semiconduttori e dell'AI. Lo sviluppo di Huawei, con un'interfaccia HBM a 4.096 bit, il doppio dello standard HBM4, mostra gli sforzi della Cina per raggiungere l'autonomia tecnologica in settori critici. Questi eventi sottolineano la frammentazione del mercato globale dei semiconduttori e dell'AI, con implicazioni per la disponibilità di hardware avanzato e per le strategie di autonomia tecnologica delle diverse nazioni.",
+          "why": "Questi eventi evidenziano le tensioni geopolitiche nel settore tecnologico e gli sforzi per l'autonomia, influenzando la catena di approvvigionamento globale.",
+          "sources": [
+            {
+              "url": "https://www.elettronicanews.it/semiconduttori-notizie-26-novembre-2026/",
+              "title": "elettronicanews.it"
+            }
+          ],
+          "readSeconds": 44
+        },
+        {
+          "title": "Mercato semiconduttori in forte espansione, Europa punta all'autonomia",
+          "lead": "Il mercato globale dei semiconduttori è previsto in crescita del 90% nel 2026, raggiungendo 1.510 miliardi di dollari, e supererà i 1.900 miliardi nel 2027.",
+          "body": "L'Europa, che detiene circa il 10% del mercato mondiale e dipende per quasi l'80% da fornitori extra-UE, sta cercando di rafforzare la propria filiera. A tal fine, il 3 giugno 2026 la Commissione Europea ha adottato il Chips Act 2.0, che sposta l'attenzione dall'attrazione di fabbriche alla costruzione della domanda interna. L'obiettivo è trasformare le competenze scientifiche europee in leadership industriale, investendo nella progettazione, formazione e trasferimento tecnologico, con 43 miliardi di euro di investimenti pubblici per raggiungere il 20% della quota di mercato entro il 2030. L'Italia, attraverso la Fondazione Chips-IT, sta contribuendo a questo sforzo.",
+          "why": "L'espansione del mercato e le politiche europee mirano a ridurre la vulnerabilità strategica del continente, garantendo maggiore autonomia tecnologica.",
           "sources": [
             {
               "url": "https://www.meteoweb.eu/2026/11/semiconduttori-mercato-in-forte-espansione-tra-intelligenza-artificiale-e-autonomia-tecnologica/1002008403/",
               "title": "meteoweb.eu"
             },
             {
-              "url": "https://www.borsaitaliana.it/borsa/notizie/radiocor/economia/dettaglio/industria-90-a-15-trilioni-valore-mercato-mondiale-dei-chip-nel-2026-studio-nRC_26112026_1752_545540329.html",
-              "title": "borsaitaliana.it"
+              "url": "https://www.impresacity.it/news/57428/semiconduttori-mercato-globale-a-151-trilioni-di-dollari-nel-2026.html",
+              "title": "impresacity.it"
             },
             {
               "url": "https://www.hwupgrade.it/news/mercato/il-mercato-dei-chip-e-quasi-raddoppiato-in-un-anno-e-l-europa-ferma-al-10_162665.html",
               "title": "hwupgrade.it"
             }
           ],
-          "readSeconds": 41
-        },
-        {
-          "title": "OpenAI e Anthropic lanciano nuovi modelli e agenti AI avanzati",
-          "lead": "OpenAI ha presentato i modelli GPT-6.2 Astra e Sol con un taglio del 20% sui prezzi API, mentre Anthropic ha introdotto \"Claude Ship\", un sistema di agenti AI per lo sviluppo software autonomo.",
-          "body": "Questi sviluppi riflettono la rapida evoluzione dell'intelligenza artificiale generativa e degli agenti autonomi, con le grandi aziende tecnologiche che competono per offrire capacità sempre più sofisticate. Anche Baidu ha aperto la preview di Ernie 5.5 Flash, un modello con 280 miliardi di parametri.\nL'introduzione di agenti AI capaci di operare autonomamente nello sviluppo software solleva questioni sull'automazione del lavoro e sulla necessità di nuove competenze umane per la supervisione. L'AI Office europeo ha richiesto informazioni sui test degli agenti AI, evidenziando le preoccupazioni sulla portata dell'AI Act in ricerca e sviluppo.",
-          "why": "Questi lanci indicano un'accelerazione nello sviluppo dell'IA, con implicazioni profonde per l'industria del software e il futuro del lavoro.",
-          "sources": [
-            {
-              "url": "https://ainews.it/",
-              "title": "ainews.it"
-            },
-            {
-              "url": "https://www.rivista.ai/",
-              "title": "rivista.ai"
-            },
-            {
-              "url": "https://www.anpai.it/blog/",
-              "title": "anpai.it"
-            }
-          ],
-          "readSeconds": 46
-        },
-        {
-          "title": "Apple aggiorna regole App Store contro deepfake, allarme bot AI in politica",
-          "lead": "Apple ha imposto alle app di prevenire e rimuovere i deepfake intimi, mentre in Italia emergono commenti generati da bot AI sotto i post di politici, riaccendendo il dibattito sulla manipolazione.",
-          "body": "La mossa di Apple risponde alle crescenti preoccupazioni etiche e di sicurezza legate all'IA generativa, che ha reso più facile la creazione di contenuti falsi o manipolati. La diffusione di deepfake può causare danni significativi a individui e società.\nContemporaneamente, il caso dei bot AI in politica ha generato allarme e richieste di maggiore trasparenza e regolamentazione nell'uso dell'IA nei social media, sottolineando la crescente preoccupazione per l'integrità democratica e la manipolazione dell'opinione pubblica.",
-          "why": "Questi eventi sottolineano l'urgente necessità di affrontare le sfide etiche e sociali poste dall'IA, in particolare per disinformazione e privacy.",
-          "sources": [
-            {
-              "url": "https://www.anpai.it/blog/",
-              "title": "anpai.it"
-            },
-            {
-              "url": "https://www.intopic.it/tecnologia/intelligenza-artificiale/",
-              "title": "intopic.it"
-            }
-          ],
-          "readSeconds": 41
+          "readSeconds": 45
         }
       ]
     },
@@ -102,67 +82,55 @@
       "title": "Finanza e mercati",
       "stories": [
         {
-          "title": "BCE mantiene tassi invariati, attesa per le prossime mosse della Fed",
-          "lead": "La BCE ha deciso di mantenere invariati i tassi di interesse, mentre si attendono le prossime decisioni della Federal Reserve, con la lotta all'inflazione ancora prioritaria.",
-          "body": "Il Consiglio direttivo della Banca Centrale Europea ha confermato il tasso sui depositi al 2,50%, quello sulle operazioni di rifinanziamento principali al 2,65% e quello sulle operazioni di rifinanziamento marginale al 2,90%. La presidente Lagarde ha attribuito il freno alla crescita nell'Eurozona al rialzo dei tassi a lungo termine, influenzato da aspettative di mercato e ingenti emissioni di titoli.\nAnche la Federal Reserve ha mantenuto invariato il tasso di riferimento tra il 3,75% e il 4%. Gli economisti prevedono un ulteriore aumento dei tassi da parte della Fed a dicembre, seguito da una stabilizzazione nel primo semestre del 2027, mentre la BCE seguirà un approccio guidato dai dati.",
-          "why": "Le decisioni delle banche centrali sono cruciali per la stabilità economica globale, influenzando i costi di finanziamento e le prospettive di crescita.",
+          "title": "Wall Street chiude in forte rialzo, trainata dai titoli tech",
+          "lead": "I principali indici azionari statunitensi hanno registrato una chiusura positiva nella seduta del 27 novembre 2026, con il Dow Jones in crescita dell'1,18%, l'S&P 500 dell'1,6% e il Nasdaq del 2,31%.",
+          "body": "Il rally è stato trainato in particolare dai titoli tecnologici, con Anthropic che ha registrato un notevole aumento dell'11% e NVIDIA in ripresa dello 0,8%. Questo avviene nonostante le preoccupazioni persistenti sul mercato dell'AI, indicando un recupero del sentiment degli investitori. Gli investitori hanno mostrato un recupero del sentiment, con i futures su S&P 500 e Nasdaq 100 in aumento. La forte performance di Wall Street, specialmente nel settore tecnologico, indica una rinnovata fiducia degli investitori e potrebbe influenzare l'andamento dei mercati globali nelle prossime settimane.",
+          "why": "La forte performance di Wall Street, specialmente nel tech, indica una rinnovata fiducia degli investitori e potrebbe influenzare i mercati globali.",
           "sources": [
             {
-              "url": "https://www.ecnews.it/lavoro/imposte-contributi-e-premi/tassazione-e-redditi-di-lavoro/decisioni-di-politica-monetaria-europea-i-tassi-bce-restano-invariati/",
-              "title": "ecnews.it"
+              "url": "https://www.soldionline.it/notizie/mercati-esteri/wall-street-performance-27-novembre-2026",
+              "title": "soldionline.it"
             },
             {
-              "url": "https://finanza.repubblica.it/News/2026/11/26/lagarde_bce_il_rialzo_dei_tassi_a_lungo_termine_ha_frenato_crescita-103/",
-              "title": "finanza.repubblica.it"
-            },
-            {
-              "url": "https://www.migrosbank.ch/it/guida/valutazioni-mercato/previsioni-sui-tassi-d-interesse.html",
-              "title": "migrosbank.ch"
-            }
-          ],
-          "readSeconds": 50
-        },
-        {
-          "title": "Mercati azionari nervosi, impatto degli investimenti in AI e tassi",
-          "lead": "I mercati azionari mostrano nervosismo a causa delle incertezze economiche e della redditività degli investimenti tecnologici, nonostante gli utili attesi per lo STOXX 600 siano in crescita.",
-          "body": "L'entusiasmo per l'intelligenza artificiale ha spinto le valutazioni di molte aziende tecnologiche, ma sta crescendo la cautela riguardo alla sostenibilità di tali crescite e all'impatto dei tassi di interesse elevati. Gli utili attesi per lo STOXX 600 nel terzo trimestre sono in crescita del 25,4%, o del 10,5% escludendo il settore energetico.\nUna pausa monetaria potrebbe portare sollievo ai mercati, ma il dilemma di fondo tra vulnerabilità economiche e tendenze inflazionistiche rimane. Il Bitcoin ha registrato un leggero recupero dopo i deflussi dagli ETF e un calo dei titoli AI, riflettendo la volatilità generale.",
-          "why": "L'andamento dei mercati azionari riflette la fiducia degli investitori nell'economia globale e l'impatto delle politiche monetarie.",
-          "sources": [
-            {
-              "url": "https://www.experts-du-patrimoine.fr/it/banques-centrales-une-pause-sur-les-taux-malgre-les-tensions-inflationnistes/",
-              "title": "experts-du-patrimoine.fr"
-            },
-            {
-              "url": "https://finanza.repubblica.it/News/Overview/",
-              "title": "finanza.repubblica.it"
-            },
-            {
-              "url": "https://it.investing.com/news/cryptocurrency-news",
-              "title": "it.investing.com"
+              "url": "https://www.home.saxo/it-it/content/articles/macro/market-quick-take---brent-tops-usd-97-and-asian-stocks-extend-rebound---27-november-2026-27112026",
+              "title": "home.saxo"
             }
           ],
           "readSeconds": 44
         },
         {
-          "title": "Criptovalute: Bitcoin sotto pressione, nuovi ETF e questioni regolatorie",
-          "lead": "Il Bitcoin ha sfiorato i 61.000 dollari ma ha registrato deflussi record dagli ETF, mentre Fidelity ha chiesto la quotazione di un ETF su Chainlink, evidenziando le sfide regolatorie.",
-          "body": "Il mercato delle criptovalute rimane volatile, influenzato da fattori macroeconomici e flussi di investimento istituzionali. Dopo aver toccato i 61.000 dollari nel Giorno del Ringraziamento, il Bitcoin ha subito vendite record e 2,5 miliardi di deflussi dagli ETF, scendendo ai minimi da agosto.\nGalaxy ha ritirato la previsione sul minimo di BTC, indicando la continuazione del mercato ribassista. La Spagna si appresta a conferire all'autorità di vigilanza finanziaria il potere di congelare i conti crypto, segnale di una crescente attenzione regolatoria.",
-          "why": "Le criptovalute continuano a essere un asset di interesse, ma la loro integrazione nel sistema finanziario tradizionale è in fase di definizione, con la regolamentazione cruciale.",
+          "title": "BCE mantiene tassi fermi, ma cresce fronte per rialzo a dicembre",
+          "lead": "Il Consiglio Direttivo della BCE ha mantenuto invariati i tassi di interesse, ma i verbali della riunione di ottobre rivelano che un numero crescente di membri ritiene necessario un ulteriore aumento a dicembre.",
+          "body": "La decisione di non intervenire non riflette una minore preoccupazione per l'inflazione, e la BCE si dichiara pronta a usare tutti gli strumenti per riportare la crescita dei prezzi verso l'obiettivo del 2%. Le condizioni finanziarie si sono inasprite e le aspettative di inflazione a lungo termine gravitano intorno al 2%. Questa posizione suggerisce che un rialzo dei tassi a dicembre è fortemente probabile, anche perché già evitata con il rinvio operato a ottobre. La potenziale stretta monetaria della BCE a dicembre avrà un impatto significativo sull'economia dell'Eurozona, influenzando i costi di finanziamento per imprese e famiglie e l'andamento dei mercati obbligazionari.",
+          "why": "Un potenziale rialzo dei tassi BCE a dicembre avrà un impatto significativo sull'economia dell'Eurozona, influenzando costi e mercati.",
           "sources": [
             {
-              "url": "https://news.bitcoin.com/it/",
-              "title": "news.bitcoin.com"
+              "url": "https://www.lamiafinanza.it/2026/11/bce-tassi-fermi-ma-cresce-il-fronte-favorevole-a-un-rialzo-rincaro-sui-mutui-ecco-quando/",
+              "title": "lamiafinanza.it"
             },
             {
-              "url": "https://www.milanofinanza.it/mercati/bitcoin-criptovalute",
-              "title": "milanofinanza.it"
-            },
-            {
-              "url": "https://it.tradingview.com/news/crypto/all/",
-              "title": "it.tradingview.com"
+              "url": "https://www.eunews.it/2026/11/27/la-bce-verso-laumento-dei-tassi-di-interesse-a-dicembre/",
+              "title": "eunews.it"
             }
           ],
-          "readSeconds": 44
+          "readSeconds": 49
+        },
+        {
+          "title": "Bitcoin scende sotto i 60.000 dollari, mercati crypto in difficoltà",
+          "lead": "Nonostante un forte rally nei mercati azionari statunitensi, le criptovalute hanno faticato a recuperare, con Bitcoin (BTC) che è sceso sotto la soglia psicologicamente importante dei 60.000 dollari.",
+          "body": "Al 27 novembre 2026, Bitcoin ha registrato un calo dell'1,18% a 59.780,83 dollari, mentre Ethereum (ETH) è sceso dell'1,29% a 1.665,99 dollari. La debolezza del mercato crypto è stata attribuita a diversi fattori, tra cui la scadenza di circa 7 miliardi di dollari in opzioni Bitcoin, che ha aggiunto volatilità, e una liquidità più sottile durante il periodo festivo del Ringraziamento negli Stati Uniti. Arthur Hayes, capo del fondo Maelstrom, ha avvertito di possibili forti vendite nel settore crypto prima della riapertura di Wall Street lunedì, in assenza di un tono più accomodante dalla Federal Reserve.",
+          "why": "La divergenza tra mercati tradizionali e criptovalute solleva interrogativi sulla maturità del settore crypto e la sua resilienza.",
+          "sources": [
+            {
+              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/27/crypto-market-today-nov-27-bitcoin-falls-below-usd60-000-as-crypto-markets-struggle-despite-wall-street-s-biggest-rally-in-over-a-year/",
+              "title": "fool.com"
+            },
+            {
+              "url": "https://it.beincrypto.com/avvertimento-arthur-hayes-crypto-fed-blackout/",
+              "title": "it.beincrypto.com"
+            }
+          ],
+          "readSeconds": 46
         }
       ]
     },
@@ -171,59 +139,55 @@
       "title": "Italia",
       "stories": [
         {
-          "title": "Morte di Gianni De Gennaro, lettere postume scatenano dibattito",
-          "lead": "La morte di Gianni De Gennaro, ex capo della Polizia e dei servizi segreti, ha scatenato un'ampia discussione a seguito della pubblicazione di due lettere postume con accuse alla Procura di Caltanissetta.",
-          "body": "De Gennaro, scomparso il 25 novembre 2026, si è dichiarato \"condannato a morte\" e ha negato di aver mai tradito la Patria in una delle lettere, indirizzata ai magistrati. L'altra era destinata alla pubblicazione, riaprendo interrogativi su eventi passati e sulle dinamiche del potere in Italia.\nIl Presidente Mattarella parteciperà ai funerali, mentre la Premier Meloni ha espresso cordoglio. Le lettere hanno suscitato forte curiosità nelle Procure e un acceso dibattito politico, con richieste di chiarezza e indagini approfondite, inserendosi in un delicato contesto di rapporti tra politica e magistratura.",
-          "why": "La morte di De Gennaro e il contenuto delle sue lettere rappresentano un evento di grande rilevanza politica e sociale, con potenziali ripercussioni istituzionali.",
+          "title": "Italia preoccupata per operazione ucraina a Bengasi, Libia",
+          "lead": "Il Presidente del Consiglio, Giorgia Meloni, ha espresso preoccupazione al Presidente ucraino Zelensky per l'operazione condotta dalle forze ucraine nel porto di Bengasi, in Libia.",
+          "body": "Meloni ha sottolineato che l'operazione ha violato la sovranità della Libia e rischia di estendere il conflitto al Mediterraneo. Il Ministro degli Esteri Antonio Tajani ha smentito le dichiarazioni iniziali di Zelensky, secondo cui l'operazione sarebbe stata coordinata con i partner, affermando che l'Italia non era stata avvertita. La Libia è un'area di interesse strategico per l'Italia, e l'estensione del conflitto russo-ucraino nel Mediterraneo è vista come una minaccia alla sicurezza nazionale e regionale. Meloni ha ribadito il sostegno all'Ucraina, ma ha precisato che questo non può tradursi nell'accettazione di iniziative che mettano a rischio la sicurezza dell'Italia e della regione.",
+          "why": "L'incidente ha creato tensione diplomatica, evidenziando le complessità della politica estera italiana e i rischi di escalation del conflitto.",
           "sources": [
             {
-              "url": "https://rtl.it/notizie/italia/politica/",
-              "title": "rtl.it"
+              "url": "https://www.governo.it/it/tipologie-contenuto/notizie",
+              "title": "governo.it"
             },
             {
-              "url": "https://www.adnkronos.com/internazionale/esteri/",
-              "title": "adnkronos.com"
+              "url": "https://www.spes.academy/2026/11/27/zelensky-e-lattacco-in-libia-ucraina-si-coordina-sempre-con-i-partner-tajani-non-e-vero/",
+              "title": "spes.academy"
             },
             {
-              "url": "https://www.ilriformista.it/politica/",
-              "title": "ilriformista.it"
+              "url": "https://tg24.sky.it/mondo/2026/11/27/guerra-ucraina-russia-ultime-notizie-diretta",
+              "title": "tg24.sky.it"
             }
           ],
-          "readSeconds": 47
+          "readSeconds": 46
         },
         {
-          "title": "Dibattito politico su riforma delle Province e legge sul fine vita",
-          "lead": "Il Consiglio dei Ministri ha approvato una riforma per l'elezione diretta dei presidenti di Provincia, mentre la maggioranza è spaccata dopo l'impugnazione della legge veneta sul fine vita.",
-          "body": "La riforma delle Province introduce un turno unico e un superpremio di maggioranza, riaccendendo il dibattito sulla reintroduzione di questi enti dopo la riforma Delrio. È un tema ricorrente nel panorama politico italiano, con posizioni diverse tra i partiti.\nParallelamente, l'impugnazione della legge sul fine vita approvata dalla Regione Veneto ha evidenziato le tensioni interne alla maggioranza di governo. Questa questione tocca corde etiche e morali profonde, dividendo l'opinione pubblica e le forze politiche sui diritti individuali e i limiti dello Stato.",
-          "why": "Questi due temi sono centrali nel dibattito politico italiano, riflettendo visioni diverse sulla struttura dello Stato e sui diritti civili.",
+          "title": "Sondaggi politici: \"Campo Largo\" supera centrodestra, Vannacci fattore",
+          "lead": "Secondo gli ultimi sondaggi politici della Supermedia YouTrend/Agi del 27 novembre 2026, il \"Campo Largo\" (l'alleanza tra Partito Democratico e Movimento 5 Stelle) stacca il centrodestra.",
+          "body": "I dati mostrano un'evoluzione degli equilibri tra maggioranza e opposizione nel panorama politico italiano. La Lega di Matteo Salvini sale al 5,9% (+0,1%), mentre Italia Viva di Matteo Renzi sale al 2,6% (+0,3%). La figura di Roberto Vannacci, leader di Futuro Nazionale, viene indicata come un potenziale \"ancora\" per Giorgia Meloni, alimentando il dibattito politico interno e le strategie dei partiti in vista delle prossime scadenze elettorali. I risultati dei sondaggi alimentano il dibattito politico interno e le strategie dei partiti in vista delle prossime scadenze elettorali.",
+          "why": "L'andamento dei sondaggi è un indicatore cruciale dello stato dell'opinione pubblica e può influenzare le decisioni politiche future.",
           "sources": [
             {
-              "url": "https://rtl.it/notizie/italia/politica/",
-              "title": "rtl.it"
-            },
-            {
-              "url": "https://www.fanpage.it/politica/",
-              "title": "fanpage.it"
+              "url": "https://www.virgilio.it/notizie/ultimi-sondaggi-politici-venerdi-27-novembre-campo-largo-stacca-centrodestra-l-ancora-di-meloni-e-vannacci-1799404",
+              "title": "virgilio.it"
             }
           ],
           "readSeconds": 42
         },
         {
-          "title": "PNRR e economia italiana: rischio di mancata spesa e prospettive future",
-          "lead": "L'Italia affronta difficoltà nella spesa dei fondi PNRR, con il rischio che 112 miliardi di euro possano essere compromessi dalla burocrazia, mentre la crescita del Sud potrebbe rallentare dal 2027.",
-          "body": "Il Piano Nazionale di Ripresa e Resilienza è uno strumento fondamentale per la ripresa e la modernizzazione del paese, ma la sua attuazione è complessa e richiede un'efficace capacità amministrativa. Si intensifica il dibattito sulla necessità di accelerare la spesa e semplificare le procedure.\nLa situazione economica del Sud Italia, che ha superato la crescita del Centro-Nord, rischia di rallentare o invertirsi dal 2027. La sostenibilità di questa crescita è legata alla capacità di investire e superare le criticità strutturali, con il governo chiamato a definire strategie oltre il PNRR.",
-          "why": "La gestione del PNRR e le prospettive economiche, in particolare per il Sud, sono cruciali per il futuro sviluppo e la competitività dell'Italia.",
+          "title": "Milano candidata a ospitare l'Agenzia ONU per l'Intelligenza Artificiale",
+          "lead": "Milano si è candidata per ospitare l'agenzia delle Nazioni Unite per l'Intelligenza Artificiale, un'opportunità strategica per l'Italia nel dibattito globale sulla governance dell'AI.",
+          "body": "Questa candidatura è stata menzionata durante il XX Transatlantic Award Gala Dinner dell'American Chamber of Commerce in Italy, un evento che ha celebrato gli investimenti tra Italia e Stati Uniti e ha visto la partecipazione di oltre ottocento esponenti istituzionali ed economici. La candidatura di Milano si inserisce in un contesto di crescente attenzione globale alla regolamentazione e alla governance dell'AI. L'Italia sta cercando di posizionarsi come un attore rilevante nel dibattito internazionale sull'intelligenza artificiale, unendo innovazione e regole, e attrarre investimenti e competenze nel settore.",
+          "why": "Ospitare un'agenzia ONU sull'AI consoliderebbe la posizione di Milano e dell'Italia come hub per tecnologia, ricerca e governance AI.",
           "sources": [
             {
-              "url": "https://www.ilriformista.it/politica/",
-              "title": "ilriformista.it"
+              "url": "https://www.insidertrend.it/2026/11/28/imprese/imprese-eventi-milano-xx-transatlantic-award-gala-dinner/",
+              "title": "insidertrend.it"
             },
             {
-              "url": "https://tg24.sky.it/economia",
-              "title": "tg24.sky.it"
+              "url": "https://forbes.it/2026/11/27/oltre-100-milioni-cosi-sigma-trasforma-roma-hub-globale/",
+              "title": "forbes.it"
             }
           ],
-          "readSeconds": 46
+          "readSeconds": 41
         }
       ]
     },
@@ -232,67 +196,51 @@
       "title": "Mondo",
       "stories": [
         {
-          "title": "Attacco in Kuwait: due tecnici italiani morti, tensione con l'Iran",
-          "lead": "Due tecnici italiani dell'azienda Rheinmetall, Antonio Saccoccio ed Emanuele Lo Russo, sono morti in Kuwait in un attacco con droni iraniani, generando tensione con Teheran che nega il coinvolgimento.",
-          "body": "I due italiani, di 65 e 36 anni, sono stati colpiti dalle schegge dell'intercettazione dei droni, diretti verso una \"struttura strategica\". Il ministro degli Esteri italiano, Antonio Tajani, ha accusato l'Iran, ma Teheran ha negato ogni coinvolgimento, accusando a sua volta l'Ucraina.\nL'incidente si inserisce in un quadro di crescenti tensioni nel Golfo Persico e nel Medio Oriente, con l'Iran al centro di diverse crisi regionali. Il governo italiano ha espresso profondo cordoglio per le vittime e ha chiesto chiarezza sull'accaduto.",
-          "why": "La morte dei due tecnici italiani è un evento grave che evidenzia la pericolosità delle aree di conflitto e le complesse interconnessioni geopolitiche.",
+          "title": "Conflitto ucraino: attacco a Bengasi e droni su San Pietroburgo",
+          "lead": "Il presidente ucraino Zelensky ha inizialmente rivendicato un attacco a navi russe nel porto di Bengasi, Libia, per poi fare marcia indietro, mentre droni ucraini hanno colpito San Pietroburgo.",
+          "body": "L'attacco a Bengasi, definito da Zelensky \"obiettivo assolutamente legittimo\", ha sollevato preoccupazioni internazionali per un'estensione del conflitto russo-ucraino nel Mediterraneo, un'area geopoliticamente sensibile. L'Italia, tramite la Presidente Meloni, ha espresso forte preoccupazione per l'operazione, considerandola una violazione della sovranità libica e un rischio per la sicurezza regionale. Nel frattempo, 55 droni ucraini hanno preso di mira San Pietroburgo, la seconda città più grande della Russia, causando danni a un edificio residenziale e un ferito. Questi attacchi con droni in territorio russo rappresentano una strategia ucraina per colpire obiettivi all'interno della Russia.",
+          "why": "Questi eventi indicano un'escalation e una potenziale espansione geografica del conflitto, con implicazioni significative per la sicurezza internazionale.",
           "sources": [
             {
-              "url": "https://tg24.sky.it/mondo",
+              "url": "https://www.governo.it/it/tipologie-contenuto/notizie",
+              "title": "governo.it"
+            },
+            {
+              "url": "https://www.spes.academy/2026/11/27/zelensky-e-lattacco-in-libia-ucraina-si-coordina-sempre-con-i-partner-tajani-non-e-vero/",
+              "title": "spes.academy"
+            },
+            {
+              "url": "https://tg24.sky.it/mondo/2026/11/27/guerra-ucraina-russia-ultime-notizie-diretta",
               "title": "tg24.sky.it"
-            },
-            {
-              "url": "https://www.ilriformista.it/esteri/",
-              "title": "ilriformista.it"
-            },
-            {
-              "url": "https://www.tgcom24.mediaset.it/mondo/",
-              "title": "tgcom24.mediaset.it"
             }
           ],
-          "readSeconds": 43
+          "readSeconds": 44
         },
         {
-          "title": "COP31 ad Antalya: mancato accordo globale sul clima, emissioni record",
-          "lead": "La Conferenza ONU sul clima (COP31) ad Antalya si è conclusa senza un accordo globale significativo, registrando l'emissione di circa 125.000 tonnellate di gas serra per l'organizzazione.",
-          "body": "Tenutasi dal 9 al 20 novembre 2026, la COP31 non è riuscita a raggiungere un consenso internazionale su azioni concrete per contrastare il cambiamento climatico, nonostante l'obiettivo di affrontare la sostenibilità e l'ambiente. Questo fallimento evidenzia le persistenti difficoltà nel negoziare politiche climatiche globali.\nIl mancato accordo ha generato delusione tra gli attivisti e gli osservatori internazionali, che sottolineano l'urgenza di interventi più incisivi. Le emissioni record legate all'organizzazione stessa della conferenza hanno ulteriormente alimentato le critiche.",
-          "why": "L'esito della COP31 è un segnale preoccupante per la lotta al cambiamento climatico, indicando difficoltà nel trovare soluzioni comuni e vincolanti.",
+          "title": "Vertice trilaterale Trump, Putin, Xi ridefinisce equilibri geopolitici",
+          "lead": "Il 19 novembre 2026, Donald Trump, Vladimir Putin e Xi Jinping hanno partecipato al primo vertice trilaterale tra i leader delle tre maggiori potenze a Shenzhen.",
+          "body": "L'incontro assume un significato strategico profondo, riconoscendo reciprocamente le tre architetture di potere come interlocutori imprescindibili nella gestione della sicurezza internazionale, della competizione tecnologica e degli equilibri nucleari. Il sistema internazionale sta attraversando una trasformazione che non riguarda solo la distribuzione della potenza militare, economica e tecnologica, ma anche le identità storiche e le matrici culturali attraverso cui le grandi potenze interpretano il proprio ruolo nel mondo. L'incontro non è visto come la nascita di un direttorio mondiale o la convergenza di tre visioni politiche, ma come il riconoscimento di una nuova centralità delle potenze capaci di incidere sulle regole del sistema internazionale.",
+          "why": "Questo vertice segna un passaggio verso un sistema multipolare, dove le relazioni tra USA, Russia e Cina saranno centrali per la stabilità globale.",
           "sources": [
             {
-              "url": "https://www.ilriformista.it/esteri/",
-              "title": "ilriformista.it"
-            },
-            {
-              "url": "https://www.simoptions.com/it/il-tuo-calendario-dei-grandi-eventi-del-2026/",
-              "title": "simoptions.com"
-            },
-            {
-              "url": "https://www.mastroinchiostro.com/blog/calendario-editoriale-novembre-2026/",
-              "title": "mastroinchiostro.com"
+              "url": "https://www.triesteallnews.it/2026/11/da-mosca-a-pechino-la-geopolitica-riscopre-le-radici-delle-civilta/",
+              "title": "triesteallnews.it"
             }
           ],
-          "readSeconds": 41
+          "readSeconds": 48
         },
         {
-          "title": "Regno Unito contatta 100.000 riservisti: allerta per possibile guerra",
-          "lead": "Il governo del Regno Unito ha contattato circa 100.000 riservisti per aggiornare i loro dati, preparandosi a una possibile guerra in un contesto di crescenti tensioni geopolitiche globali.",
-          "body": "La mossa, rivelata dal Telegraph, riguarda i membri della riserva strategica, veterani che possono essere richiamati in servizio in circostanze eccezionali. L'allerta si inserisce in un contesto di crescenti tensioni geopolitiche globali, con riferimenti ad allarmi per sabotaggi russi e tensioni in Libia.\nLe autorità britanniche hanno anche invitato le famiglie a predisporre kit di emergenza e scorte sufficienti ad affrontare almeno 72 ore di interruzione dei servizi essenziali. La notizia ha generato preoccupazione e dibattito sulla sicurezza nazionale e sulla preparazione del paese a scenari di conflitto.",
-          "why": "Questa azione del Regno Unito è un indicatore significativo di un inasprimento delle tensioni internazionali e della percezione di un rischio crescente di conflitti.",
+          "title": "Processo di allargamento UE si riapre: Montenegro al traguardo",
+          "lead": "Il processo di allargamento dell'Unione Europea si riapre, con il Montenegro che si avvicina al traguardo dell'adesione, mentre per la Moldova rimane il nodo irrisolto della Transnistria.",
+          "body": "L'allargamento è diventato una partita geopolitica cruciale che riguarda la sicurezza europea e i futuri equilibri di influenza nel continente. Il semestre di presidenza di turno della Grecia potrebbe concentrarsi su questo processo. L'avanzamento del Montenegro è visto positivamente come un segnale della vitalità del processo di integrazione europea. La situazione della Moldova, con la regione separatista della Transnistria sostenuta dalla Russia, evidenzia le sfide geopolitiche e i conflitti congelati che complicano l'espansione dell'UE. La riapertura del processo di allargamento dell'UE è fondamentale per la stabilità e l'influenza del blocco nel continente.",
+          "why": "La riapertura dell'allargamento UE è cruciale per la stabilità europea, ma le sfide geopolitiche ne complicano l'espansione.",
           "sources": [
             {
-              "url": "https://www.adnkronos.com/internazionale/esteri/",
-              "title": "adnkronos.com"
-            },
-            {
-              "url": "https://www.ilfattoquotidiano.it/mondo/",
-              "title": "ilfattoquotidiano.it"
-            },
-            {
-              "url": "https://www.tgcom24.mediaset.it/mondo/",
-              "title": "tgcom24.mediaset.it"
+              "url": "https://it.euronews.com/2026/11/27/allargamento-ue-la-partita-si-riapre-il-montenegro-al-traguardo-in-moldova-resta-il-nodo-t",
+              "title": "it.euronews.com"
             }
           ],
-          "readSeconds": 45
+          "readSeconds": 44
         }
       ]
     }

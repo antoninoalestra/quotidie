@@ -1,6 +1,15 @@
 {
   "lessons": [
     {
+      "date": "2026-11-28",
+      "title": "Troppo Pulito? Il Paradosso dell'Igiene e la Salute",
+      "category": "Medicina e salute",
+      "categoryId": "medicina-e-salute",
+      "minutes": 4,
+      "hook": "Abbiamo sempre creduto che un ambiente immacolato fosse la chiave per la salute, specialmente per i bambini. Ma se questa convinzione, in realtà, stesse contribuendo all'aumento globale delle allergie e delle malattie autoimmuni, sfidando l'idea che 'pulito' sia sempre sinonimo di 'sano'?",
+      "kind": "regular"
+    },
+    {
       "date": "2026-11-27",
       "title": "Il Suono delle Forme: L'Effetto Bouba-Kiki e la Sinestesia Linguistica",
       "category": "Linguistica ed etimologia",
